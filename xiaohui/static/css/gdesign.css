@@ -1,0 +1,605 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+@font-face {
+    font-family: '方正兰亭黑简体';
+    src: url(../font/heijian.TTF);
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url(../font/Gotham-Bold.otf);
+}
+html, body {   
+    font-family: '方正兰亭黑简体';
+    overflow-x: hidden;
+    color:#444553;
+    /*将rem设置为10px*/
+    font-size:62.5%; 
+    -webkit-text-size-adjust:none;
+    }
+p{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 4.8rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+.nav{
+    position: fixed;
+    top: -90px;
+    width: auto;
+    left: 7%;
+    right:7%;
+    opacity: 0;
+}
+.logo{
+    position: relative;
+    display: inline;
+    float:left;
+    width:189px;
+    height:34px;
+}
+.logo svg{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+}
+.logo a{
+    text-decoration: none;
+}
+.dropdownmenu{
+    position: relative;
+    margin-left: 10vw;
+}
+.dropdownmenu ul {
+    list-style: none;
+    width: 100%;
+   
+}
+.dropdownmenu li {
+    float: left;
+    position: relative;
+    width:10vw;;
+    line-height: 50px;
+    top:-16px;
+}
+.dropdownmenu a {
+    color: white;
+    opacity: 0.5;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#gdesign a{
+    opacity: 1;
+}
+.dropdownmenu li:hover a {
+    color:white;
+    opacity: 1;
+}
+#submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+li:hover ul#submenu {
+    opacity: 1;
+    top: 80px;  /* adjust this as per top nav padding top & bottom comes */
+    visibility: visible;
+}
+
+}
+#submenu li {
+    float: none;
+    width: 100%;
+}
+#submenu a:hover {
+    color: #5376FF;
+    opacity: 1;
+}
+#submenu a {
+    background-color:white;
+    line-height: 2.4rem;
+    color:#444553;
+}
+
+.english{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    line-height: 34px;
+    font-family: 'Gotham-Bold';
+    width: auto;
+}
+.english a{
+text-decoration: none;
+color: white;
+}
+
+.contact{
+    position: fixed;
+    bottom: 65px;
+    right:7%;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+    opacity: 0;
+}
+.qrcode{
+    position: fixed;
+    bottom: 120px;
+    right: 7%;
+    background: white;
+    width:0rem;
+    height:0rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+}
+.qrcode div{
+    position: absolute;
+    width:80%;
+    left: 10%;
+    top:10%;
+    height:auto;
+}
+.qrcode img{
+    width:100%;
+}
+.qrcode p{
+    position: absolute;
+    white-space:nowrap;
+    opacity: 0;
+    bottom: 15%;
+    width:100%;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+}
+.leftdown{
+    position: fixed;
+    left: 7%;
+    bottom: 80px;
+    width: auto;
+    left: 7%;
+    opacity: 0;
+    animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -webkit-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -moz-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -o-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+}
+.leftdown div{
+    position: relative;
+    display: inline-block;
+    color: white;
+    opacity: 0;
+    margin-left: 1vw;
+}
+@keyframes bounce-down {
+    25% {transform: translateY(-10px);}
+    50%{transform: translateY(0);}
+    75% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+
+/*首页*/
+#landing{
+    position: fixed;
+    width:100%;
+    height: 100%;  
+    overflow: hidden;
+}
+#back{
+    position: absolute;
+}
+#front{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-color:black;
+    opacity: 0.6;
+}   
+#mask{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    mask: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50%) no-repeat; 
+    mask-size:700px 700px;
+    -webkit-mask: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50%) no-repeat; 
+    -webkit-mask-size:700px 700px;
+}
+
+#title{
+    position: absolute;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    opacity: 0;
+    top:90px;
+}
+#title h1{
+    margin-top:40vh;
+    font-size: 7rem;
+    line-height: 7rem;
+}
+#title p{
+    width: 86%;
+    line-height: calc(12px + 8vh);
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 2rem;
+}
+/*内容区域*/
+#scroll{
+    position: absolute;
+    width: 100%;
+    
+}
+#transparentLanding{
+    width:100vw;
+    height:100vh;
+    position: relative;
+}
+
+/*能力优势*/
+#pro{
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width:100%;
+    background: #F9F9F9;
+    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
+    background-size: 60px 60px;
+}
+.mainInfo div{
+    position: relative;
+    height: 4.8rem;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+.mainInfo h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top:4.8rem;
+    line-height: 4.8rem;
+    color: #444553;
+    opacity: 0;
+}
+#proSub{
+    position: relative;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: inline-block;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.proSub1{
+    position: relative;
+    width:30%;
+    height: auto;
+    display: inline-block;
+}
+.proh3{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+}
+.prop{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    line-height: 30px;
+}
+#proSub h3{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    opacity: 0;
+    top: 4.8rem;
+}
+#proSub p{
+    position: absolute;
+    width:100%;
+    opacity: 0;
+    top: 4.8rem;
+    text-align: center;
+}
+
+/*学习过程*/
+#studyProcess{
+    position: relative;
+    width: 100%;
+    height:auto;
+}
+#studyProcess video{
+    width: 100%;
+    height: 100%;
+}
+#videoCover{
+    position: absolute;
+    top:0px;
+    width:100%;
+    height: 100%;
+    background-color: #444553;
+    opacity: 0.4;
+}
+#studyInfo{
+    position: absolute;
+    top:40%;
+    width: 100%;
+    text-align: center;
+}
+#studyInfo h1{
+    color: white;
+}
+#studyInfo p{
+    position: absolute;
+    width: 100%;
+    color: white;
+    top: 4.8rem;
+    line-height: 2.4rem;
+    height: 2.4rem;
+    opacity: 0;
+}
+
+/*案例*/
+#case{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #F9F9F9;
+    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
+    background-size: 60px 60px;
+}
+#caseInfo{
+    position: absolute;
+    float: left;
+    left:7%;
+    top:50%;
+    transform: translate(0,-50%);
+}
+#caseInfo div{
+    position: relative;
+    display: block;
+    width: 49vw;
+}
+#caseInfo h1{
+    position: absolute;
+    text-align: left;
+}
+#caseInfo p{
+    position: absolute;
+    text-align: left;
+    top: 4.8rem;
+    opacity: 0;
+}
+#case button{
+    position: absolute;
+    top: 4.8rem;
+    left: 0px;
+    width:10vw;
+    height: 6vh;
+    font-size:1.6rem;
+    color: #444553;
+    border-radius: 10px;
+    border: solid #444553 1px;
+    background-color: transparent;
+    opacity: 0;
+}
+#pic4{
+    position: absolute;
+    float: right;
+    top:50%;
+    transform: translate(0,-50%);
+    right:7%;
+    width: calc(160rem * 0.6);
+    height:calc(90rem * 0.6);
+    opacity: 0;
+}
+.box{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+.flexslider{
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    font-size: 0;
+    top:0;
+    left:0;
+    margin-left: 0px;
+    overflow: hidden;
+}
+.flexslider div{
+    position: relative;
+    display:inline-block;
+    width: 25%;
+    height: 100%;
+}
+.flexslider div img{
+    width:100%;
+    height: 100%;
+}
+
+/*更多信息*/
+#more{
+    position: relative;
+    display: inline-block;
+    width:100vw;
+    height: 70vh;
+    text-align: center;
+    background: #F5F5F5;
+    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
+    background-size: 60px 60px;
+}
+#moreInfo{
+    padding-top: 10%;
+}
+#moreSub div{
+    position: relative;
+    display: inline-block;
+    padding-top:4vh;
+    width: 40vw;
+}
+#moreSub div div{
+    position: relative;
+    padding-bottom: 3vh;
+    width: 100%;
+}
+#moreSub div h3{
+    position: absolute;
+    top:calc(12px + 5vw);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+#moreSub div p{
+    width: 100%;
+    position: absolute;
+    line-height: 30px;
+    text-align: center;
+    top:4rem;
+    opacity: 0;
+}
+#moreSub div button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width:8vw;
+    height: 6vh;
+    font-size: 1.6rem;
+    color: #444553;
+    border-radius: 10px;
+    border: solid #444553 1px;
+    background-color: transparent;
+    top:4rem;
+    opacity: 0;
+}
+
+/*页面尾部*/
+#footer{
+    position: relative;
+    width:100vw;
+    height: 30vh;
+    background-color: white;
+    z-index: 999;
+}
+
+#footLogo{
+    position: relative;
+    width:100%;
+    height: 34px;
+    padding-top:5vh;
+    padding-bottom:3vh;
+}
+#footLogo svg{
+    position: absolute;
+    left: 7%;
+}
+#line{
+    position: relative;
+    width:86%;
+    margin-left: 7%;
+    height: 1px;
+    border-top:solid #444553 1px;
+    opacity: 0.2;
+}
+#groupInfo{
+    position: relative;
+    padding-top: 3vh;
+    width: 100%;
+}
+#leftSide{
+    position: absolute;
+    float: left;
+    left: 7%;
+    opacity: 0.2;
+    width:60vw;
+    height:8vw;
+}
+#leftSide p{
+    text-align: left;
+    font-size: 1.6rem;
+}
+#groupName{
+    line-height: 4vw;
+}
+#rightSide{
+    position: absolute;
+    float: right;
+    right: 7%;
+    width:8vw;
+    height: 8vw;
+}
+#rightSide img{
+    width:100%;
+    height:100%;
+}
+
+
+/*@media screen and (max-width: 300px) {
+    pad大小
+    1,菜单变汉堡
+    2，应用案例上下排布
+    手机大小
+    1，能力优势竖排
+    2，其他能力竖排
+    3，页尾竖排
+}*/
+
+
+
+
+
+
+    
+
+
+
+
+
+        
+
+
+
+
+
+
+   
+
+
+
+
+
+

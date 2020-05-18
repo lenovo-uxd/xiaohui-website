@@ -1,0 +1,898 @@
+@charset "UTF-8";
+@font-face {
+    font-family: '方正兰亭黑简体';
+    src: url(../font/heijian.TTF);
+}
+@font-face {
+    font-family: '方正兰亭大黑简体';
+    src: url(../font/dahei.TTF);
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url(../font/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url(../font/Gotham-Light.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {   
+    font-family: '方正兰亭黑简体';
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color:#444553;
+    /*将rem设置为10px*/
+    font-size:62.5%; 
+    -webkit-text-size-adjust:none;
+    }
+h2,h3,p{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
+button{
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #444553;
+}
+a{
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+#loading{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    background-color: #5376FF;
+}
+#loading p{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 100vh;
+}
+/*导航*/
+.nav{
+    position: fixed;
+    top: -80px;
+    width: auto;
+    left: 7%;
+    right:7%;
+    opacity: 0;
+}
+.logo{
+    position: relative;
+    display: inline;
+    float:left;
+    width:189px;
+    height:34px;
+}
+.logo svg{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+}
+.logo a{
+    text-decoration: none;
+}
+.dropdownmenu{
+    position: relative;
+    margin-left: 10vw;
+}
+.dropdownmenu ul {
+    list-style: none;
+    width: 100%;
+   
+}
+.dropdownmenu li {
+    float: left;
+    position: relative;
+    width:10vw;;
+    line-height: 50px;
+    top:-16px;
+}
+.dropdownmenu a {
+    color: #444553;
+    opacity: 0.5;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#homepage a{
+    opacity: 1;
+}
+.dropdownmenu li:hover a {
+    color:#444553;
+    opacity: 1;
+}
+#submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+li:hover ul#submenu {
+    opacity: 1;
+    top: 80px;  /* adjust this as per top nav padding top & bottom comes */
+    visibility: visible;
+}
+
+}
+#submenu li {
+    float: none;
+    width: 100%;
+}
+#submenu a:hover {
+    color: #5376FF;
+    opacity: 1;
+}
+#submenu a {
+    background-color:white;
+    line-height: 2.4rem;
+    color:#444553;
+}
+
+.english{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    line-height: 34px;
+    font-family: 'Gotham-Bold';
+    width: auto;
+}
+.english a{
+text-decoration: none;
+color: #444553;
+}
+
+.contact{
+    position: fixed;
+    bottom: 65px;
+    right:7%;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 0.8;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+}
+.qrcode{
+    position: fixed;
+    bottom: 120px;
+    right: 7%;
+    background: white;
+    width:0rem;
+    height:0rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+}
+.qrcode div{
+    position: absolute;
+    width:80%;
+    left: 10%;
+    top:10%;
+    height:auto;
+}
+.qrcode img{
+    width:100%;
+}
+.qrcode p{
+    position: absolute;
+    white-space:nowrap;
+    opacity: 0;
+    bottom: 15%;
+    width:100%;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+}
+.leftdown{
+    position: fixed;
+    left: 7%;
+    bottom: 80px;
+    width: auto;
+    left: 7%;
+    opacity: 0;
+    animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -webkit-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -moz-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+    -o-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
+}
+@keyframes bounce-down {
+    25% {transform: translateY(-10px);}
+    50%{transform: translateY(0);}
+    75% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+#groupName{
+    position: fixed;
+    left: 7%;
+    bottom: 80px;
+    width: auto;
+    left: 7%;
+    display: none;
+}
+#pagenumber{
+    position: fixed;
+    bottom: 120px;
+    left: 7%;
+    width: auto;
+    height:4rem;
+    overflow: hidden;
+            }
+#pagenumber .totalpage{
+    display: table-cell;
+    font-family: 'Gotham-Light';
+    height: 4rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    vertical-align:bottom;
+    color: #444553;
+}
+.pagenumber{
+    display: inline-block;
+    float: left;
+    font-family: 'Gotham-Light';
+    font-size: 5rem;;
+    line-height: 4rem;
+    color: #444553;
+}
+
+/*页面通用*/
+.page {
+    width: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    /*transition: all 0.5s ease-in 0.3s;
+    -moz-transition: all 0.5s ease-in 0.3s;
+    -webkit-transition: all 0.5s ease-in 0.3s;
+    -o-transition:all 0.5s ease-in 0.3s;*/
+    }
+.back{
+    position:absolute;
+    top:0%;
+    background: #F7F7F7;
+    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
+    background-size: 60px 60px;
+    width:100%;
+    height:100%; 
+    /*transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;*/
+}
+.textmodel{
+    position: absolute;
+    width:auto; 
+}
+.main{
+    color: #444553;
+    font-size: 8rem;
+    font-family: '方正兰亭大黑简体';
+    line-height: 10rem;
+}
+.main div{
+    height: 10rem;
+    overflow: hidden;
+}
+.sub p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+/*第一页*/
+#textmodel1{
+    left:7%;
+    top:40%;
+    /*transition: all 0.5s ease-in 0.3s;
+    -moz-transition: all 0.5s ease-in 0.3s;
+    -webkit-transition: all 0.5s ease-in 0.3s;
+    -o-transition:all 0.5s ease-in 0.3s;*/
+}
+#main1 .div1{
+    height:14rem;
+    font-family: "Gotham-Light";
+}
+#main1 .div1 h1{
+    font-size: 12rem;
+    line-height: 14rem;
+}
+#main1 .div2{
+    height:14rem;
+}
+#main1 .div2 h1{
+    font-size: 10rem;
+    line-height: 14rem;
+}
+.landing-animation{
+    position: absolute;
+    top:10%;
+    left: 25%;
+    width:1440px;
+    height: auto;
+}
+.landinginner{
+    position: absolute;
+    background-size: 100% 2900%;
+    background-image: url('../image/landing2.png');
+    background-repeat: repeat-y;
+    background-position: 0 0;
+    width:100%;
+}
+#landing{
+            opacity: 0;
+        }
+
+/*第二页*/
+#textmodel2{
+    right:7%;
+    top:60%;
+    opacity: 0;
+}
+#pic2{
+    position: absolute;
+    left: 7%;
+    top:0%;
+    width: 70%;
+    height: 100%;
+}
+#circle1{
+    position: absolute;
+    left:5rem;
+    background-color: #EAE8ED;
+    width:30rem;
+    height:30rem;
+    border-radius: 15rem;
+}
+#circle2{
+    position: absolute;
+    left:5rem;
+    background-color: #EAE8ED;
+    width:30rem;
+    height:30rem;
+    border-radius: 15rem;
+}
+#circle3{
+    position: absolute;
+    left:5rem;
+    background-color: #EAE8ED;
+    width:30rem;
+    height:30rem;
+    border-radius: 15rem;
+}
+.wanhuatong{
+    position: absolute;
+    left:65%;
+    top: 60%;
+}
+.wangyuanjing{
+    position: absolute;
+    left: -5%;
+    top:60%;
+}
+.shiguangji{
+    position: absolute;
+    left:30%;
+    top:90%;
+}
+#hover1{
+    position: relative;
+    width:calc(160rem * 0.3);
+    height:calc(90rem * 0.3);
+    overflow: hidden;
+    background-image: url("../image/wanhuatong.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+#hover2{
+    position: relative;
+    width:calc(160rem * 0.3);
+    height:calc(90rem * 0.3);
+    overflow: hidden;
+    background-image: url("../image/wangyuanjing.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+#hover3{
+    position: relative;
+    width:calc(160rem * 0.3);
+    height:calc(90rem * 0.3);
+    overflow: hidden;
+    background-image: url("../image/shiguangji.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+.descript1{
+    position: relative;
+    width: 100%;
+    margin-top: -4rem;
+}
+.descript2{
+    position: relative;
+    width: 100%;
+    margin-top: -4rem;
+}
+.descript3{
+    position: relative;
+    width: 100%;
+    margin-top: -4rem;
+}
+#details1,#details2,#details3{
+    position: relative;
+    opacity: 0;
+}
+
+#pic2 p{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+#details1 p,#details2 p,#details3 p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: normal;
+}
+/*第三页*/
+#textmodel3{
+    left:7%;
+    top:45%;
+    opacity: 0;
+}
+#pic3{
+    position: absolute;
+    right: 0px;
+    top:40%;
+    width: 70%;
+    height: 100%;
+}
+#pic3 ul li{
+    list-style: none;
+}
+.infopic1{
+    position: absolute;
+    top:30%;
+    left:20%;
+    width:50%;
+}
+.infopic2{
+    position: absolute;
+    top:30%;
+    left:20%;
+    width:50%;
+}
+.infopic3{
+    position: absolute;
+    top:30%;
+    left:20%;
+    width:50%;
+}
+.infopic4{
+    position: absolute;
+    top:30%;
+    left:20%;
+    width:50%;
+}
+.titleinfo1{
+    position: absolute;
+    left:10%;
+    top:30%;
+}
+.titleinfo2{
+    position: absolute;
+    left:5%;
+    top:70%;
+}
+.titleinfo3{
+    position: absolute;
+    right:10%;
+    top:30%;
+}
+.titleinfo4{
+    position: absolute;
+    right:20%;
+    top:70%;
+}
+.title1{
+    color: #252525;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    text-align: right;
+}
+.title2{
+    color: #252525;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+.info1{
+    color: #A2A2A2;
+    font-size: 1.6rem;
+}
+
+/*第四页*/
+#pic4{
+    position: absolute;
+    height:34vw;
+    top:61%;
+    right: 0%;
+}
+.box{
+    position: relative;
+    float: left;
+    width: calc(160rem * 0.6);
+    height:calc(90rem * 0.6);
+    overflow: hidden;
+}
+.slide-decoration{
+    position: relative;
+    float: left;
+    right: 0%;
+    height:calc(90rem * 0.6);
+    width: 7vw;
+    margin-left: 10px;
+    background:#E4E4E4;
+}
+
+.flexslider{
+    position: relative;
+    float: left;
+    width: 400%;
+    height: 100%;
+    font-size: 0;
+    top:0;
+    left:0;
+    margin-left: 0px;
+    overflow: hidden;
+    
+}
+.flexslider div{
+    position: relative;
+    display:inline-block;
+    width: 25%;
+    height: 100%;
+}
+.flexslider div img{
+    width:100%;
+    height: 100%;
+}
+
+#textmodel4{
+    left:7%;
+    top:30%;
+    opacity: 0;
+}
+#textmodel4 button{
+    font-size: 1.6rem;
+    color: #444553;
+    padding: 1.6rem 4rem;
+    margin-top: 40px;
+    border:solid 1px rgba(98,93,112,0.8);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+/*第五页*/
+#textmodel5{
+    right:7%;
+    top:30%;
+    opacity: 0;
+    height: 100%;
+}
+
+#enjoy{
+    position: absolute;
+    top:30%;
+    left: 0%;
+    resize: none;
+    border-radius:10px;
+    font-size: 1.5rem;
+    line-height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid #6F6F6F;
+    background: #F7F7F7;
+    opacity: 0.8;
+}
+#combtn{
+    position: absolute;
+    top:40%;
+    left: 0%;
+    width:100%;
+}
+#btn_put{
+    color: #444553;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #6F6F6F;
+    background: #F7F7F7;
+    opacity: 0.8;
+}
+#footer{
+    position: fixed;
+    top:63%;
+    left: 0%;
+    width:100%;
+    height: 60%;
+    /*border: 1px solid #444553;*/
+     box-sizing: border-box;
+    overflow: hidden;
+     word-break: break-all;
+    white-space: nowrap;
+}
+
+
+#foot {
+    position: relative;
+    display: inline-block;
+    line-height: 5rem;
+    text-align: left;
+    color:#444553;
+    height: 100%;
+}
+.cover{
+    position: fixed;
+    right: 0px;
+    width:45%;
+    height: 100%;
+    background-image: linear-gradient(to left, #F7F7F7 60%, transparent);
+    opacity: 0.6;
+}
+.coverLeft{
+    position: fixed;
+    left: 0px;
+    width:10%;
+    height: 100%;
+    background-image: linear-gradient(to right, #F7F7F7 60%, transparent);
+    opacity: 1;
+}
+#textdiv1{
+    position: absolute;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv1a{
+    position: absolute; 
+    animation: marquee 15s linear infinite;
+}
+#textdiv2{
+    position: absolute;
+    top:15%;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv2a{
+    position: absolute; 
+    top:15%;
+    animation: marquee 15s linear infinite;
+}
+#textdiv3{
+    position: absolute;
+    top:30%;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv3a{
+    position: absolute; 
+    top:30%;
+    animation: marquee 15s linear infinite;
+}
+#textdiv4{
+    position: absolute;
+    top:45%;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv4a{
+    position: absolute; 
+    top:45%;
+    animation: marquee 15s linear infinite;
+}
+#textdiv5{
+    position: absolute;
+    top:60%;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv5a{
+    position: absolute; 
+    top:60%;
+    animation: marquee 15s linear infinite;
+}
+#textdiv6{
+    position: absolute;
+    top:80%;
+    animation: marqueeTransform 15s linear infinite;
+}
+#textdiv6a{
+    position: absolute; 
+    top:80%;
+    animation: marquee 15s linear infinite;
+}
+#exist1{
+    font-size: 3.5rem;
+    opacity: 0.4;
+}
+#exist3{
+    font-size: 3.5rem;
+    opacity: 0.4;
+}
+#exist2{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist4{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist5{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist7{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist6{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist8{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist9{
+    font-size: 2rem;
+    opacity: 0.4;
+}
+#exist11{
+    font-size: 2rem;
+    opacity: 0.4;
+}
+#exist10{
+    font-size: 1rem;
+    opacity: 0.4;
+}
+#exist12{
+    font-size: 1rem;
+    opacity: 0.4;
+}
+#exist13{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist15{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist14{
+    font-size: 1rem;
+    opacity: 0.4;
+}
+#exist16{
+    font-size: 1rem;
+    opacity: 0.4;
+}
+#exist17{
+    font-size: 3.5rem;
+    opacity: 0.4;
+}
+#exist19{
+    font-size: 3.5rem;
+    opacity: 0.4;
+}
+#exist18{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist20{
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+#exist21{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist23{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist22{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#exist24{
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+#foot p{
+    display: inline-block;  
+    margin-left: 20%;
+}
+
+
+
+
+@keyframes marqueeTransform {
+    0%   { transform: translate(0%, 0); }
+    100% { transform: translate(-150%, 0); }
+  }
+@keyframes marquee {
+    0%   { transform: translate(150%, 0); }
+    100% { transform: translate(0%, 0); }
+  }
+
+
+        
+        .hidden{
+            position: relative;
+            top:6rem;
+            animation: all 0.5s ease-in 0.3s;
+        }
+        .display{
+            position: relative;
+            top:0px;
+            animation: text1 0.5s ease-in 0.3s;
+        }
+        @keyframes text1 {
+            0%{
+                top:6rem;
+            }
+            100%{
+                top:0px;
+            }
+        }
+
+        .display{
+            position: relative;
+            top:0px;
+            animation: text2 0.5s ease-in 0.3s;
+        }
+        @keyframes text2 {
+            0%{
+                top:6rem;
+            }
+            100%{
+                top:0px;
+            }
+        }
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+   
+
+
+
+
+
+

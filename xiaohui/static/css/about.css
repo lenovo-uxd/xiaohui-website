@@ -1,0 +1,760 @@
+ @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+@font-face {
+    font-family: '方正兰亭黑简体';
+    src: url(../font/heijian.TTF);
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url(../font/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url(../font/Gotham-Light.otf);
+}
+
+html, body {   
+    font-family: 'Gotham-Light';
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color:#444553;
+    /*将rem设置为10px*/
+    font-size:62.5%; 
+    -webkit-text-size-adjust:none;
+    }
+p{
+    font-size: 1.6rem;
+}
+h3{
+    font-size: 3.6rem;
+}
+h1{
+    font-size:12rem;
+    color: white;
+    font-family: 'Gotham-Bold';
+}
+h2{
+    font-size:12rem;
+    color: white;
+    font-family: 'Gotham-Light';
+}
+#loading{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    background-color: #5376FF;
+}
+#loading p{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    top: -80px;
+    width: auto;
+    left: 7%;
+    right:7%;
+    opacity: 0;
+}
+.logo{
+    position: relative;
+    display: inline;
+    float:left;
+    width:189px;
+    height:34px;
+    background-color: #F7F7F7;
+}
+.logo svg{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+}
+.logo a{
+    text-decoration: none;
+}
+.dropdownmenu{
+    position: relative;
+    margin-left: 10vw;
+}
+.dropdownmenu ul {
+    list-style: none;
+    width: 100%;
+   
+}
+.dropdownmenu li {
+    float: left;
+    position: relative;
+    width:10vw;;
+    line-height: 50px;
+    top:-16px;
+}
+.dropdownmenu a {
+    color: #444553;
+    opacity: 0.5;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+#aboutMe a{
+    opacity: 1;
+}
+.dropdownmenu li:hover a {
+    color:#444553;
+    opacity: 1;
+}
+#submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+li:hover ul#submenu {
+    opacity: 1;
+    top: 80px;  /* adjust this as per top nav padding top & bottom comes */
+    visibility: visible;
+}
+
+}
+#submenu li {
+    float: none;
+    width: 100%;
+}
+#submenu a:hover {
+    color: #5376FF;
+    opacity: 1;
+}
+#submenu a {
+    background-color:white;
+    line-height: 2.4rem;
+    color:#444553;
+}
+
+.english{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    line-height: 34px;
+    font-family: 'Gotham-Bold';
+    width: auto;
+}
+.english a{
+text-decoration: none;
+color: #444553;
+}
+
+
+.leftdown{
+    position: fixed;
+    bottom: 80px;
+    width: auto;
+    right: 7%;
+    animation: bounce-down 1s linear infinite;
+    -webkit-animation: bounce-down 1s linear infinite;
+    -moz-animation: bounce-down 1s linear infinite;
+    -o-animation: bounce-down 1s linear infinite;
+}
+#hint{
+    position: fixed;
+    bottom: 80px;
+    width: calc(93vw - 40px);
+    color: #444553;
+    line-height: 30px;
+    height: 30px;
+}
+#hint p{
+    text-align: right;
+}
+@keyframes bounce-down {
+    25% {transform: translateX(-10px);}
+    50%{transform: translateX(0);}
+    75% {transform: translateX(10px);}
+    100% {transform: translateX(0);}
+}
+
+/*横条背景*/
+#totalBackground{
+    position: fixed;
+    width:1000vw;
+    height:100vh;
+    background-color: #F7F7F7;
+    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
+    background-size: 60px 60px;
+}
+
+#back{
+    position: absolute;
+    width:900vw;
+    height:40vh;
+    top:170px;
+    left: 0;
+    opacity: 0;
+}
+.back{
+    position: relative;
+    float: left;
+    width:86vw;
+    height:40vh;
+    margin-right: 7vw;
+    padding-left: 7vw;
+}
+#firstBack{
+    position: absolute;
+    background-color: #5376FF;
+    height:40vh;
+    top:170px;
+    width:100vw;
+    overflow: hidden;
+    left:-100vw;
+}
+#firstBack img{
+    position: absolute;
+    height:120%;
+}
+#firstBack h1{
+    position: absolute;
+    left:7%;
+    bottom: 10%;
+}
+
+#secondBack{
+    background-color: #5376FF;
+    
+}
+#thirdBack{
+    background-color: #495CD2;
+}
+#fourthBack{
+    background-color: #3C49A0;
+}
+#fifthBack{
+    background-color: #1F2030;
+}
+#sixthBack{
+    background-color: #495CD2;
+}
+#seventhBack{
+    background-color: #5376FF;
+}
+#eighthBack{
+    background-color: #F2C13A;
+}
+
+
+
+/*第一页*/
+
+#firstContent{
+    position: fixed;
+    bottom:-80px;
+    left:7%;
+    opacity: 0;
+}
+
+#firstContent h3{
+    line-height: 18rem;
+    height: 18rem;
+    font-size: 6rem;
+        
+}
+#firstContent h3 span{
+    font-family: "Gotham-Bold";
+}
+#firstContent p{
+    line-height: 4rem;
+}
+
+#firstPic{
+    position: fixed;
+    width:80vw;
+    right: 0px;
+    bottom: 20px;
+    opacity: 0;
+}
+#firstPic img{
+    width:100%;
+    height:100%;
+}
+
+/*第二页*/
+.Content{
+    position: absolute;
+    left:7%;
+    top:calc(170px + 5vh);
+    opacity: 0;
+}
+.Content div{
+    position: relative;
+    display: block;
+}
+.Title{
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+.secondText{
+    margin-top: 2vh;
+}
+
+#explore1{
+    position: absolute;
+    top:45vh;
+    right:40vw;
+}
+#pic1{
+    position: relative;
+    width:34rem;
+    height:34rem;
+    overflow: hidden;
+    background-image: url("../image/ruleeSmall.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+#description1{
+    position: relative;
+    display: block;
+    margin-top:-6rem;
+    text-align: center;
+}
+#description1 h1{
+    font-size: 6rem;
+    color: #444553;
+}
+
+#explore2{
+    position: absolute;
+    top:15vh;
+    right:25vw;
+}
+#pic2{
+    position: relative;
+    width:34rem;
+    height:34rem;
+    overflow: hidden;
+    background-image: url("../image/suanfaSmall.png");
+    background-position: 0 0;
+    background-size: cover;
+    
+}
+#description2{
+    position: relative;
+    display: block;
+    margin-top:-6rem;
+    text-align: center;
+    color: white;
+}
+#description2 h1{
+    font-size: 6rem;
+}
+
+#explore3{
+    position: absolute;
+    top:45vh;
+    right:10vw;
+}
+#pic3{
+    position: relative;
+    width:34rem;
+    height:34rem;
+    overflow: hidden;
+    background-image: url("../image/biaozhuSmall.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+#description3{
+    position: relative;
+    display: block;
+    margin-top:-6rem;
+    text-align: center;
+}
+#description3 h1{
+    font-size: 6rem;
+    color: #444553;
+}
+
+
+
+
+/*第三页*/
+#thirdTitle{
+    top:3.6rem;
+}
+.thirdText{
+    top:3.6rem;
+    margin-top: 2vh;
+}
+.thirdDate{
+    top:12rem;
+}
+#thirdPic{
+    position: absolute;
+    width:calc(160rem * 1.1);
+    height:calc(90rem * 1.1);
+    overflow: hidden;
+    top:5vh;
+    left: 35vw;
+    background-image: url("../image/demo.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+#thirdPic img{
+    width:100%;
+    height:100%;
+    opacity: 0;
+}
+/*第四页*/
+#fourthTitle{
+    top:3.6rem;
+}
+.fourthText{
+    top:3.6rem;
+    margin-top: 2vh;
+}
+.fourthDate{
+    top:12rem;
+}
+#fourthPic{
+    position: absolute;
+    width:calc(160rem * 0.8);
+    height:calc(90rem * 0.8);
+    overflow: hidden;
+    top:20vh;
+    left: 45vw;
+    background-image: url("../image/explore.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+/*第五页*/
+#fifthTitle{
+    top:3.6rem;
+}
+.fifthText{
+    top:3.6rem;
+    margin-top: 2vh;
+}
+.fifthDate{
+    top:12rem;
+}
+#fifthPic{
+    position: absolute;
+    width:160rem;
+    height:90rem;
+    left:20vw;
+    opacity: 0;
+    display: none;
+}
+#ball{
+    position: absolute;
+    width:15rem;
+    height:15rem;
+    top:20vh;
+    right: 5vw;
+    animation: ballmove 10s linear infinite;
+    -webkit-animation: ballmove 10s linear infinite;
+    -moz-animation: ballmove 10s linear infinite;
+    -o-animation: ballmove 10s linear infinite;
+}
+#curve{
+    position: absolute;
+    width:20rem;
+    height:20rem;
+    top:60vh;
+    left: 32vw;
+    animation: lilballmove 10s linear infinite;
+    -webkit-animation: lilballmove 10s linear infinite;
+    -moz-animation: lilballmove 10s linear infinite;
+    -o-animation: lilballmove 10s linear infinite;
+}
+#fifthPic img{
+    width:100%;
+    height:100%;
+}
+#video{
+    position: absolute;
+    width:calc(160rem * 0.5);
+    height:calc(90rem * 0.5);
+    top:50vh;
+    transform: translate(0,-50%);
+    left: 40vw;
+}
+
+/*第六页*/
+#sixthTitle{
+    top:3.6rem;
+}
+.sixthText{
+    top:3.6rem;
+    margin-top: 2vh;
+}
+.sixthDate{
+    top:12rem;
+}
+#sixthPic{
+    position: absolute;
+    left:20vw;
+    width:100%;
+    opacity: 0;
+}
+#purpleball{
+    position: absolute;
+    width:13rem;
+    height:13rem;
+    top:67vh;
+    right: 15vw;
+    animation: ballmove 10s linear infinite;
+    -webkit-animation: ballmove 10s linear infinite;
+    -moz-animation: ballmove 10s linear infinite;
+    -o-animation: ballmove 10s linear infinite;
+}
+@keyframes ballmove {
+    25% {transform: translateY(3rem);}
+    50%{transform: translateY(0px);}
+    75% {transform: translateY(3rem);}
+    100% {transform: translateY(0px);}
+}
+#lilBall{
+    position: absolute;
+    width:10rem;
+    height:10rem;
+    top:22vh;
+    left: 38vw;
+    animation: lilballmove 10s linear infinite;
+    -webkit-animation: lilballmove 10s linear infinite;
+    -moz-animation: lilballmove 10s linear infinite;
+    -o-animation: lilballmove 10s linear infinite;
+}
+@keyframes lilballmove {
+    25% {transform: translateY(-3rem);}
+    50%{transform: translateY(0px);}
+    75% {transform: translateY(-3rem);}
+    100% {transform: translateY(0px);}
+}
+#sixthPic img{
+    width:100%;
+    height:100%;
+}
+.box{
+    position: absolute;
+    width: calc(160rem * 0.5);
+    height:calc(90rem * 0.5);
+    overflow: hidden;
+}
+
+.flexslider{
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    font-size: 0;
+    top:0;
+    left:0;
+    margin-left: 0px;
+    overflow: hidden;
+    
+}
+.flexslider div{
+    position: relative;
+    display:inline-block;
+    width: 25%;
+    height: 100%;
+}
+.flexslider div img{
+    width:100%;
+    height: 100%;
+}
+
+/*第七页*/
+#seventhTitle{
+    top:3.6rem;
+}
+.seventhText{
+    top:3.6rem;
+    margin-top: 2vh;
+    z-index: 999;
+}
+.seventhDate{
+    top:12rem;
+}
+.seventhText a{
+    text-decoration: underline;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #444553;
+}
+#sevenPic{
+    position: absolute;
+    width:calc(160rem * 0.8);
+    height:calc(90rem * 0.8);
+    overflow: hidden;
+    top:18vh;
+    left: 30vw;
+    background-image: url("../image/stage.png");
+    background-position: 0 0;
+    background-size: cover;
+}
+/*第八页*/
+#eighthTitle{
+    top:3.6rem;
+}
+.eighthText{
+    top:3.6rem;
+    margin-top: 2vh;
+}
+.eighthDate{
+    top:12rem;
+}
+.countNum{
+    position: fixed;
+    
+}
+.countNum h1{
+    text-align: center;
+    color: #444553;
+}
+.countNum p{
+    text-align: center;
+}
+#sucai{
+    top:calc(170px + 12vh);
+    right:0vw;
+    color: white;
+    opacity: 0;
+}
+#sucai h1{
+    color: white;
+}
+#shiyong{
+    top:calc(170px + 47vh);
+    right:20vw;
+    opacity: 0;
+}
+#zhuli{
+    top:calc(170px + 47vh);
+    right:-10vw;
+    opacity: 0;
+}
+/*第九页*/
+#ninthTitle{
+    margin-top: 20vh;
+    top:3.6rem;
+    font-size: 6rem;
+}
+.ninthText{
+    top:3.6rem;
+    margin-top: 5vh;
+}
+#footer{
+    position: fixed;
+    width:100vw;
+    height: 30vh;
+    background-color: white;
+    bottom: 0;
+    opacity: 0;
+    z-index: 888;
+}
+
+#footLogo{
+    position: relative;
+    width:100%;
+    height: 34px;
+    padding-top:5vh;
+    padding-bottom:3vh;
+}
+#footLogo svg{
+    position: absolute;
+    left: 7%;
+}
+#line{
+    position: relative;
+    width:86%;
+    margin-left: 7%;
+    height: 1px;
+    border-top:solid #444553 1px;
+    opacity: 0.2;
+}
+#groupInfo{
+    position: relative;
+    padding-top: 3vh;
+    width: 100%;
+}
+#leftSide{
+    position: absolute;
+    float: left;
+    left: 7%;
+    opacity: 0.2;
+    width:60vw;
+    height:8vw;
+}
+#leftSide p{
+    text-align: left;
+    font-size: calc(8px + 0.5vw);
+}
+#groupName{
+    line-height: 4vw;
+}
+#rightSide{
+    position: absolute;
+    float: right;
+    right: 7%;
+    width:8vw;
+    height: 8vw;
+}
+#rightSide img{
+    width:100%;
+    height:100%;
+}
+/*底部时间线*/
+#timeLine{
+    position: absolute;
+    left:50vw;
+    bottom: 80px;
+    opacity: 0;
+    transform: translate(-50%,0);
+}
+
+#timeLine li{
+    float: left;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style-type: none;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-family: 'Gotham-Bold';
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        
+
+
+
+
+
+
+   
+
+
+
+
+
+

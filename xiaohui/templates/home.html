@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>小绘</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js">
+    </script>
+</head>
+
+<body>
+<div id="loading" style="z-index: 999"><p>loading...</p></div>
+<!--页面信息-->  
+<div id="wrap">
+    <div id="main">
+        <div id="page5" class="page">
+        <div class="back" id="back5"> </div>
+        <div id="footer">
+        <div id="foot">
+        <div id="textdiv1">
+        <p class="existtext1" id="exist1">一个神奇的网站～</p>
+        <p class="existtext1" id="exist2">看起来挺有趣的，希望越来越好～</p>
+        </div>
+        <div id="textdiv1a">
+        <p class="existtext1" id="exist3">一个神奇的网站～</p>
+        <p class="existtext1" id="exist4">看起来挺有趣的，希望越来越好～</p>
+        </div>
+        <div id="textdiv2">
+        <p class="existtext2" id="exist5">人工智能好神奇啊</p>
+        <p class="existtext2" id="exist6">这是个什么东东？</p>    
+        </div>
+        <div id="textdiv2a">
+        <p class="existtext2" id="exist7">人工智能好神奇啊</p>
+        <p class="existtext2" id="exist8">这是个什么东东？</p>    
+        </div>
+        <div id="textdiv3">
+        <p class="existtext3" id="exist9">我的家在东北，松花江上啊。</p>
+        <p class="existtext3" id="exist10">那里有满山遍野，大豆高粱啊。</p>   
+        </div>
+        <div id="textdiv3a">
+        <p class="existtext3" id="exist11">我的家在东北，松花江上啊。</p>
+        <p class="existtext3" id="exist12">那里有满山遍野，大豆高粱啊。</p>   
+        </div>
+        <div id="textdiv4">
+        <p class="existtext4" id="exist13">请相信这会是场设计风暴。</p>
+        <p class="existtext4" id="exist14">我在1和0之间给你无穷创意～</p>  
+        </div>
+        <div id="textdiv4a">
+        <p class="existtext4" id="exist15">请相信这会是场设计风暴。</p>
+        <p class="existtext4" id="exist16">我在1和0之间给你无穷创意～</p>  
+        </div>
+        <div id="textdiv5">
+        <p class="existtext5" id="exist17">设计永远在不断进步。</p>
+        <p class="existtext5" id="exist18">看起来很好玩儿的样子啊@-@</p>
+        </div>
+        <div id="textdiv5a">
+        <p class="existtext5" id="exist19">设计永远在不断进步。</p>
+        <p class="existtext5" id="exist20">看起来很好玩儿的样子啊@-@</p>
+        </div>
+        <div id="textdiv6">
+        <p class="existtext6" id="exist21">怎么接入这个API啊？</p>
+        <p class="existtext6" id="exist22">随便逛逛...</p>    
+        </div>
+        <div id="textdiv6a">
+        <p class="existtext6" id="exist23">怎么接入这个API啊？</p>
+        <p class="existtext6" id="exist24">随便逛逛...</p>    
+        </div>
+        </div>
+        </div>
+        <div class="cover"> </div>
+        <div class="coverLeft"> </div>
+        <div id="textmodel5" class="textmodel">
+        <div class="main" id="main5">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+        <div class="sub" id="sub5"><p>跟进用户反馈，贴近真实需求。</p></div>
+        
+        <div id="header">
+        <textarea name="comment" id="enjoy" style="width:330px; height:60px"></textarea>
+        <div id="combtn">
+        <button id="btn_put">提交</button>
+        </div>
+        </div>
+    
+        </div>
+       
+        </div>
+        
+        <div id="page4" class="page">
+        <div class="back" id="back4"> </div>
+        
+        <div class="pic" id="pic4">
+        <div class="box">
+        <div class="flexslider">
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" />
+        </div>
+        <div><img src="{{ url_for('static', filename='image/2.png')}}" />
+        </div>
+        <div><img src="{{ url_for('static', filename='image/3.png')}}" /></div>
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" /></div>
+        </div>
+        </div>
+        <div class="slide-decoration">
+        </div> 
+        
+        </div>
+        <div id="textmodel4" class="textmodel">
+        <div class="main" id="main4">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+        <div class="sub" id="sub4"><P>持续验证与更新，每分每秒都在进步。</P></div>
+        <button>了解更多</button>
+        </div>
+        </div>
+        
+        <div id="page3" class="page">
+        <div class="back" id="back3"> </div>
+        <div id="textmodel3" class="textmodel">
+        <div class="main" id="main3">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+        <div class="sub" id="sub3"><p>高效、低成本生成独特的视觉素材。</p></div>
+        </div>
+        <div class="pic" id="pic3">
+        <ul>
+            <li><div class="titleinfo1"><p class="title1">企业宣传</p><p class="info1">高效、定制化生成设计素材</p></div>
+                <div class="infopic1"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div>
+            </li>
+            <li><div class="titleinfo2"><p class="title1">市场营销</p><p class="info1">千人千面助力智能创意营销</p></div>
+                <div class="infopic2"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
+            <li><div class="titleinfo3"><p class="title2">展会互动</p><p class="info1">低成本生产创意视觉互动内容</p></div>
+                <div class="infopic3"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
+            <li><div class="titleinfo4"><p class="title2">日常平面需求</p><p class="info1">启发式工具，拓展设计可能</p></div>
+                <div class="infopic4"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
+        </ul>
+        </div>
+        </div>
+        
+        <div id="page2" class="page">
+        <div class="back" id="back2"> </div>
+        <div class="pic" id="pic2">
+        <div class="wanhuatong">
+        <div id="circle1"></div> 
+        <div id="hover1"></div>
+        <div class="descript1"><p>万花筒-风格转换</p></div>
+        <div id="details1"><P>利用风格迁移算法，<br>实现100+不同视觉风格的实时转换。</P></div>
+        </div>
+        
+        <div class="wangyuanjing">
+        <div id="circle2"></div> 
+        <div id="hover2"></div>
+        <div class="descript2"><p>望远镜-设计生成</p></div>
+        <div id="details2"><P>基于降维神经网络，结合资深设计师<br>先验经验，快速批量生成抽象设计背景。</P></div>
+        </div>
+        
+        <div class="shiguangji">
+        <div id="circle3"></div>  
+        <div id="hover3"></div>
+        <div class="descript3"><p>时光机-域到域转换</p></div>
+        <div id="details3"><p>通过深度学习，实现图像<br>从一个样本域到另一个样本域的转换。</p></div>
+        </div>
+        
+        </div>
+        <div id="textmodel2" class="textmodel">
+        <div class="main" id="main2">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+        <div class="sub" id="sub2"><p>不断学习，持续拓宽设计能力边界。</p></div>
+        </div>
+        </div>
+        
+        <div id="page1" class="page">
+        <div class="back" id="back1"> </div>
+        <div class="landing-animation">
+        <div class=landinginner>
+        <div id="landing"><img src="{{ url_for('static', filename='image/placeholderlanding.png')}}" width=100% height=auto /></div>
+        </div>
+        </div>
+        <div class="pic" id="pic1">
+        
+        </div>
+        <div id="textmodel1" class="textmodel">
+        <div class="main" id="main1">
+            <div class="div1"><h1>1%</h1></div>
+            <div class="div2"><h1>人类参与</h1></div>
+        </div>
+        <div class="sub" id="sub1"><p>人工智能让设计师的工作解放，只参与最有价值的部分。<br>未来工作中你只需要消耗现在精力的1%。</p></div> 
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
+<!--不动产-->
+<div class="nav">
+        <div class="logo">
+                <a href="/">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="42px" height="32px">
+<path fill-rule="evenodd"  fill="rgb(83, 118, 255)"
+ d="M32.488,17.198 L35.994,30.291 L29.060,31.936 C28.865,31.983 28.667,31.996 28.474,31.979 C28.088,31.945 27.723,31.789 27.432,31.534 C27.287,31.407 27.161,31.256 27.060,31.082 L20.576,19.902 C19.171,17.480 19.172,14.501 20.580,12.079 L27.078,0.898 C27.408,0.331 28.014,-0.004 28.654,-0.004 C28.794,-0.004 28.937,0.011 29.078,0.045 L35.994,1.690 L32.488,14.784 C32.276,15.575 32.276,16.406 32.488,17.198 ZM8.916,31.082 C8.513,31.776 7.700,32.123 6.915,31.936 L0.001,30.291 L3.504,17.198 C3.717,16.406 3.717,15.575 3.504,14.784 L0.001,1.690 L6.932,0.044 C7.073,0.010 7.216,-0.006 7.357,-0.006 C7.676,-0.006 7.988,0.078 8.261,0.233 C8.534,0.389 8.768,0.615 8.933,0.899 L15.419,12.079 C16.823,14.501 16.821,17.480 15.415,19.902 L8.916,31.082 Z"/>
+</svg>
+               
+                <svg id="logoChange" width="138px" height="34px" viewBox="0 0 219 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7能力展示-设计生成" transform="translate(-204.000000, -579.000000)" fill="#444533" fill-rule="nonzero">
+            <g id="编组-21" transform="translate(204.290000, 579.699041)">
+                <polygon id="路径" points="10.72 44.1009594 5.68434189e-14 44.1009594 12.94 23.2809594 0.94 2.84095942 11.55 2.84095942 18.88 16.3009594 26.66 2.84095942 37.38 2.84095942 24.66 23.2809594 37.27 44.1009594 26.66 44.1009594 18.77 30.2509594"></polygon>
+                <path d="M45.77,10.3809594 C44.37799,10.4272725 43.0297471,9.89087482 42.05,8.90095942 C41.0553385,7.92702718 40.5117358,6.58251662 40.55,5.19095942 C40.5117358,3.79940222 41.0553385,2.45489167 42.05,1.48095942 C44.1142568,-0.492391183 47.3657432,-0.492391183 49.43,1.48095942 C50.4246615,2.45489167 50.9682642,3.79940222 50.93,5.19095942 C50.9572401,6.5703811 50.4233396,7.90176831 49.4505829,8.88018058 C48.4778262,9.85859285 47.1495564,10.4002025 45.77,10.3809594 M50.04,44.1009594 L41.32,44.1009594 L41.32,13.5109594 L50.04,13.5109594 L50.04,44.1009594 Z" id="形状"></path>
+                <path d="M79.48,16.7409594 L79.48,13.5109594 L87.71,13.5109594 L87.71,44.1009594 L79.49,44.1009594 L79.49,40.9709594 C77.0386003,43.5214439 73.637103,44.9378289 70.1,44.8809594 C66.0039802,44.9848229 62.0680455,43.2891184 59.33,40.2409594 C56.4794228,37.0595756 54.9675865,32.9002348 55.11,28.6309594 C54.9915186,24.442155 56.5210979,20.3740486 59.37,17.3009594 C62.1166895,14.306924 66.0286166,12.6538428 70.09,12.7709594 C73.6445815,12.7176402 77.0557782,14.1707591 79.48,16.7709594 M63.82,28.7709594 C63.7714809,30.9094311 64.5445086,32.9851537 65.98,34.5709594 C67.4381175,36.1046008 69.4742689,36.9539046 71.59,36.9109594 C73.7212195,36.9710461 75.7716595,36.0938525 77.2,34.5109594 C78.6827072,32.9702567 79.5014169,30.9091191 79.48,28.7709594 C79.5082684,26.6433547 78.6877838,24.5921433 77.2,23.0709594 C75.7178961,21.5722854 73.6977608,20.728932 71.59,20.728932 C69.4822392,20.728932 67.4621039,21.5722854 65.98,23.0709594 C64.5452853,24.6172345 63.7703547,26.66219 63.82,28.7709594" id="形状"></path>
+                <path d="M109.31,44.9309594 C104.896692,45.0863131 100.615416,43.4107167 97.48,40.3009594 C94.454137,37.2506615 92.8067215,33.0959952 92.92,28.8009594 C92.7996354,24.5223613 94.4493655,20.3835649 97.48,17.3609594 C104.146763,11.1085899 114.523237,11.1085899 121.19,17.3609594 C124.240609,20.3747502 125.912197,24.51392 125.81,28.8009594 C125.899725,33.1707493 124.177609,37.382954 121.052206,40.4382722 C117.926803,43.4935905 113.676632,45.1197492 109.31,44.9309594 M117.08,28.7509594 C117.124648,26.6546731 116.303528,24.6326199 114.81,23.1609594 C113.371458,21.6648509 111.38551,20.8193335 109.31,20.8193335 C107.23449,20.8193335 105.248542,21.6648509 103.81,23.1609594 C102.333796,24.6403974 101.531006,26.6618366 101.59,28.7509594 C101.52481,30.8855248 102.325491,32.9557549 103.81,34.4909594 C105.264996,35.9565927 107.244789,36.780877 109.31,36.780877 C111.375211,36.780877 113.355004,35.9565927 114.81,34.4909594 C116.304056,32.9583289 117.121656,30.8909183 117.08,28.7509594" id="形状"></path>
+                <polygon id="路径" points="141.08 44.1009594 131.91 44.1009594 131.91 2.84095942 141.08 2.84095942 141.08 18.9809594 157.08 18.9809594 157.08 2.84095942 166.3 2.84095942 166.3 44.1009594 157.08 44.1009594 157.08 27.8509594 141.08 27.8509594"></polygon>
+                <path d="M187.46,44.8809594 C183.02,44.8809594 179.52,43.6509594 176.99,41.1909594 C174.46,38.7309594 173.18,35.3309594 173.18,30.9809594 L173.18,13.5109594 L181.9,13.5109594 L181.9,31.0309594 C181.810377,32.593849 182.342388,34.1287741 183.38,35.3009594 C185.703157,37.3788545 189.216843,37.3788545 191.54,35.3009594 C192.562448,34.1284383 193.089507,32.6046272 193.01,31.0509594 L193.01,13.5109594 L201.71,13.5109594 L201.71,30.9809594 C201.71,35.4142928 200.453333,38.8376261 197.94,41.2509594 C195.426667,43.6642928 191.926667,44.8742928 187.44,44.8809594" id="路径"></path>
+                <path d="M212.62,10.3809594 C211.229474,10.4188385 209.884462,9.88372624 208.9,8.90095942 C207.905338,7.92702718 207.361736,6.58251662 207.4,5.19095942 C207.361736,3.79940222 207.905338,2.45489167 208.9,1.48095942 C210.96762,-0.49365314 214.22238,-0.49365314 216.29,1.48095942 C217.284662,2.45489167 217.828264,3.79940222 217.79,5.19095942 C217.817315,6.57214222 217.282057,7.90510384 216.30711,8.88382249 C215.332163,9.86254115 214.001278,10.4029419 212.62,10.3809594 M216.9,44.1009594 L208.17,44.1009594 L208.17,13.5109594 L216.9,13.5109594 L216.9,44.1009594 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+                </a>
+        </div>
+        
+        <nav class="dropdownmenu">
+        <ul>
+        <li id="homepage"><a href="/">主页</a></li>
+        <li><a href="#">能力展示</a>
+        <ul id="submenu">
+        <li><a href="/gdesign">望远镜<br>-设计生成</a></li>
+        <li><a href="/transfer">万花筒<br>-风格转换</a></li>
+        <li><a href="/cross">时光机<br>-跨域转换</a></li>
+        </ul>
+        </li>
+        <li><a href="/api">API接入</a></li>
+        <li><a href="/about">关于我</a></li>
+        </ul>
+        </nav>
+            
+        <div class="english">
+         <a href="/hui">
+         <p>EN</p>
+         </a>
+        </div>
+        </div>
+<div id="pagenumber">
+            <ul class="pagenumber">
+            <li class="one">01</li>
+            <li class="two">02</li>
+            <li class="three">03</li>
+            <li class="four">04</li>
+            <li class="five">05</li>
+            </ul>
+            <div class="totalpage">
+            <p>/05</p>
+            </div>
+        </div>    
+<div class="leftdown">
+        <svg width="26px" height="14px" viewBox="0 0 26 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>btn_next</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7能力展示-设计生成" transform="translate(-376.000000, -617.000000)" fill="#444553">
+            <g id="btn_next" transform="translate(376.000000, 616.000000)">
+                <path d="M25.021,2.707 L13.707,14.02 C13.3165001,14.4103819 12.6834999,14.4103819 12.293,14.02 L0.978,2.707 C0.587258539,2.31625854 0.587258539,1.68274146 0.978,1.292 C1.36874146,0.901258539 2.00225854,0.901258539 2.393,1.292 L13,11.9 L23.607,1.292 C23.8597654,1.03941322 24.2280837,0.940862148 24.573213,1.03347002 C24.9183423,1.1260779 25.1878491,1.39577538 25.280213,1.74097003 C25.3725768,2.08616468 25.2737654,2.45441323 25.021,2.707 Z" id="矩形_2256_拷贝_8"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+        </div>
+<div id="groupName"><p>联想研究院用户体验团队</p></div>
+<div class="contact">
+        <img src="{{ url_for('static', filename='image/qrcode.svg')}}" width=26 height=26 />
+        </div>
+<div class="qrcode">
+        <div><img src="{{ url_for('static', filename='image/uxdcode.jpg')}}"/></div>
+        <p>欢迎关注，一起进步</p>
+        </div>
+<!--js代码部分-->
+<script type="text/javascript">
+//赋值变量
+var startTime = 0, //翻屏起始时间
+            endTime = 0,
+            count = 1,
+            timeSpace=500,
+            
+            page1=$("#page1"),
+            back1=$("#back1"),
+            text1=$("#textmodel1"),
+            page2=$("#page2"),
+            back2=$("#back2"),
+            text2=$("#textmodel2"),
+            page3=$("#page3"),
+            back3=$("#back3"),
+            text3=$("#textmodel3"),
+            page4=$("#page4"),
+            back4=$("#back4"),
+            text4=$("#textmodel4"),
+            page5=$("#page5"),
+            back5=$("#back5"),
+            text5=$("#textmodel5"),
+            
+           
+            main2div1=$('#main2 .div1'),
+            main2div2=$('#main2 .div2'),
+            main3div1=$('#main3 .div1'),
+            main3div2=$('#main3 .div2'),
+            main4div1=$('#main4 .div1'),
+            main4div2=$('#main4 .div2'),
+            main5div1=$('#main5 .div1'),
+            main5div2=$('#main5 .div2'),
+            
+            wangyuanjing=$(".wangyuanjing"),
+            wanhuatong=$(".wanhuatong"),
+            shiguangji=$(".shiguangji"),
+            
+            contact=$(".contact"),
+            qrcode=$(".qrcode"),
+            qrcodeP=$(".qrcode p"),
+            nav=$(".nav"),
+            loading=$("#loading"),
+            warp=$("#warp"),
+            flexslider=$(".flexslider"),
+            
+            
+            landingPosition = document.querySelector('.landinginner'),
+            m=(-landingPosition.clientHeight)*15,
+            i=0,
+            divwidth=landingPosition.clientWidth,
+            halfwidth=divwidth/2,
+            div = document.getElementsByClassName("landinginner")[0], 
+            divout = document.getElementsByClassName("landing-animation")[0],
+            countx=document.getElementById("countx");
+        
+        
+        
+    
+//序列帧动画1（div，每次动多少，多少张）
+function start(aniPosition,step,page){
+        var i=0;
+        setInterval(
+        function(){
+            if(i>-step*page){
+            i += -step;
+            aniPosition.css('background-position',"0px " + i + "rem");
+            }
+        }, 70);
+}  
+//序列帧动画2（div，每次动多少，多少张）
+function over(aniPosition,step,page){
+        var i=0;
+        setInterval(
+        function(){
+            if(i<0){
+            i += step;
+            aniPosition.css('background-position',"0px " + i + "rem");
+            }
+        }, 70);
+}  
+//页面loading
+document.onreadystatechange = loadingChange;
+function loadingChange(){ 
+            if(document.readyState === "loading"){ 
+				loading.show();
+                warp.hide();
+                nav.hide();
+			} 
+			if(document.readyState === "complete"){ 
+				loading.hide();
+                warp.show();
+                nav.show();
+                nav.delay(1000).animate({"opacity":"1","top":"80px"},timeSpace*2);
+                $(".leftdown").delay(1000).animate({"opacity":"1"},timeSpace*2);
+			} 
+		} 
+
+//首页动画
+window.onmousemove = function move (event) {  
+            event = event || window.event;  
+            //2.获取鼠标在整个页面的位置  
+            var pagex = event.pageX || scroll().left + event.clientX;   
+            //3.获取盒子在整个页面的位置  
+            var xx = divout.offsetLeft;  
+            //4.用鼠标的位置减去盒子的位置赋值给盒子的内容。  
+            var targetx = pagex - xx; 
+            if(targetx>0&&targetx<divwidth){
+            i=-Math.round((targetx/divwidth)*27)*landingPosition.clientHeight;
+            landingPosition.style.backgroundPosition = "0px " + i + "px";  
+            }
+        }
+
+//windowonload-交互-鼠标悬浮
+window.onload = function(){
+        var count = 0;
+    //发表评论    
+        var btnPut=document.getElementById('btn_put');
+        var textnum=1;
+        var newtext=1;
+        btnPut.onclick=function(){
+        var getContent=document.getElementById('enjoy').value;
+        if(getContent){
+        var content=document.getElementById('textdiv'+textnum);
+        var contenta=document.getElementById('textdiv'+textnum+'a');
+        var textsize=Math.floor(Math.random()*3)+1;
+        content.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
+        contenta.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
+        document.getElementById('enjoy').value='';
+        $(".addtext"+newtext).animate({opacity:"1"},1000).animate({opacity:"0.4"},1000);
+        newtext++;
+        if(textnum<6){textnum++;}else{textnum=1;}
+        }else{
+        alert('请输入内容');
+        }
+        };
+    //鼠标悬停
+	contact.mouseenter(
+                function () {
+                    qrcode.css("width","20rem").css("height","24rem");
+                    qrcodeP.css("opacity","1");
+                    contact.css("opacity","1");
+                });
+    contact.mouseleave(
+                function () {
+                    qrcode.css("width","0rem").css("height","0rem");
+                    qrcodeP.css("opacity","0");
+                    contact.css("opacity","0.8");
+                });
+    wangyuanjing.mouseenter(
+                function () {
+                   $("#details2").css("opacity","1");
+                   start($("#hover2"),90*0.3,15);
+                });
+    wangyuanjing.mouseleave(
+                function () {
+                   $("#details2").css("opacity","0");
+                   over($("#hover2"),90*0.3,15);
+                });
+    wanhuatong.mouseenter(
+                function () {
+                   $("#details1").css("opacity","1");
+                   start($("#hover1"),90*0.3,15);
+                });
+    wanhuatong.mouseleave(
+                function () {
+                   $("#details1").css("opacity","0");
+                   over($("#hover1"),90*0.3,15);
+                });
+    shiguangji.mouseenter(
+                function () {
+                  $("#details3").css("opacity","1");
+                  start($("#hover3"),90*0.3,15);
+                });
+    shiguangji.mouseleave(
+                function () {
+                  $("#details3").css("opacity","0");
+                  over($("#hover3"),90*0.3,15);
+                });
+    }
+   
+       
+    //滑动页面
+    var str2='惊人的，学习能力。',
+        str3='丰富的，应用场景。',
+        str4='探索，从未停止。',
+        str5='共同，见证未来。';
+    //分割为数组
+    var arr2a=str2.slice(0,4).split(''),
+        arr2b=str2.slice(4,9).split(''),
+        arr3a=str3.slice(0,4).split(''),
+        arr3b=str3.slice(4,9).split(''),
+        arr4a=str4.slice(0,3).split(''),
+        arr4b=str4.slice(3,8).split(''),
+        arr5a=str5.slice(0,3).split(''),
+        arr5b=str5.slice(3,8).split('');
+    var titleduration=50;
+    var wrap = document.getElementById("wrap");
+    var main = document.getElementById("main");
+    var hei = window.innerHeight;
+    wrap.style.height = hei + "px";
+    var obj = document.getElementsByTagName("div");
+    for (var i = 0; i < obj.length; i++) {
+        if (obj[i].className == 'page') {
+            obj[i].style.height = hei + "px";
+        }
+    };
+//页面消失函数（页面，背景，文字）
+function pageGone(page,back,text){
+        page.delay(timeSpace/5).animate({"top":"-100%"},timeSpace*2);
+        back.css("background-color","#E6E6E6");
+        text.animate({"opacity":"0"},timeSpace*2);
+    }
+//页面出现函数（背景，文字）
+function pageCome(back,text){
+        back.css("background-color","#F7F7F7");
+        text.css("opacity","1");
+    }
+//文字滚动出现函数（数组a，数组b，diva，divb）
+function textScroll(a,b,adiv,bdiv){
+        $.each(a,function (index,el) {
+                //依次将每个字放到div里
+                adiv.append('<span id="text1'+index+'" class="hidden">'+el+'</span>')
+                //给每个字添加样式，时机为 index*150 ms
+                setTimeout(function () {
+                $('#text1'+index).animate({"top":"0"},500)
+                },index*titleduration*2)
+                }) 
+                             
+        $.each(b,function (index,el) {
+                //依次将每个字放到div里
+                bdiv.append('<span id="text2'+index+'" class="hidden">'+el+'</span>')
+                //给每个字添加样式，时机为 index*150 ms
+                setTimeout(function () {
+                $('#text2'+index).animate({"top":"0"},500)
+                },index*titleduration*2)
+                })
+    }
+//页面上滑出现函数（页面，背景，文字）
+function pageComeUp(page,back,text){
+                page.delay(timeSpace/5).animate({"top":"0%"},timeSpace*2);
+                back.css("background-color","#F7F7F7");
+                text.animate({"opacity":"1"},timeSpace*2);
+                }
+//页面上滑消失函数（背景，文字）
+function pageGoneUp(back,text){
+                back.css("background-color","#E6E6E6");
+                text.animate({"opacity":"0"},timeSpace*2);
+                }
+//物体出现函数
+function objectAppear(who,top){
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"1"},timeSpace*2); 
+} 
+//物体消失函数
+function objectDisappear(who,top){
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"0"},timeSpace*2); 
+}
+//清空文本
+function emptyText(a,b){
+                setTimeout(function(){
+                a.empty();
+                b.empty();
+                },timeSpace*2)  
+} 
+    
+    //浏览器兼容
+   if((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) { window.addEventListener('DOMMouseScroll',scrollFun,{passive:false}); } else if(document.addEventListener) { window.addEventListener('mousewheel',scrollFun,{passive:false}); }
+    else if (document.attachEvent) {
+        document.attachEvent("onmousewheel", scrollFun);
+    }
+    else {
+        document.onmousewheel = scrollFun;
+    }
+    
+    //滚动事件处理函数
+    function scrollFun(event) {
+        startTime = new Date().getTime();
+        var delta = event.detail || (-event.wheelDelta);
+        if ((endTime - startTime) < -1000) {
+            
+            if (delta > 0) {
+//向下滚动
+                if(count==5){return ''}else{
+                $(".pagenumber").animate({'margin-top':'-=4rem'},1000);
+                count++;
+                    
+                //第二页
+                if(count==2){
+                pageGone(page1,back1,text1);
+                pageCome(back2,text2);
+                objectDisappear($(".landing-animation"),"50%")
+                objectAppear(wanhuatong,"20%");
+                objectAppear(wangyuanjing,"20%");
+                objectAppear(shiguangji,"55%");
+                $(".leftdown").hide();
+                $("#groupName").show();
+                textScroll(arr2a,arr2b,main2div1,main2div2);
+                }
+                 
+                //第三页
+                if(count==3){
+                pageGone(page2,back2,text2);
+                pageCome(back3,text3);
+                objectDisappear(wanhuatong,"60%");
+                objectDisappear(wangyuanjing,"60%");
+                objectDisappear(shiguangji,"95%");
+                objectAppear($("#pic3"),"0%");
+                textScroll(arr3a,arr3b,main3div1,main3div2);            
+                }
+                    
+                //第四页
+                if(count==4){
+                pageGone(page3,back3,text3);
+                pageCome(back4,text4);
+                objectDisappear($("#pic3"),"40%");
+                objectAppear($("#pic4"),"21%");
+                textScroll(arr4a,arr4b,main4div1,main4div2);           
+                }
+                    
+                //第五页
+                if(count==5){
+                pageGone(page4,back4,text4);
+                pageCome(back5,text5);
+                objectDisappear($("#pic4"),"61%");
+                objectAppear($("#footer"),"23%");
+                textScroll(arr5a,arr5b,main5div1,main5div2);        
+                } 
+                    
+                }
+                
+            }
+            if (delta < 0 ) {
+//向上滚动
+                if(count==1){return ''}else{
+                $(".pagenumber").animate({'margin-top':'+=4rem'},1000);
+                count--;
+                    
+                //第四页
+                if(count==4){
+                pageComeUp(page4,back4,text4); 
+                pageGoneUp(back5,text5);
+                objectDisappear($("#footer"),"63%");
+                objectAppear($("#pic4"),"20%");
+                emptyText(main5div1,main5div2); 
+                }
+                
+                //第三页
+                if(count==3){
+                pageComeUp(page3,back3,text3); 
+                pageGoneUp(back4,text4);
+                objectDisappear($("#pic4"),"50%");
+                objectAppear($("#pic3"),"0%");
+                emptyText(main4div1,main4div2);
+                }
+                    
+                //第二页
+                if(count==2){
+                pageComeUp(page2,back2,text2); 
+                pageGoneUp(back3,text3);
+                objectDisappear($("#pic3"),"40%");
+                objectAppear(wanhuatong,"20%");
+                objectAppear(wangyuanjing,"20%");
+                objectAppear(shiguangji,"55%");
+                emptyText(main3div1,main3div2);
+                }
+                    
+                //第一页
+                if(count==1){
+                pageComeUp(page1,back1,text1); 
+                pageGoneUp(back2,text2);
+                objectAppear($(".landing-animation"),"10%");
+                objectDisappear(wanhuatong,"60%");
+                objectDisappear(wangyuanjing,"60%");
+                objectDisappear(shiguangji,"95%");
+                emptyText(main2div1,main2div2);
+                $("#groupName").hide();
+                $(".leftdown").show();
+                            }  
+                }
+                
+            }
+            endTime = new Date().getTime();
+        }
+        else {
+            event.preventDefault();
+        }
+    }
+//走马灯
+
+$(function (){
+    var scrolldiv=document.getElementsByClassName("flexslider");
+    var currentSlide=1;
+    var interval;
+    function startslide(){
+    interval=setInterval(function(){
+    $(".flexslider").animate({'margin-left':'-='+160*0.6+'rem'},1000,function(){
+            currentSlide++;
+            if(currentSlide==4){
+                currentSlide=1;
+                $(".flexslider").css("margin-left",0);
+            }
+        });
+    },3000);}
+    function pauseslide(){
+        clearInterval(interval);
+    }
+    $(".box").on("mouseenter",pauseslide).on("mouseleave",startslide);
+    startslide();
+});    
+</script>
+</body>
+</html>

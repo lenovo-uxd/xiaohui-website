@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js">
+    </script>
+</head>
+
+<body>
+<div id="loading" style="z-index: 999"><p>loading...</p></div>
+<!--页面信息-->
+<!--横条背景-->
+<div id="ready">
+<div id="totalBackground"></div>
+<!--蓝条背景-->
+<div id="firstBack">
+<img src="{{ url_for('static', filename='image/about@2x.png')}}" alt=""/>
+</div>
+<div id="back">
+<div id="secondBack" class="back"></div> 
+<div id="thirdBack" class="back"></div> 
+<div id="fourthBack" class="back"></div> 
+<div id="fifthBack" class="back"></div> 
+<div id="sixthBack" class="back"></div> 
+<div id="seventhBack" class="back"></div> 
+<div id="eighthBack" class="back"></div> 
+<div id="ninthBack" class="back"></div>
+</div>
+<!--第一页-->
+<div id="first">
+<div id="firstContent">
+<h3><span>Hello</span>，我是小绘。</h3>
+<p>一个崇尚设计理性化的人工智能设计师，<br>我致力于成长为一个AI设计启发式平台， <br>发掘并实践AI设计的可行商业模式，赋能设计行业。</p> 
+</div>
+<div id="firstPic">
+<img src="{{ url_for('static', filename='image/placeholderlanding.png')}}" alt=""/>  
+</div>
+</div>
+<!--第二页-->
+<div id="second">
+<div id="secondContent" class="Content">
+<div class="secondDate"><h1>1 1</h1></div>
+<div class="secondDate"><h2>2018</h2></div>
+<div id="secondTitle" class="Title"><h3>我的智能设计探索之旅开始了</h3></div>
+<div class="secondText" class="Text"><p> </p></div>
+<div class="secondText" class="Text"><p> </p></div>
+</div> 
+
+<div id="explore1">
+<div id="pic1"></div>
+<div id="description1">
+<h1>5</h1>
+<p>规则探索（轮）</p>
+</div>   
+</div>
+
+<div id="explore2">
+<div id="pic2"></div>
+<div id="description2">
+<h1>10</h1>
+<p>算法尝试（轮）</p>
+</div>   
+</div>
+
+<div id="explore3">
+<div id="pic3"></div>
+<div id="description3">
+<h1>7</h1>
+<p>样本标注（轮）</p>
+</div>  
+</div>
+
+</div>
+    
+<!--第三页-->
+<div id="third">
+<div id="thirdContent" class="Content">
+<div class="thirdDate"><h1>07</h1></div>
+<div class="thirdDate"><h2>2019</h2></div>
+<div id="thirdTitle" class="Title"><h3>第一版设计生成DEMO上线了</h3></div>
+<div class="thirdText" class="Text"><p>10多位参与测试的设计师，</p></div>
+<div class="thirdText" class="Text"><p>第一次用它自动生成了海报。</p></div>
+</div> 
+<div id="thirdPic">
+<img src="{{ url_for('static', filename='image/demoFinal.png')}}" alt=""/>    
+</div>
+</div>
+
+<!--第四页-->
+<div id="fourth">
+<div id="fourthContent" class="Content">
+<div class="fourthDate"><h1>08</h1></div>
+<div class="fourthDate"><h2>2019</h2></div>
+<div id="fourthTitle" class="Title"><h3>持续优化数据集，储备设计能力</h3></div>
+<div class="fourthText" class="Text"><p>10000+样本数据，100+设计风格变体，</p></div>
+<div class="fourthText" class="Text"><p>同时探索多种算法。</p></div>
+</div>
+<div id="fourthPic"> </div>
+</div>
+    
+<!--第五页-->
+<div id="fifth">
+<div id="fifthContent" class="Content">
+<div class="fifthDate"><h1>09</h1></div>
+<div class="fifthDate"><h2>2019</h2></div>
+<div id="fifthTitle" class="Title"><h3>助力企业内部市场团队</h3></div>
+<div class="fifthText" class="Text"><p>通过风格迁移能力，</p></div>
+<div class="fifthText" class="Text"><p>批量美化项目宣传视频。</p></div>
+</div>
+<div id="fifthPic">
+<div id="ball"><img src="{{ url_for('static', filename='image/ball-dec.png')}}" alt=""/></div>
+<div id="video">
+<video  width="100%" height="100%" autoplay muted loop>
+<source src="{{ url_for('static', filename='image/test.mp4')}}" type="video/mp4">
+</video>   
+</div>
+<div id="curve"><img src="{{ url_for('static', filename='image/curve-dec.png')}}" alt=""/></div>   
+</div>
+</div>
+    
+<!--第六页-->
+<div id="sixth">
+<div id="sixthContent" class="Content">
+<div class="sixthDate"><h1>10</h1></div>
+<div class="sixthDate"><h2>2019</h2></div>
+<div id="sixthTitle" class="Title"><h3>支持TechWorld大会宣传</h3></div>
+<div class="sixthText" class="Text"><p>助力设计师在极短时间内</p></div>
+<div class="sixthText" class="Text"><p>制作了丰富的宣传物料。</p></div>
+</div> 
+<div id="sixthPic">
+<div id="video">
+<div class="box">
+        <div class="flexslider">
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/2.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/3.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" alt=""/></div>
+        </div>
+</div>   
+</div>
+<div id="purpleball"><img src="{{ url_for('static', filename='image/purpleball.png')}}" alt=""/></div>  
+<div id="lilBall"><img src="{{ url_for('static', filename='image/ball-dec.png')}}" alt=""/></div>
+</div>
+</div>
+
+<!--第八页-->
+<div id="eighth">
+<div id="eighthContent" class="Content">
+<div class="eighthDate"><h1>Until</h1></div>
+<div class="eighthDate"><h2>Now</h2></div>
+<div id="eighthTitle" class="Title"><h3>过去到现在，现在到未来</h3></div>
+<div class="eighthText" class="Text"><p>我不断被发现，被试用，被迭代</p></div>
+<div class="eighthText" class="Text"><p>以创造更多的可能。</p></div>
+</div> 
+<div id="sucai" class="countNum">
+<h1>12384</h1>
+<p>累计生成素材（张）</p>
+</div>
+<div id="shiyong" class="countNum">
+<h1>3384</h1>
+<p>累计被使用（次）</p>
+</div>
+<div id="zhuli" class="countNum">
+<h1>10</h1>
+<p>累计助力项目宣传（个）</p>
+</div>
+</div>
+<!--第九页-->
+<div id="ninth">
+<div id="ninthContent" class="Content">
+<div id="ninthTitle" class="Title"><h3>我的旅程还在继续</h3></div>
+<div class="ninthText" class="Text"><p>欢迎关注，见证我的成长。</p></div>
+</div>
+<!--底部信息-->
+<div id="footer">
+<div id="footLogo">
+<svg width="189px" height="34px" viewBox="0 0 293 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Xiaohui@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6.1主页-二维码鼠标悬浮" transform="translate(-810.000000, -181.000000)">
+            <g id="Xiaohui@2x" transform="translate(810.000000, 181.000000)">
+                <polygon id="路径" fill="#444553" fill-rule="nonzero" points="85.01 46.8 74.29 46.8 87.23 25.98 75.23 5.54 85.84 5.54 93.17 19 100.95 5.54 111.67 5.54 98.95 25.98 111.56 46.8 100.95 46.8 93.06 32.95"></polygon>
+                <path d="M120.06,13.08 C118.66799,13.1263131 117.319747,12.5899154 116.34,11.6 C115.345338,10.6260678 114.801736,9.2815572 114.84,7.89 C114.801736,6.4984428 115.345338,5.15393224 116.34,4.18 C118.404257,2.2066494 121.655743,2.2066494 123.72,4.18 C124.714662,5.15393224 125.258264,6.4984428 125.22,7.89 C125.24724,9.26942168 124.71334,10.6008089 123.740583,11.5792212 C122.767826,12.5576334 121.439556,13.0992431 120.06,13.08 M124.33,46.8 L115.61,46.8 L115.61,16.21 L124.33,16.21 L124.33,46.8 Z" id="形状" fill="#444553" fill-rule="nonzero"></path>
+                <path d="M153.77,19.44 L153.77,16.21 L162,16.21 L162,46.8 L153.78,46.8 L153.78,43.67 C151.3286,46.2204845 147.927103,47.6368695 144.39,47.58 C140.29398,47.6838634 136.358045,45.988159 133.62,42.94 C130.769423,39.7586162 129.257587,35.5992753 129.4,31.33 C129.281519,27.1411956 130.811098,23.0730892 133.66,20 C136.406689,17.0059646 140.318617,15.3528834 144.38,15.47 C147.934582,15.4166808 151.345778,16.8697997 153.77,19.47 M138.11,31.47 C138.061481,33.6084717 138.834509,35.6841943 140.27,37.27 C141.728117,38.8036414 143.764269,39.6529452 145.88,39.61 C148.01122,39.6700867 150.06166,38.7928931 151.49,37.21 C152.972707,35.6692972 153.791417,33.6081597 153.77,31.47 C153.798268,29.3423953 152.977784,27.2911838 151.49,25.77 C150.007896,24.2713259 147.987761,23.4279726 145.88,23.4279726 C143.772239,23.4279726 141.752104,24.2713259 140.27,25.77 C138.835285,27.3162751 138.060355,29.3612306 138.11,31.47" id="形状" fill="#444553" fill-rule="nonzero"></path>
+                <path d="M183.6,47.63 C179.186692,47.7853536 174.905416,46.1097572 171.77,43 C168.744137,39.9497021 167.096721,35.7950358 167.21,31.5 C167.089635,27.2214019 168.739365,23.0826054 171.77,20.06 C178.436763,13.8076305 188.813237,13.8076305 195.48,20.06 C198.530609,23.0737907 200.202197,27.2129606 200.1,31.5 C200.189725,35.8697898 198.467609,40.0819945 195.342206,43.1373128 C192.216803,46.1926311 187.966632,47.8187898 183.6,47.63 M191.37,31.45 C191.414648,29.3537137 190.593528,27.3316605 189.1,25.86 C187.661458,24.3638915 185.67551,23.518374 183.6,23.518374 C181.52449,23.518374 179.538542,24.3638915 178.1,25.86 C176.623796,27.339438 175.821006,29.3608772 175.88,31.45 C175.81481,33.5845654 176.615491,35.6547955 178.1,37.19 C179.554996,38.6556333 181.534789,39.4799176 183.6,39.4799176 C185.665211,39.4799176 187.645004,38.6556333 189.1,37.19 C190.594056,35.6573695 191.411656,33.5899589 191.37,31.45" id="形状" fill="#444553" fill-rule="nonzero"></path>
+                <polygon id="路径" fill="#444553" fill-rule="nonzero" points="215.37 46.8 206.2 46.8 206.2 5.54 215.37 5.54 215.37 21.68 231.37 21.68 231.37 5.54 240.59 5.54 240.59 46.8 231.37 46.8 231.37 30.55 215.37 30.55"></polygon>
+                <path d="M261.75,47.58 C257.31,47.58 253.81,46.35 251.28,43.89 C248.75,41.43 247.47,38.03 247.47,33.68 L247.47,16.21 L256.19,16.21 L256.19,33.73 C256.100377,35.2928896 256.632388,36.8278147 257.67,38 C259.993157,40.0778951 263.506843,40.0778951 265.83,38 C266.852448,36.8274789 267.379507,35.3036678 267.3,33.75 L267.3,16.21 L276,16.21 L276,33.68 C276,38.1133333 274.743333,41.5366667 272.23,43.95 C269.716667,46.3633333 266.216667,47.5733333 261.73,47.58" id="路径" fill="#444553" fill-rule="nonzero"></path>
+                <path d="M286.91,13.08 C285.519474,13.1178791 284.174462,12.5827668 283.19,11.6 C282.195338,10.6260678 281.651736,9.2815572 281.69,7.89 C281.651736,6.4984428 282.195338,5.15393224 283.19,4.18 C285.25762,2.20538744 288.51238,2.20538744 290.58,4.18 C291.574662,5.15393224 292.118264,6.4984428 292.08,7.89 C292.107315,9.2711828 291.572057,10.6041444 290.59711,11.5828631 C289.622163,12.5615817 288.291278,13.1019825 286.91,13.08 M291.19,46.8 L282.46,46.8 L282.46,16.21 L291.19,16.21 L291.19,46.8 Z" id="形状" fill="#444553" fill-rule="nonzero"></path>
+                <rect id="矩形" x="0" y="0" width="292.08" height="52.6"></rect>
+                <path d="M12,-2.20268248e-13 C13.0561247,0.0113993356 14.0284478,0.577321778 14.56,1.49 L14.56,1.49 L25.12,19.87 C27.4151571,23.8494498 27.4151571,28.7505502 25.12,32.73 L25.12,32.73 L14.53,51.11 C13.8652858,52.2380784 12.5457457,52.8047521 11.27,52.51 L11.27,52.51 L1.15463195e-13,49.81 L5.71,28.31 C6.06523408,27.0003275 6.06523408,25.6196725 5.71,24.31 L5.71,24.31 L1.15463195e-13,2.79 L11.3,0.08 L11.31,0.08 C11.5364817,0.0287603888 11.7678025,0.00194057814 12,-2.20268248e-13 Z" id="形状结合" fill="#444553" fill-rule="nonzero"></path>
+                <path d="M46.7,0 C46.9354652,0.00249688028 47.170043,0.0293057705 47.4,0.08 L47.4,0.08 L58.67,2.79 L53,24.28 C52.6545981,25.5909641 52.6545981,26.9690359 53,28.28 L53,28.28 L58.67,49.81 L47.37,52.52 C46.0919687,52.8128999 44.7717836,52.2418996 44.11,51.11 L44.11,51.11 L33.54,32.73 C31.2510012,28.7489038 31.2510012,23.8510962 33.54,19.87 L33.54,19.87 L44.13,1.49 C44.6633701,0.574274825 45.6402953,0.00788632149 46.7,0 Z" id="形状结合" fill="#444553" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg> 
+</div> 
+<div id="line"> </div>
+<div id="groupInfo">
+<div id="leftSide">
+<p id="groupName">联想研究院用户体验设计</p> 
+<p>技术也可以很美</p>
+<p>欢迎关注公众号“联想研究院UXD”获取更多有趣的咨询~</p>
+</div> 
+<div id="rightSide">
+<img src="{{ url_for('static', filename='image/uxdcode.jpg')}}" alt=""/>
+</div>
+</div>
+</div>
+</div>
+    
+<!--第七页-->
+<div id="seventh">
+<div id="seventhContent" class="Content">
+<div class="seventhDate"><h1>11</h1></div>
+<div class="seventhDate"><h2>2019</h2></div>
+<div id="seventhTitle" class="Title"><h3>我举办了第一次艺术展</h3></div>
+<div class="seventhText" class="Text"><p>现场互动次数1000+</p></div>
+<div class="seventhText" class="Text"><a href="https://mp.weixin.qq.com/s/jwrp5YEGjCLadb5z--8G-w" target="_blank">一起来看现场吧</a></div>
+</div> 
+<div id="sevenPic"> </div>
+</div>
+<!--不动产-->
+<div class="nav">
+      
+        <div class="logo">
+        <a href="/">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="42px" height="32px">
+<path fill-rule="evenodd"  fill="rgb(83, 118, 255)"
+ d="M32.488,17.198 L35.994,30.291 L29.060,31.936 C28.865,31.983 28.667,31.996 28.474,31.979 C28.088,31.945 27.723,31.789 27.432,31.534 C27.287,31.407 27.161,31.256 27.060,31.082 L20.576,19.902 C19.171,17.480 19.172,14.501 20.580,12.079 L27.078,0.898 C27.408,0.331 28.014,-0.004 28.654,-0.004 C28.794,-0.004 28.937,0.011 29.078,0.045 L35.994,1.690 L32.488,14.784 C32.276,15.575 32.276,16.406 32.488,17.198 ZM8.916,31.082 C8.513,31.776 7.700,32.123 6.915,31.936 L0.001,30.291 L3.504,17.198 C3.717,16.406 3.717,15.575 3.504,14.784 L0.001,1.690 L6.932,0.044 C7.073,0.010 7.216,-0.006 7.357,-0.006 C7.676,-0.006 7.988,0.078 8.261,0.233 C8.534,0.389 8.768,0.615 8.933,0.899 L15.419,12.079 C16.823,14.501 16.821,17.480 15.415,19.902 L8.916,31.082 Z"/>
+</svg>
+               
+                <svg id="logoChange" width="138px" height="34px" viewBox="0 0 219 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7能力展示-设计生成" transform="translate(-204.000000, -579.000000)" fill="#444553" fill-rule="nonzero">
+            <g id="编组-21" transform="translate(204.290000, 579.699041)">
+                <polygon id="路径" points="10.72 44.1009594 5.68434189e-14 44.1009594 12.94 23.2809594 0.94 2.84095942 11.55 2.84095942 18.88 16.3009594 26.66 2.84095942 37.38 2.84095942 24.66 23.2809594 37.27 44.1009594 26.66 44.1009594 18.77 30.2509594"></polygon>
+                <path d="M45.77,10.3809594 C44.37799,10.4272725 43.0297471,9.89087482 42.05,8.90095942 C41.0553385,7.92702718 40.5117358,6.58251662 40.55,5.19095942 C40.5117358,3.79940222 41.0553385,2.45489167 42.05,1.48095942 C44.1142568,-0.492391183 47.3657432,-0.492391183 49.43,1.48095942 C50.4246615,2.45489167 50.9682642,3.79940222 50.93,5.19095942 C50.9572401,6.5703811 50.4233396,7.90176831 49.4505829,8.88018058 C48.4778262,9.85859285 47.1495564,10.4002025 45.77,10.3809594 M50.04,44.1009594 L41.32,44.1009594 L41.32,13.5109594 L50.04,13.5109594 L50.04,44.1009594 Z" id="形状"></path>
+                <path d="M79.48,16.7409594 L79.48,13.5109594 L87.71,13.5109594 L87.71,44.1009594 L79.49,44.1009594 L79.49,40.9709594 C77.0386003,43.5214439 73.637103,44.9378289 70.1,44.8809594 C66.0039802,44.9848229 62.0680455,43.2891184 59.33,40.2409594 C56.4794228,37.0595756 54.9675865,32.9002348 55.11,28.6309594 C54.9915186,24.442155 56.5210979,20.3740486 59.37,17.3009594 C62.1166895,14.306924 66.0286166,12.6538428 70.09,12.7709594 C73.6445815,12.7176402 77.0557782,14.1707591 79.48,16.7709594 M63.82,28.7709594 C63.7714809,30.9094311 64.5445086,32.9851537 65.98,34.5709594 C67.4381175,36.1046008 69.4742689,36.9539046 71.59,36.9109594 C73.7212195,36.9710461 75.7716595,36.0938525 77.2,34.5109594 C78.6827072,32.9702567 79.5014169,30.9091191 79.48,28.7709594 C79.5082684,26.6433547 78.6877838,24.5921433 77.2,23.0709594 C75.7178961,21.5722854 73.6977608,20.728932 71.59,20.728932 C69.4822392,20.728932 67.4621039,21.5722854 65.98,23.0709594 C64.5452853,24.6172345 63.7703547,26.66219 63.82,28.7709594" id="形状"></path>
+                <path d="M109.31,44.9309594 C104.896692,45.0863131 100.615416,43.4107167 97.48,40.3009594 C94.454137,37.2506615 92.8067215,33.0959952 92.92,28.8009594 C92.7996354,24.5223613 94.4493655,20.3835649 97.48,17.3609594 C104.146763,11.1085899 114.523237,11.1085899 121.19,17.3609594 C124.240609,20.3747502 125.912197,24.51392 125.81,28.8009594 C125.899725,33.1707493 124.177609,37.382954 121.052206,40.4382722 C117.926803,43.4935905 113.676632,45.1197492 109.31,44.9309594 M117.08,28.7509594 C117.124648,26.6546731 116.303528,24.6326199 114.81,23.1609594 C113.371458,21.6648509 111.38551,20.8193335 109.31,20.8193335 C107.23449,20.8193335 105.248542,21.6648509 103.81,23.1609594 C102.333796,24.6403974 101.531006,26.6618366 101.59,28.7509594 C101.52481,30.8855248 102.325491,32.9557549 103.81,34.4909594 C105.264996,35.9565927 107.244789,36.780877 109.31,36.780877 C111.375211,36.780877 113.355004,35.9565927 114.81,34.4909594 C116.304056,32.9583289 117.121656,30.8909183 117.08,28.7509594" id="形状"></path>
+                <polygon id="路径" points="141.08 44.1009594 131.91 44.1009594 131.91 2.84095942 141.08 2.84095942 141.08 18.9809594 157.08 18.9809594 157.08 2.84095942 166.3 2.84095942 166.3 44.1009594 157.08 44.1009594 157.08 27.8509594 141.08 27.8509594"></polygon>
+                <path d="M187.46,44.8809594 C183.02,44.8809594 179.52,43.6509594 176.99,41.1909594 C174.46,38.7309594 173.18,35.3309594 173.18,30.9809594 L173.18,13.5109594 L181.9,13.5109594 L181.9,31.0309594 C181.810377,32.593849 182.342388,34.1287741 183.38,35.3009594 C185.703157,37.3788545 189.216843,37.3788545 191.54,35.3009594 C192.562448,34.1284383 193.089507,32.6046272 193.01,31.0509594 L193.01,13.5109594 L201.71,13.5109594 L201.71,30.9809594 C201.71,35.4142928 200.453333,38.8376261 197.94,41.2509594 C195.426667,43.6642928 191.926667,44.8742928 187.44,44.8809594" id="路径"></path>
+                <path d="M212.62,10.3809594 C211.229474,10.4188385 209.884462,9.88372624 208.9,8.90095942 C207.905338,7.92702718 207.361736,6.58251662 207.4,5.19095942 C207.361736,3.79940222 207.905338,2.45489167 208.9,1.48095942 C210.96762,-0.49365314 214.22238,-0.49365314 216.29,1.48095942 C217.284662,2.45489167 217.828264,3.79940222 217.79,5.19095942 C217.817315,6.57214222 217.282057,7.90510384 216.30711,8.88382249 C215.332163,9.86254115 214.001278,10.4029419 212.62,10.3809594 M216.9,44.1009594 L208.17,44.1009594 L208.17,13.5109594 L216.9,13.5109594 L216.9,44.1009594 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+                </a>
+        </div>
+        
+        <nav class="dropdownmenu">
+        <ul>
+        <li><a href="/" class="mainMenu">主页</a></li>
+        <li><a href="#">能力展示</a>
+        <ul id="submenu">
+        <li><a href="/gdesign">望远镜<br>-设计生成</a></li>
+        <li><a href="/transfer">万花筒<br>-风格转换</a></li>
+        <li><a href="/cross/">时光机<br>-跨域转换</a></li>
+        </ul>
+        </li>
+        <li><a href="/api" class="mainMenu">API接入</a></li>
+        <li id="aboutMe"><a href="/about" class="mainMenu">关于我</a></li>
+        </ul>
+        </nav>
+            
+        <div class="english">
+         <a href="#">
+         <p>EN</p>
+         </a>
+        </div>
+        </div>
+<div class="leftdown">
+        
+<svg width="14px" height="26px" viewBox="0 0 14 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn_next</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-397.000000, -227.000000)" fill="#444553">
+            <g id="btn_next" transform="translate(404.000000, 240.000000) rotate(-90.000000) translate(-404.000000, -240.000000) translate(391.000000, 233.000000)">
+                <path d="M25.021,1.707 L13.707,13.02 C13.3165001,13.4103819 12.6834999,13.4103819 12.293,13.02 L0.978,1.707 C0.587258539,1.31625854 0.587258539,0.682741461 0.978,0.292 C1.36874146,-0.0987414605 2.00225854,-0.0987414605 2.393,0.292 L13,10.9 L23.607,0.292 C23.8597654,0.0394132191 24.2280837,-0.0591378518 24.573213,0.0334700228 C24.9183423,0.126077897 25.1878491,0.395775378 25.280213,0.740970031 C25.3725768,1.08616468 25.2737654,1.45441323 25.021,1.707 Z" id="矩形_2256_拷贝_8"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+        
+</div>
+<div id="hint"><p>滑动查看我的成长记录</p></div>
+<!--底部时间线-->
+<div id="timeLine">
+<ul>
+<li>2018.11</li> 
+<li>2019.07</li>  
+<li>2019.08</li>  
+<li>2019.09</li>  
+<li>2019.10</li>  
+<li>2019.11</li>  
+<li>NOW</li>  
+</ul>   
+</div>
+</div>
+    
+<!--js代码-->
+<script type="text/javascript">
+//全局变量
+var startTime = 0, //翻屏起始时间
+    endTime = 0,
+    timeSpace=500,
+    count = 1,
+    loading=$("#loading"),
+    ready=$("#ready"),
+    
+    explore1=$("#explore1"),
+    explore2=$("#explore2"),
+    explore3=$("#explore3"),
+    
+    content2=$("#secondContent"),
+    date2=$(".secondDate"),
+    title2=$("#secondTitle"),
+    text2=$(".secondText"),
+    
+    content3=$("#thirdContent"),
+    date3=$(".thirdDate"),
+    title3=$("#thirdTitle"),
+    text3=$(".thirdText"),
+    
+    content4=$("#fourthContent"),
+    date4=$(".fourthDate"),
+    title4=$("#fourthTitle"),
+    text4=$(".fourthText"),
+    
+    content5=$("#fifthContent"),
+    date5=$(".fifthDate"),
+    title5=$("#fifthTitle"),
+    text5=$(".fifthText"),
+    
+    content6=$("#sixthContent"),
+    date6=$(".sixthDate"),
+    title6=$("#sixthTitle"),
+    text6=$(".sixthText"),
+    
+    content7=$("#seventhContent"),
+    date7=$(".seventhDate"),
+    title7=$("#seventhTitle"),
+    text7=$(".seventhText"),
+    
+    content8=$("#eighthContent"),
+    date8=$(".eighthDate"),
+    title8=$("#eighthTitle"),
+    text8=$(".eighthText"),
+    
+    content9=$("#ninthContent"),
+    title9=$("#ninthTitle"),
+    text9=$(".ninthText"),
+    
+    firstpic=$("#firstPic"),
+    pic1 = $("#pic1"),
+    pic2 = $("#pic2"),
+    pic3 = $("#pic3"),
+    demo=$("#thirdPic"),
+    explore=$("#fourthPic"),
+    ability=$("#fourthPic"),
+    video=$("#fifthPic"),
+    sliders=$("#sixthPic"),
+    stage=$("#sevenPic"),
+    
+    footer=$("#footer"),
+    nav=$(".nav"),
+    back1=$("#firstBack"),
+    content1=$("#firstContent"),
+    sucai=$("#sucai"),
+    yong=$("#shiyong"),
+    zhuli=$("#zhuli"),
+    flexslider=$(".flexslider"),
+    back=$("#back"),
+    timeLine=$("#timeLine"),
+    hint=$("#hint");
+    
+    
+
+//页面loading
+document.onreadystatechange = loadingChange;
+function loadingChange(){ 
+            if(document.readyState === "loading"){ 
+				loading.show();
+                ready.hide();
+			} 
+			if(document.readyState === "complete"){ 
+				loading.hide();
+                ready.show();
+                explore1.css("opacity","0");
+                explore2.css("opacity","0");
+                explore3.css("opacity","0");
+                back1.delay(3000).animate({"left":"0"},timeSpace*2);
+               content1.delay(3000).animate({"opacity":"1","bottom":"80px"},timeSpace*2);
+                firstpic.delay(3000).animate({"opacity":"1"},timeSpace*2);
+                nav.delay(3000).animate({"opacity":"1","top":"80px"},timeSpace*2);
+                
+			} 
+		} 
+
+//序列帧动画（div，每次动多少，多少张）
+function start(aniPosition,step,page){
+        var i=0;
+        setInterval(
+        function(){
+            if(i>-step*page){
+            i += -step;
+            aniPosition.css('background-position',"0px " + i + "rem");
+            }
+        }, 35);
+    }
+
+//走马灯(div,总页数+1，宽度)
+function slider(who,totalSlides,width){
+        var currentSlide=1;
+        var interval;
+        function startslide(){
+        interval=setInterval(function(){
+        who.animate({'margin-left':'-='+width+'rem'},timeSpace*2,function(){
+        currentSlide++;
+            if(currentSlide==totalSlides){
+                currentSlide=1;
+                who.css("margin-left",0);
+            }
+        });
+        },3000);}
+        startslide();
+        };
+    
+//鼠标滚动页面翻页调用scrollFun函数-浏览器兼容
+if((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) { window.addEventListener('DOMMouseScroll',scrollFun,{passive:false}); 
+} else if(document.addEventListener) { 
+window.addEventListener('mousewheel',scrollFun,{passive:false}); 
+}else if (document.attachEvent) {
+document.attachEvent("onmousewheel", scrollFun);
+}else {
+document.onmousewheel = scrollFun;
+}
+
+//页面切换主文字动效
+function textGo(content,date,title,text){
+        content.animate({"opacity":"0"},timeSpace);
+        date.animate({"top":"12rem"},timeSpace);
+        title.animate({"top":"3.6rem"},timeSpace);
+        text.animate({"top":"3.6rem"},timeSpace);
+}
+function textCome(content,date,title,text){
+        content.delay(timeSpace).animate({"opacity":"1"},timeSpace);
+        date.delay(timeSpace).animate({"top":"0"},timeSpace);
+        title.delay(timeSpace).animate({"top":"0"},timeSpace);
+        text.delay(timeSpace).animate({"top":"0"},timeSpace);
+}
+//延时出现透明度变为1
+function appear(who){
+        who.delay(timeSpace).animate({'opacity':'1'},timeSpace);
+}
+//消失透明度变为0
+function disappear(who){
+        who.animate({'opacity':'0'},timeSpace);
+}  
+//背景向左移动
+function backToleft(){
+    back.animate({'left':'-=100vw'},timeSpace*2);
+} 
+//背景向右移动
+function backToright(){
+    back.animate({'left':'+=100vw'},timeSpace*2);
+} 
+//时间线切换
+function timelineChange(n,m){
+    var small="#timeLine li:nth-child("+n+")";
+    var large="#timeLine li:nth-child("+m+")";
+    $(small).css('opacity','0.6').css('font-size','1.4rem');
+    $(large).css('opacity','1').css('font-size','2.4rem');
+}
+//滚动事件处理函数
+function scrollFun(event) {
+        startTime = new Date().getTime();
+        var delta = event.detail || (-event.wheelDelta);
+        //mousewheel事件中的 “event.wheelDelta” 属性值：返回的如果是正值说明滚轮是向上滚动
+        //DOMMouseScroll事件中的 “event.detail” 属性值：返回的如果是负值说明滚轮是向上滚动
+        if ((endTime - startTime) < -1000) {
+        if (delta > 0) {
+        //向下滚动
+        if(count==9){return ''}else{
+            count++;
+            
+            //探索之旅开始2018.11
+            if(count==2){ 
+                //消失
+                disappear(content1);
+                disappear(firstpic);
+                disappear(hint);
+                back1.animate({'width':'93vw','opacity':'0'},timeSpace);
+                //出现
+                back.animate({'opacity':'1'},timeSpace);
+                appear(timeLine);
+                $("#timeLine li:first-child").css('opacity','1').css('font-size','2.4rem');
+                appear(content2);
+                appear(explore1);
+                start(pic1,34,34);
+                appear(explore2);
+                start(pic2,34,34);
+                appear(explore3);
+                start(pic3,34,34);
+                disappear(demo);
+            }
+            
+            //demo上线2019.07      
+            if(count==3){ 
+                backToleft();
+                textGo(content2,date2,title2,text2);
+                textCome(content3,date3,title3,text3);
+                timelineChange(1,2);
+                disappear(explore);
+                explore1.animate({'opacity':'0','right':'60vw'},timeSpace);
+                explore2.animate({'opacity':'0','right':'45vw'},timeSpace);
+                explore3.animate({'opacity':'0','right':'30vw'},timeSpace);
+                demo.delay(timeSpace).animate({'opacity':'1','left':'15vw'},timeSpace); 
+                start(demo,90*1.1,34);
+                $("#thirdPic img").delay(timeSpace*2).animate({'opacity':'1'},500);
+                }
+            
+            //能力积累2019.08
+            if(count==4){ 
+                backToleft();
+                textGo(content3,date3,title3,text3);
+                textCome(content4,date4,title4,text4);
+                timelineChange(2,3);
+                ability.delay(timeSpace).animate({'opacity':'1','left':'25vw'},timeSpace);
+                start(explore,90*0.8,34);
+                demo.animate({'opacity':'0','left':'-5vw'},timeSpace);
+                }
+            
+            //助力市场2019.09
+            if(count==5){
+                backToleft();
+                textGo(content4,date4,title4,text4);
+                textCome(content5,date5,title5,text5);
+                timelineChange(3,4);
+                ability.animate({'opacity':'0','left':'5vw'},timeSpace);
+                video.delay(timeSpace).show().animate({'opacity':'1','left':'0vw'},timeSpace);
+                } 
+            
+            //支持techworld2019.10
+            if(count==6){ 
+                backToleft();
+                textGo(content5,date5,title5,text5);
+                textCome(content6,date6,title6,text6);
+                timelineChange(4,5);
+                video.animate({'opacity':'0','left':'-20vw'},timeSpace);
+                sliders.delay(timeSpace).animate({'opacity':'1','left':'0vw'},timeSpace);
+                slider(flexslider,4,160*0.5);
+                } 
+            
+            //展览2019.11
+            if(count==7){ 
+                backToleft();
+                textGo(content6,date6,title6,text6);
+                textCome(content7,date7,title7,text7);
+                timelineChange(5,6);
+                sliders.animate({'opacity':'0','left':'-20vw'},timeSpace);
+                stage.delay(timeSpace).animate({'opacity':'1','left':'30vw'},timeSpace);
+                start(stage,90*0.8,34);
+                } 
+            
+            //总结数据now
+            if(count==8){
+                backToleft();
+                textGo(content7,date7,title7,text7);
+                textCome(content8,date8,title8,text8);
+                timelineChange(6,7);
+                stage.animate({'opacity':'0','left':'10vw'},timeSpace); 
+                sucai.delay(timeSpace).animate({'right':'20vw','opacity':'1'},timeSpace);
+                yong.delay(timeSpace).animate({'right':'40vw','opacity':'1'},timeSpace);
+                zhuli.delay(timeSpace).animate({'right':'10vw','opacity':'1'},timeSpace);
+                } 
+            
+            //联系方式
+            if(count==9){
+                back.animate({'opacity':'0'},timeSpace*2);
+                disappear(content8);
+                disappear(timeLine);
+                disappear(sucai);
+                disappear(yong);
+                disappear(zhuli);
+                appear(footer);
+                appear(content9);
+                } 
+            }
+                
+            }
+        if (delta < 0 ) {
+        //向上滚动
+        if(count==1){return ''}else{
+            count--;
+            
+            //首页
+            if(count==1){
+                appear(content1);
+                appear(firstpic);
+                back1.animate({'opacity':'1','width':'100vw'},timeSpace);
+                disappear(content2);
+                disappear(back);
+                disappear(timeLine);
+                disappear(explore1);
+                disappear(explore2);
+                disappear(explore3);
+                } 
+            
+            //探索之旅开始2018.11
+            if(count==2){ 
+                backToright();
+                textGo(content3,date3,title3,text3);
+                textCome(content2,date2,title2,text2);
+                timelineChange(2,1); explore1.delay(timeSpace).animate({'opacity':'1','right':'40vw'},timeSpace);
+                explore2.delay(timeSpace).animate({'opacity':'1','right':'25vw'},timeSpace);
+                explore3.delay(timeSpace).animate({'opacity':'1','right':'10vw'},timeSpace);
+                demo.animate({'opacity':'0','left':'35vw'},timeSpace); 
+                disappear($("#thirdPic img"));
+                }
+            
+            //demo上线2019.07 
+            if(count==3){ 
+                backToright();
+                textGo(content4,date4,title4,text4);
+                textCome(content3,date3,title3,text3);
+                timelineChange(3,2); 
+                ability.animate({'opacity':'0','left':'45vw'},timeSpace);
+                demo.delay(timeSpace).animate({'opacity':'1','left':'15vw'},timeSpace); 
+                }
+            
+            //能力积累2019.08
+            if(count==4){
+                backToright();
+                textGo(content5,date5,title5,text5);
+                textCome(content4,date4,title4,text4);
+                timelineChange(4,3); ability.delay(timeSpace).animate({'opacity':'1','left':'25vw'},timeSpace);
+                video.animate({'opacity':'0','left':'20vw'},timeSpace);
+                }
+            
+            //助力市场2019.09
+            if(count==5){
+                backToright();
+                textGo(content6,date6,title6,text6);
+                textCome(content5,date5,title5,text5);
+                timelineChange(5,4); 
+                video.delay(timeSpace).animate({'opacity':'1','left':'0vw'},timeSpace);
+                sliders.animate({'opacity':'0','left':'20vw'},timeSpace);
+                } 
+            
+            //支持techworld2019.10
+            if(count==6){
+                backToright();
+                textGo(content7,date7,title7,text7);
+                textCome(content6,date6,title6,text6);
+                timelineChange(6,5); 
+                stage.animate({'opacity':'0','left':'50vw'},timeSpace);
+                sliders.delay(timeSpace).animate({'opacity':'1','left':'0vw'},timeSpace);
+                } 
+            
+            //展览2019.11
+            if(count==7){ 
+                backToright();
+                textGo(content8,date8,title8,text8);
+                textCome(content7,date7,title7,text7);
+                sucai.animate({'right':'0vw','opacity':'0'},timeSpace);
+                yong.animate({'right':'20vw','opacity':'0'},timeSpace);
+                zhuli.animate({'right':'-10vw','opacity':'0'},timeSpace);
+                timelineChange(7,6); stage.delay(timeSpace).animate({'opacity':'1','left':'30vw'},timeSpace);
+                } 
+            
+            //总结数据now
+            if(count==8){ 
+                appear(back);
+                disappear(content9);
+                content8.delay(timeSpace).animate({"opacity":"1"},timeSpace);
+                sucai.delay(timeSpace).animate({'opacity':'1'},timeSpace);
+                yong.delay(timeSpace).animate({'opacity':'1'},timeSpace);
+                zhuli.delay(timeSpace).animate({'opacity':'1'},timeSpace);
+                disappear(footer);
+                appear(timeLine);
+                }
+            }   
+            }
+            endTime = new Date().getTime();
+        }
+        else {
+            event.preventDefault();
+        }
+    }
+    
+</script> 
+</body>
+  
+    
+   
+
+</html>
