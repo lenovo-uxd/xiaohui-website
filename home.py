@@ -1,8 +1,3 @@
-#backend code update
-#backend code update
-#backend code update
-#backend code update
-
 from flask import Flask, render_template
 
 app = Flask(__name__)
