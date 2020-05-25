@@ -4,16 +4,16 @@
   padding: 0;
   
 }
-@font-face {
+/*@font-face {
     font-family: '方正兰亭黑简体';
     src: url(../font/heijian.TTF);
-}
-@font-face {
+}*/
+/*@font-face {
     font-family: 'Gotham-Bold';
     src: url(../font/Gotham-Bold.otf);
-}
+}*/
 html, body {   
-    font-family: '方正兰亭黑简体';
+    font-family: 'SourceHanSans';
     overflow-x: hidden;
     color:#444553;
     /*将rem设置为10px*/
@@ -363,67 +363,79 @@ color: white;
 #studyInfo p a{
     color: #5376FF;
 }
-#operationPlace{
+.sideByside1{
     position: relative;
-    margin-top: 5vh;
-    margin-left: 7%;
-    margin-right: 7%;
+    display: inline;
+    float: left;
+    width:50vw;
+}
+.sideByside2{
+    position: relative;
+    display: inline;
+    float:right;
+    width:50vw;
 }
 #upload{
     display: inline-block;
-    float: left;
-    width:calc(28rem * 0.8);
+    float: right;
+    width:calc(8vw + 10px);
 }
 #upload button{
-    width:calc(12rem * 0.8);
-    height:calc(9rem * 0.8);
+    width:8vw;
+    height:6vw;
     margin-bottom: 10px;
-    margin-right: 10px;
     font-size: 1.6rem;
     color: white;
     background-image: url(../image/placeholder1.png);
     background-size: 100% 100%;
 }
-#upload #submit{
-    width:calc(24rem * 0.8 + 14px);
-    height:calc(6rem * 0.8);
-    background-image: none;
-    background-color: transparent;
+
+#myFile{
+    opacity: 0;
+}
+#inputLabel{
+    display:inline-block;
+    font-size: 1.6rem;
+    width:8vw;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    border: 1px solid;
     border-color: #444553;
     border-radius: 10px;
     color: #444553;
-    margin-top: 3rem;
-}
-
-#placeholder{
-    display: inline;
 }
 #before{
-    float: left;
-    width:calc(40rem * 1.22);
-    height:calc(30rem * 1.22);
+    float: right;
+    width:calc(40vw * 0.8);
+    height:calc(30vw * 0.8);
     background-color: black;
+    background-image:url(../image/placeholder1.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #after{
     float: left;
-    width:calc(40rem * 1.22);
-    height:calc(30rem * 1.22);
+    width:calc(40vw * 0.8);
+    height:calc(30vw * 0.8);
     background-color: black;
+    background-image:url(../image/placeholder2.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-left: 8px;
 }
-#placeholder img{
-    width:100%;
-    /*vertical-align: middle;*/
-}
+
 
 #styleChoose{
     display: inline-block;
-    float: right;
-    width:calc(28rem * 0.8);
+    float: left;
+    width:calc(8vw * 0.7);
 }
 #styleChoose button{
-    width:calc(12rem * 0.8);
-    height:calc(9rem * 0.8);
+    width:calc(8vw * 0.7);
+    height:calc(6vw * 0.7);
     margin-bottom: 10px;
     margin-left: 10px;
     font-size: 1.6rem;
@@ -431,15 +443,8 @@ color: white;
     background-image: url(../image/placeholder2.png);
     background-size: 100% 100%;
 }
-#styleChoose #submitStyle{
-    width:calc(24rem * 0.8 + 14px);
-    height:calc(6rem * 0.8);
-    background-image: none;
-    background-color: transparent;
-    border-color: #444553;
-    border-radius: 10px;
-    color: #444553;
-    margin-top: 3rem;
+#operationPlace img{
+    width:100%;
 }
 /*案例*/
 #case{

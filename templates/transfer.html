@@ -51,29 +51,33 @@
 <div><p>选择图像体验风格转换能力，该能力演示基于<a href="#">风格迁移API</a>搭建，
 如果您对技术能力有特别要求，欢迎扫描右下角二维码联系。</p></div>
 </div>
+    
 <div id="operationPlace">
+    
+<div class="sideByside1">
+<div id="before"></div>
 <div id="upload">
-<button>风景</button> 
-<button>风景</button> 
-<button>人物</button> 
-<button>人物</button> 
-<button>产品</button> 
-<button>产品</button> 
-<button id="submit">上传图片</button> 
-</div> 
-<div id="placeholder">
-<div id="before"><img src="{{ url_for('static', filename='image/placeholder1.png')}}" alt=""/></div>
-<div id="after"><img src="{{ url_for('static', filename='image/placeholder2.png')}}" alt=""/></div>
+<button id="landscape" onclick="changePlaceholder('{{ url_for('static', filename='image/placeholder1.png')}}')">风景</button> 
+<button id="human" onclick="changePlaceholder('{{ url_for('static', filename='image/placeholder2.png')}}')">人物</button> 
+<button id="product" onclick="changePlaceholder('{{ url_for('static', filename='image/placeholder1.png')}}')">产品</button> 
+<form method="post" action="/action_page.php">
+  <input type="file" id="myFile" accept="image/jpeg,image/png,image/jpg" name="filename" onchange="changepic(this)">
+  <label for="myFile" id="inputLabel">上传图片</label>
+</form>
 </div>
+</div> 
+
+<div class="sideByside2">
+<div id="after"></div>
 <div id="styleChoose">
 <button>风格1</button> 
 <button>风格2</button> 
 <button>风格3</button> 
 <button>风格4</button> 
-<button>风格5</button> 
-<button>风格6</button>
-<button id="submitStyle">换一批</button>     
+<button>风格5</button>    
+</div> 
 </div>
+    
 </div>
 </div>
 <div id="case">
@@ -394,6 +398,28 @@
         } 
      
         });
+    }
+    //表单部分
+    function changepic(obj) {
+        var newsrc=getObjectURL(obj.files[0]);
+        $("#before").css("backgroundImage","url("+newsrc+")");
+    }
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数而已
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+    }
+    //替换占位图
+    function changePlaceholder(toWhat){
+        $("#before").css("backgroundImage","url("+toWhat+")");
     }
 </script> 
 </body>

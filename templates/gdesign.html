@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ch">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
     <title>设计生成</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gdesign.css')}}">
     <script src="https://code.jquery.com/jquery-1.8.3.min.js">
@@ -268,7 +269,7 @@
                 function () {
                     leftdownHint.css("opacity",0);
                 });
-        slider(flexslider,4,160*0.6);
+        slider(flexslider,4,160*0.35);
         
         //探照灯
         window.onmousemove = function(e){
@@ -282,7 +283,7 @@
         var interval;
         function startslide(){
         interval=setInterval(function(){
-        who.animate({'margin-left':'-='+width+'rem'},timeSpace*2,function(){
+        who.animate({'margin-left':'-='+width+'vw'},timeSpace*2,function(){
         currentSlide++;
             if(currentSlide==totalSlides){
                 currentSlide=1;
