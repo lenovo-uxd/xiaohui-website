@@ -74,10 +74,9 @@ def api_upload():
 def leave_message():
     message = request.get_json()
         
-    with open('message.csv', 'a+') as csvfile:
+    with open('message.csv', 'a+',newline='') as csvfile:
         fieldnames = ['content', 'time','ip']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
         localtime = time.asctime(time.localtime(time.time()))
         writer.writerow({'content': message["comment"], 'time': str(localtime), 'ip':str(request.remote_addr)})
         csvfile.close()
