@@ -73,25 +73,27 @@ def api_upload():
 @app.route('/leave-message', methods=['POST'], strict_slashes=False)
 def leave_message():
     message = request.get_json()
-    f = codecs.open('message.csv','a+','gbk')
-    writer = csv.writer(f)
-    localtime = time.asctime(time.localtime(time.time()))
-    writer.writerow([message["comment"],str(localtime),str(request.remote_addr)])
-    f.close()
-    return jsonify({"success": 0, "msg": "更新成功"})
+        
+    with open('message.csv', 'a+') as csvfile:
+        fieldnames = ['content', 'time','ip']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        localtime = time.asctime(time.localtime(time.time()))
+        writer.writerow({'content': message["comment"], 'time': str(localtime), 'ip':str(request.remote_addr)})
+        csvfile.close()
+        return jsonify({"success": 0, "msg": "更新成功"})
 
 @app.route('/get-message', methods=['GET'], strict_slashes=False)
 def get_message():
-    returnedData = {
-        "messages":[]
-    }
-    with codecs.open('message.csv', 'rb', 'gbk') as f:
-        for i in f:
-            returnedData["messages"].append(i)
-    print (returnedData)
-    response = make_response(returnedData, 200)
-    return response
-
+    with open('message.csv','r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        column = [row['content'] for row in reader]
+        print (column)
+        returnedData = {
+            'comment':column
+        }
+        response = make_response(returnedData, 200)
+        return response
 
 if __name__ == '__main__':
     app.run(debug=True)
