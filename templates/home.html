@@ -395,8 +395,46 @@ window.onmousemove = function move (event) {
             }
         }
 
+//字符串转unicode
+function charToUnicode(str) {
+    let temp;
+    let i = 0;
+    let r = '';
+   
+    for (let val of str) {
+        temp = val.codePointAt(0).toString(16);
+   
+        while ( temp.length < 4 )
+        temp = '0' + temp;
+   
+        r += '＼＼u' + temp;
+    };
+  
+    return r;
+}
+//unicode转字符串
+function unicodeToChar(str){
+   //方案一
+  return eval("'" + str + "'");
+  //方案二
+  return unescape(str.replace(/＼u/g, "%u")); 
+}
 //windowonload-交互-鼠标悬浮
 window.onload = function(){
+        //更新服务器评论    
+        $.ajax({
+            type:'GET',
+            url:'/get-message',
+            success:function(data){
+                console.log(data)
+            //alert('上传成功');
+            },
+            error:function(err){
+                console.log(err)
+            //alert('更新评论失败');
+            },
+        });
+    
         var count = 0;
     //发表评论    
         var btnPut=document.getElementById('btn_put');
@@ -408,6 +446,30 @@ window.onload = function(){
         var content=document.getElementById('textdiv'+textnum);
         var contenta=document.getElementById('textdiv'+textnum+'a');
         var textsize=Math.floor(Math.random()*3)+1;
+        var bodydata = {}
+        bodydata.comment = getContent
+        console.log(bodydata)
+        //评论上传服务器    
+//        $.ajax({
+//            type:'POST',
+//            url:'/leave-message',
+//            headers:{
+//                contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+//            },
+//            data:JSON.stringify(bodydata),
+//            dataType:'json',
+//            success:function(data){
+//                console.log(data)
+//            //alert('上传成功');
+//            },
+//            error:function(err){
+//                console.log(err)
+//            //alert('评论失败');
+//            },
+//        });
+        $.post("/leave-message",bodydata,function(data){
+            console.log(data)
+        })
         content.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
         contenta.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
         document.getElementById('enjoy').value='';
@@ -690,7 +752,9 @@ $(function (){
     }
     $(".box").on("mouseenter",pauseslide).on("mouseleave",startslide);
     startslide();
-});    
+}); 
+//留言板上传与更新
+
 </script>
 </body>
 </html>

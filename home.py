@@ -73,6 +73,7 @@ def api_upload():
 @app.route('/leave-message', methods=['POST'], strict_slashes=False)
 def leave_message():
     message = request.get_json()
+    print(request)
         
     with open('message.csv', 'a+',newline='') as csvfile:
         fieldnames = ['content', 'time','ip']
