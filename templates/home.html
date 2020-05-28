@@ -450,26 +450,20 @@ window.onload = function(){
         bodydata.comment = getContent
         console.log(bodydata)
         //评论上传服务器    
-//        $.ajax({
-//            type:'POST',
-//            url:'/leave-message',
-//            headers:{
-//                contentType:'application/x-www-form-urlencoded; charset=UTF-8',
-//            },
-//            data:JSON.stringify(bodydata),
-//            dataType:'json',
-//            success:function(data){
-//                console.log(data)
-//            //alert('上传成功');
-//            },
-//            error:function(err){
-//                console.log(err)
-//            //alert('评论失败');
-//            },
-//        });
-        $.post("/leave-message",bodydata,function(data){
-            console.log(data)
-        })
+       $.ajax({
+           type:'POST',
+           url:'/leave-message',
+           contentType:'application/json',
+           data:JSON.stringify(bodydata),
+           dataType:'json',
+           success:function(data){
+               console.log(data)
+           },
+           error:function(err){
+               console.log(err)
+           },
+       });
+
         content.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
         contenta.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
         document.getElementById('enjoy').value='';
