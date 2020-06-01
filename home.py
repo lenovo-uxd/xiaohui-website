@@ -9,6 +9,8 @@ import base64
 import random
 import csv
 import codecs
+import requests
+import json
 
 
 app = Flask(__name__)
@@ -73,8 +75,6 @@ def api_upload():
 @app.route('/leave-message', methods=['POST'], strict_slashes=False)
 def leave_message():
     message = request.get_json()
-    print(request)
-        
     with open('message.csv', 'a+',newline='') as csvfile:
         fieldnames = ['content', 'time','ip']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -94,6 +94,22 @@ def get_message():
         }
         response = make_response(returnedData, 200)
         return response
+
+
+@app.route('/style-transfer', methods=['POST'])
+def style_transfer():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.130.24:11354/apicore/art/style-transfer-simple-graph/1.0.0"
+    res = requests.post(url=url,data=data)
+    return jsonify(json.loads(res.content))
+
+
+@app.route('/cross-domain', methods=['POST'])
+def cross_domain():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.130.24:11354/apicore/art/cross-domain/1.0.0"
+    res = requests.post(url=url,data=data)
+    return jsonify(json.loads(res.content))
 
 if __name__ == '__main__':
     app.run(debug=True)
