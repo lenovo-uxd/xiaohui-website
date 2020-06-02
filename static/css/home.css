@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@font-face {
+/*@font-face {
     font-family: '方正兰亭黑简体';
     src: url(../font/heijian.TTF);
-}
+}*/
 @font-face {
     font-family: '方正兰亭大黑简体';
     src: url(../font/dahei.TTF);
@@ -19,9 +19,10 @@
   margin: 0;
   padding: 0;
 }
-
+button:focus{outline:0;}
+textarea:focus{outline: :0;}
 html, body {   
-    font-family: '方正兰亭黑简体';
+    font-family: SourceHanSans;
     overflow-y: hidden;
     overflow-x: hidden;
     color:#444553;
@@ -142,12 +143,16 @@ li:hover ul#submenu {
 
 .english{
     position: absolute;
-    height: 100%;
+    height: 34px;
     right: 0px;
-    line-height: 34px;
     font-family: 'Gotham-Bold';
     width: auto;
 }
+.english p{
+    line-height: 34px;
+}
+
+
 .english a{
 text-decoration: none;
 color: #444553;
@@ -264,10 +269,7 @@ color: #444553;
     width:100%;
     height:100%;
     overflow: hidden;
-    /*transition: all 0.5s ease-in 0.3s;
-    -moz-transition: all 0.5s ease-in 0.3s;
-    -webkit-transition: all 0.5s ease-in 0.3s;
-    -o-transition:all 0.5s ease-in 0.3s;*/
+   
     }
 .back{
     position:absolute;
@@ -277,10 +279,7 @@ color: #444553;
     background-size: 60px 60px;
     width:100%;
     height:100%; 
-    /*transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;*/
+    
 }
 .textmodel{
     position: absolute;
@@ -304,50 +303,155 @@ color: #444553;
 /*第一页*/
 #textmodel1{
     left:7%;
-    top:40%;
-    /*transition: all 0.5s ease-in 0.3s;
-    -moz-transition: all 0.5s ease-in 0.3s;
-    -webkit-transition: all 0.5s ease-in 0.3s;
-    -o-transition:all 0.5s ease-in 0.3s;*/
+    bottom:calc(15rem + 80px);
 }
+
 #main1 .div1{
-    height:14rem;
+    height:20rem;
     font-family: "Gotham-Light";
 }
 #main1 .div1 h1{
-    font-size: 12rem;
-    line-height: 14rem;
+    font-size: 20rem;
+    line-height: 20rem;
 }
 #main1 .div2{
-    height:14rem;
+    height:12rem;
 }
 #main1 .div2 h1{
-    font-size: 10rem;
-    line-height: 14rem;
-}
-.landing-animation{
-    position: absolute;
-    top:10%;
-    left: 25%;
-    width:1440px;
-    height: auto;
+    font-size: 8rem;
+    line-height: 12rem;
 }
 .landinginner{
     position: absolute;
-    background-size: 100% 2900%;
-    background-image: url('../image/landing2.png');
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    top:-5%;
+    left: 0%;
+    background-image: url('../image/landing.png');
+    background-size:auto,100vh;
     background-repeat: repeat-y;
     background-position: 0 0;
-    width:100%;
+}
+/*飞着的小块块*/
+.flyDec{
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    top:50%;
+    transform: translate(0,-50%);
+   /* background-color: aqua;*/
+}
+#rect1{
+    position: absolute;
+    width:8vw;
+    height: 4vh;
+    background-color: #8298F8;
+    top:0%;
+     left:-10vw;
+    animation: flying 8s linear infinite;
+    -webkit-animation: flying 8s linear infinite;
+    -moz-animation: flying 8s linear infinite;
+    -o-animation: flying 8s linear infinite;
+}
+#rect2{
+    position: absolute;
+    width:8vw;
+    height: 4vh;
+    background-color: #EC72DB;
+    top:30%;
+    left:-10vw;
+    animation: flying 12s linear infinite;
+    -webkit-animation: flying 12s linear infinite;
+    -moz-animation: flying 12s linear infinite;
+    -o-animation: flying 12s linear infinite;
+}
+#rect3{
+    position: absolute;
+    width:10vw;
+    height: 4vh;
+    background-color: #444553;
+    bottom: 5%;
+     left:-10vw;
+    animation: flying 9s linear infinite;
+    -webkit-animation: flying 9s linear infinite;
+    -moz-animation: flying 9s linear infinite;
+    -o-animation: flying 9s linear infinite;
+}
+#rect4{
+    position: absolute;
+    width:10vw;
+    height: 4vh;
+    background-color: #E6E6E6;
+    bottom:30%;
+    left:-10vw;
+    animation: flying 6s linear infinite;
+    -webkit-animation: flying 6s linear infinite;
+    -moz-animation: flying 6s linear infinite;
+    -o-animation: flying 6s linear infinite;
+}
+#line1{
+    position: absolute;
+    width:10vw;
+    height: 2px;
+    background-color: #E6E6E6;
+    top:50%;
+     left:-10vw;
+    animation: flying 10s linear infinite;
+    -webkit-animation: flying 10s linear infinite;
+    -moz-animation: flying 10s linear infinite;
+    -o-animation: flying 10s linear infinite;
+}
+#line2{
+    position: absolute;
+    width:10vw;
+    height: 2px;
+    background-color: #E6E6E6;
+    top:20%;
+     left:-10vw;
+    animation: flying 11s linear infinite;
+    -webkit-animation: flying 11s linear infinite;
+    -moz-animation: flying 11s linear infinite;
+    -o-animation: flying 11s linear infinite;
+}
+#line3{
+    position: absolute;
+    width:10vw;
+    height: 2px;
+    background-color: #E6E6E6;
+    bottom:10%;
+     left:-10vw;
+    animation: flying 5s linear infinite;
+    -webkit-animation: flying 5s linear infinite;
+    -moz-animation: flying 5s linear infinite;
+    -o-animation: flying 5s linear infinite;
+}
+#line4{
+    position: absolute;
+    width:10vw;
+    height: 2px;
+    background-color: #E6E6E6;
+    bottom:20%;
+    left:-10vw;
+    animation: flying 13s linear infinite;
+    -webkit-animation: flying 13s linear infinite;
+    -moz-animation: flying 13s linear infinite;
+    -o-animation: flying 13s linear infinite;
+}
+@keyframes flying {
+    0% {transform: translateX(-10vw);}
+    
+    100% {transform: translateX(110vw);}
 }
 #landing{
             opacity: 0;
         }
 
+
 /*第二页*/
 #textmodel2{
     right:7%;
-    top:60%;
+    bottom:calc(5rem + 80px);
     opacity: 0;
 }
 #pic2{
@@ -360,7 +464,7 @@ color: #444553;
 #circle1{
     position: absolute;
     left:5rem;
-    background-color: #EAE8ED;
+    background-color: #E5E7EE;
     width:30rem;
     height:30rem;
     border-radius: 15rem;
@@ -368,7 +472,7 @@ color: #444553;
 #circle2{
     position: absolute;
     left:5rem;
-    background-color: #EAE8ED;
+    background-color: #EDE0EF;
     width:30rem;
     height:30rem;
     border-radius: 15rem;
@@ -376,7 +480,7 @@ color: #444553;
 #circle3{
     position: absolute;
     left:5rem;
-    background-color: #EAE8ED;
+    background-color: #F1EBDE;
     width:30rem;
     height:30rem;
     border-radius: 15rem;
@@ -457,7 +561,7 @@ color: #444553;
 /*第三页*/
 #textmodel3{
     left:7%;
-    top:45%;
+    bottom:calc(15rem + 80px);
     opacity: 0;
 }
 #pic3{
@@ -470,30 +574,14 @@ color: #444553;
 #pic3 ul li{
     list-style: none;
 }
-.infopic1{
+.infopic1,.infopic2,.infopic3,.infopic4{
     position: absolute;
-    top:30%;
+    top:50%;
+    transform: translate(0,-50%);
     left:20%;
     width:50%;
 }
-.infopic2{
-    position: absolute;
-    top:30%;
-    left:20%;
-    width:50%;
-}
-.infopic3{
-    position: absolute;
-    top:30%;
-    left:20%;
-    width:50%;
-}
-.infopic4{
-    position: absolute;
-    top:30%;
-    left:20%;
-    width:50%;
-}
+
 .titleinfo1{
     position: absolute;
     left:10%;
@@ -501,26 +589,26 @@ color: #444553;
 }
 .titleinfo2{
     position: absolute;
-    left:5%;
+    left:10%;
     top:70%;
 }
 .titleinfo3{
     position: absolute;
-    right:10%;
+    right:15%;
     top:30%;
 }
 .titleinfo4{
     position: absolute;
-    right:20%;
+    right:15%;
     top:70%;
 }
-.title1{
+.title1,.title2{
     color: #252525;
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 4rem;
     text-align: right;
 }
-.title2{
+.title3,.title4{
     color: #252525;
     font-size: 2rem;
     line-height: 4rem;
@@ -533,22 +621,22 @@ color: #444553;
 /*第四页*/
 #pic4{
     position: absolute;
-    height:34vw;
-    top:61%;
     right: 0%;
+    top:90%;
+    transform:translate(0,-50%);
 }
 .box{
     position: relative;
     float: left;
-    width: calc(160rem * 0.6);
-    height:calc(90rem * 0.6);
+    width: calc(160vw * 0.35);
+    height:calc(90vw * 0.35);
     overflow: hidden;
 }
 .slide-decoration{
     position: relative;
     float: left;
-    right: 0%;
-    height:calc(90rem * 0.6);
+    /*right: 0%;*/
+    height:calc(90vw * 0.35);
     width: 7vw;
     margin-left: 10px;
     background:#E4E4E4;
@@ -579,57 +667,66 @@ color: #444553;
 
 #textmodel4{
     left:7%;
-    top:30%;
+    top:50%;
+    transform:translate(0,-50%);
     opacity: 0;
 }
 #textmodel4 button{
     font-size: 1.6rem;
     color: #444553;
-    padding: 1.6rem 4rem;
+    height: 6rem;
     margin-top: 40px;
     border:solid 1px rgba(98,93,112,0.8);
     border-radius: 10px;
     background-color: transparent;
 }
+#textmodel4 a{
+    color:#444553;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
 /*第五页*/
 #textmodel5{
+    position: absolute;
     right:7%;
-    top:30%;
+    top:50%;
+    transform:translate(0,-50%);
     opacity: 0;
-    height: 100%;
 }
 
 #enjoy{
-    position: absolute;
-    top:30%;
-    left: 0%;
+    position: relative;
     resize: none;
     border-radius:10px;
-    font-size: 1.5rem;
-    line-height: 60px;
+    font-size: 1.6rem;
+    line-height: 6rem;
+    height: 6rem;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid #6F6F6F;
+    margin-top:6vh;
+    border: 1px solid rgba(98,93,112,0.8);
     background: #F7F7F7;
     opacity: 0.8;
+    width:300px;
 }
 #combtn{
-    position: absolute;
-    top:40%;
-    left: 0%;
+    position: relative;
     width:100%;
 }
 #btn_put{
     color: #444553;
     font-size: 1.6rem;
-    line-height: 3rem;
-    width: 180px;
-    height: 60px;
+    line-height: 6rem;
+    width: 16rem;
+    height: 6rem;
     border-radius: 10px;
-    border: 2px solid #6F6F6F;
+    border: 1px solid rgba(98,93,112,0.8);
     background: #F7F7F7;
     opacity: 0.8;
+    margin-top:1vh;
 }
 #footer{
     position: fixed;
@@ -637,7 +734,6 @@ color: #444553;
     left: 0%;
     width:100%;
     height: 60%;
-    /*border: 1px solid #444553;*/
      box-sizing: border-box;
     overflow: hidden;
      word-break: break-all;
@@ -667,178 +763,60 @@ color: #444553;
     width:10%;
     height: 100%;
     background-image: linear-gradient(to right, #F7F7F7 60%, transparent);
-    opacity: 1;
+    opacity: 0.6;
 }
 #textdiv1{
     position: absolute;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 10s linear infinite;
 }
-#textdiv1a{
-    position: absolute; 
-    animation: marquee 15s linear infinite;
-}
+
 #textdiv2{
     position: absolute;
     top:15%;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 14s linear infinite;
 }
-#textdiv2a{
-    position: absolute; 
-    top:15%;
-    animation: marquee 15s linear infinite;
-}
+
 #textdiv3{
     position: absolute;
     top:30%;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 12s linear infinite;
 }
-#textdiv3a{
-    position: absolute; 
-    top:30%;
-    animation: marquee 15s linear infinite;
-}
+
 #textdiv4{
     position: absolute;
     top:45%;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 10s linear infinite;
 }
-#textdiv4a{
-    position: absolute; 
-    top:45%;
-    animation: marquee 15s linear infinite;
-}
+
 #textdiv5{
     position: absolute;
     top:60%;
     animation: marqueeTransform 15s linear infinite;
 }
-#textdiv5a{
-    position: absolute; 
-    top:60%;
-    animation: marquee 15s linear infinite;
-}
+
 #textdiv6{
     position: absolute;
     top:80%;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 13s linear infinite;
 }
-#textdiv6a{
-    position: absolute; 
-    top:80%;
-    animation: marquee 15s linear infinite;
-}
-#exist1{
-    font-size: 3.5rem;
-    opacity: 0.4;
-}
-#exist3{
-    font-size: 3.5rem;
-    opacity: 0.4;
-}
-#exist2{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist4{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist5{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist7{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist6{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist8{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist9{
-    font-size: 2rem;
-    opacity: 0.4;
-}
-#exist11{
-    font-size: 2rem;
-    opacity: 0.4;
-}
-#exist10{
-    font-size: 1rem;
-    opacity: 0.4;
-}
-#exist12{
-    font-size: 1rem;
-    opacity: 0.4;
-}
-#exist13{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist15{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist14{
-    font-size: 1rem;
-    opacity: 0.4;
-}
-#exist16{
-    font-size: 1rem;
-    opacity: 0.4;
-}
-#exist17{
-    font-size: 3.5rem;
-    opacity: 0.4;
-}
-#exist19{
-    font-size: 3.5rem;
-    opacity: 0.4;
-}
-#exist18{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist20{
-    font-size: 2.5rem;
-    opacity: 0.4;
-}
-#exist21{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist23{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist22{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
-#exist24{
-    font-size: 1.5rem;
-    opacity: 0.4;
-}
+
+
 #foot p{
     display: inline-block;  
-    margin-left: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
 }
-
-
 
 
 @keyframes marqueeTransform {
-    0%   { transform: translate(0%, 0); }
-    100% { transform: translate(-150%, 0); }
+    0%   { transform: translate(100vw,0);opacity: 0}
+    5%  {opacity: 1}
+    95%  {opacity: 1}
+    100% { transform: translate(-150%,0);opacity: 0}
   }
-@keyframes marquee {
-    0%   { transform: translate(150%, 0); }
-    100% { transform: translate(0%, 0); }
-  }
+
+
 
 
         
@@ -875,7 +853,25 @@ color: #444553;
             }
         }
 
+@media screen and (max-width:1280px){
+    html, body {   
+    font-size:55%; 
+    -webkit-text-size-adjust:none;
+    }
+}
 
+@media screen and (max-width:1024px){
+    html, body {   
+    font-size:50%; 
+    -webkit-text-size-adjust:none;
+    }
+}
+@media screen and (min-width:2000px){
+    html, body {   
+    font-size:100%; 
+    -webkit-text-size-adjust:none;
+    }
+}
 
 
 

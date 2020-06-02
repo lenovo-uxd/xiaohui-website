@@ -14,9 +14,9 @@
 <body>
 <!--页面信息-->
 <div id="landing">
-<div id="back"><img src="{{ url_for('static', filename='image/styleTransfer.png')}}"/></div>
+<div id="back"><img src="{{ url_for('static', filename='image/crossface.png')}}"/></div>
 <div id="front"> </div>
-<div id="mask"><img src="{{ url_for('static', filename='image/styleTransferAfter.png')}}"/></div>
+<div id="mask"><img src="{{ url_for('static', filename='image/crossfaceFinal.png')}}"/></div>
 </div>
 <div id="title">
 <h1>时光机-跨域转换</h1>
@@ -51,24 +51,28 @@
 <div><p>选择头像体验跨域转换能力，该能力演示基于<a href="#">跨域转换API</a>搭建，
 如果您对技术能力有特别要求，欢迎扫描右下角二维码联系。</p></div>
 </div>
-<div id="operationPlace">
+    
+<div class="sideByside1">
+<div id="before"></div>
 <div id="upload">
-<button>男青年</button> 
-<button>女青年</button> 
-<button>男中年</button> 
-<button>女中年</button> 
-<button id="submit">上传头像</button> 
+<button id="originpic1">男性</button> 
+<button id="originpic2">女性</button> 
+
+<input type="file" id="myFile" accept="image/jpeg,image/png,image/jpg" name="filename" onchange="changepic(this,event,1)">
+<label for="myFile" id="inputLabel">上传头像</label>
+    
+</div>
 </div> 
-<div id="placeholder">
-<div id="before"><img src="{{ url_for('static', filename='image/man1.png')}}" alt=""/></div>
-<div id="after"><img src="{{ url_for('static', filename='image/man2.png')}}" alt=""/></div>
-</div>
+
+<div class="sideByside2">
+<div id="after"></div>
 <div id="styleChoose">
-<button>中世纪</button> 
-<button>二次元</button> 
-<button>敬请期待</button>  
-</div>
-</div>
+<button id="style1">中世纪</button> 
+<!--<button id="style2">二次元</button> -->    
+</div> 
+</div>    
+    
+
 </div>
 <div id="case">
 <div class="mainInfo" id="caseInfo">
@@ -145,7 +149,7 @@
 <p>欢迎关注公众号“联想研究院UXD”获取更多有趣的咨询~</p>
 </div> 
 <div id="rightSide">
-<img src="../image/uxdcode.jpg"/>
+<img src="{{ url_for('static', filename='image/uxdcode.jpg')}}"/>
 </div>
 </div>
 </div>
@@ -388,6 +392,138 @@
         } 
        
         });
+    }
+    
+      //表单部分
+    
+    var camp="{{ url_for('static', filename='image/man1.png')}}";
+    var scooter="{{ url_for('static', filename='image/woman1.png')}}";
+  
+    var camp1="{{ url_for('static', filename='image/man2.png')}}";
+    var scooter1="{{ url_for('static', filename='image/woman2.png')}}";
+  
+    
+    //切换已有原图
+    styleChange(camp1);
+    $("#originpic1").click(function(){
+        changePlaceholder(camp,camp1);
+        styleChange(camp1);
+        styleBorder("#originpic",1,3);
+    });
+    $("#originpic2").click(function(){
+        changePlaceholder(scooter,scooter1);
+        styleChange(scooter1);
+        styleBorder("#originpic",2,3);
+    });
+    $("#originpic1").trigger("click");
+    
+    
+    
+    /*var imgbase;*/
+    function changepic(obj,event,styleName) {
+        var newsrc=getObjectURL(obj.files[0]);
+        $("#before").css("backgroundImage","url("+newsrc+")");
+        //base64转换
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+        var imgbase=event.target.result;
+        var imgbaseBack=imgbase.split(",")[1];
+        var imgbaseFront=imgbase.split(",")[0]
+        var imgInfo={
+            "Base64Data":imgbaseBack,
+            "gender": "mix",
+            "domain":"medieval"
+        };
+            
+        console.log(imgInfo);
+        //post给服务器
+        $.ajax({
+            type:'POST',
+            url:'/cross-domain',
+            contentType:'application/json',
+            data:JSON.stringify(imgInfo),
+            dataType:'json',
+            success:function(data){
+            var finaldata=imgbaseFront+","+data.result;
+            $("#after").css("backgroundImage","url("+finaldata+")"); 
+            console.log(finaldata);
+            },
+            error:function(err){
+            console.log(err);
+            },
+        });
+        //切换风格
+       /* $("#style1").click(function(){StyleAjax(imgbaseBack,1)});*/
+        };
+        reader.readAsDataURL(file);
+        
+        
+    }
+    //风格ajax请求
+    /*function StyleAjax(data,i){
+        $.ajax({
+            type:'POST',
+            url:'/cross-domain',
+            contentType:'application/json',
+            data:JSON.stringify({
+            "Base64Data":data,
+            "style":i
+        }),
+            dataType:'json',
+            success:function(data){
+            var finaldata=imgbaseFront+data.result;
+            $("#after").css("backgroundImage","url("+finaldata+")"); 
+            console.log(finaldata);
+            },
+            error:function(err){
+            console.log(err);
+            },
+        });
+    }*/
+   
+    
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数而已
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+    }
+    
+    //按钮状态改变
+    function styleBorder(which,num,total){
+        for(i=1;i<=total;i++){
+            if(i==num){
+            $(which+i).css("border","4px solid #5376FF");
+            }else{
+            $(which+i).css("border","none");  
+            }
+        }  
+    }
+    
+    //切换风格图
+    function styleChange(sty1){
+        
+        
+        $("#style1").click(function(){/*$("#after").css("backgroundImage","url("+sty1+")");*/
+         styleBorder("#style",1,5);                      
+                                     });
+       
+        
+        $("#style1").trigger("click");
+        };
+    
+    //替换占位图
+    function changePlaceholder(toWhat,which){
+        $("#before").css("backgroundImage","url("+toWhat+")");
+        $("#after").css("backgroundImage","url("+which+")");
     }
 </script> 
 </body>

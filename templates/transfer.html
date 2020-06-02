@@ -57,9 +57,9 @@
 <div class="sideByside1">
 <div id="before"></div>
 <div id="upload">
-<button id="landscape" onclick="changePlaceholder('{{ url_for('static', filename='image/camp.png')}}','camp1')">风景</button> 
-<button id="human" onclick="changePlaceholder('{{ url_for('static', filename='image/scooter.png')}}','scooter1')">人物</button> 
-<button id="product" onclick="changePlaceholder('{{ url_for('static', filename='image/dog.png')}}','dog1')">动物</button> 
+<button id="originpic1">风景</button> 
+<button id="originpic2">人物</button> 
+<button id="originpic3">动物</button> 
     
 <input type="file" id="myFile" accept="image/jpeg,image/png,image/jpg" name="filename" onchange="changepic(this,event,1)">
 <label for="myFile" id="inputLabel">上传图片</label>
@@ -71,10 +71,10 @@
 <div id="after"></div>
 <div id="styleChoose">
 <button id="style1">月光</button> 
-<button id="style2">星空</button> 
-<button id="style3">素雅</button> 
-<button id="style4">水波</button> 
-<button id="style5">斑斓</button>    
+<button id="style2">素雅</button> 
+<button id="style3">斑斓</button> 
+<button id="style4">星空</button> 
+<button id="style5">水波</button>    
 </div> 
 </div>
     
@@ -400,38 +400,127 @@
         });
     }
     //表单部分
-    var imgbase;
+    
+    var camp="{{ url_for('static', filename='image/camp.png')}}";
+    var scooter="{{ url_for('static', filename='image/scooter.png')}}";
+    var dog="{{ url_for('static', filename='image/dog.png')}}";
+    var camp1="{{ url_for('static', filename='image/camp1.png')}}";
+    var scooter1="{{ url_for('static', filename='image/scooter1.png')}}";
+    var dog1="{{ url_for('static', filename='image/dog1.png')}}";
+    var camp2="{{ url_for('static', filename='image/camp2.png')}}";
+    var scooter2="{{ url_for('static', filename='image/scooter2.png')}}";
+    var dog2="{{ url_for('static', filename='image/dog2.png')}}";
+    var camp3="{{ url_for('static', filename='image/camp3.png')}}";
+    var scooter3="{{ url_for('static', filename='image/scooter3.png')}}";
+    var dog3="{{ url_for('static', filename='image/dog3.png')}}";
+    var camp4="{{ url_for('static', filename='image/camp4.png')}}";
+    var scooter4="{{ url_for('static', filename='image/scooter4.png')}}";
+    var dog4="{{ url_for('static', filename='image/dog4.png')}}";
+    var camp5="{{ url_for('static', filename='image/camp5.png')}}";
+    var scooter5="{{ url_for('static', filename='image/scooter5.png')}}";
+    var dog5="{{ url_for('static', filename='image/dog5.png')}}";
+    var blackback="{{ url_for('static', filename='image/blackback.png')}}";
+    
+    //切换已有原图
+    styleChange(camp1,camp2,camp3,camp4,camp5);
+    $("#originpic1").click(function(){
+        changePlaceholder(camp,camp1);
+        styleChange(camp1,camp2,camp3,camp4,camp5);
+        styleBorder("#originpic",1,3);
+    });
+    $("#originpic2").click(function(){
+        changePlaceholder(scooter,scooter1);
+        styleChange(scooter1,scooter2,scooter3,scooter4,scooter5);
+        styleBorder("#originpic",2,3);
+    });
+    $("#originpic3").click(function(){
+        changePlaceholder(dog,dog1);
+        styleChange(dog1,dog2,dog3,dog4,dog5);
+        styleBorder("#originpic",3,3);
+    });
+   
+    $("#originpic1").trigger("click");
+    
+   /* //上传左边图片
+    function imgChange(img) {
+    // 生成一个文件读取的对象
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+        // base64码
+        var imgFile =ev.target.result;//或e.target都是一样的
+        document.querySelector("img").src= ev.target.result;
+    }
+    //发起异步读取文件请求，读取结果为data:url的字符串形式，
+    reader.readAsDataURL(img.files[0]);
+}*/
+    
+    
+    /*var imgbase;*/
     function changepic(obj,event,styleName) {
+        styleChange(blackback,blackback,blackback,blackback,blackback);
         var newsrc=getObjectURL(obj.files[0]);
         $("#before").css("backgroundImage","url("+newsrc+")");
         //base64转换
         var file = event.target.files[0];
         var reader = new FileReader();
         reader.onload = function(event) {
-        imgbase=event.target.result;
-        };
-        reader.readAsDataURL(file);
-        console.log(imgbase);
-        //post给服务器
+        var imgbase=event.target.result;
+        var imgbaseBack=imgbase.split(",")[1];
+        var imgbaseFront=imgbase.split(",")[0]
         var imgInfo={
-            style:styleName,
-            img:imgbase,
+            "Base64Data":imgbaseBack,
+            "style":styleName-1
         };
-        
+        /*console.log(imgInfo);*/
+        //post给服务器
         $.ajax({
             type:'POST',
-            url:'',
-            data:imgInfo,
+            url:'/style-transfer',
+            contentType:'application/json',
+            data:JSON.stringify(imgInfo),
             dataType:'json',
             success:function(data){
-            $("#after").css("backgroundImage","url("+data+")"); 
+            var finaldata=imgbaseFront+","+data.result;
+            $("#after").css("backgroundImage","url("+finaldata+")"); 
+            /*console.log(finaldata);*/
             },
-            error:function(){
-            alert('获取失败');
+            error:function(err){
+            console.log(err);
             },
         });
+        //切换风格
+        $("#style1").click(function(){StyleAjax(imgbaseFront,imgbaseBack,1)});
+        $("#style2").click(function(){StyleAjax(imgbaseFront,imgbaseBack,2)});
+        $("#style3").click(function(){StyleAjax(imgbaseFront,imgbaseBack,3)});
+        $("#style4").click(function(){StyleAjax(imgbaseFront,imgbaseBack,4)});
+        $("#style5").click(function(){StyleAjax(imgbaseFront,imgbaseBack,5)});
+        };
+        reader.readAsDataURL(file);
         
-        }
+        
+    }
+    //风格ajax请求
+    function StyleAjax(front,data,i){
+        $.ajax({
+            type:'POST',
+            url:'/style-transfer',
+            contentType:'application/json',
+            data:JSON.stringify({
+            "Base64Data":data,
+            "style":i-1
+        }),
+            dataType:'json',
+            success:function(data){
+            var finaldata=front+","+data.result;
+            $("#after").css("backgroundImage","url("+finaldata+")"); 
+            console.log(finaldata);
+            },
+            error:function(err){
+            console.log(err);
+            },
+        });
+    }
+   
     
     //建立一個可存取到該file的url
     function getObjectURL(file) {
@@ -446,16 +535,53 @@
             }
             return url ;
     }
+    
+    //按钮状态改变
+    function styleBorder(which,num,total){
+        for(i=1;i<=total;i++){
+            if(i==num){
+            $(which+i).css("border","4px solid #5376FF");
+            }else{
+            $(which+i).css("border","none");  
+            }
+        }  
+    }
+    
+    //切换风格图
+    function styleChange(sty1,sty2,sty3,sty4,sty5){
+        
+        
+        $("#style1").click(function(){$("#after").css("backgroundImage","url("+sty1+")");
+         styleBorder("#style",1,5);                      
+                                     });
+       
+        $("#style2").click(function(){$("#after").css("backgroundImage","url("+sty2+")");
+         styleBorder("#style",2,5); 
+                                     });
+       
+        $("#style3").click(function(){$("#after").css("backgroundImage","url("+sty3+")");
+         styleBorder("#style",3,5); 
+                                     });
+    
+        $("#style4").click(function(){$("#after").css("backgroundImage","url("+sty4+")");
+         styleBorder("#style",4,5); 
+                                     });
+
+        $("#style5").click(function(){$("#after").css("backgroundImage","url("+sty5+")");
+         styleBorder("#style",5,5); 
+                                     });
+        
+        $("#style1").trigger("click");
+        };
+    
     //替换占位图
     function changePlaceholder(toWhat,which){
         $("#before").css("backgroundImage","url("+toWhat+")");
-        /*src="{{ url_for('static', filename='image/"+which+".jpg')}}"*/
-        $("#after").css("backgroundImage","url({{ url_for('static', filename='image/"+which+".png')}})");
-        var try="{{ url_for('static', filename='image/"+which+".png')}}";
-        console.log(try);
-        
+        $("#after").css("backgroundImage","url("+which+")");
     }
-    
+  
+                       
+ 
     /*$.ajax({
         type:'GET',
         url:'',

@@ -648,13 +648,15 @@ color: #444553;
 }
 /*第九页*/
 #ninthTitle{
-    margin-top: 20vh;
-    top:3.6rem;
+    margin-top: 15vh;
     font-size: 6rem;
+    text-align: center;
+    width:86vw;
 }
 .ninthText{
-    top:3.6rem;
     margin-top: 5vh;
+    text-align: center;
+    width:86vw;
 }
 #footer{
     position: fixed;

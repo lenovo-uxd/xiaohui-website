@@ -13,7 +13,7 @@
     src: url(../font/Gotham-Bold.otf);
 }*/
 html, body {   
-    font-family: Arial;
+    font-family: SourceHanSans;
     overflow-x: hidden;
     color:#444553;
     /*将rem设置为10px*/
@@ -33,6 +33,7 @@ a{
     text-decoration: none;
     color:#444553;
 }
+button:focus{outline:0;}
 .nav{
     position: fixed;
     top: -90px;
@@ -122,7 +123,8 @@ li:hover ul#submenu {
     height: 100%;
     right: 0px;
     line-height: 34px;
-    font-family: 'Gotham-Bold';
+    font-family: SourceHanSans;
+    font-weight: bold;
     width: auto;
 }
 .english a{
@@ -387,13 +389,13 @@ color: white;
     color: white;
     background-size: 100% 100%;
 }
-#landscape{
+#originpic1{
     background-image: url(../image/camp.png);
 }
-#human{
+#originpic2{
     background-image: url(../image/scooter.png);
 }
-#product{
+#originpic3{
     background-image: url(../image/dog.png);
 }
 
@@ -465,6 +467,7 @@ color: white;
 #style5{
     background-image: url(../image/555.png);
 }
+
 #operationPlace img{
     width:100%;
 }
@@ -674,12 +677,12 @@ color: white;
     2，其他能力竖排
     3，页尾竖排
 }*/
-@media screen and (max-width:1024px){
+/*@media screen and (max-width:1024px){
     html, body {   
     font-size:40%; 
     -webkit-text-size-adjust:none;
     }
-}
+}*/
 
 
 

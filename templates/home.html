@@ -17,54 +17,12 @@
         <div class="back" id="back5"> </div>
         <div id="footer">
         <div id="foot">
-        <div id="textdiv1">
-        <p class="existtext1" id="exist1">一个神奇的网站～</p>
-        <p class="existtext1" id="exist2">看起来挺有趣的，希望越来越好～</p>
-        </div>
-        <div id="textdiv1a">
-        <p class="existtext1" id="exist3">一个神奇的网站～</p>
-        <p class="existtext1" id="exist4">看起来挺有趣的，希望越来越好～</p>
-        </div>
-        <div id="textdiv2">
-        <p class="existtext2" id="exist5">人工智能好神奇啊</p>
-        <p class="existtext2" id="exist6">这是个什么东东？</p>    
-        </div>
-        <div id="textdiv2a">
-        <p class="existtext2" id="exist7">人工智能好神奇啊</p>
-        <p class="existtext2" id="exist8">这是个什么东东？</p>    
-        </div>
-        <div id="textdiv3">
-        <p class="existtext3" id="exist9">我的家在东北，松花江上啊。</p>
-        <p class="existtext3" id="exist10">那里有满山遍野，大豆高粱啊。</p>   
-        </div>
-        <div id="textdiv3a">
-        <p class="existtext3" id="exist11">我的家在东北，松花江上啊。</p>
-        <p class="existtext3" id="exist12">那里有满山遍野，大豆高粱啊。</p>   
-        </div>
-        <div id="textdiv4">
-        <p class="existtext4" id="exist13">请相信这会是场设计风暴。</p>
-        <p class="existtext4" id="exist14">我在1和0之间给你无穷创意～</p>  
-        </div>
-        <div id="textdiv4a">
-        <p class="existtext4" id="exist15">请相信这会是场设计风暴。</p>
-        <p class="existtext4" id="exist16">我在1和0之间给你无穷创意～</p>  
-        </div>
-        <div id="textdiv5">
-        <p class="existtext5" id="exist17">设计永远在不断进步。</p>
-        <p class="existtext5" id="exist18">看起来很好玩儿的样子啊@-@</p>
-        </div>
-        <div id="textdiv5a">
-        <p class="existtext5" id="exist19">设计永远在不断进步。</p>
-        <p class="existtext5" id="exist20">看起来很好玩儿的样子啊@-@</p>
-        </div>
-        <div id="textdiv6">
-        <p class="existtext6" id="exist21">怎么接入这个API啊？</p>
-        <p class="existtext6" id="exist22">随便逛逛...</p>    
-        </div>
-        <div id="textdiv6a">
-        <p class="existtext6" id="exist23">怎么接入这个API啊？</p>
-        <p class="existtext6" id="exist24">随便逛逛...</p>    
-        </div>
+        <div id="textdiv1"></div>
+        <div id="textdiv2"></div>
+        <div id="textdiv3"></div>
+        <div id="textdiv4"></div>
+        <div id="textdiv5"></div>
+        <div id="textdiv6"></div>
         </div>
         </div>
         <div class="cover"> </div>
@@ -77,7 +35,7 @@
         <div class="sub" id="sub5"><p>跟进用户反馈，贴近真实需求。</p></div>
         
         <div id="header">
-        <textarea name="comment" id="enjoy" style="width:330px; height:60px"></textarea>
+        <textarea name="comment" id="enjoy" ></textarea>
         <div id="combtn">
         <button id="btn_put">提交</button>
         </div>
@@ -111,7 +69,7 @@
             <div class="div2"></div>
         </div>
         <div class="sub" id="sub4"><P>持续验证与更新，每分每秒都在进步。</P></div>
-        <button>了解更多</button>
+        <button><a href="/about">了解更多</a></button>
         </div>
         </div>
         
@@ -127,14 +85,14 @@
         <div class="pic" id="pic3">
         <ul>
             <li><div class="titleinfo1"><p class="title1">企业宣传</p><p class="info1">高效、定制化生成设计素材</p></div>
-                <div class="infopic1"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div>
+                <div class="infopic1"><img src="{{ url_for('static', filename='image/xuanchuan.png')}}" width=100% height=auto /></div>
             </li>
-            <li><div class="titleinfo2"><p class="title1">市场营销</p><p class="info1">千人千面助力智能创意营销</p></div>
-                <div class="infopic2"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
-            <li><div class="titleinfo3"><p class="title2">展会互动</p><p class="info1">低成本生产创意视觉互动内容</p></div>
-                <div class="infopic3"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
-            <li><div class="titleinfo4"><p class="title2">日常平面需求</p><p class="info1">启发式工具，拓展设计可能</p></div>
-                <div class="infopic4"><img src="{{ url_for('static', filename='image/scenario@2x.png')}}" width=100% height=auto /></div></li>
+            <li><div class="titleinfo2"><p class="title2">市场营销</p><p class="info1">千人千面助力智能创意营销</p></div>
+                <div class="infopic2"><img src="{{ url_for('static', filename='image/shichang.png')}}" width=100% height=auto /></div></li>
+            <li><div class="titleinfo3"><p class="title3">展会互动</p><p class="info1">低成本生产创意视觉互动内容</p></div>
+                <div class="infopic3"><img src="{{ url_for('static', filename='image/zhanhui.png')}}" width=100% height=auto /></div></li>
+            <li><div class="titleinfo4"><p class="title4">日常平面需求</p><p class="info1">启发式工具，拓展设计可能</p></div>
+                <div class="infopic4"><img src="{{ url_for('static', filename='image/pingmian.png')}}" width=100% height=auto /></div></li>
         </ul>
         </div>
         </div>
@@ -144,21 +102,21 @@
         <div class="pic" id="pic2">
         <div class="wanhuatong">
         <div id="circle1"></div> 
-        <div id="hover1"></div>
+        <div id="hover1" onclick="window.location.href= '/transfer';return false"></div>
         <div class="descript1"><p>万花筒-风格转换</p></div>
         <div id="details1"><P>利用风格迁移算法，<br>实现100+不同视觉风格的实时转换。</P></div>
         </div>
         
         <div class="wangyuanjing">
         <div id="circle2"></div> 
-        <div id="hover2"></div>
+        <div id="hover2" onclick="window.location.href= '/gdesign';return false"></div>
         <div class="descript2"><p>望远镜-设计生成</p></div>
         <div id="details2"><P>基于降维神经网络，结合资深设计师<br>先验经验，快速批量生成抽象设计背景。</P></div>
         </div>
         
         <div class="shiguangji">
         <div id="circle3"></div>  
-        <div id="hover3"></div>
+        <div id="hover3" onclick="window.location.href= '/cross';return false"></div>
         <div class="descript3"><p>时光机-域到域转换</p></div>
         <div id="details3"><p>通过深度学习，实现图像<br>从一个样本域到另一个样本域的转换。</p></div>
         </div>
@@ -175,14 +133,18 @@
         
         <div id="page1" class="page">
         <div class="back" id="back1"> </div>
-        <div class="landing-animation">
-        <div class=landinginner>
-        <div id="landing"><img src="{{ url_for('static', filename='image/placeholderlanding.png')}}" width=100% height=auto /></div>
+        <div class="flyDec">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+        <div id="line4"></div>
+        <div id="rect1"></div>
+        <div id="rect2"></div>
+        <div id="rect3"></div>
+        <div id="rect4"></div>    
         </div>
-        </div>
-        <div class="pic" id="pic1">
         
-        </div>
+        <div class=landinginner></div>
         <div id="textmodel1" class="textmodel">
         <div class="main" id="main1">
             <div class="div1"><h1>1%</h1></div>
@@ -243,7 +205,7 @@
         </nav>
             
         <div class="english">
-         <a href="/hui">
+         <a href="#">
          <p>EN</p>
          </a>
         </div>
@@ -333,6 +295,7 @@ var startTime = 0, //翻屏起始时间
             m=(-landingPosition.clientHeight)*15,
             i=0,
             divwidth=landingPosition.clientWidth,
+            
             halfwidth=divwidth/2,
             div = document.getElementsByClassName("landinginner")[0], 
             divout = document.getElementsByClassName("landing-animation")[0],
@@ -377,75 +340,63 @@ function loadingChange(){
                 nav.show();
                 nav.delay(1000).animate({"opacity":"1","top":"80px"},timeSpace*2);
                 $(".leftdown").delay(1000).animate({"opacity":"1"},timeSpace*2);
+               
 			} 
 		} 
 
-//首页动画
-window.onmousemove = function move (event) {  
-            event = event || window.event;  
-            //2.获取鼠标在整个页面的位置  
-            var pagex = event.pageX || scroll().left + event.clientX;   
-            //3.获取盒子在整个页面的位置  
-            var xx = divout.offsetLeft;  
-            //4.用鼠标的位置减去盒子的位置赋值给盒子的内容。  
-            var targetx = pagex - xx; 
-            if(targetx>0&&targetx<divwidth){
-            i=-Math.round((targetx/divwidth)*27)*landingPosition.clientHeight;
-            landingPosition.style.backgroundPosition = "0px " + i + "px";  
-            }
-        }
+//序列帧动画（div，每次动多少，多少张）
+function startlanding(aniPosition,step){
+        var i=0;
+        setInterval(
+        function(){
+            
+             i += -step;
+            aniPosition.css('background-position',"0px " + i + "px");
+            console.log(i);   
+            
+            
+        }, 80);
+}  
 
-//字符串转unicode
-function charToUnicode(str) {
-    let temp;
-    let i = 0;
-    let r = '';
-   
-    for (let val of str) {
-        temp = val.codePointAt(0).toString(16);
-   
-        while ( temp.length < 4 )
-        temp = '0' + temp;
-   
-        r += '＼＼u' + temp;
-    };
-  
-    return r;
-}
-//unicode转字符串
-function unicodeToChar(str){
-   //方案一
-  return eval("'" + str + "'");
-  //方案二
-  return unescape(str.replace(/＼u/g, "%u")); 
-}
 //windowonload-交互-鼠标悬浮
+var flyCube=$(".flyDec div");
 window.onload = function(){
-        //更新服务器评论    
+       //首页landing
+       startlanding($(".landinginner"),1080);
+     
+        //更新服务器评论  
+        var line=1;
         $.ajax({
             type:'GET',
             url:'/get-message',
             success:function(data){
-                console.log(data)
-            //alert('上传成功');
+                console.log(data);
+                $.each(data,function(i,commentValue){
+                    $.each(commentValue,function(i,value){
+                    var textsize=Math.floor(Math.random()*3)+1;//随机字体大小
+                    $("#textdiv"+line).prepend("<p style='font-size:"+textsize+"rem'>"+commentValue[i]+"</p>");  
+                    line++;
+                    if(line>=7){
+                        line=1;
+                    }
+                    })
+                })
             },
             error:function(err){
-                console.log(err)
-            //alert('更新评论失败');
+                console.log(err);
             },
         });
     
         var count = 0;
     //发表评论    
         var btnPut=document.getElementById('btn_put');
-        var textnum=1;
         var newtext=1;
+        var textnum=1; 
         btnPut.onclick=function(){
+        
         var getContent=document.getElementById('enjoy').value;
         if(getContent){
         var content=document.getElementById('textdiv'+textnum);
-        var contenta=document.getElementById('textdiv'+textnum+'a');
-        var textsize=Math.floor(Math.random()*3)+1;
         var bodydata = {}
         bodydata.comment = getContent
         console.log(bodydata)
@@ -463,15 +414,11 @@ window.onload = function(){
                console.log(err)
            },
        });
-
-        content.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
-        contenta.innerHTML=content.innerHTML+"<p class='addtext"+newtext+"' style='font-size:"+textsize+"rem'>"+getContent+'</p>';
+        $("#textdiv"+textnum).prepend("<p style='color: #5376FF;font-size:3rem'>"+getContent+"</p>");  
         document.getElementById('enjoy').value='';
-        $(".addtext"+newtext).animate({opacity:"1"},1000).animate({opacity:"0.4"},1000);
-        newtext++;
         if(textnum<6){textnum++;}else{textnum=1;}
         }else{
-        alert('请输入内容');
+        alert('给我们留言，分享你的建议吧～');
         }
         };
     //鼠标悬停
@@ -517,6 +464,27 @@ window.onload = function(){
                   $("#details3").css("opacity","0");
                   over($("#hover3"),90*0.3,15);
                 });
+    
+    
+    //应用场景轮播
+    var scenarioNum=1;
+    setInterval(function(){ 
+        for(i=1;i<=4;i++){
+            if(i==scenarioNum){
+                $(".titleinfo"+i).css("opacity",'1');
+                $(".title"+i).css({"font-size":'3rem',"line-height":"6rem"});
+                $(".infopic"+i).css("opacity",'1');
+            }else{
+                $(".titleinfo"+i).css("opacity",'0.4');
+                $(".title"+i).css({"font-size":'2rem',"line-height":"4rem"});
+                $(".infopic"+i).css("opacity",'0');
+            }
+        }
+        scenarioNum++;
+        if(scenarioNum>4){
+            scenarioNum=1;
+        }
+    }, 1000);
     }
    
        
@@ -653,7 +621,7 @@ function emptyText(a,b){
                 pageGone(page3,back3,text3);
                 pageCome(back4,text4);
                 objectDisappear($("#pic3"),"40%");
-                objectAppear($("#pic4"),"21%");
+                objectAppear($("#pic4"),"50%");
                 textScroll(arr4a,arr4b,main4div1,main4div2);           
                 }
                     
@@ -661,7 +629,7 @@ function emptyText(a,b){
                 if(count==5){
                 pageGone(page4,back4,text4);
                 pageCome(back5,text5);
-                objectDisappear($("#pic4"),"61%");
+                objectDisappear($("#pic4"),"90%");
                 objectAppear($("#footer"),"23%");
                 textScroll(arr5a,arr5b,main5div1,main5div2);        
                 } 
@@ -680,7 +648,7 @@ function emptyText(a,b){
                 pageComeUp(page4,back4,text4); 
                 pageGoneUp(back5,text5);
                 objectDisappear($("#footer"),"63%");
-                objectAppear($("#pic4"),"20%");
+                objectAppear($("#pic4"),"50%");
                 emptyText(main5div1,main5div2); 
                 }
                 
@@ -688,7 +656,7 @@ function emptyText(a,b){
                 if(count==3){
                 pageComeUp(page3,back3,text3); 
                 pageGoneUp(back4,text4);
-                objectDisappear($("#pic4"),"50%");
+                objectDisappear($("#pic4"),"90%");
                 objectAppear($("#pic3"),"0%");
                 emptyText(main4div1,main4div2);
                 }
@@ -733,7 +701,7 @@ $(function (){
     var interval;
     function startslide(){
     interval=setInterval(function(){
-    $(".flexslider").animate({'margin-left':'-='+160*0.6+'rem'},1000,function(){
+    $(".flexslider").animate({'margin-left':'-='+160*0.35+'vw'},1000,function(){
             currentSlide++;
             if(currentSlide==4){
                 currentSlide=1;
@@ -747,7 +715,7 @@ $(function (){
     $(".box").on("mouseenter",pauseslide).on("mouseleave",startslide);
     startslide();
 }); 
-//留言板上传与更新
+
 
 </script>
 </body>
