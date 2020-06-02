@@ -107,7 +107,7 @@ def style_transfer():
 @app.route('/cross-domain', methods=['POST'])
 def cross_domain():
     data = json.dumps(request.get_json())
-    url = "http://10.110.130.24:11354/apicore/art/cross-domain/1.0.0"
+    url = "http://10.110.130.24:11354/apicore/art/cross-domain-align/1.0.0"
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
