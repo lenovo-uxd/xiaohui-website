@@ -7,10 +7,10 @@ import time
 import os
 import base64
 import random
-import csv
 import codecs
 import requests
 import json
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -85,15 +85,13 @@ def leave_message():
 
 @app.route('/get-message', methods=['GET'], strict_slashes=False)
 def get_message():
-    with open('message.csv','r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        column = [row['content'] for row in reader]
-        print (column)
-        returnedData = {
-            'comment':column
-        }
-        response = make_response(returnedData, 200)
-        return response
+    returnedData = {
+        'comment':[]
+    }
+    data = pd.read_csv('message.csv',encoding='utf-8')
+    for i in range(len(data)):
+        returnedData['comment'].append(data["content"][i])
+    return jsonify(returnedData)
 
 
 @app.route('/style-transfer', methods=['POST'])
@@ -112,4 +110,4 @@ def cross_domain():
     return jsonify(json.loads(res.content))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=3002)
