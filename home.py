@@ -93,7 +93,7 @@ def get_message():
         returnedData['comment'].append(data["content"][i])
     return jsonify(returnedData)
 
-
+#图片风格转换
 @app.route('/style-transfer', methods=['POST'])
 def style_transfer():
     data = json.dumps(request.get_json())
@@ -101,13 +101,30 @@ def style_transfer():
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
-
+#头像域到域转换
 @app.route('/cross-domain', methods=['POST'])
 def cross_domain():
     data = json.dumps(request.get_json())
     url = "http://10.110.130.24:11354/apicore/art/cross-domain-align/1.0.0"
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
+
+#随机生成图像
+@app.route('/style-gan-post', methods=['POST'])
+def style_gan_random():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.130.24:11354/apicore/art/style-gan-post/1.0.0"
+    res = requests.post(url=url,data=data)
+    return jsonify(json.loads(res.content))
+
+#随机生成图像
+@app.route('/style-gan-get', methods=['GET'])
+def style_gan_post():
+    number = request.args.get("number")
+    url = "http://10.110.130.24:11354/apicore/art/style-gan-get/1.0.0?number="+str(number)
+    res = requests.get(url=url)
+    return jsonify(json.loads(res.content))
+
 
 if __name__ == '__main__':
     app.run(debug=True,port=3002)
