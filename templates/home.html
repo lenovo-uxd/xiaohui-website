@@ -274,7 +274,7 @@
         <img src="{{ url_for('static', filename='image/qrcode.svg')}}" width=26 height=26 />
         </div>
 <div class="qrcode">
-        <div><img src="{{ url_for('static', filename='image/uxdcode.jpg')}}"/></div>
+        <div><img src="{{ url_for('static', filename='image/contact.jpeg')}}"/></div>
         <p>欢迎关注，一起进步</p>
         </div>
     
@@ -403,7 +403,7 @@ window.onload = function(){
             type:'GET',
             url:'/get-message',
             success:function(data){
-                console.log(data);
+                /*console.log(data);*/
                 $.each(data,function(i,commentValue){
                     $.each(commentValue,function(i,value){
                     var textsize=Math.floor(Math.random()*3)+1;//随机字体大小
@@ -568,22 +568,25 @@ function emptyText(a,b){
         if ((endTime - startTime) < -2000) {
             
             if (delta > 0) {
-//向下滚动
-                if(count==5){return ''}else{
+//向下滚动       
+                
+                if(count==4){return ''}else{
                 $(".pagenumber").animate({'top':'+=17px'},1000);
                 count++;
                     
                 //第二页
-                if(count==2){
+                if(count==1){
+                console.log(count);
                 $("#dot1").animate({"margin-bottom":"12px"},1000);
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
                 pageGone(page1,back1,text1);
                 pageCome(back2,text2);
                 $("div #dot1").css("animation","none");
+                
                 }
                  
                 //第三页
-                if(count==3){
+                if(count==2){
                 $("#dot2").animate({"margin-bottom":"12px"},1000);
                 $("#dot3").animate({"margin-bottom":"35px"},1000);
                 pageGone(page2,back2,text2);
@@ -597,7 +600,7 @@ function emptyText(a,b){
                 }
                     
                 //第四页
-                if(count==4){
+                if(count==3){
                 $("#dot3").animate({"margin-bottom":"12px"},1000);
                 $("#dot4").animate({"margin-bottom":"35px"},1000);
                 $(".contact").hide();
@@ -609,7 +612,7 @@ function emptyText(a,b){
                 }
                     
                 //第五页
-                if(count==5){
+                if(count==4){
                 $("#dot4").animate({"margin-bottom":"12px"},1000);
                 $("#dot5").animate({"margin-bottom":"35px"},1000);
                 $(".contact").show();
@@ -625,9 +628,9 @@ function emptyText(a,b){
             }
             if (delta < 0 ) {
 //向上滚动
-                if(count==1){return ''}else{
+                if(count==0){return ''}else{
                 $(".pagenumber").animate({'top':'-=17px'},1000);
-                count--;
+                
                     
                 //第四页
                 if(count==4){
@@ -636,9 +639,6 @@ function emptyText(a,b){
                 $(".contact").hide();
                 pageComeUp(page4,back4,text4); 
                 pageGoneUp(back5,text5);
-                /*objectDisappear($("#footer"),"63%");
-                objectAppear($("#pic4"),"50%");*/
-                /*emptyText(main5div1,main5div2); */
                 }
                 
                 //第三页
@@ -648,9 +648,6 @@ function emptyText(a,b){
                 $(".contact").show();
                 pageComeUp(page3,back3,text3); 
                 pageGoneUp(back4,text4);
-                /*objectDisappear($("#pic4"),"90%");
-                objectAppear($("#pic3"),"0%");*/
-                /*emptyText(main4div1,main4div2);*/
                 }
                     
                 //第二页
@@ -659,11 +656,6 @@ function emptyText(a,b){
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
                 pageComeUp(page2,back2,text2); 
                 pageGoneUp(back3,text3);
-                /*objectDisappear($("#pic3"),"40%");
-                objectAppear(wanhuatong,"20%");
-                objectAppear(wangyuanjing,"20%");
-                objectAppear(shiguangji,"55%");*/
-               /* emptyText(main3div1,main3div2);*/
                 }
                     
                 //第一页
@@ -674,7 +666,8 @@ function emptyText(a,b){
                 pageGoneUp(back2,text2);
                 $("div #dot1").css("animation","dothint 1s linear infinite");
     
-                            }  
+                            } 
+                count--;
                 }
                 
             }
