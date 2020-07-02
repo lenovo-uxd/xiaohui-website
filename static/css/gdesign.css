@@ -5,17 +5,18 @@
   
 }
 @font-face {
-    font-family: '方正兰亭黑简体';
-    src: url(../font/heijian.TTF);
-}
-@font-face {
     font-family: 'Gotham-Bold';
     src: url(../font/Gotham-Bold.otf);
 }
+
+@font-face {
+    font-family: 'heijian';
+    src: url(../font/heijian.TTF);
+}
 html, body {   
-    font-family: '方正兰亭黑简体';
+    font-family: 'heijian';
     overflow-x: hidden;
-    color:#444553;
+    color:white;
     /*将rem设置为10px*/
     font-size:62.5%; 
     -webkit-text-size-adjust:none;
@@ -25,29 +26,38 @@ p{
 }
 h1{
     font-size: 4.8rem;
+    margin-bottom: 3rem;
 }
 h3{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+}
+button:focus{outline:0;}
+/*导航*/
+#navback{
+    position: fixed;
+    left: 0;
+    top:0;
+    width:100%;
+    height:48px;
+    background-color: #1D1D23;
+    opacity: 0;
 }
 .nav{
     position: fixed;
-    top: -90px;
-    width: auto;
+    top: 30px;
+    width: 86%;
     left: 7%;
     right:7%;
-    opacity: 0;
 }
 .logo{
     position: relative;
     display: inline;
     float:left;
-    width:189px;
-    height:34px;
+    width:130px;
+    height:30px;
 }
-.logo svg{
-    position: relative;
-    height: 100%;
-    display: inline-block;
+.logo img{
+    height:100%;
 }
 .logo a{
     text-decoration: none;
@@ -65,15 +75,14 @@ h3{
     float: left;
     position: relative;
     width:10vw;;
-    line-height: 50px;
+    line-height: 44px;
     top:-16px;
 }
 .dropdownmenu a {
     color: white;
-    opacity: 0.5;
+    opacity: 0.6;
     display: block;
     font-size: 1.4rem;
-    font-weight: 700;
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
@@ -98,217 +107,219 @@ li:hover ul#submenu {
     visibility: visible;
 }
 
-}
+
 #submenu li {
     float: none;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #submenu a:hover {
-    color: #5376FF;
-    opacity: 1;
+    background-color: #5376FF;
+    color: white;
+
 }
 #submenu a {
     background-color:white;
-    line-height: 2.4rem;
+    line-height: 4rem;
     color:#444553;
 }
 
 .english{
     position: absolute;
-    height: 100%;
+    height: 30px;
     right: 0px;
-    line-height: 34px;
     font-family: 'Gotham-Bold';
     width: auto;
 }
+.english p{
+    line-height: 34px;
+}
+
+
 .english a{
 text-decoration: none;
 color: white;
 }
 
-.contact{
-    position: fixed;
-    bottom: 65px;
-    right:7%;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
-    opacity: 0;
-}
-.qrcode{
-    position: fixed;
-    bottom: 120px;
-    right: 7%;
-    background: white;
-    width:0rem;
-    height:0rem;
-    overflow: hidden;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
-}
-.qrcode div{
-    position: absolute;
-    width:80%;
-    left: 10%;
-    top:10%;
-    height:auto;
-}
-.qrcode img{
-    width:100%;
-}
-.qrcode p{
-    position: absolute;
-    white-space:nowrap;
-    opacity: 0;
-    bottom: 15%;
-    width:100%;
-    letter-spacing: 0.3rem;
-    text-align: center;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
-}
-.leftdown{
-    position: fixed;
-    left: 7%;
-    bottom: 80px;
-    width: auto;
-    left: 7%;
-    opacity: 0;
-    animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
-    -webkit-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
-    -moz-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
-    -o-animation: bounce-down 1s linear infinite;animation: bounce-down 1s linear infinite;
-}
-.leftdown div{
-    position: relative;
-    display: inline-block;
-    color: white;
-    opacity: 0;
-    margin-left: 1vw;
-}
-@keyframes bounce-down {
-    25% {transform: translateY(-10px);}
-    50%{transform: translateY(0);}
-    75% {transform: translateY(10px);}
-    100% {transform: translateY(0);}
-}
 
 /*首页*/
 #landing{
     position: fixed;
-    width:100%;
-    height: 100%;  
+    width:100vw;
+    height: 31vw;  
     overflow: hidden;
 }
 #back{
     position: absolute;
     width:100%;
-    height: 100vh;
+    height: 100%;
+    overflow: hidden;
 }
-/*#back img{
-    width:auto;
-    height:100%;
-}*/
+
 #front{
     position: absolute;
     left: 0px;
     top:0px;
     width:100%;
-    height:100%;
+    height:31vw;
     background-color:black;
-    opacity: 0.4;
+    opacity: 0.2;
 }   
-#mask{
-    position: absolute;
-    left: 0px;
-    top:0px;
-    width: 100%;
-    height:100%;
-    overflow: hidden;
-    mask: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50%) no-repeat; 
-    mask-size:700px 700px;
-    -webkit-mask: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50%) no-repeat; 
-    -webkit-mask-size:700px 700px;
-}
+
 
 #title{
-    position: absolute;
+    position: relative;
     color: white;
-    width: 100vw;
-    height: 100vh;
+    width:100vw;
+    height: 31vw;  
     text-align: center;
-    opacity: 0;
-    top:90px;
 }
 #title h1{
-    margin-top:40vh;
-    font-size: 7rem;
-    line-height: 7rem;
+    padding-top: 12vw;
+    font-size: 6rem;
+    line-height: 6rem;
 }
 #title p{
     width: 86%;
-    line-height: calc(12px + 8vh);
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 2rem;
+    line-height: 3rem;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 2vh;
+    font-size: 1.6rem;
+}
+#title button{
+    margin-top: 4vh;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+    font-size: 1.6rem;
 }
 /*内容区域*/
 #scroll{
-    position: absolute;
-    width: 100%;
-    
-}
-#transparentLanding{
-    width:100vw;
-    height:100vh;
     position: relative;
+    width: 100vw;
+    background-color: #131315;
 }
+
 
 /*能力优势*/
 #pro{
     position: relative;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 1%;
+    padding-bottom: 3%;
     width:100%;
-    background: #F9F9F9;
-    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
-    background-size: 60px 60px;
-}
-.mainInfo div{
-    position: relative;
-    height: 4.8rem;
-    margin-bottom: 8rem;
-    text-align: center;
-}
-.mainInfo h1{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top:4.8rem;
-    line-height: 4.8rem;
-    color: #444553;
-    opacity: 0;
 }
 #proSub{
     position: relative;
     margin-top: 3%;
     margin-bottom: 3%;
     display: inline-block;
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+#proicon1,#proicon2,#proicon3{
+    width:25vw;
+    height:25vw;
+}
+#proicon1 .icon2{
+    position: absolute;
+    top:2vw;
+    left:1vw;
+    width:20vw;
+    height: 25vw;
+    background-image: url(../image/qianzhang.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#proicon1 .icon1{
+    position: absolute;
+    right: 3vw;
+    top:6vw;
+    width:8vw;
+    height: 8vw;
+    background-color: #3F1698;
+}
+
+#proicon2 .icon1{
+    position: absolute;
+    top:4.5vw;
+    left:5vw;
+    width:7vw;
+    height: 7vw;
+    background-image: url(../image/dute1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#proicon2 .icon2{
+    position: absolute;
+    top:5.5vw;
+    right:5.5vw;
+    width:6.5vw;
+    height: 6.5vw;
+    background-image: url(../image/dute2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#proicon2 .icon3{
+    position: absolute;
+    top:12.7vw;
+    left:6.5vw;
+    width:5.5vw;
+    height: 5.5vw;
+    background-image: url(../image/dute3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#proicon2 .icon4{
+    position: absolute;
+    top:13.2vw;
+    right:5vw;
+    width:7vw;
+    height: 7vw;
+    background-color: #3F1698;
+}
+
+#proicon3 .icon1{
+    position: absolute;
+    top:7.5vw;
+    left:2.5vw;
+    width:8vw;
+    height: 8vw;
+    background-color: #3F1698;
+}
+#proicon3 .icon2{
+    position: absolute;
+    top:4.5vw;
+    left:6vw;
+    width:11.5vw;
+    height: 16vw;
+    background-image: url(../image/baozheng2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#proicon3 .icon3{
+    position: absolute;
+    top:6vw;
+    right:1vw;
+    width:10vw;
+    height: 10vw;
+    border-radius: 5vw;
+    background-image: url(../image/baozheng2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .proSub1{
     position: relative;
-    width:30%;
+    width:25vw;
     height: auto;
     display: inline-block;
 }
@@ -326,23 +337,22 @@ color: white;
     line-height: 30px;
 }
 #proSub h3{
-    position: absolute;
+    position: relative;
     width:100%;
     text-align: center;
-    opacity: 0;
-    top: 4.8rem;
 }
 #proSub p{
-    position: absolute;
+    position: relative;
     width:100%;
-    opacity: 0;
-    top: 4.8rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
 /*学习过程*/
 #studyProcess{
     position: relative;
+    padding-top: 10%;
+    padding-bottom: 6%;
     width: 100%;
     height:auto;
 }
@@ -350,227 +360,632 @@ color: white;
     width: 100%;
     height: 100%;
 }
-#videoCover{
-    position: absolute;
-    top:0px;
-    width:100%;
-    height: 100%;
-    background-color: #444553;
-    opacity: 0.4;
-}
 #studyInfo{
-    position: absolute;
-    top:40%;
+    position: relative;
     width: 100%;
     text-align: center;
 }
-#studyInfo h1{
-    color: white;
-}
 #studyInfo p{
-    position: absolute;
+    position: relative;
     width: 100%;
-    color: white;
-    top: 4.8rem;
     line-height: 2.4rem;
     height: 2.4rem;
-    opacity: 0;
+}
+#videoStudy{
+    position: relative;
+    margin:0 auto;
+    margin-top:6rem;
+    width: calc(160vw * 0.35);
+    height:calc(90vw * 0.35);
+}
+#dec1,#dec2,#dec3,#dec4{
+    position: absolute;
+}
+#dec1{
+    left:15vw;
+    top:40vh;
+    width:20rem;
+    height:15rem;
+    background-color: #6066FF;
+}
+#dec2{
+    right:15vw;
+    bottom: 20vh;
+    width:20rem;
+    height:15rem;
+    background-color: #6066FF;
+}
+#dec3{
+    left:7vw;
+    bottom: 20vh;
+    width:15rem;
+    height:8rem;
+    background-color: #3F1698;
+}
+#dec4{
+    right: 7vw;
+    top:35vh;
+    width:15rem;
+    height:8rem;
+    background-color: #3F1698;
+}
+/*能力演示*/
+#demo{
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 6%;
+    width: 100%;
+    height:auto;
+}
+#demo p{
+    text-align: center;
+    line-height: 2.4rem;
+}
+#demo p a{
+    color: #5376FF;
+    text-decoration: none;
+}
+#demo h1{
+    text-align: center;
+}
+#demo img{
+    position: absolute;
+    width: 100%;
+}
+.download{
+    position: absolute;
+    left:2rem;
+    bottom: 0.5rem;
+    width:2rem;
+    height:3rem;
+    background: transparent;
+    border: none;
+    background-image: url("../image/download.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
 }
 
+#demoPart{
+    position: relative;
+    width:100%;
+    margin-top: 6rem;
+}
+#demoTitle{
+    position: relative;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
+    height: 5rem;
+}
+#demoTitle p{
+    position: absolute;
+    left:0;
+    line-height: 4rem;
+}
+#demoTitle div{
+    position: absolute;
+    right:0;
+}
+#demoTitle button{
+    position: relative;
+    display: inline;
+    margin-left: 1rem;
+    width:8rem;
+    height: 4rem;
+    border-radius: 5px;
+    border:1px solid white;
+    color:white;
+    background-color: transparent;
+}
+#demoFirstline{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#demoFirstline div{
+    position: relative;
+    display: inline-block;
+    width:16.8vw;
+    height:8.4vw;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+#demoFirstline div:hover{
+    border: 2px solid #5375FF;
+}
+#demoSecondline{
+    position: relative;
+    margin-top: 0.5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;  
+}
+
+#demoSecondline div{
+    position: relative;
+    display: inline-block;
+    width:16.8vw;
+    height:8.4vw;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+#demoSecondline div:hover{
+    border: 2px solid #5375FF;
+}
+/*添加的dom节点*/
+#adddom{
+    position: relative;
+    background-color: #444553;
+}
+#domTitle{
+    position: relative;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-top: 4rem;
+    height: 5rem;
+}
+#domTitle p{
+    position: absolute;
+    left:0;
+    line-height: 4rem;
+    color: white;
+}
+#domTitle div{
+    position: absolute;
+    right:0;
+}
+#domTitle button{
+    color: white;
+    position: relative;
+    display: inline;
+    margin-left: 1rem;
+    width:8rem;
+    height: 4rem;
+    border-radius: 5px;
+    border:1px solid white;
+    background-color: transparent;
+}
+#domFirst{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+#domFirst div{
+    position: relative;
+    display: inline-block;
+    width:16.8vw;
+    height:8.4vw;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+#domFirst div:hover{
+    border: 2px solid #5375FF;
+}
+#domSecond{
+    position: relative;
+    margin-top: 0.5vw;
+    padding-bottom: 9rem;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+#domSecond div{
+    position: relative;
+    display: inline-block;
+    width:16.8vw;
+    height:8.4vw;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+#domSecond div:hover{
+    border: 2px solid #5375FF;
+}
+#arrow{
+    position: relative;
+    width: 0; 
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color:transparent transparent #444553 transparent;
+    margin-left: calc(7% + 8vw);
+    margin-top: -3px;
+}
+#demoloading{
+    position: relative;
+    width:100vw;
+    height:15rem;
+    margin-top: 10rem;
+    background-image: url(../image/demoloading.png);
+    background-size: 15rem auto;
+    background-position: center 0;
+    background-repeat: repeat-y;
+}
+#domloading{
+    position: relative;
+    width:100vw;
+    height:15rem;
+    background-image: url(../image/demoloading.png);
+    background-size: 15rem auto;
+    background-position: center 0;
+    background-repeat: repeat-y;
+}
 /*案例*/
 #case{
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: #F9F9F9;
-    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
-    background-size: 60px 60px;
+    padding-top: 10%;
+    padding-bottom: 6%;
+    width: 100%;
+    height: auto;
 }
 #caseInfo{
-    position: absolute;
-    float: left;
-    left:7%;
-    top:50%;
-    transform: translate(0,-50%);
-}
-#caseInfo div{
     position: relative;
-    display: block;
-    width: 49vw;
-}
-#caseInfo h1{
-    position: absolute;
-    text-align: left;
-}
-#caseInfo p{
-    position: absolute;
-    text-align: left;
-    top: 4.8rem;
-    opacity: 0;
-}
-#case button{
-    position: absolute;
-    top: 4.8rem;
-    left: 0px;
-    width:10vw;
-    height: 6vh;
-    font-size:1.6rem;
-    color: #444553;
-    border-radius: 10px;
-    border: solid #444553 1px;
-    background-color: transparent;
-    opacity: 0;
-}
-#pic4{
-    position: absolute;
-    float: right;
-    top:50%;
-    transform: translate(0,-50%);
-    right:7%;
-    width: calc(160vw * 0.35);
-    height:calc(90vw * 0.35);
-    opacity: 0;
-}
-.box{
-    position: absolute;
     width: 100%;
-    height:100%;
-    overflow: hidden;
-}
-.flexslider{
-    position: absolute;
-    width: 400%;
-    height: 100%;
-    font-size: 0;
-    top:0;
-    left:0;
-    margin-left: 0px;
-    overflow: hidden;
-}
-.flexslider div{
-    position: relative;
-    display:inline-block;
-    width: 25%;
-    height: 100%;
-}
-.flexslider div img{
-    width:100%;
-    height: 100%;
+    text-align: center;
 }
 
+#caseInfo p{
+    position: relative;
+    width: 100%;
+    line-height: 2.4rem;
+    height: 2.4rem;
+}
+#pic4{
+    position: relative;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:6rem;
+    display: flex;
+    justify-content: space-between;
+}
+#packaging,#advertising,#brand{
+    width:28.4vw;
+}
+#packUp{
+    width:28.4vw;
+    height:16.4vw;
+    background-image: url(../image/pack3.png);
+    background-size: cover;
+    background-position: center;
+}
+#packLeft,#adverLeft,#brandLeft{
+    display: inline-block;
+    float: left;
+}
+#packRight,#adverRight,#brandRight{
+    display: inline-block;
+    float: right;
+}
+
+#packLeft1{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec1.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#packLeft2{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/pack1.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#packLeft3{
+    width:14vw;
+    height:8vw;
+    background-color: #FFC903;
+    margin-top:0.4vw;
+}
+#packLeft3 h1{
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 8vw;
+}
+#packRight1{
+    width:14vw;
+    height:16.4vw;
+    background-image: url(../image/pack2.png);
+    background-size: cover;
+    background-position: center;
+    margin-top:0.4vw;
+}
+#packRight2{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec2.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+
+#adverLeft1{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/adver2.jpg);
+    background-size: cover;
+}
+#adverLeft2{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec3.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#adverLeft3{
+    width:14vw;
+    height:8vw;
+    background-color: #3E62F6;
+    margin-top:0.4vw;
+}
+#adverLeft3 h1{
+    font-size: 1.2vw;
+    text-align: center;
+    line-height: 8vw;
+}
+#adverLeft4{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/adver1.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#adverLeft5{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/case10.png);
+    background-size: cover;
+    margin-top:0.4vw;
+    background-position: right;
+}
+#adverRight1{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/adver3.jpg);
+    background-size: cover;
+    background-position: right;
+}
+#adverRight2{
+    width:14vw;
+    height:16.4vw;
+    background-image: url(../image/adver4.jpg);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#adverRight3{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec4.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#adverRight4{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/adver5.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+
+#brandLeft1{
+    width:14vw;
+    height:8vw;
+    background-color: #E1031A;
+}
+#brandLeft1 h1{
+    font-size: 2vw;
+    text-align: center;
+    line-height: 8vw;
+}
+#brandLeft2{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/brand1.png);
+    background-size: cover;
+    background-position: center;
+    margin-top:0.4vw;
+}
+#brandLeft3{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/brand3.jpg);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#brandLeft4{
+    width:14vw;
+    height:16.4vw;
+    background-image: url(../image/brand2.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#brandRight1{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec5.png);
+    background-size: cover;
+}
+#brandRight2{
+    width:14vw;
+    height:8vw;
+    background-color: #2D2D2F;
+    margin-top:0.4vw;
+}
+#brandRight2 h1{
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 8vw;
+}
+#brandRight3{
+    width:14vw;
+    height:16.4vw;
+    background-image: url(../image/inter1.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+#brandRight4{
+    width:14vw;
+    height:8vw;
+    background-image: url(../image/casedec6.png);
+    background-size: cover;
+    margin-top:0.4vw;
+}
+.gray{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.gray:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
 /*更多信息*/
 #more{
     position: relative;
-    display: inline-block;
-    width:100vw;
-    height: 70vh;
-    text-align: center;
-    background: #F5F5F5;
-    background-image: radial-gradient(#D5D5D7 4%, transparent 0);
-    background-size: 60px 60px;
+    padding-top: 6%;
+    padding-bottom: 10%;
+    width:100%;
+    /*background: black;*/
 }
 #moreInfo{
-    padding-top: 10%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+#moreInfo h1{
+    font-size: 2.4rem;
+}
+
+#moreSub{
+    position: relative;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 #moreSub div{
-    position: relative;
     display: inline-block;
-    padding-top:4vh;
-    width: 40vw;
+    float: left;
+    margin-right: 2rem;
+    height:7rem;
 }
-#moreSub div div{
-    position: relative;
-    padding-bottom: 3vh;
+.othericon{
+    width:7rem;
+    height:7rem;
+    border-radius: 4rem;
+    border: 4px solid white;
+    background-image: url(../image/other.svg);
+    background-repeat: no-repeat;
+    background-size: 4rem 4rem;
+    background-position: 50% 50%;
+}
+#moreSub div:hover .othericon{
+    background-position: 90% 50%;
+    animation: bounce-right 1s linear infinite;
+    -webkit-animation: bounce-right 1s linear infinite;
+    -moz-animation: bounce-right 1s linear infinite;
+    -o-animation: bounce-right 1s linear infinite;
+}
+@keyframes bounce-right {
+    0% {background-position: 50% 50%;}
+    25%{background-position: 70% 50%;}
+    75%{background-position: 70% 50%;}
+    100% {background-position: 50% 50%;}
+}
+#moreSub h3{
     width: 100%;
+    line-height: 5rem;
 }
-#moreSub div h3{
-    position: absolute;
-    top:calc(12px + 5vw);
+#moreSub p{
     width: 100%;
-    text-align: center;
-    opacity: 0;
+    line-height: 2rem;
+    opacity: 0.6;
 }
-#moreSub div p{
-    width: 100%;
-    position: absolute;
-    line-height: 30px;
-    text-align: center;
-    top:4rem;
-    opacity: 0;
-}
-#moreSub div button{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-    width:8vw;
-    height: 6vh;
-    font-size: 1.6rem;
-    color: #444553;
-    border-radius: 10px;
-    border: solid #444553 1px;
-    background-color: transparent;
-    top:4rem;
-    opacity: 0;
-}
+
 
 /*页面尾部*/
 #footer{
     position: relative;
-    width:100vw;
-    height: 30vh;
-    background-color: white;
-    z-index: 999;
+    width:86vw;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background-color: #1E1E23;
+    display: flex;
+    justify-content: space-between;
 }
 
-#footLogo{
-    position: relative;
-    width:100%;
-    height: 34px;
-    padding-top:5vh;
-    padding-bottom:3vh;
+#leftSide div{
+    width:20rem;
+    height:2rem;
+    background-image: url("../image/footerLogo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 2rem;
 }
-#footLogo svg{
-    position: absolute;
-    left: 7%;
+#groupName{
+    padding-bottom: 2rem;
+}
+#email{
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+
+#rightSide div{
+    display: inline-block;
+    width:10rem;
+    height: 10rem;
+    background-image: url("../image/contact.jpeg");
+    background-size: contain;
+}
+#rightSide p{
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    line-height: 3rem;
+    text-align: right;
 }
 #line{
     position: relative;
-    width:86%;
-    margin-left: 7%;
-    height: 1px;
-    border-top:solid #444553 1px;
-    opacity: 0.2;
-}
-#groupInfo{
-    position: relative;
-    padding-top: 3vh;
-    width: 100%;
-}
-#leftSide{
-    position: absolute;
-    float: left;
-    left: 7%;
-    opacity: 0.2;
-    width:60vw;
-    height:8vw;
-}
-#leftSide p{
-    text-align: left;
-    font-size: 1.6rem;
-}
-#groupName{
-    line-height: 4vw;
-}
-#rightSide{
-    position: absolute;
-    float: right;
-    right: 7%;
-    width:8vw;
-    height: 8vw;
-}
-#rightSide img{
     width:100%;
-    height:100%;
+    height:1px;
+    background-color: white;
+    opacity: 0.1;
+}
+#middleSide{
+    background-color: #1E1E23;
+}
+#middleSide p{
+    position: relative;
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width:100%;
+    text-align: center;
+}
+#middleSide span{
+    opacity: 0.6;
 }
 
 
@@ -586,77 +1001,8 @@ color: white;
 
 
 
-@media screen and (max-width: 960px) {
-/*案例*/
-#caseInfo{
-    position: absolute;
-    left: 0;
-    top:10%;
-}
-#caseInfo div{
-    position: relative;
-    display: block;
-    width: 100vw;
-}
-#caseInfo h1{
-    position: absolute;
-    text-align: center;
-}
-#caseInfo p{
-    position: absolute;
-    text-align: center;
-    top: 4.8rem;
-    opacity: 0;
-}
-#case button{
-    position: absolute;
-    top: 4.8rem;
-    left: 0px;
-    width:10vw;
-    height: 6vh;
-    font-size:1.6rem;
-    color: #444553;
-    border-radius: 10px;
-    border: solid #444553 1px;
-    background-color: transparent;
-    opacity: 0;
-}
-#pic4{
-    position: absolute;
-    float: right;
-    top:50%;
-    transform: translate(0,-50%);
-    right:7%;
-    width: calc(160vw * 0.35);
-    height:calc(90vw * 0.35);
-    opacity: 0;
-}
-.box{
-    position: absolute;
-    width: 100%;
-    height:100%;
-    overflow: hidden;
-}
-.flexslider{
-    position: absolute;
-    width: 400%;
-    height: 100%;
-    font-size: 0;
-    top:0;
-    left:0;
-    margin-left: 0px;
-    overflow: hidden;
-}
-.flexslider div{
-    position: relative;
-    display:inline-block;
-    width: 25%;
-    height: 100%;
-}
-.flexslider div img{
-    width:100%;
-    height: 100%;
-}
+
+
 
 
 
