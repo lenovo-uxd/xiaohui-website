@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gdesign.css')}}">
     <script src="{{ url_for('static', filename='js/jquery-1.8.3.min.js')}}">
     </script>
-    <!--<script src="gdesign.js"></script>-->
     
     
 </head>
@@ -15,155 +14,181 @@
 <body>
 <!--页面信息-->
 <div id="landing">
-<div id="back"><video width="auto" height="100%" autoplay muted loop>
-<source src="{{ url_for('static', filename='image/gdesignfront.mp4')}}" type="video/mp4">
+<div id="back"><video width="100%" height="auto" autoplay muted loop>
+<source src="{{ url_for('static', filename='image/gdesign.mp4')}}" type="video/mp4">
 </video></div>
 <div id="front"> </div>
-<div id="mask"><video width="auto" height="100%" autoplay muted loop>
-<source src="{{ url_for('static', filename='image/gdesignfront.mp4')}}" type="video/mp4">
-</video></div>
 </div>
+    
 <div id="title">
-<h1>望远镜-设计生成</h1>
+<h1>望远镜-背景拓展工具</h1>
 <p>设计生成是降维神经网络与资深设计师先验经验的结合，可应用于快速生成张张不同的抽象背景素材。</p>
+<button id="gotoTry">试试看</button>
 </div>
 <!--向下滚-->
 <div id="scroll">
-<div id="transparentLanding"> </div>
 <div id="pro">
-<div class="mainInfo" id="proInfo">
-<div><h1>能力优势</h1></div>
-</div>
 
 <div id="proSub">
 <div class="proSub1">
+<div id="proicon1">
+<div class="icon1"></div><div class="icon2"></div>     
+</div>
 <div class="proh3"><h3>一秒千张</h3></div>
-<div class="prop"><p>&nbsp;视觉素材批量极速生成,<br>&nbsp;&nbsp;助力高效工作。</p></div>
+<div class="prop"><p>视觉素材批量极速生成,助力高效工作</p></div>
 </div>
 <div class="proSub1">
+<div id="proicon2">
+<div class="icon1"></div><div class="icon2"></div><div class="icon3"></div><div class="icon4"></div>    
+</div>
 <div class="proh3"><h3>张张独特</h3></div>
-<div class="prop"><p>&nbsp;每张素材独一无二,<br>&nbsp;&nbsp;不埋没设计的个性。</p></div> 
+<div class="prop"><p>每张素材独一无二,不埋没设计的个性</p></div> 
 </div>
 <div class="proSub1">
+<div id="proicon3">
+<div class="icon1"></div><div class="icon2"></div><div class="icon3"></div>     
+</div>
 <div class="proh3"><h3>效果保证</h3></div>
-<div class="prop"><p>&nbsp;生成效果把关,<br>&nbsp;&nbsp;确保设计风格稳定。</p></div>
+<div class="prop"><p>生成效果把关,确保设计风格稳定</p></div>
 </div>
 </div>
 </div>
+    
+<!--学习过程-->
 <div id="studyProcess">
+<div id="dec1"></div>
+<div id="dec2"></div>
+<div id="dec3"></div>
+<div id="dec4"></div>
+<div class="mainInfo" id="studyInfo">
+<div><h1>学习过程</h1></div>
+<div><p>像人类一样学习，并且更有条理</p></div>
+</div>
+<div id="videoStudy"> 
 <video width="100%" height="100%" autoplay muted loop>
 <source src="{{ url_for('static', filename='image/gdesignprocess.mp4')}}" type="video/mp4">
 </video>
-<div id="videoCover"> </div>
-<div class="mainInfo" id="studyInfo">
-<div><h1>学习过程</h1></div>
-<div><p>&nbsp;&nbsp;像人类一样学习，并且更有条理。</p></div>
 </div>
 </div>
-<div id="case">
-<div class="mainInfo" id="caseInfo">
-<div><h1>应用案例</h1></div>
-<div><p>若对技术应用感兴趣，欢迎扫描右下方二维码交流。</p></div>
-<div><button>免费接入API</button></div>
+    
+<!--能力演示 --> 
+<div id="demo">
+<div class="mainInfo" id="demoInfo">
+<div><h1>能力演示</h1></div>
+<div><p>点击任意图片体验定向无限背景生成能力，该能力演示基于<a href="#">设计生成API</a>搭建，
+<br>如果您对技术能力有特别要求，欢迎联系我们。</p></div>
 </div>
-<div class="pic" id="pic4">
-        <div class="box">
-        <div class="flexslider">
-        <div><img src="{{ url_for('static', filename='image/gd1.png')}}" />
-        </div>
-        <div><img src="{{ url_for('static', filename='image/gd2.png')}}" />
-        </div>
-        <div><img src="{{ url_for('static', filename='image/gd3.png')}}" /></div>
-        <div><img src="{{ url_for('static', filename='image/gd1.png')}}" /></div>
-        </div>
-        </div> 
-</div>
-</div>
-<div id="more">
-<div class="mainInfo" id="moreInfo">
-<div><h1>其他能力</h1></div>
-</div>
-<div id="moreSub">
+<div id="demoloading"></div>
+<div id="demoPart">
+<div id="demoTitle">
+<p>随机生成：</p>
 <div>
-<div><h3>万花筒-风格转换</h3></div>
-<div><p>利用风格迁移算法，<br>实现100+不同视觉风格的实时转换。</p></div>
-<div><button>了解更多</button></div>
-</div> 
-<div>
-<div><h3>时光机-跨域转换</h3></div>
-<div><p>通过深度学习，<br>实现图像从一个域到另一个域的跨域转换。</p></div>
-<div><button>了解更多</button></div>
+<!--<button>上一批</button>-->
+<button onclick="getImage();$('#demoloading').show();
+       $('#demoPart').hide();">下一批</button>
 </div>
 </div>
+<div id="demoFirstline">
+<div><img id="triggerone" src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>
 </div>
-<div id="footer">
-<div id="footLogo">
-<svg width="189px" height="34px" viewBox="0 0 293 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
-    <title>Xiaohui@2x</title>
-    <desc>Created with Sketch.</desc>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="6.1主页-二维码鼠标悬浮" transform="translate(-810.000000, -181.000000)">
-            <g id="Xiaohui@2x" transform="translate(810.000000, 181.000000)">
-                <polygon id="路径" fill="#444553" fill-rule="nonzero" points="85.01 46.8 74.29 46.8 87.23 25.98 75.23 5.54 85.84 5.54 93.17 19 100.95 5.54 111.67 5.54 98.95 25.98 111.56 46.8 100.95 46.8 93.06 32.95"></polygon>
-                <path d="M120.06,13.08 C118.66799,13.1263131 117.319747,12.5899154 116.34,11.6 C115.345338,10.6260678 114.801736,9.2815572 114.84,7.89 C114.801736,6.4984428 115.345338,5.15393224 116.34,4.18 C118.404257,2.2066494 121.655743,2.2066494 123.72,4.18 C124.714662,5.15393224 125.258264,6.4984428 125.22,7.89 C125.24724,9.26942168 124.71334,10.6008089 123.740583,11.5792212 C122.767826,12.5576334 121.439556,13.0992431 120.06,13.08 M124.33,46.8 L115.61,46.8 L115.61,16.21 L124.33,16.21 L124.33,46.8 Z" id="形状" fill="#444553" fill-rule="nonzero"></path>
-                <path d="M153.77,19.44 L153.77,16.21 L162,16.21 L162,46.8 L153.78,46.8 L153.78,43.67 C151.3286,46.2204845 147.927103,47.6368695 144.39,47.58 C140.29398,47.6838634 136.358045,45.988159 133.62,42.94 C130.769423,39.7586162 129.257587,35.5992753 129.4,31.33 C129.281519,27.1411956 130.811098,23.0730892 133.66,20 C136.406689,17.0059646 140.318617,15.3528834 144.38,15.47 C147.934582,15.4166808 151.345778,16.8697997 153.77,19.47 M138.11,31.47 C138.061481,33.6084717 138.834509,35.6841943 140.27,37.27 C141.728117,38.8036414 143.764269,39.6529452 145.88,39.61 C148.01122,39.6700867 150.06166,38.7928931 151.49,37.21 C152.972707,35.6692972 153.791417,33.6081597 153.77,31.47 C153.798268,29.3423953 152.977784,27.2911838 151.49,25.77 C150.007896,24.2713259 147.987761,23.4279726 145.88,23.4279726 C143.772239,23.4279726 141.752104,24.2713259 140.27,25.77 C138.835285,27.3162751 138.060355,29.3612306 138.11,31.47" id="形状" fill="#444553" fill-rule="nonzero"></path>
-                <path d="M183.6,47.63 C179.186692,47.7853536 174.905416,46.1097572 171.77,43 C168.744137,39.9497021 167.096721,35.7950358 167.21,31.5 C167.089635,27.2214019 168.739365,23.0826054 171.77,20.06 C178.436763,13.8076305 188.813237,13.8076305 195.48,20.06 C198.530609,23.0737907 200.202197,27.2129606 200.1,31.5 C200.189725,35.8697898 198.467609,40.0819945 195.342206,43.1373128 C192.216803,46.1926311 187.966632,47.8187898 183.6,47.63 M191.37,31.45 C191.414648,29.3537137 190.593528,27.3316605 189.1,25.86 C187.661458,24.3638915 185.67551,23.518374 183.6,23.518374 C181.52449,23.518374 179.538542,24.3638915 178.1,25.86 C176.623796,27.339438 175.821006,29.3608772 175.88,31.45 C175.81481,33.5845654 176.615491,35.6547955 178.1,37.19 C179.554996,38.6556333 181.534789,39.4799176 183.6,39.4799176 C185.665211,39.4799176 187.645004,38.6556333 189.1,37.19 C190.594056,35.6573695 191.411656,33.5899589 191.37,31.45" id="形状" fill="#444553" fill-rule="nonzero"></path>
-                <polygon id="路径" fill="#444553" fill-rule="nonzero" points="215.37 46.8 206.2 46.8 206.2 5.54 215.37 5.54 215.37 21.68 231.37 21.68 231.37 5.54 240.59 5.54 240.59 46.8 231.37 46.8 231.37 30.55 215.37 30.55"></polygon>
-                <path d="M261.75,47.58 C257.31,47.58 253.81,46.35 251.28,43.89 C248.75,41.43 247.47,38.03 247.47,33.68 L247.47,16.21 L256.19,16.21 L256.19,33.73 C256.100377,35.2928896 256.632388,36.8278147 257.67,38 C259.993157,40.0778951 263.506843,40.0778951 265.83,38 C266.852448,36.8274789 267.379507,35.3036678 267.3,33.75 L267.3,16.21 L276,16.21 L276,33.68 C276,38.1133333 274.743333,41.5366667 272.23,43.95 C269.716667,46.3633333 266.216667,47.5733333 261.73,47.58" id="路径" fill="#444553" fill-rule="nonzero"></path>
-                <path d="M286.91,13.08 C285.519474,13.1178791 284.174462,12.5827668 283.19,11.6 C282.195338,10.6260678 281.651736,9.2815572 281.69,7.89 C281.651736,6.4984428 282.195338,5.15393224 283.19,4.18 C285.25762,2.20538744 288.51238,2.20538744 290.58,4.18 C291.574662,5.15393224 292.118264,6.4984428 292.08,7.89 C292.107315,9.2711828 291.572057,10.6041444 290.59711,11.5828631 C289.622163,12.5615817 288.291278,13.1019825 286.91,13.08 M291.19,46.8 L282.46,46.8 L282.46,16.21 L291.19,16.21 L291.19,46.8 Z" id="形状" fill="#444553" fill-rule="nonzero"></path>
-                <rect id="矩形" x="0" y="0" width="292.08" height="52.6"></rect>
-                <path d="M12,-2.20268248e-13 C13.0561247,0.0113993356 14.0284478,0.577321778 14.56,1.49 L14.56,1.49 L25.12,19.87 C27.4151571,23.8494498 27.4151571,28.7505502 25.12,32.73 L25.12,32.73 L14.53,51.11 C13.8652858,52.2380784 12.5457457,52.8047521 11.27,52.51 L11.27,52.51 L1.15463195e-13,49.81 L5.71,28.31 C6.06523408,27.0003275 6.06523408,25.6196725 5.71,24.31 L5.71,24.31 L1.15463195e-13,2.79 L11.3,0.08 L11.31,0.08 C11.5364817,0.0287603888 11.7678025,0.00194057814 12,-2.20268248e-13 Z" id="形状结合" fill="#444553" fill-rule="nonzero"></path>
-                <path d="M46.7,0 C46.9354652,0.00249688028 47.170043,0.0293057705 47.4,0.08 L47.4,0.08 L58.67,2.79 L53,24.28 C52.6545981,25.5909641 52.6545981,26.9690359 53,28.28 L53,28.28 L58.67,49.81 L47.37,52.52 C46.0919687,52.8128999 44.7717836,52.2418996 44.11,51.11 L44.11,51.11 L33.54,32.73 C31.2510012,28.7489038 31.2510012,23.8510962 33.54,19.87 L33.54,19.87 L44.13,1.49 C44.6633701,0.574274825 45.6402953,0.00788632149 46.7,0 Z" id="形状结合" fill="#444553" fill-rule="nonzero"></path>
-            </g>
-        </g>
-    </g>
-</svg> 
-</div> 
-<div id="line"> </div>
-<div id="groupInfo">
-<div id="leftSide">
-<p id="groupName">联想研究院用户体验设计</p> 
-<p>技术也可以很美</p>
-<p>欢迎关注公众号“联想研究院UXD”获取更多有趣的咨询~</p>
-</div> 
-<div id="rightSide">
-<img src="{{ url_for('static', filename='image/uxdcode.jpg')}}"/>
-</div>
-</div>
+    
+<div id="demoSecondline">
+<div><img src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>
+<div><img src="#" /></div>    
 </div>
 </div>
 
+</div>
+
+<!--应用案例 --> 
+<div id="case">
+<div class="mainInfo" id="caseInfo">
+<div><h1>应用案例</h1></div>
+<div><p>多场景应用的视觉素材</p></div>
+</div>
+<div class="pic" id="pic4">
+<div id="packaging">
+<div class="gray" id="packUp"></div>
+<div id="packLeft">
+    <div class="gray" id="packLeft1"></div><div class="gray" id="packLeft2"></div><div id="packLeft3"><h1>PACKAGING</h1></div>
+</div>
+<div id="packRight">
+    <div class="gray" id="packRight1"></div><div class="gray" id="packRight2"></div>
+</div> 
+</div>  
+    
+<div id="advertising">
+<div id="adverLeft">
+    <div class="gray" id="adverLeft1"></div><div class="gray" id="adverLeft2"></div><div id="adverLeft3"><h1>ADVERTISEMENT</h1></div><div class="gray" id="adverLeft4"></div><div class="gray" id="adverLeft5"></div>
+</div>
+<div id="adverRight">
+    <div class="gray" id="adverRight1"></div><div class="gray" id="adverRight2"></div><div class="gray" id="adverRight3"></div><div class="gray" id="adverRight4"></div>   
+</div>
+</div> 
+    
+<div id="brand">
+<div id="brandLeft">
+    <div id="brandLeft1"><h1>BRAND</h1></div><div class="gray" id="brandLeft2"></div><div class="gray" id="brandLeft3"></div><div class="gray" id="brandLeft4"></div>  
+</div>
+<div id="brandRight">
+    <div class="gray" id="brandRight1"></div><div id="brandRight2"><h1>INTERACTION</h1></div><div class="gray" id="brandRight3"></div><div class="gray" id="brandRight4"></div>
+</div>
+</div> 
+    
+</div>
+</div>   
+<!--更多功能-->
+<div id="more">
+<div class="mainInfo" id="moreInfo">
+<div><h1>尝试其他小绘智能设计能力</h1></div>
+</div>
+<div id="moreSub">
+    
+<div onclick="window.location.href= '/transfer';return false">
+<div class="othericon"></div>
+<div><h3>万花筒</h3><p>风格迁移工具</p></div>
+<div></div>
+</div>
+    
+<div onclick="window.location.href= '/cross';return false">
+<div class="othericon"></div>
+<div><h3>时光机</h3><p>肖像绘制工具</p></div>
+</div>
+    
+</div>
+</div>
+    
+<!--页脚-->
+<div id="footer"> 
+<div id="leftSide">
+<div></div>
+<p id="groupName">联想研究院用户体验设计</p> 
+<p id="email">联系邮箱：yangzhi3@lenovo.com</p>
+
+</div>   
+<div id="rightSide">
+<p>关注公众号“联想研究院UXD”<br>获取更多有趣的资讯~</p>
+<div></div>
+</div> 
+</div>
+<div id="line"></div>
+<div id="middleSide"><p><span>Made with</span> 🧡❤️🧡❤️🧡❤️🧡 <span>by UXD Lenovo Research</span></p></div>  
+
+</div>
 <!--不动产-->
+<div id="navback"></div>
 <div class="nav">
       
         <div class="logo">
                 <a href="/">
-                <svg 
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="42px" height="32px">
-<path fill-rule="evenodd"  fill="rgb(83, 118, 255)"
- d="M32.488,17.198 L35.994,30.291 L29.060,31.936 C28.865,31.983 28.667,31.996 28.474,31.979 C28.088,31.945 27.723,31.789 27.432,31.534 C27.287,31.407 27.161,31.256 27.060,31.082 L20.576,19.902 C19.171,17.480 19.172,14.501 20.580,12.079 L27.078,0.898 C27.408,0.331 28.014,-0.004 28.654,-0.004 C28.794,-0.004 28.937,0.011 29.078,0.045 L35.994,1.690 L32.488,14.784 C32.276,15.575 32.276,16.406 32.488,17.198 ZM8.916,31.082 C8.513,31.776 7.700,32.123 6.915,31.936 L0.001,30.291 L3.504,17.198 C3.717,16.406 3.717,15.575 3.504,14.784 L0.001,1.690 L6.932,0.044 C7.073,0.010 7.216,-0.006 7.357,-0.006 C7.676,-0.006 7.988,0.078 8.261,0.233 C8.534,0.389 8.768,0.615 8.933,0.899 L15.419,12.079 C16.823,14.501 16.821,17.480 15.415,19.902 L8.916,31.082 Z"/>
-</svg>
-               
-                <svg id="logoChange" width="138px" height="34px" viewBox="0 0 219 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
-    
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="7能力展示-设计生成" transform="translate(-204.000000, -579.000000)" fill="white" fill-rule="nonzero">
-            <g id="编组-21" transform="translate(204.290000, 579.699041)">
-                <polygon id="路径" points="10.72 44.1009594 5.68434189e-14 44.1009594 12.94 23.2809594 0.94 2.84095942 11.55 2.84095942 18.88 16.3009594 26.66 2.84095942 37.38 2.84095942 24.66 23.2809594 37.27 44.1009594 26.66 44.1009594 18.77 30.2509594"></polygon>
-                <path d="M45.77,10.3809594 C44.37799,10.4272725 43.0297471,9.89087482 42.05,8.90095942 C41.0553385,7.92702718 40.5117358,6.58251662 40.55,5.19095942 C40.5117358,3.79940222 41.0553385,2.45489167 42.05,1.48095942 C44.1142568,-0.492391183 47.3657432,-0.492391183 49.43,1.48095942 C50.4246615,2.45489167 50.9682642,3.79940222 50.93,5.19095942 C50.9572401,6.5703811 50.4233396,7.90176831 49.4505829,8.88018058 C48.4778262,9.85859285 47.1495564,10.4002025 45.77,10.3809594 M50.04,44.1009594 L41.32,44.1009594 L41.32,13.5109594 L50.04,13.5109594 L50.04,44.1009594 Z" id="形状"></path>
-                <path d="M79.48,16.7409594 L79.48,13.5109594 L87.71,13.5109594 L87.71,44.1009594 L79.49,44.1009594 L79.49,40.9709594 C77.0386003,43.5214439 73.637103,44.9378289 70.1,44.8809594 C66.0039802,44.9848229 62.0680455,43.2891184 59.33,40.2409594 C56.4794228,37.0595756 54.9675865,32.9002348 55.11,28.6309594 C54.9915186,24.442155 56.5210979,20.3740486 59.37,17.3009594 C62.1166895,14.306924 66.0286166,12.6538428 70.09,12.7709594 C73.6445815,12.7176402 77.0557782,14.1707591 79.48,16.7709594 M63.82,28.7709594 C63.7714809,30.9094311 64.5445086,32.9851537 65.98,34.5709594 C67.4381175,36.1046008 69.4742689,36.9539046 71.59,36.9109594 C73.7212195,36.9710461 75.7716595,36.0938525 77.2,34.5109594 C78.6827072,32.9702567 79.5014169,30.9091191 79.48,28.7709594 C79.5082684,26.6433547 78.6877838,24.5921433 77.2,23.0709594 C75.7178961,21.5722854 73.6977608,20.728932 71.59,20.728932 C69.4822392,20.728932 67.4621039,21.5722854 65.98,23.0709594 C64.5452853,24.6172345 63.7703547,26.66219 63.82,28.7709594" id="形状"></path>
-                <path d="M109.31,44.9309594 C104.896692,45.0863131 100.615416,43.4107167 97.48,40.3009594 C94.454137,37.2506615 92.8067215,33.0959952 92.92,28.8009594 C92.7996354,24.5223613 94.4493655,20.3835649 97.48,17.3609594 C104.146763,11.1085899 114.523237,11.1085899 121.19,17.3609594 C124.240609,20.3747502 125.912197,24.51392 125.81,28.8009594 C125.899725,33.1707493 124.177609,37.382954 121.052206,40.4382722 C117.926803,43.4935905 113.676632,45.1197492 109.31,44.9309594 M117.08,28.7509594 C117.124648,26.6546731 116.303528,24.6326199 114.81,23.1609594 C113.371458,21.6648509 111.38551,20.8193335 109.31,20.8193335 C107.23449,20.8193335 105.248542,21.6648509 103.81,23.1609594 C102.333796,24.6403974 101.531006,26.6618366 101.59,28.7509594 C101.52481,30.8855248 102.325491,32.9557549 103.81,34.4909594 C105.264996,35.9565927 107.244789,36.780877 109.31,36.780877 C111.375211,36.780877 113.355004,35.9565927 114.81,34.4909594 C116.304056,32.9583289 117.121656,30.8909183 117.08,28.7509594" id="形状"></path>
-                <polygon id="路径" points="141.08 44.1009594 131.91 44.1009594 131.91 2.84095942 141.08 2.84095942 141.08 18.9809594 157.08 18.9809594 157.08 2.84095942 166.3 2.84095942 166.3 44.1009594 157.08 44.1009594 157.08 27.8509594 141.08 27.8509594"></polygon>
-                <path d="M187.46,44.8809594 C183.02,44.8809594 179.52,43.6509594 176.99,41.1909594 C174.46,38.7309594 173.18,35.3309594 173.18,30.9809594 L173.18,13.5109594 L181.9,13.5109594 L181.9,31.0309594 C181.810377,32.593849 182.342388,34.1287741 183.38,35.3009594 C185.703157,37.3788545 189.216843,37.3788545 191.54,35.3009594 C192.562448,34.1284383 193.089507,32.6046272 193.01,31.0509594 L193.01,13.5109594 L201.71,13.5109594 L201.71,30.9809594 C201.71,35.4142928 200.453333,38.8376261 197.94,41.2509594 C195.426667,43.6642928 191.926667,44.8742928 187.44,44.8809594" id="路径"></path>
-                <path d="M212.62,10.3809594 C211.229474,10.4188385 209.884462,9.88372624 208.9,8.90095942 C207.905338,7.92702718 207.361736,6.58251662 207.4,5.19095942 C207.361736,3.79940222 207.905338,2.45489167 208.9,1.48095942 C210.96762,-0.49365314 214.22238,-0.49365314 216.29,1.48095942 C217.284662,2.45489167 217.828264,3.79940222 217.79,5.19095942 C217.817315,6.57214222 217.282057,7.90510384 216.30711,8.88382249 C215.332163,9.86254115 214.001278,10.4029419 212.62,10.3809594 M216.9,44.1009594 L208.17,44.1009594 L208.17,13.5109594 L216.9,13.5109594 L216.9,44.1009594 Z" id="形状"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+                <img src="{{ url_for('static', filename='image/logowhite.svg')}}" width=100% height=auto />
                 </a>
         </div>
         
@@ -172,9 +197,9 @@
         <li><a href="/" class="mainMenu">主页</a></li>
         <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
         <ul id="submenu">
-        <li><a href="/gdesign">望远镜<br>-设计生成</a></li>
-        <li><a href="/transfer">万花筒<br>-风格转换</a></li>
-        <li><a href="/cross">时光机<br>-跨域转换</a></li>
+        <li><a href="/gdesign">望远镜</a></li>
+        <li><a href="/transfer">万花筒</a></li>
+        <li><a href="/cross">时光机</a></li>
         </ul>
         </li>
         <li><a href="/api" class="mainMenu">API接入</a></li>
@@ -187,44 +212,13 @@
          <p>EN</p>
          </a>
         </div>
-        </div>
-<div class="leftdown">
-        <svg width="26px" height="14px" viewBox="0 0 26 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
-    <title>btn_next</title>
-    <desc>Created with Sketch.</desc>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="7能力展示-设计生成" transform="translate(-376.000000, -617.000000)" fill="white">
-            <g id="btn_next" transform="translate(376.000000, 616.000000)">
-                <path d="M25.021,2.707 L13.707,14.02 C13.3165001,14.4103819 12.6834999,14.4103819 12.293,14.02 L0.978,2.707 C0.587258539,2.31625854 0.587258539,1.68274146 0.978,1.292 C1.36874146,0.901258539 2.00225854,0.901258539 2.393,1.292 L13,11.9 L23.607,1.292 C23.8597654,1.03941322 24.2280837,0.940862148 24.573213,1.03347002 C24.9183423,1.1260779 25.1878491,1.39577538 25.280213,1.74097003 C25.3725768,2.08616468 25.2737654,2.45441323 25.021,2.707 Z" id="矩形_2256_拷贝_8"></path>
-            </g>
-        </g>
-    </g>
-</svg>
-        <div id="hint"><p>向下滚动</p></div>
-        </div>
-<div class="contact">
-        <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
-    <title>qrcode</title>
-    <desc>Created with Sketch.</desc>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="7能力展示-设计生成" transform="translate(-770.000000, -564.000000)" fill="white">
-            <g id="qrcode" transform="translate(769.000000, 564.000000)">
-                <path d="M26.992,11.936 C26.854,11.943 26.735,11.957 26.616,11.957 C22.892,11.957 19.194,11.957 15.471,11.965 C15.107,11.965 14.984,11.884 14.9869466,11.496 C15.001,7.945 14.995,3.966 14.995,0.414 L14.995,0.009 L26.995,0.009 L26.995,11.936 L26.992,11.936 Z M18.98,3.986 C18.98,5.221 18.972,6.593 18.994,7.773 C19.0585462,7.89661327 19.1796271,7.98069725 19.318,7.998 C20.094,8.017 20.701,8.007 21.478,8.007 L23.025,8.007 L23.025,3.986 L18.98,3.986 Z M13.011,0 L13.011,12.007 L1.043,12.007 L1.043,0 L13.011,0 Z M10.011,3.019 C9.858,3.009 9.75,3 9.643,3 C7.83,3 6.234,3.007 4.422,2.992 C4.29855253,2.95634154 4.16547561,2.99037612 4.07430539,3.08092331 C3.98313517,3.1714705 3.94818887,3.30431092 3.983,3.428 C4.001,5.073 3.992,6.963 3.994,8.608 C3.994,8.725 4.011,8.844 4.022,8.978 L10.01,8.978 L10.01,3.018 L10.011,3.019 Z M27,14 L27,25.96 L14.988,25.96 C14.98,25.808 14.97,25.689 14.97,25.569 C14.97,22.017 15.001,18.028 14.987,14.476 C14.987,14.076 15.078,13.985 15.466,13.985 C19.174,14 22.885,14 26.594,14 L27,14 Z M17.914,16.931 L17.914,23.062 C17.9605885,23.0790696 18.0088598,23.0911374 18.058,23.098 C19.979,23.098 21.783,23.098 23.704,23.107 C24.046,23.107 24.028,22.907 24.028,22.684 C24.028,21.038 24.028,19.393 24.028,17.749 C24.028,17.63 24.01,17.074 23.997,16.931 L17.912,16.931 L17.914,16.931 Z M7.014,20.222 L7.014,25.968 C6.856,25.979 6.725,25.994 6.592,25.994 C4.792,25.994 3.236,25.987 1.437,26.003 C1.31267674,26.0406714 1.17771324,26.0065974 1.08617101,25.9144267 C0.994628783,25.8222561 0.961478897,25.6870626 1,25.563 C1.017,23.917 1.008,22.271 1.009,20.625 C1.009,20.506 1.026,20.143 1.038,19.984 C3.129,19.984 4.965,19.976 7.038,19.976 L7.014,20.222 Z M2.924,21.943 C2.924,22.543 2.916,23.294 2.934,23.843 C2.96173647,23.9463731 3.041308,24.0278392 3.144,24.058 C3.796,24.076 4.399,24.077 5.051,24.058 C5.135,24.058 5.04,23.91 5.043,23.825 C5.06001623,23.5270547 5.05533722,23.2282663 5.029,22.931 C5.03533594,22.6176793 5.00173213,22.3048278 4.929,22 C4.21,21.979 3.687,21.938 2.921,21.938 L2.924,21.943 Z M7.024,19.961 C7.024,18.152 7.074,16.177 7.062,14.368 C7.03028397,14.2628709 7.05853938,14.1488139 7.1356633,14.0706478 C7.21278722,13.9924817 7.32645463,13.9626979 7.432,13.993 C9.121,14.006 10.942,14.005 12.632,13.993 C12.7367224,13.9627033 12.8496379,13.9916008 12.9269319,14.0684792 C13.004226,14.1453577 13.0337317,14.2581158 13.004,14.363 C12.991,16.05 12.991,17.94 13.004,19.627 C13.034024,19.7326292 13.0039362,19.8462218 12.9255603,19.9231386 C12.8471843,20.0000554 12.7330464,20.0280035 12.628,19.996 C10.816,19.971 8.842,19.951 7.028,20.03 C7.02119068,20.2220382 6.86514065,20.3750849 6.6730064,20.3782085 C6.48087216,20.3812379 6.32000214,20.2332658 6.30704796,20.0415441 C6.29409379,19.8498223 6.43359627,19.6815548 6.62439801,19.6587572 C6.81519976,19.6359597 6.99041941,19.7666233 7.023,19.956 L7.024,19.961 Z M8.994,18.013 L11.04,18.013 L11.04,16 L8.993,16 L8.993,18.013 L8.994,18.013 Z M5.983,14.026 L5.983,16 L3.021,16 L3.021,18.449 C3.021,19.015 3.021,19.015 2.446,19.015 L1.814,19.015 C1.008,19.015 1.008,19.015 1.008,18.195 C1.008,17.026 1.008,15.651 1.008,14.483 L1.008,14.021 L5.982,14.021 L5.983,14.026 Z M11.034,21.026 L13.018,21.026 L13.018,25.968 L7.99,25.968 C7.99,25.396 7.976,24.803 8.005,24.262 C8.06941294,24.1382694 8.19056365,24.0541369 8.329,24.037 C9.029,24.016 9.881,24.009 10.577,24.037 C10.926,24.05 11.056,23.963 11.041,23.588 C11.01,22.789 11.032,21.857 11.032,21.016 L11.034,21.026 Z M4.02,17.048 L5.971,17.048 L5.971,19.013 C5.232,19.013 4.927,19.018 4.198,19.003 C4.10737618,18.9644804 4.04282742,18.8821902 4.027,18.785 C4.012,18.246 4.02,17.628 4.02,17.048 Z" id="形状_2"></path>
-            </g>
-        </g>
-    </g>
-</svg>
-        </div>
-<div class="qrcode">
-        <div><img src="{{ url_for('static', filename='image/uxdcode.jpg')}}"/></div>
-        <p>欢迎关注，一起进步</p>
-        </div>
+</div>
+
     
 <!--js代码-->
 <script type="text/javascript"> 
     //赋值变量
+    var tryPosition = $('#demo').offset().top;
     var oBox = document.getElementById('mask'),
         windowTop=0,
         windowH=window.innerHeight,
@@ -247,11 +241,18 @@
         qrcodeP=$(".qrcode p"),
         timeSpace=500;
     //页面加载
+   
     window.onload=function(){
-        $(".nav").animate({"opacity":"1","top":"90px"},timeSpace*2);
-        $(".leftdown").animate({"opacity":"1"},timeSpace*2);
-        $(".contact").animate({"opacity":"1"},timeSpace*2);
-        $("#title").animate({"opacity":"1"},timeSpace*2);
+        //生成十张图
+        getImage();
+
+        /*点击试试看页面滑动*/
+        $("#title button").on("click",function(){
+            window.scrollTo({ 
+            top: tryPosition, 
+            behavior: "smooth" 
+        });
+        })
         //鼠标悬停
         contact.mouseenter(
                 function () {
@@ -273,122 +274,233 @@
                 function () {
                     leftdownHint.css("opacity",0);
                 });
-        slider(flexslider,4,160*0.35);
-        
-        //探照灯
-        window.onmousemove = function(e){
-        e = e || event;
-        oBox.style.WebkitMaskPosition=(e.clientX-350)+"px "+ (e.clientY-350)+"px";
-        }
-        
-        //走马灯
-        function slider(who,totalSlides,width){
-        var currentSlide=1;
-        var interval;
-        function startslide(){
-        interval=setInterval(function(){
-        who.animate({'margin-left':'-='+width+'vw'},timeSpace*2,function(){
-        currentSlide++;
-            if(currentSlide==totalSlides){
-                currentSlide=1;
-                who.css("margin-left",0);
-            }
-        });
-        },3000);}
-        function pauseslide(){
-        clearInterval(interval);
-        }
-        $(".box").on("mouseenter",pauseslide).on("mouseleave",startslide);
-        startslide();
-        };
         
          // 上下滑动
         $(window).scroll(function() {
         let scrollS = $(this).scrollTop();
-        //导航消失
-        if(scrollS>windowTop){
-        $(".dropdownmenu").css("opacity","0");// 上滑时要做的事（隐藏）
-        $("#logoChange").css("opacity","0");
-        windowTop=scrollS;
+        //导航变化
+        if(scrollS>10){
+        $(".nav").css("top","9px");// 上滑时要做的事（上移一点）
+        $("#navback").css("opacity","1");   
         }else{
-        $(".dropdownmenu").css("opacity","1");// 下滑时要做的事（显示）
-        $("#logoChange").css("opacity","1");
-        windowTop=scrollS;
+        $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+        $("#navback").css("opacity","0");  
         }
         //滚动页面动效
         var disappear=1-(scrollS/windowH)*2;
         $("#title").css("opacity",disappear);
         var coverOpacity=((scrollS-(proH+windowH))/windowH);
         $("#videoCover").css("opacity",coverOpacity); 
-    
-        //文字出现
-        if(scrollS>windowH/4){
-        $("#proInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#proSub h3").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#proSub p").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
+            
+        //case微动
+        var tryHeight=$("#demo").height();
+        if(scrollS>tryPosition+tryHeight*1/3){
+            var caseMove=(scrollS-tryPosition-tryHeight)*0.1;
+            $("#packaging").css("transform","translateY("+caseMove+"px)");
+            $("#brand").css("transform","translateY("+caseMove+"px)");
         }
-    
-        if(scrollS>windowH*1.2){
-        $("#studyInfo h1").animate({"opacity":"1","top":0},timeSpace); 
-        $("#studyInfo p").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        }
-        if(scrollS>windowH*2){
-        $("#caseInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#caseInfo p").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#caseInfo button").delay(timeSpace).animate({"opacity":"0.2","top":0},timeSpace); 
-        $("#pic4").animate({"opacity":"1"},timeSpace);
-        }
-        if(scrollS>windowH*3){
-        $("#moreInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#moreSub h3").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#moreSub p").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
-        $("#moreSub button").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
+        //图形元素微动
+        var proPosition = $('#proSub').offset().top;
+        var proHeight=$("#proSub").height();
+        if(scrollS>proPosition/2){
+        var squreMove=(scrollS-proPosition-proHeight)*0.2;
+        $("#dec1").css("transform","translateY("+squreMove+"px)");
+        $("#dec2").css("transform","translateY("+(-squreMove)+"px)");
+        $("#dec3").css("transform","translateY("+squreMove+"px)");
+        $("#dec4").css("transform","translateY("+(-squreMove)+"px)");
         }
         
-        //元素颜色变化
-        //底部
+        var pM=scrollS*0.05; 
+        $("#proicon1 .icon1").css("transform","translate("+pM/2+"px,"+pM+"px)");
+        $("#proicon1 .icon2").css("transform","translate("+(-pM)+"px,"+(-pM)+"px)");
         
-        if(scrollS<=80+26){
-        leftdownSvg.css("fill",whiteColor);
-        contactSvg.css("fill",whiteColor);   
-        }
-        if(scrollS>80+26){
-        $(".leftdown").css("-webkit-animation","none");
-        leftdownSvg.css("fill",normalGray);
-        contactSvg.css("fill",normalGray);
-        }       
-        if(scrollS>80+26+proH){
-        leftdownSvg.css("fill",whiteColor);
-        contactSvg.css("fill",whiteColor);
-        } 
-        if(scrollS>80+26+proH+videoH){
-        leftdownSvg.css("fill",normalGray);
-        contactSvg.css("fill",normalGray);
-        } 
-        //顶部
-        if(scrollS<=windowH-80){
-        english.css("color",whiteColor);
-        mainMenu.css("color",whiteColor);
-        logoChange.css("fill",whiteColor);
-        }    
-        if(scrollS>windowH-80-26){
-        english.css("color",normalGray);
-        mainMenu.css("color",normalGray);
-        logoChange.css("fill",normalGray);
-        } 
-        if(scrollS>proH+windowH-80-26){
-        english.css("color",whiteColor);
-        mainMenu.css("color",whiteColor);
-        logoChange.css("fill",whiteColor);
-        }
-        if(scrollS>videoH+proH+windowH-80-26){
-        english.css("color",normalGray);
-        mainMenu.css("color",normalGray);
-        logoChange.css("fill",normalGray);
-        }
+        $("#proicon2 .icon1").css("transform","translate("+(-pM/2)+"px,"+(-pM/2)+"px)");
+        $("#proicon2 .icon2").css("transform","translate("+pM/2+"px,"+(-pM/2)+"px)");
+        $("#proicon2 .icon3").css("transform","translate("+(-pM/2)+"px,"+pM/2+"px)");
+        $("#proicon2 .icon4").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
+            
+        $("#proicon3 .icon1").css("transform","translate("+(-pM/2)+"px,"+pM+"px)");
+        $("#proicon3 .icon3").css("transform","translate("+pM/2+"px,"+(-pM)+"px)");
+        
         });
+        //能力演示部分
+        //hover上去赋予的功能：hover效果，download功能
+        function whenHover(who){
+          who.hover(function(){
+          who.append("<button class='download'></button>");
+          who.attr("id","readyTodownload");
+          //下载图片   
+          $('.download').click(function(){
+          var div=document.getElementById('readyTodownload');
+          var img=div.getElementsByTagName('img')[0];
+          var url=img.src;
+          var a=document.createElement('a');
+          var event=new MouseEvent('click');
+          a.download = 'Xiaohui-image';
+          a.href=url;
+          a.dispatchEvent(event);
+          })
+              
+          },function(){
+          $(".download").remove();
+          who.removeAttr("id");
+          });  
+        }
+        //点击图片本身赋予的功能：生成十张图并显示出来
+        
+        function whenClick(whichimg,who,i){
+            
+            
+            whichimg.click(function(){
+            
+            $("#adddom").remove();
+            $("#arrow").remove();
+            who.parent().after("<div id='arrow'></div>");
+            $("#arrow").css("margin-left","calc(7% + "+(8+17*i)+"vw + 6px)")
+            $("#arrow").after("<div id='adddom'></div>");
+            
+            $("#adddom").append("<div id='domTitle'></div>");
+            $("#adddom").append("<div id='domloading'></div>");
+            $("#domTitle").append("<p>基于所选图特征定向生成：</p>");
+            $("#domTitle").append("<div><button id='domNext'>下一批</button></div>");
+            
+            $("#adddom").append("<div id='domFirst'></div>");
+            $("#adddom").append("<div id='domSecond'></div>");
+            $("#domFirst").append("<div></div><div></div><div></div><div></div><div></div>");
+            
+            $("#domSecond").append("<div></div><div></div><div></div><div></div><div></div>");
+            start($("#domloading"),15); 
+          
+            $('#domFirst div').each(function(i){
+                $(this).append("<img src='#' />");
+                whenHover($(this));
+               
+            });
+            $('#domSecond div').each(function(i){
+                $(this).append("<img src='#' />");
+                whenHover($(this));
+                
+            });
+            $("#domFirst").hide();
+            $("#domSecond").hide();
+            postImage(i);
+            $("#domNext").on("click",function(){
+             $("#domloading").show();
+             $("#domFirst").hide();
+             $("#domSecond").hide();
+             postImage(i);
+            });
+            })
+		 
+        }
+        
+        //给每个div赋予hover和点击功能
+        
+        
+        $('#demoFirstline div').each(function(i){
+        var imgClick=this.getElementsByTagName("img")[0];
+        whenClick($(imgClick),$(this),i);
+        whenHover($(this));
+        })
+        $('#demoSecondline div').each(function(i){
+        var imgClick=this.getElementsByTagName("img")[0];
+        whenClick($(imgClick),$(this),i+5);
+        whenHover($(this));
+        })
+        
+        
+        
     }
-</script> 
+    //更新能力演示图片 
+       $("#demoloading").show();
+       $("#demoPart").hide();
+        var imageObject={};
+        function getImage(){
+          
+          $.ajax({
+            type:'GET',
+            url:'/style-gan-get?number=10',
+            success:function(data){
+                /*console.log(data.result[0].latent);*/
+                var i=0;
+                var j=5;
+                $("#demoFirstline div").each(function(){
+                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[i].image);
+                imageObject[i]=data.result[i].latent;
+                
+                i++;
+                });
+                $("#demoSecondline div").each(function(){
+                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[j].image);
+                imageObject[j]=data.result[j].latent;
+                j++;
+                });
+                $("#triggerone").trigger("click");
+                $("#demoloading").hide();
+                $("#demoPart").show();
+                $("#domloading").show();
+                $("#domFirst").hide();
+                $("#domSecond").hide();
+            },
+            error:function(err){
+                console.log(err);
+            },
+        });  
+        }
+    
+    //post部分
+         function postImage(i){
+         var imgLatent={
+         "latent":imageObject[i],
+         };
+
+         $.ajax({
+            type:'POST',
+            url:'/style-gan-post',
+            contentType:'application/json',
+            data:JSON.stringify(imgLatent),
+            dataType:'json',
+            success:function(data){
+            console.log(data);
+            var m=0;
+                var j=5;
+                $("#domFirst div").each(function(){
+                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[m].image);
+                /*imageObject[m]=data.result[i].latent;*/
+                
+                i++;
+                });
+                $("#domSecond div").each(function(){
+                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[j].image);
+                /*imageObject[j]=data.result[j].latent;*/
+                j++;
+                });
+                $("#domloading").hide();
+                $("#domFirst").show();
+                $("#domSecond").show();
+            },
+            error:function(err){
+            console.log(err);
+            },
+         }); 
+         
+         }
+    //loading动画
+    function start(aniPosition,step){
+        var i=0;
+        setInterval(
+        function(){
+            
+            i += -step;
+            aniPosition.css('background-position',"center " + i + "rem");
+            
+        }, 70);
+        
+    }     
+    start($("#demoloading"),15); 
+    
+</script>
+    
 </body>
   
     
