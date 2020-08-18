@@ -29,10 +29,10 @@ p{
     font-size: 1.6rem;
 }
 h3{
-    font-size: 3.6rem;
+    font-size: 2vw;
 }
 h1{
-    font-size:12rem;
+    font-size:8vw;
     color: white;
     font-family: 'Gotham-Bold';
 }
@@ -45,7 +45,7 @@ h2{
     position: fixed;
     width:100vw;
     height:100vh;
-    background-color: #5376FF;
+    background-color: black;
 }
 #loading p{
     text-align: center;
@@ -194,8 +194,7 @@ color: #444553;
 #back{
     position: absolute;
     width:900vw;
-    height:40vh;
-    top:170px;
+    top:8vw;
     left: 0;
     opacity: 0;
 }
@@ -203,27 +202,23 @@ color: #444553;
     position: relative;
     float: left;
     width:86vw;
-    height:40vh;
+    height:24vw;
     margin-right: 7vw;
     padding-left: 7vw;
 }
 #firstBack{
     position: absolute;
     background-color: #5376FF;
-    height:40vh;
-    top:170px;
+    height:24vw;
+    top:8vw;
     width:100vw;
-    overflow: hidden;
     left:0vw;
+    overflow: hidden;
 }
 #firstBack img{
     position: absolute;
-    height:120%;
-}
-#firstBack h1{
-    position: absolute;
-    left:7%;
-    bottom: 10%;
+    height:100%;
+    width:100%;
 }
 
 #secondBack{
@@ -255,154 +250,155 @@ color: #444553;
 
 #firstContent{
     position: fixed;
-    bottom:80px;
+    height:calc(100vh - 32vw);
+    width:93%;
+    bottom:0vw;
     left:7%;
 }
-
+#firstContent div{
+    position: absolute;
+    width:93%;
+    top:50%;
+    transform: translate(0,-50%);
+}
 #firstContent h3{
-    line-height: 18rem;
-    height: 18rem;
-    font-size: 6rem;
+    position: relative;
+    display: block;
+    line-height: 6vw;
+    height: 6vw;
+    font-size: 4vw;
         
 }
 #firstContent h3 span{
     font-family: "Gotham-Bold";
 }
 #firstContent p{
-    line-height: 4rem;
+    position: relative;
+    display: block;
+    line-height: calc(1.6rem + 1vw);
 }
 
 #firstPic{
     position: fixed;
-    width:65vw;
-    height: 100%;
-    right: 7%;
-    bottom: 20px;
+    width:60vw;
+    height:60vw;
+    right: 6%;
+    top:40%;
+    transform: translate(0,-50%);
     background-image: url(../image/xiaohui00601@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
 }
-/*#firstPic img{
-    width:100%;
-    height:100%;
-}*/
 
-/*第二页*/
+/* 通用 */
 .Content{
     position: absolute;
     left:7%;
-    top:calc(170px + 5vh);
+    top:8vw;
     opacity: 0;
 }
 .Content div{
     position: relative;
     display: block;
 }
-.Title{
-    margin-top: 15vh;
-    margin-bottom: 5vh;
-}
-.secondText{
-    margin-top: 2vh;
-}
-
-#explore1{
-    position: absolute;
-    top:45vh;
-    right:40vw;
-}
-#pic1{
-    position: relative;
-    width:20vw;
-    height:20vw;
+.date{
+    height:21vw;
     overflow: hidden;
-    background-image: url("../image/ruleeSmall.png");
-    background-position: 0 0;
-    background-size: cover;
+    padding-top: 3vw;
 }
-#description1{
+.date h1{
     position: relative;
-    display: block;
-    margin-top:-6rem;
-    text-align: center;
-}
-#description1 h1{
-    font-size: 6rem;
-    color: #444553;
-}
 
-#explore2{
+}
+.titleText{
+    height:calc(100vh - 32vw);
+}
+.titleTextinner{
     position: absolute;
-    top:15vh;
-    right:25vw;
-}
-#pic2{
-    position: relative;
-    width:20vw;
-    height:20vw;
-    overflow: hidden;
-    background-image: url("../image/suanfaSmall.png");
-    background-position: 0 0;
-    background-size: cover;
-    
-}
-#description2{
-    position: relative;
-    display: block;
-    margin-top:-6rem;
-    text-align: center;
-    color: white;
-}
-#description2 h1{
-    font-size: 6rem;
+    top:25%;
 }
 
-#explore3{
-    position: absolute;
-    top:45vh;
-    right:10vw;
-}
-#pic3{
-    position: relative;
-    width:20vw;
-    height:20vw;
-    overflow: hidden;
-    background-image: url("../image/biaozhuSmall.png");
-    background-position: 0 0;
-    background-size: cover;
-}
-#description3{
-    position: relative;
-    display: block;
-    margin-top:-6rem;
-    text-align: center;
-}
-#description3 h1{
-    font-size: 6rem;
-    color: #444553;
-}
-
-
-
-
-/*第三页*/
-#thirdTitle{
+#secondTitle,#thirdTitle,#fourthTitle,#fifthitle,#sixthTitle,#seventhTitle,#eighthTitle{
     top:3.6rem;
 }
-.thirdText{
+.secondText,.thirdText,.fourthText,.fifthText,.sixthText,.seventhText,.eighthText{
     top:3.6rem;
-    margin-top: 2vh;
+    margin-top: 1vw;
 }
-.thirdDate{
+.thirdDate,.fourthDate,.fifthDate,.sixthDate,.seventhDate,.eighthDate{
     top:12rem;
 }
+/*第二页*/
+
+.Title{
+    position: relative;
+    display: block;
+    top:8vw;
+}
+.explore{
+    position: absolute;
+}
+#explore1{
+    top:32vw;
+    transform: translate(0,-30%);
+    right:40vw;
+}
+#explore2{
+    top:8vw;
+    right:25vw;
+}
+#explore3{
+    top:32vw;
+    transform: translate(0,-30%);
+    right:10vw;
+}
+.description{
+    position: relative;
+    display: block;
+    margin-top:-3vw;
+    text-align: center;
+}
+.description h1{
+    font-size: 3.5vw;
+    color: #444553;
+}
+#description2 h1,#description2 p{
+    color: white;
+}
+
+
+#pic1,#pic2,#pic3{
+    position: relative;
+    width:300px;
+    height:300px;
+    overflow: hidden;
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+#pic1{
+    background-image: url("../image/ruleeSmall.png");
+}
+
+
+#pic2{
+    background-image: url("../image/suanfaSmall.png");
+}
+
+
+#pic3{
+    background-image: url("../image/biaozhuSmall.png");
+}
+
+/*第三页*/
+
 #thirdPic{
     position: absolute;
-    width:100vw;
-    height:100vw;
+    width:105vw;
+    height:105vw;
     overflow: hidden;
-    top: 50%;
+    top: 52%;
     transform: translate(0,-50%);
     left: 35vw;
     background-image: url("../image/demo.png");
@@ -411,43 +407,28 @@ color: #444553;
 }
 
 #thirdPic img{
-    width:100vw;
-    height:100vw;
+    width:105vw;
+    height:105vw;
     opacity: 0;
 }
+
 /*第四页*/
-#fourthTitle{
-    top:3.6rem;
-}
-.fourthText{
-    top:3.6rem;
-    margin-top: 2vh;
-}
-.fourthDate{
-    top:12rem;
-}
+
+
 #fourthPic{
     position: absolute;
-    width:calc(16vw * 5);
-    height:calc(9vw * 5);
+    width:calc(160px * 9);
+    height:calc(90px * 9);
     overflow: hidden;
-    top:20vh;
-    left: 45vw;
+    top:55%;
+    transform: translate(0,-50%);
+    left: 40vw;
     background-image: url("../image/explore.png");
     background-position: 0 0;
     background-size: cover;
 }
+
 /*第五页*/
-#fifthTitle{
-    top:3.6rem;
-}
-.fifthText{
-    top:3.6rem;
-    margin-top: 2vh;
-}
-.fifthDate{
-    top:12rem;
-}
 #fifthPic{
     position: absolute;
     width:calc(16vw * 6);
@@ -491,17 +472,9 @@ color: #444553;
     left: 40vw;
 }
 
+
 /*第六页*/
-#sixthTitle{
-    top:3.6rem;
-}
-.sixthText{
-    top:3.6rem;
-    margin-top: 2vh;
-}
-.sixthDate{
-    top:12rem;
-}
+
 #sixthPic{
     position: absolute;
     left:20vw;
@@ -576,16 +549,9 @@ color: #444553;
 }
 
 /*第七页*/
-#seventhTitle{
-    top:3.6rem;
-}
+
 .seventhText{
-    top:3.6rem;
-    margin-top: 2vh;
     z-index: 999;
-}
-.seventhDate{
-    top:12rem;
 }
 .seventhText a{
     text-decoration: underline;
@@ -595,26 +561,20 @@ color: #444553;
 }
 #sevenPic{
     position: absolute;
-    width:calc(16vw * 5);
-    height:calc(9vw * 5);
+    width:calc(160px * 9);
+    height:calc(90px * 9);
     overflow: hidden;
-    top:15vh;
+    top:50%;
+    transform: translate(0,-50%);
     left: 20vw;
     background-image: url("../image/stage.png");
     background-position: 0 0;
     background-size: cover;
 }
+
 /*第八页*/
-#eighthTitle{
-    top:3.6rem;
-}
-.eighthText{
-    top:3.6rem;
-    margin-top: 2vh;
-}
-.eighthDate{
-    top:12rem;
-}
+
+
 .countNum{
     position: fixed;
     
@@ -627,7 +587,8 @@ color: #444553;
     text-align: center;
 }
 #sucai{
-    top:calc(170px + 12vh);
+    top:20vw;
+    transform: translate(0,-50%);
     right:0vw;
     color: white;
     opacity: 0;
@@ -636,12 +597,14 @@ color: #444553;
     color: white;
 }
 #shiyong{
-    top:calc(170px + 47vh);
+    top:38vw;
+    transform: translate(0,-50%);
     right:20vw;
     opacity: 0;
 }
 #zhuli{
-    top:calc(170px + 47vh);
+    top:38vw;
+    transform: translate(0,-50%);
     right:-10vw;
     opacity: 0;
 }
@@ -764,6 +727,39 @@ color: #444553;
     opacity: 0.6;
 }
 
+@media screen and (max-width: 1440px) {
+    #pic1,#pic2,#pic3 {
+        width:250px;
+        height:250px;
+    }
+    #explore1{
+        top:26vw;
+    }
+    #explore2{
+        top:7vw;
+    }
+    #explore3{
+        top:26vw;
+    }
+    #fourthPic{
+    width:calc(160px * 8);
+    height:calc(90px * 8);
+    }
+    #sevenPic{
+        width:calc(160px * 8);
+        height:calc(90px * 8);
+    }
+}
+@media screen and (max-width: 1366px) {
+    #fourthPic{
+        width:calc(160px * 7);
+        height:calc(90px * 7);
+        }
+    #sevenPic{
+        width:calc(160px * 7);
+        height:calc(90px * 7);
+    }
+}
 
 
 

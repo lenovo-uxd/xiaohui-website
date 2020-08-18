@@ -177,28 +177,30 @@ color: white;
 }
 #title h1{
     padding-top: 12vw;
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size:4vw;
+    line-height: 4vw;
 }
 #title p{
     width: 86%;
     line-height: 3rem;
     padding-left: 7%;
     padding-right: 7%;
-    padding-top: 2vh;
+    padding-top: .5vw;
     font-size: 1.6rem;
 }
 #title button{
-    margin-top: 4vh;
+    margin-top: 2vw;
     background-color: transparent;
     border:1px solid white;
-    border-radius: 8px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    border-radius: 4px;
+    height: 4rem;
+    width: 10rem;
     color: white;
     font-size: 1.6rem;
+}
+#title button:hover{
+    background-color: #5376FF;
+    border:1px solid transparent;
 }
 /*内容区域*/
 #scroll{
@@ -315,7 +317,8 @@ color: white;
     border-radius: 5vw;
     background-image: url(../image/baozheng2.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 250%;
+    background-position: 0 40%;
 }
 .proSub1{
     position: relative;
@@ -606,19 +609,19 @@ color: white;
 #demoloading{
     position: relative;
     width:100vw;
-    height:15rem;
+    height:10rem;
     margin-top: 10rem;
     background-image: url(../image/demoloading.png);
-    background-size: 15rem auto;
+    background-size: 10rem auto;
     background-position: center 0;
     background-repeat: repeat-y;
 }
 #domloading{
     position: relative;
     width:100vw;
-    height:15rem;
+    height:10rem;
     background-image: url(../image/demoloading.png);
-    background-size: 15rem auto;
+    background-size: 10rem auto;
     background-position: center 0;
     background-repeat: repeat-y;
 }
@@ -652,6 +655,10 @@ color: white;
 }
 #packaging,#advertising,#brand{
     width:28.4vw;
+}
+/* 为了对齐凑的 */
+#packaging,#brand{
+    margin-top:35px;
 }
 #packUp{
     width:28.4vw;
@@ -858,7 +865,7 @@ color: white;
 /*更多信息*/
 #more{
     position: relative;
-    padding-top: 6%;
+    padding-top: 10%;
     padding-bottom: 10%;
     width:100%;
     /*background: black;*/
@@ -891,7 +898,7 @@ color: white;
     width:7rem;
     height:7rem;
     border-radius: 4rem;
-    border: 4px solid white;
+    border: 5px solid white;
     background-image: url(../image/other.svg);
     background-repeat: no-repeat;
     background-size: 4rem 4rem;
@@ -936,25 +943,29 @@ color: white;
 
 #leftSide div{
     width:20rem;
-    height:2rem;
+    height:1.5rem;
     background-image: url("../image/footerLogo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 2rem;
 }
 #groupName{
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
 }
 #email{
     font-size: 1.2rem;
     opacity: 0.6;
+    line-height: 2rem;
 }
 
-
+#rightSide{
+    transform: translate(0,-0.5rem);
+}
 #rightSide div{
     display: inline-block;
-    width:10rem;
-    height: 10rem;
+    width:8rem;
+    height: 8rem;
     background-image: url("../image/contact.jpeg");
     background-size: contain;
 }
@@ -963,7 +974,7 @@ color: white;
     margin-right: 2rem;
     font-size: 1.2rem;
     opacity: 0.6;
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: right;
 }
 #line{

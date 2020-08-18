@@ -42,7 +42,7 @@ a{
     position: fixed;
     width:100vw;
     height:100vh;
-    background-color: #5376FF;
+    background-color: black;
 }
 #loading p{
     text-align: center;
@@ -151,56 +151,49 @@ text-decoration: none;
 color: #444553;
 }
 
+
+#noticeUs{
+    position: fixed;
+    bottom: 30px;
+    right:7%;
+    width:15rem;
+}
 .contact{
     position: fixed;
     bottom: 30px;
     right:7%;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    opacity: 0.8;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
+    width:26px;
+    height:26px;
 }
-.qrcode{
-    position: fixed;
-    bottom: 90px;
-    right: 7%;
-    background: white;
-    width:0rem;
-    height:0rem;
-    overflow: hidden;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
-}
-.qrcode div{
+.contact img{
     position: absolute;
-    width:80%;
-    left: 10%;
-    top:10%;
-    height:auto;
+    width:26px;
+    height:26px;
+    right:0;
+    bottom: 0;
 }
-.qrcode img{
-    width:100%;
-}
-.qrcode p{
-    position: absolute;
-    white-space:nowrap;
-    opacity: 0;
-    bottom: 15%;
-    width:100%;
-    letter-spacing: 0.3rem;
+#noticeUsTitle{
+    position: relative;
+    width:10rem;
+    margin-left: -2rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #3E62F6;
     text-align: center;
-    font-size: 1rem;
-    transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
+    opacity: 0;
 }
+#noticeUsTitle p{
+    line-height: 4rem;
+}
+#noticeQR{
+    position: relative;
+    width:15rem;
+    height:15rem;
+    background-image: url("../image/contact.jpeg");
+    background-size: contain;
+    opacity: 0;
+}
+
 
 #pagenumber{
     position: absolute;
@@ -257,7 +250,6 @@ div #dot1{
     width:100%;
     height:100%;
     overflow: hidden;
-   
     }
 .back{
     position:absolute;
@@ -280,24 +272,25 @@ div #dot1{
 .textmodel h1{
     font-size: 3rem;
 }
-.textmodel h1 span{
-    font-size: 5rem;
-}
-.main{
-    color: #444553;
-    font-size: 8rem;
-    line-height: 10rem;
-}
-.main div{
-    height: 10rem;
-    overflow: hidden;
-}
+
+
 .sub p{
     font-size: 1.6rem;
     line-height: 3rem;
 }
 
 /*第一页*/
+.front{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.15;
+    display: none;
+}
+
 #textmodel1{
     position: absolute;
     left:7%;
@@ -306,39 +299,15 @@ div #dot1{
     text-align: left;
 }
 #textmodel1 h1{
-    font-size: 8rem;
-    line-height: 10rem;
+    color: #444553;
+    font-size: 5vw;
+    line-height: 7vw;
 }
 #textmodel1 p{
     font-size: 1.6rem;
     line-height: 3rem;
 }
-.landinginner{
-    position: absolute;
-    width:60rem;
-    height:60rem;
-    overflow: hidden;
-    top:50%;
-    transform: translate(0,-50%);
-    left: 43%;
-    background-image: url('../image/landing.png');
-    background-size:cover;
-    background-repeat: repeat-y;
-    background-position: 0 0;
-}
-.landingwink{
-    position: absolute;
-    width:60rem;
-    height:60rem;
-    overflow: hidden;
-    top:50%;
-    transform: translate(0,-50%);
-    left: 43%;
-    background-image: url('../image/landingwink.png');
-    background-size:cover;
-    background-repeat: repeat-y;
-    background-position: 0 0;
-}
+
 /*飞着的小块块*/
 .flyDec{
     position: absolute;
@@ -347,18 +316,7 @@ div #dot1{
     top:50%;
     transform: translate(0,-50%);
 }
-#rect1{
-    position: absolute;
-    width:4vh;
-    height: 12vh;
-    background-color: #6C72FF;
-    top:-30vh;
-    left:22vw;
-    animation: flying2 4s linear infinite;
-    -webkit-animation: flying2 4s linear infinite;
-    -moz-animation: flying2 4s linear infinite;
-    -o-animation: flying2 4s linear infinite;
-}
+
 #rect2{
     position: absolute;
     width:3vh;
@@ -440,15 +398,41 @@ div #dot1{
     left:7%;
     right: 7%;
 }
+.landinginner{
+    position: absolute;
+    width:40vw;
+    height:40vw;
+    overflow: hidden;
+    top:50%;
+    transform: translate(-50%,-50%);
+    left: 65%;
+    background-image: url('../image/landing.png');
+    background-size:cover;
+    background-repeat: repeat-y;
+    background-position: 0 0;
+}
+.landingwink{
+    position: absolute;
+    width:40vw;
+    height:40vw;
+    overflow: hidden;
+    top:50%;
+    transform: translate(-50%,-50%);
+    left: 65%;
+    background-image: url('../image/landingwink.png');
+    background-size:cover;
+    background-repeat: repeat-y;
+    background-position: 0 0;
+}
 #move1{
     position: absolute;
     background-size: contain;
     background-image: url("../image/bluesqure.png");
     background-repeat: no-repeat;
-    top:14rem;
+    top:14vh;
     left:68vw;
-    width:13rem;
-    height:13rem;
+    width:10vw;
+    height:10vw;
     animation: moveDown 3.72s linear infinite;
     -webkit-animation: moveDown 3.72s linear infinite;
     -moz-animation: moveDown 3.72s linear infinite;
@@ -459,10 +443,10 @@ div #dot1{
     background-size: contain;
     background-image: url("../image/purpletriangle.png");
     background-repeat: no-repeat;
-    bottom:35rem;
+    bottom:25vh;
     left:71vw;
-    width:13rem;
-    height:13rem;
+    width:8vw;
+    height:8vw;
     animation: moveUp 3.72s linear infinite;
     -webkit-animation: moveUp 3.72s linear infinite;
     -moz-animation: moveUp 3.72s linear infinite;
@@ -473,21 +457,21 @@ div #dot1{
     background-size: contain;
     background-image: url("../image/grayline.png");
     background-repeat: no-repeat;
-    top:50%;
-    transform: translate(0,-50%);
-    left:40vw;
-    width:65rem;
-    height:65rem;
+    top:55vh;
+    transform: translate(-50%,-50%);
+    left:63vw;
+    width:40vw;
+    height:40vw;
 }
 #move4{
     position: absolute;
     background-size: contain;
     background-image: url("../image/bluecircleright.png");
     background-repeat: no-repeat;
-    bottom:8rem;
-    left:36%;
-    width:35rem;
-    height:35rem;
+    bottom:4vh;
+    left:34vw;
+    width:22vw;
+    height:22vw;
     animation: moveUp 3.1s linear infinite;
     -webkit-animation: moveUp 3.1s linear infinite;
     -moz-animation: moveUp 3.1s linear infinite;
@@ -498,10 +482,10 @@ div #dot1{
     background-size: contain;
     background-image: url("../image/bluecirclemiddle.png");
     background-repeat: no-repeat;
-    bottom:18rem;
-    left:58%;
-    width:26rem;
-    height:13rem;
+    bottom:14vh;
+    left:52vw;
+    width:18vw;
+    height:9vw;
     animation: moveDown 3.1s linear infinite;
     -webkit-animation: moveDown 3.1s linear infinite;
     -moz-animation: moveDown 3.1s linear infinite;
@@ -512,10 +496,10 @@ div #dot1{
     background-size: contain;
     background-image: url("../image/pinkcircle.png");
     background-repeat: no-repeat;
-    top:25rem;
-    left:25vw;
-    width:10rem;
-    height:10rem;
+    top:25vh;
+    left:26vw;
+    width:7vw;
+    height:7vw;
     animation: moveDown 3.72s linear infinite;
     -webkit-animation: moveDown 3.72s linear infinite;
     -moz-animation: moveDown 3.72s linear infinite;
@@ -526,10 +510,10 @@ div #dot1{
     background-size: contain;
     background-image: url("../image/bluecircleleft.png");
     background-repeat: no-repeat;
-    bottom:-15rem;
-    left:5vw;
-    width:35rem;
-    height:35rem;
+    bottom:-30vh;
+    left:0vw;
+    width:30vw;
+    height:30vw;
     animation: moveDown 3.72s linear infinite;
     -webkit-animation: moveDown 3.72s linear infinite;
     -moz-animation: moveDown 3.72s linear infinite;
@@ -555,16 +539,16 @@ div #dot1{
     width:80%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 10vh;
+    margin-top: 8vh;
     display: flex;
     justify-content: space-between;
 }
 #dec1{
     position: absolute;
     right:25vw;
-    top:-13rem;
-    width:26rem;
-    height:26rem;
+    top:-10vh;
+    width:15vw;
+    height:15vw;
     border-radius: 13rem;
     background-color: #6167FF;
 }
@@ -572,88 +556,63 @@ div #dot1{
     position: absolute;
     right:30vw;
     bottom: 15vh;
-    width:20rem;
-    height:20rem;
-    border-radius: 10rem;
+    width:12vw;
+    height:12vw;
+    border-radius: 6vw;
     background-color: #B48CFA;
 }
 #dec3{
     position: absolute;
     left:21vw;
-    bottom:-12rem;
-    width:30rem;
-    height:30rem;
-    border-radius: 13rem;
+    bottom:-10vh;
+    width:17vw;
+    height:17vw;
     background-image: url(../image/homedec1.png);
     background-size: contain;
 }
-#circle1{
+#circle1,#circle2,#circle3{
     position: absolute;
     left:0;
+    top:2vw;
+    width:15vw;
+    height:15vw;
+    border-radius: 8vw;
+}
+#circle1{
     background-color: #E5E7EE;
-    width:26rem;
-    height:26rem;
-    border-radius: 13rem;
 }
 #circle2{
-    position: absolute;
-    left:0;
     background-color: #EDE0EF;
-    width:26rem;
-    height:26rem;
-    border-radius: 13rem;
 }
 #circle3{
-    position: absolute;
-    left:0;
     background-color: #F1EBDE;
-    width:26rem;
-    height:26rem;
-    border-radius: 13rem;
 }
-.wanhuatong{
+.wanhuatong,.wangyuanjing,.shiguangji{
     position: relative;
 }
-.wangyuanjing{
+#hover2,#hover1,#hover3{
     position: relative;
-}
-.shiguangji{
-    position: relative;
-}
-#hover1{
-    position: relative;
-    width:calc(110rem * 0.3);
-    height:calc(90rem * 0.3);
-    overflow: hidden;
-    background-image: url("../image/wanhuatong.png");
-    background-repeat: repeat-y;
-    background-position: 0 0;
-    background-size: cover;
-}
-#hover2{
-    position: relative;
-    width:calc(110rem * 0.3);
-    height:calc(90rem * 0.3);
+    width:20vw;
+    height:20vw;
     overflow: hidden;
     background-image: url("../image/wangyuanjing.png");
     background-position: 0 0;
     background-repeat: repeat-y;
     background-size: cover;
 }
+#hover1{
+    background-image: url("../image/wanhuatong.png");
+}
+#hover2{
+    background-image: url("../image/wangyuanjing.png");
+}
 #hover3{
-    position: relative;
-    width:calc(110rem * 0.3);
-    height:calc(90rem * 0.3);
-    overflow: hidden;
     background-image: url("../image/shiguangji.png");
-    background-repeat: repeat-y;
-    background-position: 0 0;
-    background-size: cover;
 }
 .descript{
     position: relative;
     width: 100%;
-    margin-top: -2rem;
+    margin-top: -5vh;
 }
 
 #details1,#details2,#details3{
@@ -662,7 +621,7 @@ div #dot1{
 
 .descript p{
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 2rem;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -673,7 +632,7 @@ div #dot1{
     opacity: 0.8;
 }
 #details1 p,#details2 p,#details3 p{
-    padding-top: 3rem;
+    padding-top: 2vh;
     text-align: center;
     font-size: 1.4rem;
     line-height: 3rem;
@@ -683,7 +642,7 @@ div #dot1{
 #pic2 button{
     display:block;
     margin: 0 auto;
-    margin-top:2rem;
+    margin-top:1vh;
     color: #3E62F5;
     border:1px solid #3E62F5;
     border-radius: 4px;
@@ -701,15 +660,15 @@ div #dot1{
     position: relative;
     margin-left: 7%;
     margin-right: 7%;
-    margin-top:5vh;
-    width: 86%;
+    margin-top:8vh;
+    width: 86vw;
     display: flex;
     justify-content: space-between;
 }
 #scenario1{
     position: relative;
     width:60vw;
-    height:30vw;
+    height:50vh;
     overflow: hidden;
     background-image: url("../image/branding.png");
     background-size: cover;
@@ -717,7 +676,7 @@ div #dot1{
 #scenario2{
     position: relative;
     width:8.5vw;
-    height:30vw;
+    height:50vh;
     overflow: hidden;
     background-image: url("../image/package.png");
     background-size: cover;
@@ -725,7 +684,7 @@ div #dot1{
 #scenario3{
     position: relative;
     width:8.5vw;
-    height:30vw;
+    height:50vh;
     overflow: hidden;
     background-image: url("../image/advertising.png");
     background-size: cover;
@@ -733,7 +692,7 @@ div #dot1{
 #scenario4{
     position: relative;
     width:8.5vw;
-    height:30vw;
+    height:50vh;
     overflow: hidden;
     background-image: url("../image/interaction.png");
     background-size: cover;
@@ -840,29 +799,29 @@ div #dot1{
 #scedec1{
     position: absolute;
     right:20vw;
-    top:-18rem;
-    width:24rem;
-    height:24rem;
+    top:-15vh;
+    width:15vw;
+    height:15vw;
     background-color: #6167FF;
     transform: rotate(-15deg);
 }
 #scedec2{
     position: absolute;
     left:30vw;
-    bottom:-15rem;
-    width:25rem;
-    height:25rem;
+    bottom:-15vh;
+    width:15vw;
+    height:15vw;
     background-image: url(../image/homedec2.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 #scedec3{
     position: absolute;
-    left:-12rem;
+    left:-5vw;
     bottom:18vh;
-    width:16rem;
-    height:16rem;
-    border-radius: 8rem;
+    width:10vw;
+    height:10vw;
+    border-radius: 5vw;
     background-color: #9E73E8;
 }
 /*第四页*/
@@ -922,7 +881,7 @@ div #dot1{
     position: absolute;
     left: 7%;
     right: 20%;
-    top:38vh;
+    top:40vh;
     width: 73%;
 }
 #recentText1{
@@ -968,11 +927,13 @@ div #dot1{
 .recentTextA p{
     color: white;
     line-height: 4rem;
+    font-size: 1.4rem;
     text-align: center;
+    opacity: 0.6;
 }
 .recentTextB{
     background-color: #3E62F6;
-    padding: 4rem;
+    padding: 3rem 4rem;
     width: 20rem;
     margin-left: 2rem;
 }
@@ -982,8 +943,9 @@ div #dot1{
 }
 .recentTextB p{
     color: white;
-    line-height: 2rem;
+    line-height: 3rem;
     font-size: 1.4rem;
+    opacity: 0.6;
 }
 
 
@@ -1005,32 +967,7 @@ div #dot1{
 #recent6{
     background-image: url("../image/recent6.png");
 }
-#noticeUs{
-    position: absolute;
-    bottom: 30px;
-    right:7%;
-    width:15rem;
-}
-#noticeUsTitle{
-    position: relative;
-    width:10rem;
-    margin-left: -2rem;
-    margin-bottom: 1rem;
-    color: white;
-    background-color: #3E62F6;
-    text-align: center;
-}
-#noticeUsTitle p{
-    line-height: 4rem;
-}
-#noticeQR{
-    position: relative;
-    width:15rem;
-    height:15rem;
-    
-    background-image: url("../image/contact.jpeg");
-    background-size: contain;
-}
+
 
 /*第五页*/
 
@@ -1051,8 +988,8 @@ div #dot1{
     position: relative;
     resize: none;
     outline:none;
-    border-radius:8px;
-    font-size: 1.8rem;
+    border-radius:4px;
+    font-size: 2.2rem;
     line-height: 5rem;
     height: 5rem;
     padding-left: 10px;
@@ -1063,6 +1000,8 @@ div #dot1{
     opacity: 0.8;
     width:300px;
 }
+
+    
 #combtn{
     position: relative;
     width:100%;
@@ -1073,11 +1012,18 @@ div #dot1{
     line-height: 5rem;
     width: 14rem;
     height: 5rem;
-    border-radius: 8px;
+    border-radius: 4px;
     border: 1px solid rgba(98,93,112,0.8);
     background: #F7F7F7;
     opacity: 0.8;
     margin-top:1vh;
+}
+
+
+#btn_put:hover{
+    background-color: #3E62F5;
+    color:white;
+    opacity: 1;
 }
 #footer{
     position: fixed;
@@ -1120,37 +1066,37 @@ div #dot1{
 }
 #textdiv1{
     position: absolute;
-    animation: marqueeTransform 10s linear infinite;
+    animation: marqueeTransform 20s linear infinite;
 }
 
 #textdiv2{
     position: absolute;
     top:15%;
-    animation: marqueeTransform 14s linear infinite;
+    animation: marqueeTransform 25s linear infinite;
 }
 
 #textdiv3{
     position: absolute;
     top:30%;
-    animation: marqueeTransform 12s linear infinite;
+    animation: marqueeTransform 27s linear infinite;
 }
 
 #textdiv4{
     position: absolute;
     top:45%;
-    animation: marqueeTransform 10s linear infinite;
+    animation: marqueeTransform 20s linear infinite;
 }
 
 #textdiv5{
     position: absolute;
     top:60%;
-    animation: marqueeTransform 15s linear infinite;
+    animation: marqueeTransform 30s linear infinite;
 }
 
 #textdiv6{
     position: absolute;
     top:80%;
-    animation: marqueeTransform 13s linear infinite;
+    animation: marqueeTransform 40s linear infinite;
 }
 
 
@@ -1163,7 +1109,7 @@ div #dot1{
 
 
 @keyframes marqueeTransform {
-    0%   { transform: translate(120%,0)}
+    0%   { transform: translate(150%,0)}
     100% { transform: translate(-240%,0)}
   }
 

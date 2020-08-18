@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="ch">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>设计生成</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gdesign.css')}}">
+<<<<<<< Updated upstream
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}">
+=======
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js">
+>>>>>>> Stashed changes
     </script>
     
     
@@ -202,7 +208,7 @@
         <li><a href="/cross">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/api" class="mainMenu">API接入</a></li>
+        <li><a href="#" class="mainMenu">API接入</a></li>
         <li><a href="/about" class="mainMenu">关于我</a></li>
         </ul>
         </nav>
@@ -219,6 +225,7 @@
 <script type="text/javascript"> 
     //赋值变量
     var tryPosition = $('#demo').offset().top;
+    var casePosition = $('#case').offset().top;
     var oBox = document.getElementById('mask'),
         windowTop=0,
         windowH=window.innerHeight,
@@ -294,8 +301,8 @@
             
         //case微动
         var tryHeight=$("#demo").height();
-        if(scrollS>tryPosition+tryHeight*1/3){
-            var caseMove=(scrollS-tryPosition-tryHeight)*0.1;
+        if(scrollS>tryPosition+tryHeight-windowH){
+            var caseMove=(scrollS-casePosition)*(1/windowH)*100;
             $("#packaging").css("transform","translateY("+caseMove+"px)");
             $("#brand").css("transform","translateY("+caseMove+"px)");
         }
@@ -311,16 +318,13 @@
         }
         
         var pM=scrollS*0.05; 
-        $("#proicon1 .icon1").css("transform","translate("+pM/2+"px,"+pM+"px)");
-        $("#proicon1 .icon2").css("transform","translate("+(-pM)+"px,"+(-pM)+"px)");
-        
-        $("#proicon2 .icon1").css("transform","translate("+(-pM/2)+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon2").css("transform","translate("+pM/2+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon3").css("transform","translate("+(-pM/2)+"px,"+pM/2+"px)");
-        $("#proicon2 .icon4").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
+        $("#proicon1 .icon1").css("transform","translateY("+pM+"px)");
+       
+        $("#proicon2 .icon2").css("transform","translateY("+pM+"px)");
+        $("#proicon2 .icon4").css("transform","translateY("+pM+"px)");
             
-        $("#proicon3 .icon1").css("transform","translate("+(-pM/2)+"px,"+pM+"px)");
-        $("#proicon3 .icon3").css("transform","translate("+pM/2+"px,"+(-pM)+"px)");
+        $("#proicon3 .icon1").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon3 .icon3").css("transform","translateY("+pM+"px)");
         
         });
         //能力演示部分
@@ -369,7 +373,7 @@
             $("#domFirst").append("<div></div><div></div><div></div><div></div><div></div>");
             
             $("#domSecond").append("<div></div><div></div><div></div><div></div><div></div>");
-            start($("#domloading"),15); 
+            start($("#domloading"),10); 
           
             $('#domFirst div').each(function(i){
                 $(this).append("<img src='#' />");
@@ -497,7 +501,7 @@
         }, 70);
         
     }     
-    start($("#demoloading"),15); 
+    start($("#demoloading"),10); 
     
 </script>
     

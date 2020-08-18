@@ -12,6 +12,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   
 }
 button:focus{outline:0;}
@@ -22,7 +23,7 @@ html, body {
     /*将rem设置为10px*/
     font-size:62.5%; 
     -webkit-text-size-adjust:none;
-    }
+}
 p{
     font-size: 1.6rem;
 }
@@ -199,28 +200,30 @@ color: white;
 }
 #title h1{
     padding-top: 12vw;
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size:4vw;
+    line-height: 4vw;
 }
 #title p{
     width: 86%;
     line-height: 3rem;
     padding-left: 7%;
     padding-right: 7%;
-    padding-top: 2vh;
+    padding-top: .5vw;
     font-size: 1.6rem;
 }
 #title button{
-    margin-top: 4vh;
+    margin-top: 2vw;
     background-color: transparent;
     border:1px solid white;
-    border-radius: 8px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    border-radius: 4px;
+    height: 4rem;
+    width: 10rem;
     color: white;
     font-size: 1.6rem;
+}
+#title button:hover{
+    background-color: #5376FF;
+    border:1px solid transparent;
 }
 /*内容区域*/
 #scroll{
@@ -346,10 +349,8 @@ color: white;
     left:5.7vw;
     width:9.5vw;
     height:9.5vw;
-    border-radius: 5vw;
-    background-image: url(../image/baozheng2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    clip-path: circle(50%);
+    background-color: #3D61F5;
 }
 #proicon3 .icon3{
     position: absolute;
@@ -357,10 +358,15 @@ color: white;
     left:11.5vw;
     width:11.5vw;
     height:11.5vw;
-    border-radius: 6vw;
-    background-image: url(../image/baozheng2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    clip-path: circle(50%);
+    background-color: #3D61F5;
+}
+#proicon3 video{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 .proSub1{
     position: relative;
@@ -457,12 +463,13 @@ color: white;
 }
 #originpic1,#originpic2,#originpic3{
     background-color: rgba(0,0,0,.2);
+    position: relative;
 }
 #upload p{
-    height:100%;
-    width: 100%;
-    text-align: center;
-    line-height: 6vw;
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+    text-align: right;
 }
 #myFile{
     display: none;
@@ -474,10 +481,14 @@ color: white;
     height: 4rem;
     line-height: 4rem;
     text-align: center;
-    background-color: #3D61F5;
+    border:1px solid #5376FF;
     border-radius: 4px;
-    color: white;
+    color: #5376FF;
     margin-top:0.5vw;
+}
+#inputLabel:hover{
+    background-color: #5376FF;
+    color: white;
 }
 #before{
     float: right;
@@ -549,6 +560,7 @@ color: white;
     margin-left: 10px;
     overflow: hidden;
 }
+
 .style2{
     background-image: url(../image/222.png);
     margin-left: 10px;
@@ -570,13 +582,15 @@ color: white;
     overflow: hidden;
 }
 #style1,#style2,#style3,#style4,#style5{
+    position: relative;
     background-color: rgba(0,0,0,.3);
 }
+
 #styleChoose p{
-    height:100%;
-    width: 100%;
-    text-align: center;
-    line-height: calc(6vw * 0.7);
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+    text-align: right;
 }
 #operationPlace img{
     width:100%;
@@ -669,10 +683,9 @@ color: white;
 /*更多信息*/
 #more{
     position: relative;
-    padding-top: 6%;
+    padding-top: 10%;
     padding-bottom: 10%;
     width:100%;
-    /*background: black;*/
 }
 #moreInfo{
     position: relative;
@@ -702,7 +715,7 @@ color: white;
     width:7rem;
     height:7rem;
     border-radius: 4rem;
-    border: 4px solid white;
+    border: 5px solid white;
     background-image: url(../image/other.svg);
     background-repeat: no-repeat;
     background-size: 4rem 4rem;
@@ -747,25 +760,29 @@ color: white;
 
 #leftSide div{
     width:20rem;
-    height:2rem;
+    height:1.5rem;
     background-image: url("../image/footerLogo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 2rem;
 }
 #groupName{
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
 }
 #email{
     font-size: 1.2rem;
     opacity: 0.6;
+    line-height: 2rem;
 }
 
-
+#rightSide{
+    transform: translate(0,-0.5rem);
+}
 #rightSide div{
     display: inline-block;
-    width:10rem;
-    height: 10rem;
+    width:8rem;
+    height: 8rem;
     background-image: url("../image/contact.jpeg");
     background-size: contain;
 }
@@ -774,7 +791,7 @@ color: white;
     margin-right: 2rem;
     font-size: 1.2rem;
     opacity: 0.6;
-    line-height: 3rem;
+    line-height:2rem;
     text-align: right;
 }
 #line{

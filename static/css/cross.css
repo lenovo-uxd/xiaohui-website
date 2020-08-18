@@ -11,7 +11,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 button:focus{outline:0;}
 html, body {   
@@ -191,29 +191,31 @@ color: white;
     text-align: center;
 }
 #title h1{
-    padding-top: 12vw;
-    font-size: 6rem;
-    line-height: 6rem;
+    padding-top: 15vw;
+    font-size:4vw;
+    line-height: 4vw;
 }
 #title p{
     width: 86%;
     line-height: 3rem;
     padding-left: 7%;
     padding-right: 7%;
-    padding-top: 2vh;
+    padding-top: .5vw;
     font-size: 1.6rem;
 }
 #title button{
-    margin-top: 4vh;
+    margin-top: 2vw;
     background-color: transparent;
     border:1px solid white;
-    border-radius: 8px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    border-radius: 4px;
+    height: 4rem;
+    width: 10rem;
     color: white;
     font-size: 1.6rem;
+}
+#title button:hover{
+    background-color: #5376FF;
+    border:1px solid transparent;
 }
 /*内容区域*/
 #scroll{
@@ -306,7 +308,7 @@ color: white;
 #proicon2 .icon2{
     position: absolute;
     top:8.3vw;
-    left:1vw;
+    left:1.5vw;
     width:9vw;
     height: 15vw;
     background-image: url(../image/yangzhi1.png);
@@ -316,7 +318,7 @@ color: white;
 #proicon2 .icon3{
     position: absolute;
     top:8.5vw;
-    left:15.5vw;
+    left:15vw;
     width:8vw;
     height: 15vw;
     background-image: url(../image/yangzhi3.png);
@@ -347,10 +349,7 @@ color: white;
     left:5.7vw;
     width:10vw;
     height: 10vw;
-    border-radius: 5vw;
-    background-image: url(../image/yao1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    clip-path: circle(50%);
 }
 #proicon3 .icon2{
     position: absolute;
@@ -358,10 +357,7 @@ color: white;
     left:11.7vw;
     width:12vw;
     height: 12vw;
-    border-radius: 6vw;
-    background-image: url(../image/yao2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    clip-path: circle(50%);
 }
 .proSub1{
     position: relative;
@@ -454,13 +450,14 @@ color: white;
 }
 
 #originpic1,#originpic2{
+    position: relative;
     background-color: rgba(0,0,0,.2);
 }
 #upload p{
-    height:100%;
-    width: 100%;
-    text-align: center;
-    line-height: 8vw;
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+    text-align: right;
 }
 
 
@@ -474,10 +471,14 @@ color: white;
     height: 4rem;
     line-height: 4rem;
     text-align: center;
-    background-color: #3D61F5;
+    border:1px solid #5376FF;
     border-radius: 4px;
-    color: white;
+    color: #5376FF;
     margin-top:0.5vw;
+}
+#inputLabel:hover{
+    background-color: #5376FF;
+    color: white;
 }
 #before{
     float: right;
@@ -549,14 +550,15 @@ color: white;
     overflow: hidden;
 }
 #style1{
+    position: relative;
     background-color: rgba(0,0,0,.3);
 }
 
 #styleChoose p{
-    height:100%;
-    width: 100%;
-    text-align: center;
-    line-height: 8vw;
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+    text-align: right;
 }
 #operationPlace img{
     width:100%;
@@ -670,7 +672,7 @@ color: white;
 /*更多信息*/
 #more{
     position: relative;
-    padding-top: 6%;
+    padding-top: 10%;
     padding-bottom: 10%;
     width:100%;
     /*background: black;*/
@@ -703,7 +705,7 @@ color: white;
     width:7rem;
     height:7rem;
     border-radius: 4rem;
-    border: 4px solid white;
+    border: 5px solid white;
     background-image: url(../image/other.svg);
     background-repeat: no-repeat;
     background-size: 4rem 4rem;
@@ -748,25 +750,29 @@ color: white;
 
 #leftSide div{
     width:20rem;
-    height:2rem;
+    height:1.5rem;
     background-image: url("../image/footerLogo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 2rem;
 }
 #groupName{
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
 }
 #email{
     font-size: 1.2rem;
     opacity: 0.6;
+    line-height: 2rem;
 }
 
-
+#rightSide{
+    transform: translate(0,-0.5rem);
+}
 #rightSide div{
     display: inline-block;
-    width:10rem;
-    height: 10rem;
+    width:8rem;
+    height: 8rem;
     background-image: url("../image/contact.jpeg");
     background-size: contain;
 }
@@ -775,7 +781,7 @@ color: white;
     margin-right: 2rem;
     font-size: 1.2rem;
     opacity: 0.6;
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: right;
 }
 #line{

@@ -2,10 +2,18 @@
 <html lang="ch">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小绘</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+<<<<<<< Updated upstream
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+=======
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script> 
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -13,6 +21,7 @@
 <!--页面信息-->  
 <div id="wrap">
     <div id="main">
+        <!-- 第5页 -->
         <div id="page5" class="page">
         <div class="back" id="back5"> </div>
         <div id="footer">
@@ -32,15 +41,18 @@
         <h1>随便说点什么吧</h1>
         
         <div id="header">
-        <textarea name="comment" id="enjoy" ></textarea>
+        <textarea name="comment" id="enjoy" autoHeight="true"></textarea>
         <div id="combtn">
         <button id="btn_put">提交</button>
         </div>
         </div>
     
         </div>
-       
+
+        <div class="front" id="front5"> </div>
         </div>
+       
+
         <!--第四页-->
         <div id="page4" class="page">
         <div class="back" id="back4"> </div>
@@ -75,7 +87,7 @@
         <div class="recentTextIn" id="recentText3">
             <div class="recentTextA"><P>2020/01</P></div>
             <div class="recentTextB">
-                <h3>助力本智生活门店引流</h3><p>吸引顾客自助“设计”卡通形象照</p>
+                <h3>助力本智生活门店引流</h3><p>吸引顾客自助设计卡通形象照</p>
             </div>
         </div>    
         
@@ -113,11 +125,10 @@
                 <div id="recenthover6"></div>
             </div> 
         </div>
-        <div id="noticeUs">
-        <div id="noticeUsTitle"><p>扫码关注</p></div>
-        <div id="noticeQR"></div>
+
+        <div class="front" id="front4"> </div>
         </div>
-        </div>
+        
         
        <!-- 第三页-->
         <div id="page3" class="page">
@@ -130,7 +141,7 @@
             <div class="div1"></div>
             <div class="div2"></div>
         </div>-->
-        <h1>应用于多场景设计中，素材<span> 0 </span>元下载</h1>
+        <h1>应用于多场景设计中，素材0元下载</h1>
         </div>
         <div class="pic" id="pic3">
         <div class="scenario" id="scenario1"><div class="scecover"><div class="icon"></div><p>品牌设计</p></div></div>
@@ -144,7 +155,10 @@
         <div id="sceText3"><h3>广告设计</h3><p>千人千面助力智能广告创意营销</p></div> 
         <div id="sceText4"><h3>互动设计</h3><p>搭建可动可静的视觉互动体验</p></div> 
         </div>
+
+        <div class="front" id="front3"> </div>
         </div>
+        
         
         <!--  第二页-->
         <div id="page2" class="page">
@@ -153,7 +167,7 @@
         <div class="deccontrol2" id="dec2"></div>
         <div class="deccontrol3" id="dec3"></div>
         <!--<div class="deccontrol4" id="dec4"></div>-->
-        <div class="textmodel" id="textmodel2"><h1><span>3 </span>种工具，造出无穷想象</h1></div>
+        <div class="textmodel" id="textmodel2"><h1>3种工具，造出无穷想象</h1></div>
         <div class="pic" id="pic2">
             
         <div class="wangyuanjing">
@@ -186,18 +200,15 @@
         </div>
         
         </div>
-        
-        <!--<div class="main" id="main2">
-            <div class="div1"></div>
-            <div class="div2"></div>
-        </div>-->
+
+        <div class="front" id="front2"> </div>
         </div>
-        
+       
+
         <!--第一页-->
         <div id="page1" class="page">
         <div class="back" id="back1"> </div>
         <div class="flyDec">
-        <div id="rect1"></div>
         <div id="rect2"></div>
         <div id="rect3"></div>
         <div id="rect4"></div>  
@@ -213,14 +224,16 @@
         <div id="move5"></div>  
         <div id="move6"></div>  
         <div id="move7"></div>  
-        </div>
         <div class="landinginner"></div>
         <div class="landingwink"></div>
-        <div id="textmodel1">
-        <h1>未来创意<br>人类参与1%</h1>
-        <p>人工智能让设计师的工作解放，只参与最有价值的部分。<br>未来工作中你只需要消耗现在精力的1%。</p>
         </div>
         
+        <div id="textmodel1">
+        <h1>未来创意<br>人类参与1%</h1>
+        <p>帮助你完成99%的基础设计工作，剩下1%的创意空间留给你！</p>
+        </div>
+
+        <div class="front" id="front1"> </div>
         </div>
         
     </div>
@@ -243,7 +256,7 @@
         <li><a href="/cross">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/api">API接入</a></li>
+        <li><a href="#">API接入</a></li>
         <li><a href="/about">关于我</a></li>
         </ul>
         </nav>
@@ -269,13 +282,15 @@
 </div>    
 
 
-<div class="contact">
-        <img src="{{ url_for('static', filename='image/qrcode.svg')}}" width=26 height=26 />
-        </div>
-<div class="qrcode">
-        <div><img src="{{ url_for('static', filename='image/contact.jpeg')}}"/></div>
-        <p>欢迎关注，一起进步</p>
-        </div>
+
+<div id="noticeUs">
+    <div id="noticeUsTitle"><p>扫码关注</p></div>
+    <div id="noticeQR"></div>
+    <div class="contact">
+        <img src="{{ url_for('static', filename='image/qrcode.svg')}}"/>
+    </div>
+</div>
+
     
 <!--js代码部分-->
 <script type="text/javascript">
@@ -363,11 +378,11 @@ function startlanding(aniPosition,step){
         
         setInterval(
         function(){
-            if(i==-60*61){
-                i=-60*60;
+            if(i==-40*61){
+                i=-40*60;
             }
-            aniPosition.css('background-position',"0 " + i + "rem");
-            $(".landingwink").css({"background-position":"0 " + i + "rem","opacity":opa});
+            aniPosition.css('background-position',"0 " + i + "vw");
+            $(".landingwink").css({"background-position":"0 " + i + "vw","opacity":opa});
             n++;
             if(n%61==0){
             step=-step;
@@ -378,23 +393,19 @@ function startlanding(aniPosition,step){
             }
             i+=-step;
             
-            if(i==60){
+            if(i==40){
                 i=0;
             }
             
-        }, 25);   
-        
-        
-        
-        
-       
+        }, 25);        
 }  
 
 //windowonload-交互-鼠标悬浮
 var flyCube=$(".flyDec div");
 window.onload = function(){
        //首页landing
-       startlanding($(".landinginner"),60);
+       var landinginnerWidth=$(".landinginner").width();
+       startlanding($(".landinginner"),40);
      
         //更新服务器评论  
         var line=1;
@@ -462,27 +473,43 @@ window.onload = function(){
         function(){
             
             i += -step;
-            aniPosition.css('background-position',"0px " + i + "rem");
-            
+            aniPosition.css('background-position',"0px " + i + "px");
+            console.log(i);
         }, 70);
         
-}  
+    }  
+
+    var wangyuanjingH=wangyuanjing.height();
+    var wanhuatongH=wanhuatong.height();
+    var shiguangjiH=shiguangji.height();
+    // 用于解决自适应时雪碧图位置错乱的问题
+    $(window).resize(function () {          //当浏览器大小变化时
+        // 获取新的窗口尺寸
+        wangyuanjingH=wangyuanjing.height();
+        wanhuatongH=wanhuatong.height();
+        shiguangjiH=shiguangji.height();
+        
+        // wangyuanjing.css('background-position',"bottom");
+        // wanhuatong.css('background-position',"bottom");
+        // shiguangji.css('background-position',"bottom");
+    });
+
     //鼠标悬停
 	contact.mouseenter(
                 function () {
-                    qrcode.css("width","20rem").css("height","24rem");
-                    qrcodeP.css("opacity","1");
-                    contact.css("opacity","1");
+                    contact.css({"opacity":"0","width":"20rem","height":"20rem"});
+                    $("#noticeUsTitle").css("opacity","1");
+                    $("#noticeQR").css("opacity","1");
                 });
     contact.mouseleave(
                 function () {
-                    qrcode.css("width","0rem").css("height","0rem");
-                    qrcodeP.css("opacity","0");
-                    contact.css("opacity","0.8");
+                    contact.css({"opacity":"1","width":"26px","height":"26px"});
+                    $("#noticeUsTitle").css("opacity","0");
+                    $("#noticeQR").css("opacity","0");
                 });
     wangyuanjing.mouseenter(
                 function () {
-                   start($("#hover2"),90*0.3);
+                    start($("#hover2"),$("#hover2").height());
                 });
     wangyuanjing.mouseleave(
                 function () {
@@ -490,7 +517,7 @@ window.onload = function(){
                 });
     wanhuatong.mouseenter(
                 function () {
-                   start($("#hover1"),90*0.3);
+                   start($("#hover1"),$("#hover1").height());
                 });
     wanhuatong.mouseleave(
                 function () {
@@ -498,7 +525,7 @@ window.onload = function(){
                 });
     shiguangji.mouseenter(
                 function () {
-                  start($("#hover3"),90*0.3);
+                  start($("#hover3"),$("#hover3").height());
                 });
     shiguangji.mouseleave(
                 function () {
@@ -513,42 +540,42 @@ window.onload = function(){
     //分割为数组
  
 //页面消失函数（页面，背景，文字）
-function pageGone(page,back,text){
-        page.delay(timeSpace/5).animate({"top":"-100%"},timeSpace*2,'easeOutCubic');
-        back.css("background-color","#E6E6E6");
-        text.animate({"opacity":"0"},timeSpace*2,'easeOutCubic');
+function pageGone(page,which,text){
+        page.delay(timeSpace/5).animate({"top":"-100%"},timeSpace,'easeOutCubic');
+        $("#front"+which).css("display","block");
+        text.animate({"opacity":"0"},timeSpace,'easeOutCubic');
     }
 //页面出现函数（背景，文字）
-function pageCome(back,text){
-        back.css("background-color","#F7F7F7");
+function pageCome(which,text){
+        $("#front"+which).css("display","none");
         text.css("opacity","1");
     }
 
 //页面上滑出现函数（页面，背景，文字）
-function pageComeUp(page,back,text){
-                page.delay(timeSpace/5).animate({"top":"0%"},timeSpace*2);
-                back.css("background-color","#F7F7F7");
-                text.animate({"opacity":"1"},timeSpace*2);
-                }
+function pageComeUp(page,which,text){
+        page.delay(timeSpace/5).animate({"top":"0%"},timeSpace);
+        $("#front"+which).css("display","none");
+        text.animate({"opacity":"1"},timeSpace);
+        }
 //页面上滑消失函数（背景，文字）
-function pageGoneUp(back,text){
-                back.css("background-color","#E6E6E6");
-                text.animate({"opacity":"0"},timeSpace*2);
-                }
+function pageGoneUp(which,text){
+        $("#front"+which).css("display","block");
+        text.animate({"opacity":"0"},timeSpace);
+       }
 //物体出现函数
 function objectAppear(who,top){
-                who.delay(timeSpace/5).animate({"top":top,"opacity":"1"},timeSpace*2); 
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"1"},timeSpace); 
 } 
 //物体消失函数
 function objectDisappear(who,top){
-                who.delay(timeSpace/5).animate({"top":top,"opacity":"0"},timeSpace*2); 
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"0"},timeSpace); 
 }
 //清空文本
 function emptyText(a,b){
                 setTimeout(function(){
                 a.empty();
                 b.empty();
-                },timeSpace*2)  
+                },timeSpace)  
 } 
     
     //浏览器兼容
@@ -564,7 +591,7 @@ function emptyText(a,b){
     function scrollFun(event) {
         startTime = new Date().getTime();
         var delta = event.detail || (-event.wheelDelta);
-        if ((endTime - startTime) < -2000) {
+        if ((endTime - startTime) < -1500) {
             
             if (delta > 0) {
 //向下滚动       
@@ -578,8 +605,8 @@ function emptyText(a,b){
                 console.log(count);
                 $("#dot1").animate({"margin-bottom":"12px"},1000);
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
-                pageGone(page1,back1,text1);
-                pageCome(back2,text2);
+                pageGone(page1,1,text1);
+                pageCome(2,text2);
                 $("div #dot1").css("animation","none");
                 
                 }
@@ -588,8 +615,8 @@ function emptyText(a,b){
                 if(count==2){
                 $("#dot2").animate({"margin-bottom":"12px"},1000);
                 $("#dot3").animate({"margin-bottom":"35px"},1000);
-                pageGone(page2,back2,text2);
-                pageCome(back3,text3);
+                pageGone(page2,2,text2);
+                pageCome(3,text3);
                /* objectDisappear(wanhuatong,"60%");
                 objectDisappear(wangyuanjing,"60%");
                 objectDisappear(shiguangji,"95%");*/
@@ -602,9 +629,8 @@ function emptyText(a,b){
                 if(count==3){
                 $("#dot3").animate({"margin-bottom":"12px"},1000);
                 $("#dot4").animate({"margin-bottom":"35px"},1000);
-                $(".contact").hide();
-                pageGone(page3,back3,text3);
-                pageCome(back4,text4);
+                pageGone(page3,3,text3);
+                pageCome(4,text4);
                 /*objectDisappear($("#pic3"),"40%");*/
                 /*objectAppear($("#pic4"),"50%");*/
                 /*textScroll(arr4a,arr4b,main4div1,main4div2); */          
@@ -614,9 +640,8 @@ function emptyText(a,b){
                 if(count==4){
                 $("#dot4").animate({"margin-bottom":"12px"},1000);
                 $("#dot5").animate({"margin-bottom":"35px"},1000);
-                $(".contact").show();
-                pageGone(page4,back4,text4);
-                pageCome(back5,text5);
+                pageGone(page4,4,text4);
+                pageCome(5,text5);
                 /*objectDisappear($("#pic4"),"90%");
                 objectAppear($("#footer"),"23%");*/
                 /*textScroll(arr5a,arr5b,main5div1,main5div2); */       
@@ -635,34 +660,32 @@ function emptyText(a,b){
                 if(count==4){
                 $("#dot5").animate({"margin-bottom":"12px"},1000);
                 $("#dot4").animate({"margin-bottom":"35px"},1000);
-                $(".contact").hide();
-                pageComeUp(page4,back4,text4); 
-                pageGoneUp(back5,text5);
+                pageComeUp(page4,4,text4); 
+                pageGoneUp(5,text5);
                 }
                 
                 //第三页
                 if(count==3){
                 $("#dot4").animate({"margin-bottom":"12px"},1000);
                 $("#dot3").animate({"margin-bottom":"35px"},1000);
-                $(".contact").show();
-                pageComeUp(page3,back3,text3); 
-                pageGoneUp(back4,text4);
+                pageComeUp(page3,3,text3); 
+                pageGoneUp(4,text4);
                 }
                     
                 //第二页
                 if(count==2){
                 $("#dot3").animate({"margin-bottom":"12px"},1000);
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
-                pageComeUp(page2,back2,text2); 
-                pageGoneUp(back3,text3);
+                pageComeUp(page2,2,text2); 
+                pageGoneUp(3,text3);
                 }
                     
                 //第一页
                 if(count==1){
                 $("#dot2").animate({"margin-bottom":"12px"},1000);
                 $("#dot1").animate({"margin-bottom":"35px"},1000);  
-                pageComeUp(page1,back1,text1); 
-                pageGoneUp(back2,text2);
+                pageComeUp(page1,1,text1); 
+                pageGoneUp(2,text2);
                 $("div #dot1").css("animation","dothint 1s linear infinite");
     
                             } 
@@ -787,17 +810,16 @@ recentHover(1);recentHover(2);recentHover(3);recentHover(4);recentHover(5);recen
             //2.获取鼠标在整个页面的位置  
             var pagex = event.pageX || scroll().left + event.clientX; 
             var pagey = event.pageY || scroll().top + event.clientY; 
-            $("#dec1").css("transform","translate("+pagex*0.03+"px,"+pagey*0.03+"px)");
+            $("#dec1").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
             $("#dec2").css("transform","translate("+pagex*-0.01+"px,"+pagey*-0.01+"px)");
             $("#dec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
-            $("#dec4").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
-  $("#scedec1").css("transform","translate("+pagex*0.05+"px,"+pagey*0.05+"px) rotate(-15deg)");
+            
+  $("#scedec1").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-15deg)");
   $("#scedec2").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-20deg)");
-  $("#scedec3").css("transform","translate("+pagex*0.03+"px,"+pagey*0.03+"px)");
+  $("#scedec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
   $(".recentTextA").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
   $(".recentTextB").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
   $("#recentdec").css("transform","translate("+pagex*-0.02+"px,"+"-50%)");
-  $("#noticeUs").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
         }
 
 </script>

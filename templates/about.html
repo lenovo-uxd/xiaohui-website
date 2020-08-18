@@ -2,9 +2,16 @@
 <html lang="ch">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>关于我</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css')}}">
+<<<<<<< Updated upstream
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}">
+=======
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js">
+>>>>>>> Stashed changes
     </script>
 </head>
 
@@ -34,40 +41,51 @@
 
 </div>
 <div id="firstContent">
+
+<div>
 <h3><span>Hello</span>，我是小绘。</h3>
 <p>一个崇尚设计理性化的人工智能设计师，<br>我致力于成长为一个AI设计启发式平台， <br>发掘并实践AI设计的可行商业模式，赋能设计行业。</p> 
+</div>
+
 </div>
 
 </div>
 <!--第二页-->
 <div id="second">
 <div id="secondContent" class="Content">
-<div class="secondDate"><h1>1 1</h1></div>
-<div class="secondDate"><h2>2018</h2></div>
-<div id="secondTitle" class="Title"><h3>我的智能设计探索之旅开始了</h3></div>
-<div class="secondText" class="Text"><p> </p></div>
-<div class="secondText" class="Text"><p> </p></div>
+<div class="date secondDate">
+<h1>11</h1>
+<h1>2018</h1>
+</div>
+
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="secondTitle" class="Title"><h3>我的智能设计探索之旅开始了</h3></div>
+        <div class="secondText" class="Text"><p> </p></div>
+        <div class="secondText" class="Text"><p> </p></div>
+    </div>
+</div>
 </div> 
 
-<div id="explore1">
+<div id="explore1" class="explore">
 <div id="pic1"></div>
-<div id="description1">
+<div id="description1" class="description">
 <h1>5</h1>
 <p>规则探索（轮）</p>
 </div>   
 </div>
 
-<div id="explore2">
+<div id="explore2" class="explore">
 <div id="pic2"></div>
-<div id="description2">
+<div id="description2" class="description">
 <h1>10</h1>
 <p>算法尝试（轮）</p>
 </div>   
 </div>
 
-<div id="explore3">
+<div id="explore3" class="explore">
 <div id="pic3"></div>
-<div id="description3">
+<div id="description3" class="description">
 <h1>7</h1>
 <p>样本标注（轮）</p>
 </div>  
@@ -78,11 +96,18 @@
 <!--第三页-->
 <div id="third">
 <div id="thirdContent" class="Content">
-<div class="thirdDate"><h1>07</h1></div>
-<div class="thirdDate"><h2>2019</h2></div>
-<div id="thirdTitle" class="Title"><h3>第一版设计生成DEMO上线了</h3></div>
-<div class="thirdText" class="Text"><p>10多位参与测试的设计师，</p></div>
-<div class="thirdText" class="Text"><p>第一次用它自动生成了海报。</p></div>
+<div class="date thirdDate">
+<h1>07</h1>
+<h1>2019</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="thirdTitle" class="Title"><h3>第一版设计生成DEMO上线了</h3></div>
+        <div class="thirdText" class="Text"><p>10多位参与测试的设计师，</p></div>
+        <div class="thirdText" class="Text"><p>第一次用它自动生成了海报。</p></div>    
+    </div>
+</div>
+
 </div> 
 <div id="thirdPic">
 <img src="{{ url_for('static', filename='image/demoFinal.png')}}" alt=""/>    
@@ -93,22 +118,36 @@
 <div id="fourth">
 <div id="fourthPic"> </div>
 <div id="fourthContent" class="Content">
-<div class="fourthDate"><h1>08</h1></div>
-<div class="fourthDate"><h2>2019</h2></div>
-<div id="fourthTitle" class="Title"><h3>持续优化数据集，储备设计能力</h3></div>
-<div class="fourthText" class="Text"><p>10000+样本数据，100+设计风格变体，</p></div>
-<div class="fourthText" class="Text"><p>同时探索多种算法。</p></div>
+<div class="date fourthDate">
+<h1>08</h1>
+<h1>2019</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="fourthTitle" class="Title"><h3>持续优化数据集，储备设计能力</h3></div>
+        <div class="fourthText" class="Text"><p>10000+样本数据，100+设计风格变体，</p></div>
+        <div class="fourthText" class="Text"><p>同时探索多种算法。</p></div>   
+    </div>
+</div>
+
 </div>
 </div>
     
 <!--第五页-->
 <div id="fifth">
 <div id="fifthContent" class="Content">
-<div class="fifthDate"><h1>09</h1></div>
-<div class="fifthDate"><h2>2019</h2></div>
-<div id="fifthTitle" class="Title"><h3>助力企业内部市场团队</h3></div>
-<div class="fifthText" class="Text"><p>通过风格迁移能力，</p></div>
-<div class="fifthText" class="Text"><p>批量美化项目宣传视频。</p></div>
+<div class="date fifthDate">
+<h1>09</h1>
+<h1>2010</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="fifthTitle" class="Title"><h3>助力企业内部市场团队</h3></div>
+        <div class="fifthText" class="Text"><p>通过风格迁移能力，</p></div>
+        <div class="fifthText" class="Text"><p>批量美化项目宣传视频。</p></div>
+    </div>
+</div>
+
 </div>
 <div id="fifthPic">
 <div id="ball"><img src="{{ url_for('static', filename='image/ball-dec.png')}}" alt=""/></div>
@@ -124,11 +163,18 @@
 <!--第六页-->
 <div id="sixth">
 <div id="sixthContent" class="Content">
-<div class="sixthDate"><h1>10</h1></div>
-<div class="sixthDate"><h2>2019</h2></div>
-<div id="sixthTitle" class="Title"><h3>支持TechWorld大会宣传</h3></div>
-<div class="sixthText" class="Text"><p>助力设计师在极短时间内</p></div>
-<div class="sixthText" class="Text"><p>制作了丰富的宣传物料。</p></div>
+<div class="date sixthDate">
+<h1>10</h1>
+<h1>2019</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="sixthTitle" class="Title"><h3>支持TechWorld大会宣传</h3></div>
+        <div class="sixthText" class="Text"><p>助力设计师在极短时间内</p></div>
+        <div class="sixthText" class="Text"><p>制作了丰富的宣传物料。</p></div> 
+    </div>
+</div>
+
 </div> 
 <div id="sixthPic">
 <div id="video">
@@ -149,11 +195,18 @@
 <!--第八页-->
 <div id="eighth">
 <div id="eighthContent" class="Content">
-<div class="eighthDate"><h1>Until</h1></div>
-<div class="eighthDate"><h2>Now</h2></div>
-<div id="eighthTitle" class="Title"><h3>过去到现在，现在到未来</h3></div>
-<div class="eighthText" class="Text"><p>我不断被发现，被试用，被迭代</p></div>
-<div class="eighthText" class="Text"><p>以创造更多的可能。</p></div>
+<div class="date eighthDate">
+<h1>Until</h1>
+<h1>Now</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="eighthTitle" class="Title"><h3>过去到现在，现在到未来</h3></div>
+        <div class="eighthText" class="Text"><p>我不断被发现，被试用，被迭代</p></div>
+        <div class="eighthText" class="Text"><p>以创造更多的可能。</p></div>
+    </div>
+</div>
+
 </div> 
 <div id="sucai" class="countNum">
 <h1>12384</h1>
@@ -196,11 +249,18 @@
 <!--第七页-->
 <div id="seventh">
 <div id="seventhContent" class="Content">
-<div class="seventhDate"><h1>11</h1></div>
-<div class="seventhDate"><h2>2019</h2></div>
-<div id="seventhTitle" class="Title"><h3>我举办了第一次艺术展</h3></div>
-<div class="seventhText" class="Text"><p>现场互动次数1000+</p></div>
-<div class="seventhText" class="Text"><a href="https://mp.weixin.qq.com/s/jwrp5YEGjCLadb5z--8G-w" target="_blank">一起来看现场吧</a></div>
+<div class="date seventhDate">
+<h1>11</h1>
+<h1>2019</h1>
+</div>
+<div class="titleText">
+    <div class="titleTextinner">
+        <div id="seventhTitle" class="Title"><h3>我举办了第一次艺术展</h3></div>
+        <div class="seventhText" class="Text"><p>现场互动次数1000+</p></div>
+        <div class="seventhText" class="Text"><a href="https://mp.weixin.qq.com/s/jwrp5YEGjCLadb5z--8G-w" target="_blank">一起来看现场吧</a></div>
+    </div>
+</div>
+
 </div> 
 <div id="sevenPic"> </div>
 </div>
@@ -223,7 +283,7 @@
         <li><a href="/cross/">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/api" class="mainMenu">API接入</a></li>
+        <li><a href="#" class="mainMenu">API接入</a></li>
         <li id="aboutMe"><a href="/about" class="mainMenu">关于我</a></li>
         </ul>
         </nav>
@@ -367,6 +427,27 @@ var pic3Width=$("#pic3").width();
 var thirdPicHeight=$("#thirdPic").height();
 var fourthPicHeight=$("#fourthPic").height();
 var sevenPicHeight=$("#sevenPic").height();
+var boxWidth=$(".box").width();
+
+// 用于解决自适应时雪碧图位置错乱的问题
+$(window).resize(function () {          //当浏览器大小变化时
+    // 获取新的窗口尺寸
+    pic1Width=$("#pic1").width();
+    pic2Width=$("#pic2").width();
+    pic3Width=$("#pic3").width();
+    thirdPicHeight=$("#thirdPic").height();
+    fourthPicHeight=$("#fourthPic").height();
+    boxWidth=$(".box").width();
+    sevenPicHeight=$("#sevenPic").height();
+    
+    pic1.css('background-position',"bottom");
+    pic2.css('background-position',"bottom");
+    pic3.css('background-position',"bottom");
+    demo.css('background-position',"bottom");
+    explore.css('background-position',"bottom");
+    stage.css('background-position',"bottom");
+});
+
 function start(aniPosition,step,page){
         var i=0;
         setInterval(
@@ -374,12 +455,14 @@ function start(aniPosition,step,page){
             if(i>-step*page){
             i += -step;
             aniPosition.css('background-position',"0px " + i + "px");
+            console.log("i="+i);
             }
         }, 35);
+        
     }
 
 //走马灯(div,总页数+1，宽度)
-var boxWidth=$(".box").width();
+
 function slider(who,totalSlides,width){
         var currentSlide=1;
         var interval;
@@ -461,9 +544,11 @@ function scrollFun(event) {
                 disappear(content1);
                 disappear(firstpic);
                 disappear(hint);
-                back1.animate({'width':'93vw','opacity':'0'},timeSpace);
-                //出现
+                back1.animate({'width':'93vw'},timeSpace,function(){
                 back.animate({'opacity':'1'},timeSpace);
+                back1.animate({'opacity':'0'},timeSpace);
+                });
+                //出现
                 appear(timeLine);
                 $("#timeLine li:first-child").css('opacity','1').css('font-size','2.4rem');
                 appear(content2);
@@ -497,7 +582,7 @@ function scrollFun(event) {
                 textGo(content3,date3,title3,text3);
                 textCome(content4,date4,title4,text4);
                 timelineChange(2,3);
-                ability.delay(timeSpace).animate({'opacity':'1','left':'25vw'},timeSpace);
+                ability.delay(timeSpace).animate({'opacity':'1','left':'20vw'},timeSpace);
                 start(explore,fourthPicHeight,34);
                 demo.animate({'opacity':'0','left':'-5vw'},timeSpace);
                 }
@@ -508,7 +593,7 @@ function scrollFun(event) {
                 textGo(content4,date4,title4,text4);
                 textCome(content5,date5,title5,text5);
                 timelineChange(3,4);
-                ability.animate({'opacity':'0','left':'5vw'},timeSpace);
+                ability.animate({'opacity':'0','left':'0vw'},timeSpace);
                 video.delay(timeSpace).show().animate({'opacity':'1','left':'0vw'},timeSpace);
                 } 
             
@@ -575,7 +660,9 @@ function scrollFun(event) {
             if(count==1){
                 appear(content1);
                 appear(firstpic);
-                back1.animate({'opacity':'1','width':'100vw'},timeSpace);
+                back1.animate({'opacity':'1'},timeSpace,function(){
+                    back1.animate({'width':'100vw'},timeSpace);
+                });
                 disappear(content2);
                 disappear(back);
                 disappear(timeLine);
@@ -602,7 +689,7 @@ function scrollFun(event) {
                 textGo(content4,date4,title4,text4);
                 textCome(content3,date3,title3,text3);
                 timelineChange(3,2); 
-                ability.animate({'opacity':'0','left':'45vw'},timeSpace);
+                ability.animate({'opacity':'0','left':'40vw'},timeSpace);
                 demo.delay(timeSpace).animate({'opacity':'1','left':'15vw'},timeSpace); 
                 }
             
@@ -611,7 +698,8 @@ function scrollFun(event) {
                 backToright();
                 textGo(content5,date5,title5,text5);
                 textCome(content4,date4,title4,text4);
-                timelineChange(4,3); ability.delay(timeSpace).animate({'opacity':'1','left':'25vw'},timeSpace);
+                timelineChange(4,3); 
+                ability.delay(timeSpace).animate({'opacity':'1','left':'20vw'},timeSpace);
                 video.animate({'opacity':'0','left':'20vw'},timeSpace);
                 }
             

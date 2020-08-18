@@ -2,9 +2,16 @@
 <html lang="ch">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>跨域转换</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cross.css')}}">
+<<<<<<< Updated upstream
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}">
+=======
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js">
+>>>>>>> Stashed changes
     </script>
     
     
@@ -43,7 +50,17 @@
 </div>
 <div class="proSub1">
 <div id="proicon3">
-<div class="icon1"></div><div class="icon2"></div><div class="icon3"></div>
+<div class="icon1"></div>
+<div class="icon2">
+    <video width="100%" height="100%" autoplay muted loop>
+        <source src="{{ url_for('static', filename='image/yaocen1.mp4')}}" type="video/mp4">
+    </video>
+</div>
+<div class="icon3">
+    <video width="100%" height="100%" autoplay muted loop>
+        <source src="{{ url_for('static', filename='image/yaocen.mp4')}}" type="video/mp4">
+    </video>
+</div>
 </div>
 <div class="proh3"><h3>实时转换</h3></div>
 <div class="prop"><p>支持图片速转及视频流实时转换。</p></div>
@@ -159,7 +176,7 @@
         <li><a href="/cross">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/api" class="mainMenu">API接入</a></li>
+        <li><a href="#" class="mainMenu">API接入</a></li>
         <li><a href="/about" class="mainMenu">关于我</a></li>
         </ul>
         </nav>
@@ -274,9 +291,12 @@
         $("#title").css("opacity",disappear);
         var coverOpacity=((scrollS-(proH+windowH))/windowH);
         $("#videoCover").css("opacity",coverOpacity); 
+
         //case微动
-        if(scrollS>tryPosition){
-            var caseMove=460-scrollS*0.2;
+        var tryHeight=$("#demo").height();
+        
+        if(scrollS>tryPosition+tryHeight-windowH){
+            var caseMove=(scrollS-casePosition)*(1/windowH)*130;
             $("#crosscase1").css("transform","translateY("+caseMove+"px)");
             $("#crosscase3").css("transform","translateY("+caseMove+"px)");
             $("#crosscase5").css("transform","translateY("+caseMove+"px)");
@@ -285,18 +305,18 @@
         //图形元素微动
         
         var pM=scrollS*0.05; 
-        $("#proicon1 .icon1").css("transform","translate("+pM/2+"px,"+pM+"px)");
+        $("#proicon1 .icon1").css("transform","translateY("+(-pM)+"px)");
         $("#proicon1 .icon2").css("transform","translate("+(-pM)+"px,"+(-pM)+"px)");
         $("#proicon1 .icon3").css("transform","translate("+pM/2+"px,"+pM+"px)");
         $("#proicon1 .icon4").css("transform","translate("+pM/2+"px,"+pM+"px)");
         var maskSize="calc(6vw + "+(pM*1.5)+"px) calc(11vw + "+(-pM*2)+"px)";
-        console.log(maskSize);
+        // console.log(maskSize);
         $("#proicon1 .icon4").css("-webkit-mask-size",maskSize);
         
-        $("#proicon2 .icon1").css("transform","translate("+(-pM/2)+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon2").css("transform","translate("+pM/2+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon3").css("transform","translate("+(-pM/2)+"px,"+pM/2+"px)");
-        $("#proicon2 .icon4").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
+        $("#proicon2 .icon1").css("transform","translateY("+(-pM/2)+"px)");
+        $("#proicon2 .icon2").css("transform","translate("+(-pM/2)+"px,"+pM/2+"px)");
+        $("#proicon2 .icon3").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
+        // $("#proicon2 .icon4").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
             
         $("#proicon3 .icon1").css("transform","translate("+(-pM/2)+"px,"+pM+"px)");
         $("#proicon3 .icon2").css("transform","translate("+(-pM/2)+"px,"+pM+"px)");
@@ -349,7 +369,7 @@
             "domain":"medieval"
         };
             
-        console.log(imgInfo);
+        // console.log(imgInfo);
             
         //post给服务器
         $.ajax({
@@ -367,8 +387,6 @@
             console.log(err);
             },
         });
-        //切换风格
-       /* $("#style1").click(function(){StyleAjax(imgbaseBack,1)});*/
         };
         reader.readAsDataURL(file);
         
@@ -395,9 +413,9 @@
     function styleBorder(which,num,total){
         for(i=1;i<=total;i++){
             if(i==num){
-            $(which+i).css("background-color","#5376FF");
+            $(which+i).css("border","3px solid #5376FF");
             }else{
-            $(which+i).css("background-color","rgba(0,0,0,.3)"); 
+            $(which+i).css("border","none"); 
             }
         }  
     }
@@ -420,9 +438,11 @@
         $("#after").css("backgroundImage","url("+which+")");
     }
     
+    
     var caseHeight1=document.getElementById("crosscase2").clientWidth;
     var caseHeight2=document.getElementById("crosscase4").clientWidth;
     var caseHeight3=document.getElementById("crosscase6").clientWidth;
+    
     start($("#crosscase2 .casebefore"),caseHeight1);
     start($("#crosscase2 .caseafter"),caseHeight1);
     

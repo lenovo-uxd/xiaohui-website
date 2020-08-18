@@ -2,11 +2,18 @@
 <html lang="ch">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>风格迁移</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transfer.css')}}">
+<<<<<<< Updated upstream
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}">
     </script>
     <!--<script src="gdesign.js"></script>-->
+=======
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+>>>>>>> Stashed changes
     
     
 </head>
@@ -44,7 +51,17 @@
 </div>
 <div class="proSub1">
 <div id="proicon3">
-<div class="icon1"></div><div class="icon3"></div> <div class="icon2"></div>    
+<div class="icon1"></div>
+<div class="icon3">
+    <video width="100%" height="100%" autoplay muted loop>
+        <source src="{{ url_for('static', filename='image/sea.mp4')}}" type="video/mp4">
+    </video>
+</div> 
+<div class="icon2">
+    <video width="100%" height="100%" autoplay muted loop>
+        <source src="{{ url_for('static', filename='image/sea1.mp4')}}" type="video/mp4">
+    </video> 
+</div>    
 </div>
 <div class="proh3"><h3>实时转换</h3></div>
 <div class="prop"><p>支持图片速转及视频流实时转换</p></div>
@@ -67,11 +84,11 @@
 <div><p>原图</p></div>
 </div>
 <div id="upload">
-<div class="originpic1"><div id="originpic1"><p>例1</p></div></div>
-<div class="originpic2"><div id="originpic2"><p>例2</p></div></div> 
-<div class="originpic3"><div id="originpic3"><p>例3</p></div></div> 
+<div class="originpic1" onclick="pic1Click()"><div id="originpic1"><p>例1</p></div></div>
+<div class="originpic2" onclick="pic2Click()"><div id="originpic2"><p>例2</p></div></div> 
+<div class="originpic3" onclick="pic3Click()"><div id="originpic3"><p>例3</p></div></div> 
     
-<input type="file" id="myFile" accept="image/jpeg,image/png,image/jpg" name="filename" onchange="changepic(this,event,1)">
+<input type="file" id="myFile" accept="image/jpeg,image/png,image/jpg" name="filename" onchange="changepic(this,event)">
 <label for="myFile" id="inputLabel">上传图片</label>
     
 </div>
@@ -183,7 +200,7 @@
         <li><a href="/cross">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/api" class="mainMenu">API接入</a></li>
+        <li><a href="#" class="mainMenu">API接入</a></li>
         <li><a href="/about" class="mainMenu">关于我</a></li>
         </ul>
         </nav>
@@ -245,14 +262,6 @@
                     qrcodeP.css("opacity","0");
                     contact.css("opacity","0.8");
                 });
-        /*leftDown.mouseenter(
-                function () {
-                    leftdownHint.css("opacity",1);
-                });
-        leftDown.mouseleave(
-                function () {
-                    leftdownHint.css("opacity",0);
-                });*/
         
         slider(flexslider,4,160*0.35);
         
@@ -312,66 +321,19 @@
         }
             
         var pM=scrollS*0.05; 
-        $("#proicon1 .icon1").css("transform","translate("+pM/2+"px,"+pM+"px)");
-        $("#proicon1 .icon2").css("transform","translate("+(-pM)+"px,"+(-pM)+"px)");
-        $("#proicon1 .icon3").css("transform","translate("+pM/2+"px,"+pM+"px)");
-        $("#proicon1 .icon4").css("transform","translate("+(-pM)+"px,"+(-pM)+"px)");
+        $("#proicon1 .icon1").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon1 .icon2").css("transform","translateY("+pM+"px)");
+        $("#proicon1 .icon3").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon1 .icon4").css("transform","translateY("+pM+"px)");
         
-        $("#proicon2 .icon1").css("transform","translate("+(-pM/2)+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon2").css("transform","translate("+pM/2+"px,"+(-pM/2)+"px)");
-        $("#proicon2 .icon3").css("transform","translate("+(-pM/2)+"px,"+pM/2+"px)");
-        $("#proicon2 .icon4").css("transform","translate("+pM/2+"px,"+pM/2+"px)");
+        $("#proicon2 .icon1").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon2 .icon2").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon2 .icon3").css("transform","translateY("+pM+"px)");
+        $("#proicon2 .icon4").css("transform","translateY("+(-pM)+"px)");
             
-        $("#proicon3 .icon1").css("transform","translate("+(-pM/2)+"px,"+pM+"px)");
-        $("#proicon3 .icon3").css("transform","translate("+pM/2+"px,"+(-pM)+"px)");
-        //文字出现
-        /*if(scrollS>windowH/4){
-        $("#proInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#proSub h3").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#proSub p").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
-        }
-    
-        if(scrollS>windowH){
-        $("#studyInfo h1").animate({"opacity":"1","top":0},timeSpace); 
-        $("#studyInfo p").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        }
-        if(scrollS>windowH*2){
-        $("#caseInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#caseInfo p").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#caseInfo button").delay(timeSpace).animate({"opacity":"0.2","top":0},timeSpace); 
-        $("#pic4").animate({"opacity":"1"},timeSpace);
-        }
-        if(scrollS>windowH*3){
-        $("#moreInfo h1").animate({"opacity":"1","top":0},timeSpace);
-        $("#moreSub h3").delay(timeSpace/2).animate({"opacity":"1","top":0},timeSpace); 
-        $("#moreSub p").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
-        $("#moreSub button").delay(timeSpace).animate({"opacity":"1","top":0},timeSpace); 
-        }*/
-        
-        //元素颜色变化
-        //底部
-        
-        /*if(scrollS<=80+26){
-        leftdownSvg.css("fill",whiteColor);
-        contactSvg.css("fill",whiteColor);   
-        }
-        if(scrollS>80+26){
-        $(".leftdown").css("-webkit-animation","none");
-        leftdownSvg.css("fill",normalGray);
-        contactSvg.css("fill",normalGray);
-        }       
-        
-        //顶部
-        if(scrollS<=windowH-80){
-        english.css("color",whiteColor);
-        mainMenu.css("color",whiteColor);
-        logoChange.css("fill",whiteColor);
-        }    
-        if(scrollS>windowH-80-26){
-        english.css("color",normalGray);
-        mainMenu.css("color",normalGray);
-        logoChange.css("fill",normalGray);
-        } */
+        $("#proicon3 .icon1").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon3 .icon2").css("transform","translateY("+(-pM)+"px)");
+        $("#proicon3 .icon3").css("transform","translateY("+pM+"px)");
      
         });
     }
@@ -398,8 +360,10 @@
     var blackback="{{ url_for('static', filename='image/blackback.png')}}";
     
     //切换已有原图
+    
     styleChange(camp1,camp2,camp3,camp4,camp5);
-    $("#originpic1").click(function(){
+
+    function pic1Click(){
         changePlaceholder(camp,camp1);
         styleChange(camp1,camp2,camp3,camp4,camp5);
         styleBorder("#originpic",1,3);
@@ -407,9 +371,10 @@
         $(".style2").css("background-image","url(../static/image/camp2.png)");
         $(".style3").css("background-image","url(../static/image/camp3.png)");
         $(".style4").css("background-image","url(../static/image/camp4.png)");
-        $(".style5").css("background-image","url(../static/image/camp5.png)");
-    });
-    $("#originpic2").click(function(){
+        $(".style5").css("background-image","url(../static/image/camp5.png)");   
+    };
+
+    function pic2Click(){
         changePlaceholder(scooter,scooter1);
         styleChange(scooter1,scooter2,scooter3,scooter4,scooter5);
         styleBorder("#originpic",2,3);
@@ -418,8 +383,9 @@
         $(".style3").css("background-image","url(../static/image/scooter3.png)");
         $(".style4").css("background-image","url(../static/image/scooter4.png)");
         $(".style5").css("background-image","url(../static/image/scooter5.png)");
-    });
-    $("#originpic3").click(function(){
+    };
+
+    function pic3Click(){
         changePlaceholder(dog,dog1);
         styleChange(dog1,dog2,dog3,dog4,dog5);
         styleBorder("#originpic",3,3);
@@ -428,34 +394,15 @@
         $(".style3").css("background-image","url(../static/image/dog3.png)");
         $(".style4").css("background-image","url(../static/image/dog4.png)");
         $(".style5").css("background-image","url(../static/image/dog5.png)");
-    });
-   
+    };
+
     $("#originpic1").trigger("click");
     
-   /* //上传左边图片
-    function imgChange(img) {
-    // 生成一个文件读取的对象
-    const reader = new FileReader();
-    reader.onload = function (ev) {
-        // base64码
-        var imgFile =ev.target.result;//或e.target都是一样的
-        document.querySelector("img").src= ev.target.result;
-    }
-    //发起异步读取文件请求，读取结果为data:url的字符串形式，
-    reader.readAsDataURL(img.files[0]);
-}*/
     
-    
-    /*var imgbase;*/
-    function changepic(obj,event,styleName) {
-        $("#style1").css("background-image","url(../static/image/111.png)");
-        $("#style2").css("background-image","url(../static/image/222.png)");
-        $("#style3").css("background-image","url(../static/image/333.png)");
-        $("#style4").css("background-image","url(../static/image/444.png)");
-        $("#style5").css("background-image","url(../static/image/555.png)");
-        styleChange(blackback,blackback,blackback,blackback,blackback);
+    function changepic(obj,event) {
         var newsrc=getObjectURL(obj.files[0]);
         $("#before").css("backgroundImage","url("+newsrc+")");
+        $("#after").css("backgroundImage","url("+blackback+")");
         //base64转换
         var file = event.target.files[0];
         var reader = new FileReader();
@@ -463,58 +410,145 @@
         var imgbase=event.target.result;
         var imgbaseBack=imgbase.split(",")[1];
         var imgbaseFront=imgbase.split(",")[0]
-        var imgInfo={
+        
+        // var styleNum=1;
+        
+            var imgInfo1={
             "Base64Data":imgbaseBack,
-            "style":styleName-1
-        };
-        /*console.log(imgInfo);*/
-        //post给服务器
-        $.ajax({
+            "style":1-1,
+            };
+
+            var imgInfo2={
+            "Base64Data":imgbaseBack,
+            "style":2-1,
+            };
+
+            var imgInfo3={
+            "Base64Data":imgbaseBack,
+            "style":3-1,
+            };
+
+            var imgInfo4={
+            "Base64Data":imgbaseBack,
+            "style":4-1,
+            };
+
+            var imgInfo5={
+            "Base64Data":imgbaseBack,
+            "style":5-1,
+            };
+
+            var ajaxData1,
+                ajaxData2,
+                ajaxData3,
+                ajaxData4,
+                ajaxData5;
+
+            $.ajax({
             type:'POST',
             url:'/style-transfer',
             contentType:'application/json',
-            data:JSON.stringify(imgInfo),
+            data:JSON.stringify(imgInfo1),
             dataType:'json',
             success:function(data){
             var finaldata=imgbaseFront+","+data.result;
-            $("#after").css("backgroundImage","url("+finaldata+")"); 
-            /*console.log(finaldata);*/
+            $(".style1").css("background-image","url("+finaldata+")"); 
+            ajaxData1=finaldata;
+            $("#after").css("background-image","url("+ajaxData1+")");
             },
             error:function(err){
             console.log(err);
             },
-        });
-        //切换风格
-        $("#style1").click(function(){StyleAjax(imgbaseFront,imgbaseBack,1)});
-        $("#style2").click(function(){StyleAjax(imgbaseFront,imgbaseBack,2)});
-        $("#style3").click(function(){StyleAjax(imgbaseFront,imgbaseBack,3)});
-        $("#style4").click(function(){StyleAjax(imgbaseFront,imgbaseBack,4)});
-        $("#style5").click(function(){StyleAjax(imgbaseFront,imgbaseBack,5)});
-        };
-        reader.readAsDataURL(file);
-        
-        
-    }
-    //风格ajax请求
-    function StyleAjax(front,data,i){
-        $.ajax({
+            });
+
+            $.ajax({
             type:'POST',
             url:'/style-transfer',
             contentType:'application/json',
-            data:JSON.stringify({
-            "Base64Data":data,
-            "style":i-1
-        }),
+            data:JSON.stringify(imgInfo2),
             dataType:'json',
             success:function(data){
-            var finaldata=front+","+data.result;
-            $("#after").css("backgroundImage","url("+finaldata+")"); 
-            console.log(finaldata);
+            var finaldata=imgbaseFront+","+data.result;
+            $(".style2").css("background-image","url("+finaldata+")"); 
+            ajaxData2=finaldata;
             },
             error:function(err){
             console.log(err);
             },
-        });
+            });
+
+            $.ajax({
+            type:'POST',
+            url:'/style-transfer',
+            contentType:'application/json',
+            data:JSON.stringify(imgInfo3),
+            dataType:'json',
+            success:function(data){
+            var finaldata=imgbaseFront+","+data.result;
+            $(".style3").css("background-image","url("+finaldata+")"); 
+            ajaxData3=finaldata;
+            },
+            error:function(err){
+            console.log(err);
+            },
+            });
+
+            $.ajax({
+            type:'POST',
+            url:'/style-transfer',
+            contentType:'application/json',
+            data:JSON.stringify(imgInfo4),
+            dataType:'json',
+            success:function(data){
+            var finaldata=imgbaseFront+","+data.result;
+            $(".style4").css("background-image","url("+finaldata+")"); 
+            ajaxData4=finaldata;
+            },
+            error:function(err){
+            console.log(err);
+            },
+            });
+
+            $.ajax({
+            type:'POST',
+            url:'/style-transfer',
+            contentType:'application/json',
+            data:JSON.stringify(imgInfo5),
+            dataType:'json',
+            success:function(data){
+            var finaldata=imgbaseFront+","+data.result;
+            $(".style5").css("background-image","url("+finaldata+")"); 
+            ajaxData5=finaldata;
+            },
+            error:function(err){
+            console.log(err);
+            },
+            });
+
+            $("#style1").click(function(){$("#after").css("background-image","url("+ajaxData1+")");
+            styleBorder("#style",1,5);                      
+                                     });
+       
+        $("#style2").click(function(){$("#after").css("background-image","url("+ajaxData2+")");
+         styleBorder("#style",2,5); 
+                                     });
+       
+        $("#style3").click(function(){$("#after").css("background-image","url("+ajaxData3+")");
+         styleBorder("#style",3,5); 
+                                     });
+    
+        $("#style4").click(function(){$("#after").css("background-image","url("+ajaxData4+")");
+         styleBorder("#style",4,5); 
+                                     });
+
+        $("#style5").click(function(){$("#after").css("background-image","url("+ajaxData5+")");
+         styleBorder("#style",5,5); 
+                                     });
+
+        };
+        reader.readAsDataURL(file);
+        console.log("haha");
+        
     }
    
     
@@ -536,9 +570,9 @@
     function styleBorder(which,num,total){
         for(i=1;i<=total;i++){
             if(i==num){
-            $(which+i).css("background-color","#5376FF");
+            $(which+i).css("border","3px solid #5376FF");
             }else{
-            $(which+i).css("background-color","rgba(0,0,0,.3)");  
+            $(which+i).css("border","none");  
             }
         }  
     }
@@ -547,23 +581,23 @@
     function styleChange(sty1,sty2,sty3,sty4,sty5){
         
         
-        $("#style1").click(function(){$("#after").css("backgroundImage","url("+sty1+")");
+        $("#style1").click(function(){$("#after").css("background-image","url("+sty1+")");
          styleBorder("#style",1,5);                      
                                      });
        
-        $("#style2").click(function(){$("#after").css("backgroundImage","url("+sty2+")");
+        $("#style2").click(function(){$("#after").css("background-image","url("+sty2+")");
          styleBorder("#style",2,5); 
                                      });
        
-        $("#style3").click(function(){$("#after").css("backgroundImage","url("+sty3+")");
+        $("#style3").click(function(){$("#after").css("background-image","url("+sty3+")");
          styleBorder("#style",3,5); 
                                      });
     
-        $("#style4").click(function(){$("#after").css("backgroundImage","url("+sty4+")");
+        $("#style4").click(function(){$("#after").css("background-image","url("+sty4+")");
          styleBorder("#style",4,5); 
                                      });
 
-        $("#style5").click(function(){$("#after").css("backgroundImage","url("+sty5+")");
+        $("#style5").click(function(){$("#after").css("background-image","url("+sty5+")");
          styleBorder("#style",5,5); 
                                      });
         
@@ -576,34 +610,7 @@
         $("#after").css("backgroundImage","url("+which+")");
     }
   
-                       
- 
-    /*$.ajax({
-        type:'GET',
-        url:'',
-        success:function(data){
-        $("#after").css("backgroundImage","url("+data+")"); 
-        },
-        error:function(){
-            alert('获取失败');
-        }
-    });*/
-    
-    /*function(){
-        var imgInfo={
-            style:1,
-            img:
-        };
-        
-        $.ajax({
-            type:'POST',
-            url:'',
-            data:imgInfo,
-            success:function(data){
-            $("#after").css("backgroundImage","url("+data+")"); 
-        },
-        });
-    }*/
+                    
 </script> 
 </body>
   
