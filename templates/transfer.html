@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>风格迁移</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/transfer.css')}}">
-<<<<<<< Updated upstream
-    <script src="{{ url_for('static', filename='js/jquery.min.js')}}">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?e2df743fde48309176ca4f42c089a8ff";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
     </script>
-    <!--<script src="gdesign.js"></script>-->
-=======
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transfer.css')}}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
-    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
->>>>>>> Stashed changes
-    
-    
 </head>
 
 <body>
