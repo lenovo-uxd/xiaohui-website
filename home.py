@@ -13,6 +13,9 @@ import json
 import pandas as pd
 
 
+token = "3ebad9eb-9f48-4132-b476-477ea0d48021"
+
+
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
@@ -98,7 +101,7 @@ def get_message():
 def style_transfer():
     data = json.dumps(request.get_json())
     #url = "http://10.110.130.24:11354/apicore/art/style-transfer-simple-graph/1.0.0"
-    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-transfer/1.0?token=bdf321ef-68ee-482d-b5d2-3174beb43e41"
+    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-transfer/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
@@ -107,7 +110,7 @@ def style_transfer():
 def cross_domain():
     data = json.dumps(request.get_json())
     #url = "http://10.110.130.24:11354/apicore/art/cross-domain-align/1.0.0"
-    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/cross-domain/1.0?token=bdf321ef-68ee-482d-b5d2-3174beb43e41"
+    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/cross-domain/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
@@ -116,7 +119,7 @@ def cross_domain():
 def style_gan_extend():
     data = json.dumps(request.get_json())
     #url = "http://10.110.130.24:11354/apicore/art/style-gan-post/1.0.0"
-    url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token=bdf321ef-68ee-482d-b5d2-3174beb43e41"
+    url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
@@ -125,7 +128,7 @@ def style_gan_extend():
 def style_gan_random():
     data = json.dumps(request.get_json())
     #url = "http://10.110.130.24:11354/apicore/art/style-gan-post/1.0.0"
-    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token=bdf321ef-68ee-482d-b5d2-3174beb43e41"
+    url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
