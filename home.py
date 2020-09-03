@@ -129,7 +129,7 @@ def style_gan_random():
     number = request.args.get("number")
     url = "http://10.110.146.100:11354/apicore/art/style-gan-get/1.0.0?number="+number
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
-    res = requests.get(url=url,data=data)
+    res = requests.get(url=url)
     return jsonify(json.loads(res.content))
 
 
