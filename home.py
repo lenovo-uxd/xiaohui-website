@@ -100,7 +100,7 @@ def get_message():
 @app.route('/style-transfer', methods=['POST'])
 def style_transfer():
     data = json.dumps(request.get_json())
-    url = "http://10.110.130.24:11354/apicore/art/style-transfer-simple-graph/1.0.0"
+    url = "http://10.110.146.100:11354/apicore/art/style-transfer-simple-graph/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-transfer/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
@@ -109,7 +109,7 @@ def style_transfer():
 @app.route('/cross-domain', methods=['POST'])
 def cross_domain():
     data = json.dumps(request.get_json())
-    url = "http://10.110.130.24:11354/apicore/art/cross-domain-align/1.0.0"
+    url = "http://10.110.146.100:11354/apicore/art/cross-domain-align/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/cross-domain/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
@@ -118,7 +118,7 @@ def cross_domain():
 @app.route('/style-gan-post', methods=['POST'])
 def style_gan_extend():
     data = json.dumps(request.get_json())
-    url = "http://10.110.130.24:11354/apicore/art/style-gan-post/1.0.0"
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-post/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
@@ -127,7 +127,7 @@ def style_gan_extend():
 @app.route('/style-gan-get', methods=['GET'])
 def style_gan_random():
     number = request.args.get("number")
-    url = "http://10.110.130.24:11354/apicore/art/style-gan-get/1.0.0?number="+number
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-get/1.0.0?number="+number
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
     res = requests.get(url=url,data=data)
     return jsonify(json.loads(res.content))
