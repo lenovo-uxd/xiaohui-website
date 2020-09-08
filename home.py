@@ -11,12 +11,14 @@ import codecs
 import requests
 import json
 import pandas as pd
+from flask_cors import CORS
 
 
 token = "3ebad9eb-9f48-4132-b476-477ea0d48021"
 
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
 UPLOAD_FOLDER = 'upload'
