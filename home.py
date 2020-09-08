@@ -117,10 +117,10 @@ def cross_domain():
     return jsonify(json.loads(res.content))
 
 #随机生成图像
-@app.route('/style-gan-post', methods=['POST'])
+@app.route('/style-gan-random', methods=['POST'])
 def style_gan_random():
     data = json.dumps(request.get_json())
-    url = "http://10.110.146.100:11354/apicore/art/style-gan-post/1.0.0"
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-random/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
@@ -131,6 +131,17 @@ def style_gan_extend():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-gan-withtag/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
+    res = requests.post(url=url,data=data)
+    return jsonify(json.loads(res.content))
+
+
+## SUXI DEMO NEED TO BE MERGED
+#随机生成图像
+@app.route('/style-gan-post', methods=['POST'])
+def style_gan_post():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-post/1.0.0"
+    # url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
