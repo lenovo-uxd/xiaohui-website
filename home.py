@@ -102,7 +102,7 @@ def get_message():
     return jsonify(returnedData)
 
 #图片风格转换
-@app.route('/home/style-transfer', methods=['POST'])
+@app.route('/style-transfer', methods=['POST'])
 def style_transfer():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-transfer-simple-graph/1.0.0"
@@ -111,7 +111,7 @@ def style_transfer():
     return jsonify(json.loads(res.content))
 
 #头像域到域转换
-@app.route('/home/cross-domain', methods=['POST'])
+@app.route('/cross-domain', methods=['POST'])
 def cross_domain():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/cross-domain-align/1.0.0"
@@ -120,7 +120,7 @@ def cross_domain():
     return jsonify(json.loads(res.content))
 
 #随机生成图像
-@app.route('/home/style-gan-random', methods=['POST'])
+@app.route('/style-gan-random', methods=['POST'])
 def style_gan_random():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-gan-random/1.0.0"
@@ -129,7 +129,7 @@ def style_gan_random():
     return jsonify(json.loads(res.content))
 
 #拓展图像
-@app.route('/home/style-gan-extend', methods=['POST'])
+@app.route('/style-gan-extend', methods=['POST'])
 def style_gan_extend():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-gan-withtag/1.0.0"
@@ -140,7 +140,7 @@ def style_gan_extend():
 
 ## SUXI DEMO NEED TO BE MERGED
 #随机生成图像
-@app.route('/home/style-gan-post', methods=['POST'])
+@app.route('/style-gan-post', methods=['POST'])
 def style_gan_post():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-gan-post/1.0.0"
@@ -149,7 +149,7 @@ def style_gan_post():
     return jsonify(json.loads(res.content))
 
 #随机生成图像
-@app.route('/home/style-gan-get', methods=['GET'])
+@app.route('/style-gan-get', methods=['GET'])
 def style_gan_get():
     number = request.args.get("number")
     url = "http://10.110.146.100:11354/apicore/art/style-gan-get/1.0.0?number="+number
