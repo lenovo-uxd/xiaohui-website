@@ -14,17 +14,17 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/transfer.css')}}">
-    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
-    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('staticfile', filename='css/transfer.css')}}">
+    <script src="{{ url_for('staticfile', filename='js/jquery.min.js')}}"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('staticfile', filename='image/favicon.png')}}">
 </head>
 
 <body>
 <!--页面信息-->
 <div id="landing">
-<div id="back"><img src="{{ url_for('static', filename='image/colorrun.png')}}"/></div>
+<div id="back"><img src="{{ url_for('staticfile', filename='image/colorrun.png')}}"/></div>
 <div id="front"> </div>
-<div id="mask"><img src="{{ url_for('static', filename='image/colorrun2.png')}}"/></div>
+<div id="mask"><img src="{{ url_for('staticfile', filename='image/colorrun2.png')}}"/></div>
 </div>
 <div id="title">
 <h1>万花筒-风格迁移工具</h1>
@@ -55,12 +55,12 @@
 <div class="icon1"></div>
 <div class="icon3">
     <video width="100%" height="100%" autoplay muted loop>
-        <source src="{{ url_for('static', filename='image/sea.mp4')}}" type="video/mp4">
+        <source src="{{ url_for('staticfile', filename='image/sea.mp4')}}" type="video/mp4">
     </video>
 </div> 
 <div class="icon2">
     <video width="100%" height="100%" autoplay muted loop>
-        <source src="{{ url_for('static', filename='image/sea1.mp4')}}" type="video/mp4">
+        <source src="{{ url_for('staticfile', filename='image/sea1.mp4')}}" type="video/mp4">
     </video> 
 </div>    
 </div>
@@ -126,19 +126,19 @@
 <div class="pic" id="pic4">
         <div class="box">
         <div class="flexslider">
-        <div><img src="{{ url_for('static', filename='image/3.png')}}" />
+        <div><img src="{{ url_for('staticfile', filename='image/3.png')}}" />
         </div>
         <div>
         <video width="100%" height="100%" autoplay muted loop>
-        <source src="{{ url_for('static', filename='image/test.mp4')}}" type="video/mp4">
+        <source src="{{ url_for('staticfile', filename='image/test.mp4')}}" type="video/mp4">
         </video>
         </div>
         <div>
         <video width="100%" height="100%" autoplay muted loop>
-        <source src="{{ url_for('static', filename='image/test.mp4')}}" type="video/mp4">
+        <source src="{{ url_for('staticfile', filename='image/test.mp4')}}" type="video/mp4">
         </video>    
         </div>
-        <div><img src="{{ url_for('static', filename='image/3.png')}}" /></div>
+        <div><img src="{{ url_for('staticfile', filename='image/3.png')}}" /></div>
         </div>
         </div> 
 </div>
@@ -187,7 +187,7 @@
       
         <div class="logo">
                 <a href="/">
-                <img src="{{ url_for('static', filename='image/logowhite.svg')}}" width=100% height=auto />
+                <img src="{{ url_for('staticfile', filename='image/logowhite.svg')}}" width=100% height=auto />
                 </a>
         </div>
         
@@ -340,25 +340,25 @@
     }
     //表单部分
     
-    var camp="{{ url_for('static', filename='image/camp.png')}}";
-    var scooter="{{ url_for('static', filename='image/scooter.png')}}";
-    var dog="{{ url_for('static', filename='image/dog.png')}}";
-    var camp1="{{ url_for('static', filename='image/camp1.png')}}";
-    var scooter1="{{ url_for('static', filename='image/scooter1.png')}}";
-    var dog1="{{ url_for('static', filename='image/dog1.png')}}";
-    var camp2="{{ url_for('static', filename='image/camp2.png')}}";
-    var scooter2="{{ url_for('static', filename='image/scooter2.png')}}";
-    var dog2="{{ url_for('static', filename='image/dog2.png')}}";
-    var camp3="{{ url_for('static', filename='image/camp3.png')}}";
-    var scooter3="{{ url_for('static', filename='image/scooter3.png')}}";
-    var dog3="{{ url_for('static', filename='image/dog3.png')}}";
-    var camp4="{{ url_for('static', filename='image/camp4.png')}}";
-    var scooter4="{{ url_for('static', filename='image/scooter4.png')}}";
-    var dog4="{{ url_for('static', filename='image/dog4.png')}}";
-    var camp5="{{ url_for('static', filename='image/camp5.png')}}";
-    var scooter5="{{ url_for('static', filename='image/scooter5.png')}}";
-    var dog5="{{ url_for('static', filename='image/dog5.png')}}";
-    var blackback="{{ url_for('static', filename='image/blackback.png')}}";
+    var camp="{{ url_for('staticfile', filename='image/camp.png')}}";
+    var scooter="{{ url_for('staticfile', filename='image/scooter.png')}}";
+    var dog="{{ url_for('staticfile', filename='image/dog.png')}}";
+    var camp1="{{ url_for('staticfile', filename='image/camp1.png')}}";
+    var scooter1="{{ url_for('staticfile', filename='image/scooter1.png')}}";
+    var dog1="{{ url_for('staticfile', filename='image/dog1.png')}}";
+    var camp2="{{ url_for('staticfile', filename='image/camp2.png')}}";
+    var scooter2="{{ url_for('staticfile', filename='image/scooter2.png')}}";
+    var dog2="{{ url_for('staticfile', filename='image/dog2.png')}}";
+    var camp3="{{ url_for('staticfile', filename='image/camp3.png')}}";
+    var scooter3="{{ url_for('staticfile', filename='image/scooter3.png')}}";
+    var dog3="{{ url_for('staticfile', filename='image/dog3.png')}}";
+    var camp4="{{ url_for('staticfile', filename='image/camp4.png')}}";
+    var scooter4="{{ url_for('staticfile', filename='image/scooter4.png')}}";
+    var dog4="{{ url_for('staticfile', filename='image/dog4.png')}}";
+    var camp5="{{ url_for('staticfile', filename='image/camp5.png')}}";
+    var scooter5="{{ url_for('staticfile', filename='image/scooter5.png')}}";
+    var dog5="{{ url_for('staticfile', filename='image/dog5.png')}}";
+    var blackback="{{ url_for('staticfile', filename='image/blackback.png')}}";
     
     //切换已有原图
     
