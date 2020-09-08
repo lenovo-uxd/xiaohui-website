@@ -425,7 +425,7 @@
           
           $.ajax({
             type:'GET',
-            url:'/style-gan-get?number=10',
+            url:'/home/style-gan-get?number=10',
             success:function(data){
                 /*console.log(data.result[0].latent);*/
                 var i=0;
@@ -462,7 +462,7 @@
 
          $.ajax({
             type:'POST',
-            url:'/style-gan-post',
+            url:'/home/style-gan-post',
             contentType:'application/json',
             data:JSON.stringify(imgLatent),
             dataType:'json',
