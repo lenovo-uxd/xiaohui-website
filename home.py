@@ -118,16 +118,25 @@ def cross_domain():
 
 #随机生成图像
 @app.route('/style-gan-post', methods=['POST'])
-def style_gan_extend():
+def style_gan_random():
     data = json.dumps(request.get_json())
     url = "http://10.110.146.100:11354/apicore/art/style-gan-post/1.0.0"
     # url = "https://dev-api.brain.lenovo.com/lenovo/cv/style-gan-withtag-/1.0?token="+token
     res = requests.post(url=url,data=data)
     return jsonify(json.loads(res.content))
 
+#拓展图像
+@app.route('/style-gan-extend', methods=['POST'])
+def style_gan_extend():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-withtag/1.0.0"
+    # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
+    res = requests.post(url=url,data=data)
+    return jsonify(json.loads(res.content))
+
 #随机生成图像
 @app.route('/style-gan-get', methods=['GET'])
-def style_gan_random():
+def style_gan_get():
     number = request.args.get("number")
     url = "http://10.110.146.100:11354/apicore/art/style-gan-get/1.0.0?number="+number
     # url = "https://dev-api.brain.lenovo.com/namespaces/ai-design/cv/style-gan-random/1.0?token="+token
