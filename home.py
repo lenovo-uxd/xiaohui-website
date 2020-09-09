@@ -38,8 +38,8 @@ def create_uuid(): #生成唯一的图片的名称字符串，防止图片显示
     return uniqueNum;
 
 
-@app.route('/home/static/<filename>')
-def staticfile(filename): pass
+# @app.route('/home/static/<filename>')
+# def staticfile(filename): pass
 
 @app.route('/')
 def home():
