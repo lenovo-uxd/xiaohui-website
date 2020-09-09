@@ -14,9 +14,9 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <link rel="stylesheet" href="{{ url_for('staticfile', filename='css/about.css')}}">
-    <script src="{{ url_for('staticfile', filename='js/jquery.min.js')}}"></script>
-    <link rel="shortcut icon" type="image/png" href="{{ url_for('staticfile', filename='image/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css')}}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 <div id="totalBackground"></div>
 <!--蓝条背景-->
 <div id="firstBack">
-<img src="{{ url_for('staticfile', filename='image/about@2x.png')}}" alt=""/>
+<img src="{{ url_for('static', filename='image/about@2x.png')}}" alt=""/>
 </div>
 <div id="back">
 <div id="secondBack" class="back"></div> 
@@ -114,7 +114,7 @@
 
 </div> 
 <div id="thirdPic">
-<img src="{{ url_for('staticfile', filename='image/demoFinal.png')}}" alt=""/>    
+<img src="{{ url_for('static', filename='image/demoFinal.png')}}" alt=""/>    
 </div>
 </div>
 
@@ -154,13 +154,13 @@
 
 </div>
 <div id="fifthPic">
-<div id="ball"><img src="{{ url_for('staticfile', filename='image/ball-dec.png')}}" alt=""/></div>
+<div id="ball"><img src="{{ url_for('static', filename='image/ball-dec.png')}}" alt=""/></div>
 <div id="video">
 <video  width="100%" height="100%" autoplay muted loop>
-<source src="{{ url_for('staticfile', filename='image/test.mp4')}}" type="video/mp4">
+<source src="{{ url_for('static', filename='image/test.mp4')}}" type="video/mp4">
 </video>   
 </div>
-<div id="curve"><img src="{{ url_for('staticfile', filename='image/curve-dec.png')}}" alt=""/></div>   
+<div id="curve"><img src="{{ url_for('static', filename='image/curve-dec.png')}}" alt=""/></div>   
 </div>
 </div>
     
@@ -184,15 +184,15 @@
 <div id="video">
 <div class="box">
         <div class="flexslider">
-        <div><img src="{{ url_for('staticfile', filename='image/1.png')}}" alt=""/></div>
-        <div><img src="{{ url_for('staticfile', filename='image/2.png')}}" alt=""/></div>
-        <div><img src="{{ url_for('staticfile', filename='image/3.png')}}" alt=""/></div>
-        <div><img src="{{ url_for('staticfile', filename='image/1.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/2.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/3.png')}}" alt=""/></div>
+        <div><img src="{{ url_for('static', filename='image/1.png')}}" alt=""/></div>
         </div>
 </div>   
 </div>
-<div id="purpleball"><img src="{{ url_for('staticfile', filename='image/purpleball.png')}}" alt=""/></div>  
-<div id="lilBall"><img src="{{ url_for('staticfile', filename='image/ball-dec.png')}}" alt=""/></div>
+<div id="purpleball"><img src="{{ url_for('static', filename='image/purpleball.png')}}" alt=""/></div>  
+<div id="lilBall"><img src="{{ url_for('static', filename='image/ball-dec.png')}}" alt=""/></div>
 </div>
 </div>
 
@@ -272,28 +272,28 @@
 <div class="nav">
       
         <div class="logo">
-                <a href="/home/">
-                <img src="{{ url_for('staticfile', filename='image/Xiaohui@2x.svg')}}" width=100% height=auto />
+                <a href="/">
+                <img src="{{ url_for('static', filename='image/Xiaohui@2x.svg')}}" width=100% height=auto />
                 </a>
         </div>
         
         <nav class="dropdownmenu">
         <ul>
-        <li><a href="/home/" class="mainMenu">主页</a></li>
-        <li><a href="/home#">能力展示</a>
+        <li><a href="/" class="mainMenu">主页</a></li>
+        <li><a href="#">能力展示</a>
         <ul id="submenu">
-        <li><a href="/home/gdesign">望远镜</a></li>
-        <li><a href="/home/transfer">万花筒</a></li>
-        <li><a href="/home/cross/">时光机</a></li>
+        <li><a href="/gdesign">望远镜</a></li>
+        <li><a href="/transfer">万花筒</a></li>
+        <li><a href="/cross/">时光机</a></li>
         </ul>
         </li>
-        <li><a href="/home#" class="mainMenu">API接入</a></li>
-        <li id="aboutMe"><a href="/home/about" class="mainMenu">关于我</a></li>
+        <li><a href="#" class="mainMenu">API接入</a></li>
+        <li id="aboutMe"><a href="/about" class="mainMenu">关于我</a></li>
         </ul>
         </nav>
             
         <div class="english">
-         <a href="/home#">
+         <a href="#">
          <p>EN</p>
          </a>
         </div>

@@ -64,7 +64,7 @@ def transfer():
 basedir = os.path.abspath(os.path.dirname(__file__))
  
 
-@app.route('/home/up_photo', methods=['POST'], strict_slashes=False)
+@app.route('/up_photo', methods=['POST'], strict_slashes=False)
 def api_upload():
     file_dir = os.path.join(basedir, app.config['UPLOAD_FOLDER'])
     if not os.path.exists(file_dir):
@@ -80,7 +80,7 @@ def api_upload():
     else:
         return jsonify({"error": 1001, "msg": "上传失败"})
 
-@app.route('/home/leave-message', methods=['POST'], strict_slashes=False)
+@app.route('/leave-message', methods=['POST'], strict_slashes=False)
 def leave_message():
     message = request.get_json()
     with open('message.csv', 'a+',newline='') as csvfile:
@@ -91,7 +91,7 @@ def leave_message():
         csvfile.close()
         return jsonify({"success": 0, "msg": "更新成功"})
 
-@app.route('/home/get-message', methods=['GET'], strict_slashes=False)
+@app.route('/get-message', methods=['GET'], strict_slashes=False)
 def get_message():
     returnedData = {
         'comment':[]
