@@ -422,23 +422,33 @@
        $("#demoPart").hide();
         var imageObject={};
         function getImage(){
-          
-          $.ajax({
-            type:'GET',
-            url:'/style-gan-get?number=10',
+
+            var postInfo={
+                "number":10,
+                "size":"large",
+                "ifDlatents":true,
+                "ratio":"(2:1)"
+            };
+
+            $.ajax({
+            type:'POST',
+            url:'/style-gan-random',
+            contentType:'application/json',
+            data:JSON.stringify(postInfo),
+            dataType:'json',
             success:function(data){
-                /*console.log(data.result[0].latent);*/
+                console.log(data);
                 var i=0;
                 var j=5;
                 $("#demoFirstline div").each(function(){
                 $(this).find("img").attr('src',"data:image/png;base64,"+data.result[i].image);
-                imageObject[i]=data.result[i].latent;
+                imageObject[i]=data.result[i].dlatent;
                 
                 i++;
                 });
                 $("#demoSecondline div").each(function(){
                 $(this).find("img").attr('src',"data:image/png;base64,"+data.result[j].image);
-                imageObject[j]=data.result[j].latent;
+                imageObject[j]=data.result[j].dlatent;
                 j++;
                 });
                 $("#triggerone").trigger("click");
@@ -457,12 +467,18 @@
     //post部分
          function postImage(i){
          var imgLatent={
-         "latent":imageObject[i],
-         };
+         "dlatentsData":imageObject[i],
+         "style":"similarity",
+        "number":10,
+        "size":"large",
+        "styleScale":1.0,
+        "ifDlatents":true,
+        "ratio":"(2:1)"
+        };
 
          $.ajax({
             type:'POST',
-            url:'/style-gan-post',
+            url:'/style-gan-extend',
             contentType:'application/json',
             data:JSON.stringify(imgLatent),
             dataType:'json',
