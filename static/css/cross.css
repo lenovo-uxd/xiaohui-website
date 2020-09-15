@@ -196,10 +196,8 @@ color: white;
     line-height: 4vw;
 }
 #title p{
-    width: 86%;
+    width: 100%;
     line-height: 3rem;
-    padding-left: 7%;
-    padding-right: 7%;
     padding-top: .5vw;
     font-size: 1.6rem;
 }
@@ -738,7 +736,7 @@ color: white;
 /*页面尾部*/
 #footer{
     position: relative;
-    width:86vw;
+    width:100vw;
     padding-left: 7%;
     padding-right: 7%;
     padding-top: 6rem;
@@ -754,10 +752,11 @@ color: white;
     background-image: url("../image/footerLogo.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
 }
 #groupName{
     padding-bottom: 1rem;
+    padding-top: 2rem;
     font-size: 1.2rem;
 }
 #email{
