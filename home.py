@@ -84,7 +84,7 @@ def api_upload():
 @app.route('/leave-message', methods=['POST'], strict_slashes=False)
 def leave_message():
     message = request.get_json()
-    with open('message.csv', 'a+',newline='') as csvfile:
+    with open('message.csv', 'a+') as csvfile:
         fieldnames = ['content', 'time','ip']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         localtime = time.asctime(time.localtime(time.time()))
