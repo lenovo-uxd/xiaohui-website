@@ -449,7 +449,7 @@ window.onload = function(){
             if(getContent){
                 var content=document.getElementById('textdiv'+textnum);
                 var bodydata = {}
-                bodydata.comment = getContent.html()
+                bodydata.comment = getContent
                 console.log(bodydata)
                 //评论上传服务器    
                $.ajax({
