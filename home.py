@@ -2,7 +2,7 @@
 import datetime
 from datetime import timedelta
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response
+from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response, render_template_string
 import time
 import os
 import base64
@@ -91,6 +91,7 @@ def leave_message():
         writer.writerow({'content': message["comment"], 'time': str(localtime), 'ip':str(request.remote_addr)})
         csvfile.close()
         return jsonify({"success": 0, "msg": "更新成功"})
+
 
 @app.route('/get-message', methods=['GET'], strict_slashes=False)
 def get_message():

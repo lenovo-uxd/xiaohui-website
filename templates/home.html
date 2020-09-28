@@ -442,30 +442,35 @@ window.onload = function(){
         btnPut.onclick=function(){
         
         var getContent=document.getElementById('enjoy').value;
-        if(getContent){
-        var content=document.getElementById('textdiv'+textnum);
-        var bodydata = {}
-        bodydata.comment = getContent
-        console.log(bodydata)
-        //评论上传服务器    
-       $.ajax({
-           type:'POST',
-           url:'/leave-message',
-           contentType:'application/json',
-           data:JSON.stringify(bodydata),
-           dataType:'json',
-           success:function(data){
-               console.log(data)
-           },
-           error:function(err){
-               console.log(err)
-           },
-       });
-        $("#textdiv"+textnum).prepend("<p style='color: #5376FF;font-size:3rem'>"+getContent+"</p>");  
-        document.getElementById('enjoy').value='';
-        if(textnum<6){textnum++;}else{textnum=1;}
+
+        if (/['")-><&\\\/\.]/.test(getContent)) {
+            alert('包含特殊字符，不允许提交!');
         }else{
-        alert('给我们留言，分享你的建议吧～');
+            if(getContent){
+                var content=document.getElementById('textdiv'+textnum);
+                var bodydata = {}
+                bodydata.comment = getContent.html()
+                console.log(bodydata)
+                //评论上传服务器    
+               $.ajax({
+                   type:'POST',
+                   url:'/leave-message',
+                   contentType:'application/json',
+                   data:JSON.stringify(bodydata),
+                   dataType:'json',
+                   success:function(data){
+                       console.log(data)
+                   },
+                   error:function(err){
+                       console.log(err)
+                   },
+               });
+                $("#textdiv"+textnum).prepend("<p style='color: #5376FF;font-size:3rem'>"+getContent+"</p>");  
+                document.getElementById('enjoy').value='';
+                if(textnum<6){textnum++;}else{textnum=1;}
+            }else{
+                alert('给我们留言，分享你的建议吧～');
+            }
         }
         };
     
