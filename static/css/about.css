@@ -392,7 +392,6 @@ color: #444553;
 }
 
 /*第三页*/
-
 #thirdPic{
     position: absolute;
     width:105vw;
@@ -401,20 +400,19 @@ color: #444553;
     top: 52%;
     transform: translate(0,-50%);
     left: 35vw;
-    background-image: url("../image/demo.png");
+    opacity: 0;
+    /* background-image: url("../image/demo.png");
     background-position: 0 0;
-    background-size: cover;
+    background-size: cover; */
 }
 
 #thirdPic img{
-    width:105vw;
-    height:105vw;
-    opacity: 0;
+    width:100%;
+    height:100%;
+    /* opacity: 0; */
 }
 
 /*第四页*/
-
-
 #fourthPic{
     position: absolute;
     width:calc(160px * 9);
@@ -426,6 +424,7 @@ color: #444553;
     background-image: url("../image/explore.png");
     background-position: 0 0;
     background-size: cover;
+    opacity: 0;
 }
 
 /*第五页*/
@@ -557,7 +556,7 @@ color: #444553;
     text-decoration: underline;
     font-size: 1.6rem;
     line-height: 2rem;
-    color: #444553;
+    color: #5376ff;
 }
 #sevenPic{
     position: absolute;
@@ -570,6 +569,7 @@ color: #444553;
     background-image: url("../image/stage.png");
     background-position: 0 0;
     background-size: cover;
+    opacity: 0;
 }
 
 /*第八页*/

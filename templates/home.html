@@ -42,7 +42,7 @@
         <div class="coverLeft"> </div>
         <div id="textmodel5" class="textmodel">
         
-        <h1>随便说点什么吧</h1>
+        <h1>跟小绘说点什么吧</h1>
         
         <div id="header">
         <textarea name="comment" id="enjoy" autoHeight="true"></textarea>
@@ -145,7 +145,7 @@
             <div class="div1"></div>
             <div class="div2"></div>
         </div>-->
-        <h1>应用于多场景设计中，素材0元下载</h1>
+        <h1>4大应用场景，设计可以更轻松</h1>
         </div>
         <div class="pic" id="pic3">
         <div class="scenario" id="scenario1"><div class="scecover"><div class="icon"></div><p>品牌设计</p></div></div>
@@ -177,18 +177,18 @@
         <div class="wangyuanjing">
         <div id="circle2"></div> 
         <div id="hover2" onclick="window.location.href= '/gdesign';return false"></div>
-        <div class="descript"><p>望远镜</p></div>
-        <div class="subDes"><p>背景拓展工具</p></div>
-        <div id="details2"><p>1秒1万张<br>张张精彩，张张不同</p></div>
+        <div class="descript"><p>万花筒</p></div>
+        <div class="subDes"><p>背景生成工具</p></div>
+        <div id="details2"><p>1秒1万张<br>每一次转动，你的眼前都是新的风景</p></div>
         <button onclick="window.location.href= '/gdesign';return false">试试看</button>
         </div>
             
         <div class="wanhuatong">
         <div id="circle1"></div> 
         <div id="hover1" onclick="window.location.href= '/transfer';return false"></div>
-        <div class="descript"><p>万花筒</p></div>
+        <div class="descript"><p>造梦机</p></div>
         <div class="subDes"><p>风格迁移工具</p></div>
-        <div id="details1"><p>把你想要的风格<br>一键迁移到你的图中</p></div>
+        <div id="details1"><p>无限学习库<br>你的图片，你来决定是什么风格</p></div>
         <button onclick="window.location.href= '/transfer';return false">试试看</button>
         </div>
         
@@ -199,7 +199,7 @@
         <div id="hover3" onclick="window.location.href= '/cross';return false"></div>
         <div class="descript"><p>时光机</p></div>
         <div class="subDes"><p>肖像绘制工具</p></div>
-        <div id="details3"><p>让文艺复兴时期的大师<br>为你画肖像</p></div>
+        <div id="details3"><p>即时转换<br>让文艺复兴时期的大师，为你画肖像</p></div>
         <button onclick="window.location.href= '/cross';return false">试试看</button>
         </div>
         
@@ -234,7 +234,7 @@
         
         <div id="textmodel1">
         <h1>未来创意<br>人类参与1%</h1>
-        <p>帮助你完成99%的基础设计工作，剩下1%的创意空间留给你！</p>
+        <p>99%的基础设计工作小绘帮你完成，剩下1%的创意空间留给你！</p>
         </div>
 
         <div class="front" id="front1"> </div>
@@ -251,19 +251,19 @@
         </div>
         
         <nav class="dropdownmenu">
-        <ul>
-        <li id="homepage"><a href="/">主页</a></li>
-        <li><a href="#">能力展示</a>
-        <ul id="submenu">
-        <li><a href="/gdesign">望远镜</a></li>
-        <li><a href="/transfer">万花筒</a></li>
-        <li><a href="/cross">时光机</a></li>
-        </ul>
-        </li>
-        <li><a href="#">API接入</a></li>
-        <li><a href="/about">关于我</a></li>
-        </ul>
-        </nav>
+            <ul>
+            <li><a href="/" class="mainMenu">主页</a></li>
+            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <ul id="submenu">
+            <li><a href="/gdesign">万花筒</a></li>
+            <li><a href="/transfer">造梦机</a></li>
+            <li><a href="/cross">时光机</a></li>
+            </ul>
+            </li>
+            <li><a href="#" class="mainMenu">API接入</a></li>
+            <li><a href="/about" class="mainMenu">关于小绘</a></li>
+            </ul>
+            </nav>
             
         <div class="english">
          <a href="#">
@@ -478,7 +478,7 @@ window.onload = function(){
             
             i += -step;
             aniPosition.css('background-position',"0px " + i + "px");
-            console.log(i);
+            // console.log(i);
         }, 70);
         
     }  
@@ -606,7 +606,7 @@ function emptyText(a,b){
                     
                 //第二页
                 if(count==1){
-                console.log(count);
+                // console.log(count);
                 $("#dot1").animate({"margin-bottom":"12px"},1000);
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
                 pageGone(page1,1,text1);

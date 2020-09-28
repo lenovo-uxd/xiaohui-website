@@ -942,12 +942,12 @@ color: white;
 }
 
 #leftSide div{
-    width:20rem;
+    width:25rem;
     height:1.5rem;
     background-image: url("../image/footerLogo.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
 }
 #groupName{
     padding-bottom: 1rem;
