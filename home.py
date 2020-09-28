@@ -2,7 +2,7 @@
 import datetime
 from datetime import timedelta
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response, render_template_string
+from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response
 import time
 import os
 import base64
