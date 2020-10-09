@@ -64,6 +64,9 @@ def transfer():
 
 basedir = os.path.abspath(os.path.dirname(__file__))
  
+headers = {
+  'Content-Type': 'application/json'
+}
 
 @app.route('/up_photo', methods=['POST'], strict_slashes=False)
 def api_upload():
@@ -109,7 +112,7 @@ def style_transfer():
     data = json.dumps(request.get_json())
     #url = "http://10.110.146.100:11354/apicore/art/style-transfer-simple-graph/1.0.0"
     url = "https://api.brain.lenovo.com/lenovo/ad/style-transfer-service/1.0?token="+token
-    res = requests.post(url=url,data=data)
+    res = requests.post(url=url,headers=headers,data=data)
     return jsonify(json.loads(res.content))
 
 #头像域到域转换
@@ -118,7 +121,7 @@ def cross_domain():
     data = json.dumps(request.get_json())
     #url = "http://10.110.146.100:11354/apicore/art/cross-domain-align/1.0.0"
     url = "https://api.brain.lenovo.com/lenovo/ad/art-portrait-service/1.0?token="+token
-    res = requests.post(url=url,data=data)
+    res = requests.post(url=url,headers=headers,data=data)
     return jsonify(json.loads(res.content))
 
 #随机生成图像
@@ -127,7 +130,7 @@ def style_gan_random():
     data = json.dumps(request.get_json())
     #url = "http://10.110.146.100:11354/apicore/art/style-gan-random/1.0.0"
     url = "https://api.brain.lenovo.com/lenovo/ad/abstract-art-service/1.0?token="+token
-    res = requests.post(url=url,data=data)
+    res = requests.post(url=url,headers=headers,data=data)
     return jsonify(json.loads(res.content))
 
 #拓展图像
@@ -136,7 +139,7 @@ def style_gan_extend():
     data = json.dumps(request.get_json())
     #url = "http://10.110.146.100:11354/apicore/art/style-gan-withtag/1.0.0"
     url = "https://api.brain.lenovo.com/lenovo/ad/semantic-art-design/1.0?token="+token
-    res = requests.post(url=url,data=data)
+    res = requests.post(url=url,headers=headers,data=data)
     return jsonify(json.loads(res.content))
 
 
