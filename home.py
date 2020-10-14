@@ -143,6 +143,25 @@ def style_gan_extend():
     return jsonify(json.loads(res.content))
 
 
+#随机生成图像
+@app.route('/style-gan-random-localtest', methods=['POST'])
+def style_gan_random_test():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-random/1.0.0"
+    # url = "https://api.brain.lenovo.com/lenovo/ad/abstract-art-service/1.0?token="+token
+    res = requests.post(url=url,headers=headers,data=data)
+    return jsonify(json.loads(res.content))
+
+#拓展图像
+@app.route('/style-gan-extend-localtest', methods=['POST'])
+def style_gan_extend_test():
+    data = json.dumps(request.get_json())
+    url = "http://10.110.146.100:11354/apicore/art/style-gan-withtag/1.0.0"
+    # url = "https://api.brain.lenovo.com/lenovo/ad/semantic-art-design/1.0?token="+token
+    res = requests.post(url=url,headers=headers,data=data)
+    return jsonify(json.loads(res.content))
+
+
 
 
 

@@ -225,6 +225,12 @@
     
 <!--js代码-->
 <script type="text/javascript"> 
+
+    var requestUrl=""
+    if(window.location.search=="?test"){
+        requestUrl="-localtest"
+    }
+
     //赋值变量
     var tryPosition = $('#demo').offset().top;
     var casePosition = $('#case').offset().top;
@@ -432,7 +438,7 @@
 
             $.ajax({
             type:'POST',
-            url:'/style-gan-random',
+            url:'/style-gan-random'+requestUrl,
             contentType:'application/json',
             data:JSON.stringify(postInfo),
             dataType:'json',
@@ -478,7 +484,7 @@
 
          $.ajax({
             type:'POST',
-            url:'/style-gan-extend',
+            url:'/style-gan-extend'+requestUrl,
             contentType:'application/json',
             data:JSON.stringify(imgLatent),
             dataType:'json',
