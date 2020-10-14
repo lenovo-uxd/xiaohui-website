@@ -475,7 +475,7 @@
          var imgLatent={
             "dlatentsData":imageObject[i],
             "style":"similarity",
-            "number":10,
+            "number":5,
             "size":"large",
             "styleScale":1.0,
             "ifDlatents":true,
@@ -489,23 +489,22 @@
             data:JSON.stringify(imgLatent),
             dataType:'json',
             success:function(data){
-            console.log(data);
             var m=0;
-                var j=5;
-                $("#domFirst div").each(function(){
-                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[m].image);
-                /*imageObject[m]=data.result[i].latent;*/
-                
-                i++;
-                });
-                $("#domSecond div").each(function(){
-                $(this).find("img").attr('src',"data:image/png;base64,"+data.result[j].image);
-                /*imageObject[j]=data.result[j].latent;*/
-                j++;
-                });
-                $("#domloading").hide();
-                $("#domFirst").show();
-                $("#domSecond").show();
+            var j=5;
+            $("#domFirst div").each(function(){
+            $(this).find("img").attr('src',"data:image/png;base64,"+data.result[m].image);
+            /*imageObject[m]=data.result[i].latent;*/
+            
+            m++;
+            });
+            $("#domSecond div").each(function(){
+            $(this).find("img").attr('src',"data:image/png;base64,"+data.result[j].image);
+            /*imageObject[j]=data.result[j].latent;*/
+            j++;
+            });
+            $("#domloading").hide();
+            $("#domFirst").show();
+            $("#domSecond").show();
             },
             error:function(err){
             console.log(err);
