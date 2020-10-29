@@ -227,8 +227,10 @@
 <script type="text/javascript"> 
 
     var requestUrl=""
+    var numOfPics = 10
     if(window.location.search=="?test"){
         requestUrl="-localtest"
+        numOfPics=5
     }
 
     //赋值变量
@@ -475,7 +477,7 @@
          var imgLatent={
             "dlatentsData":imageObject[i],
             "style":"similarity",
-            "number":5,
+            "number":numOfPics,
             "size":"large",
             "styleScale":1.0,
             "ifDlatents":true,
