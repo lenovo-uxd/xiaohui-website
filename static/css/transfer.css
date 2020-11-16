@@ -501,13 +501,13 @@ color: white;
 #before div{
     margin-left: 1rem;
     margin-top:1rem;
-    background-color: white;
+    background-color: #444553;
     width:6rem;
     height:3rem;
     border-radius: 1.5rem;
 }
 #before div p{
-    color: #434553;
+    color: white;
     text-align: center;
     line-height: 3rem;
     font-size: 1.4rem;
@@ -527,13 +527,13 @@ color: white;
     float: right;
     margin-right:1rem;
     margin-top:1rem;
-    background-color: white;
+    background-color: #444553;
     width:6rem;
     height:3rem;
     border-radius: 1.5rem;
 }
 #after div p{
-    color: #434553;
+    color: white;
     text-align: center;
     line-height: 3rem;
     font-size: 1.4rem;
@@ -549,7 +549,6 @@ color: white;
     width:calc(8vw * 0.7);
     height:calc(6vw * 0.7);
     margin-bottom: 0.5vw;
-    
     font-size: 1.6rem;
     background-size: 100% 100%;
 }
@@ -815,21 +814,444 @@ color: white;
     opacity: 0.6;
 }
 
-/*@media screen and (max-width: 300px) {
-    pad大小
-    1,菜单变汉堡
-    2，应用案例上下排布
-    手机大小
-    1，能力优势竖排
-    2，其他能力竖排
-    3，页尾竖排
-}*/
-/*@media screen and (max-width:1024px){
-    html, body {   
-    font-size:40%; 
-    -webkit-text-size-adjust:none;
+.mobileNav-details{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    p{
+        font-size: 1.4rem;
     }
-}*/
+    h1{
+        font-size:9vw;
+        line-height: 12vw;
+        margin-bottom: 0rem;
+    }
+    /* 移动端导航 */
+    .dropdownmenu{
+        display: none;
+    }
+    .mobileNav{
+        position: fixed;
+        top: 30px;
+        right:7vw;
+        width:26px;
+        height:30px;
+        z-index: 1000;
+    }
+    .line{
+        position: absolute;
+        width:100%;
+        height:4px;
+        background-color: white;
+        border-radius: 4px;
+    }
+    .line1{
+        width:26px;
+        top:2px;
+        transform-origin: 0 2px;
+        transition: all .2s;
+    }
+    .line2{
+        top:13px;
+        transition: all .2s;
+    }
+    .line3{
+        width:26px;
+        bottom:2px;
+        transform-origin: 0 2px;
+        transition: all .2s;
+    }
+
+    .mobileNav-details{
+        display: block;
+        position: fixed;
+        top:0;
+        right:0;
+        width:0;
+        height:100%;
+        background-color: black;
+        transition: all .2s;
+        overflow: hidden;
+        z-index: 999;
+    }
+    .Navdetails{
+        position: relative;
+        margin:0 auto;
+        width:36vw;
+        height:10vh;
+        margin-bottom:4vh;
+        border-radius: 10px;
+        color: white;
+    }
+    .Navdetails h3{
+        position: absolute;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        left:4vw;
+        top:3vh;
+    }
+    .Navdetails1{
+        margin-top: 10vh;
+        background: linear-gradient(180deg, #DEDEDE 0%, #CFCFCF 100%);
+        color:#444553;
+    }
+    .Navdetails2{
+        background: linear-gradient(135deg, #3023AE 0%, #C86DD7 100%);
+    }
+    .Navdetails3{
+        background: linear-gradient(90deg, #4B78C0 0%, #B8D8FF 100%);
+    }
+    .Navdetails4{
+        background: linear-gradient(287deg, #FAD961 0%, #F8A06F 100%);
+    }
+    .Navdetails5{
+        background: linear-gradient(180deg, #4A90E2 0%, #3D78FF 100%);
+    }
+    .Navdetails6{
+        margin-bottom: 0;
+        background: linear-gradient(180deg, #383838 0%, #828282 100%);
+    }
+    .navPic{
+        position: absolute;
+        right:-6vw;
+        top:-3vh;
+        width:60%;
+        height:150%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navPic1{
+        background-image: url("../image/nav1.png");
+    }
+    .navPic2{
+        background-image: url("../image/nav2.png");
+    }
+    .navPic3{
+        background-image: url("../image/nav3.png");
+    }
+    .navPic4{
+        background-image: url("../image/nav4.png");
+    }
+    .navPic5{
+        background-image: url("../image/nav5.png");
+    }
+    .navPic6{
+        background-image: url("../image/nav6.png");
+    }
+
+    .navDec1{
+        position: absolute;
+        top:10vw;
+        left:10vw;
+        width:10vw;
+        height:10vw;
+        border-radius: 10vw;
+        background: linear-gradient(180deg, #4A90E2 0%, #3D78FF 100%);
+    }
+    .navDec2{
+        position: absolute;
+        bottom:10vw;
+        right:10vw;
+        width:10vw;
+        height:10vw;
+        border-radius: 10vw;
+        background: linear-gradient(180deg, #4A90E2 0%, #3D78FF 100%);
+    }
+    .navDec3{
+        position: absolute;
+        top:23vh;
+        left:28vw;
+        width:5vw;
+        height:5vw;
+        border-radius: 5vw;
+        background: linear-gradient(287deg, #FAD961 0%, #F8A06F 100%);
+    }
+    .navDec4{
+        position: absolute;
+        top:45vh;
+        right:-3vw;
+        width:20vw;
+        height:20vw;
+        border-radius: 20vw;
+        background: linear-gradient(135deg, #3023AE 0%, #C86DD7 100%);
+    }
+    /* landing的部分 */
+     #landing,#front,#mask{
+        width:300vw;
+        height: 90vw;  
+    }
+    #landing img{
+        transform:translate(-25%,0);
+    }
+    #title{
+        width:300vw;
+        height: 90vw;  
+        text-align: left;
+        margin-left: 7%;
+    }
+    #title h1{
+        padding-top:30vw;
+        font-size:9vw;
+        line-height: 12vw;
+        margin-bottom: 1vw;
+    }
+    #title h1 span{
+        display:block; 
+        white-space:pre-wrap;
+    }
+    #title p{
+        width: 86vw;
+        line-height: 2rem;
+        padding-left: 0%;
+        padding-right: 0%;
+        font-size: 1.4rem;
+    }
+    #title button{
+        background-color:#5376FF;
+        border:none;
+        width: 8rem;
+        font-size: 1.4rem;
+    }
+/* 能力优势 */
+#proSub{
+    display: block;
+    margin-top: 0;
+    
+}
+.proSub1,.proSub2,.proSub3{
+    width:100%;
+    height:100%;
+    margin-top: 15vh;
+}
+#proicon1,#proicon2,#proicon3{
+    width:75vw;
+    height:75vw;
+}
+#proicon1 .icon1{
+    top:23.4vw;
+    left:15vw;
+    width:12vw;
+    height: 36vw;
+    
+}
+#proicon1 .icon2{
+    top:14.7vw;
+    left:27.9vw;
+    width:12vw;
+    height: 36vw;
+}
+#proicon1 .icon3{
+    top:23.4vw;
+    left:40.5vw;
+    width:12vw;
+    height: 36vw;
+}
+#proicon1 .icon4{
+    top:10.5vw;
+    right:6.9vw;
+    width:22.5vw;
+    height: 22.5vw;
+    border-radius: 11.25vw;
+}
+
+#proicon2 .icon1{
+    top:36vw;
+    left:7.5vw;
+    width:24vw;
+    height: 24vw;
+    border-radius: 12vw;
+}
+#proicon2 .icon2{
+    top:19.5vw;
+    left:17.1vw;
+    width:22.5vw;
+    height: 30vw;
+}
+#proicon2 .icon3{
+    top:12vw;
+    left:40.5vw;
+    width:22.5vw;
+    height: 30vw;
+}
+#proicon2 .icon4{
+    top:36vw;
+    left:54.9vw;
+    width:10.5vw;
+    height: 19.5vw;
+}
+
+#proicon3 .icon1{
+    position: absolute;
+    top:18.9vw;
+    left:6.9vw;
+    width:24vw;
+    height:24vw;
+}
+#proicon3 .icon2{
+    position: absolute;
+    top:31.5vw;
+    left:17.1vw;
+    width:28.5vw;
+    height:28.5vw;
+}
+#proicon3 .icon3{
+    position: absolute;
+    top:10.5vw;
+    left:34.5vw;
+    width:34.5vw;
+    height:34.5vw;
+}
+#proSub p{
+    margin-top: 0rem;
+}
+/*能力演示 */
+#studyProcess,#case,#more{
+    padding-top: 15vh;
+}
+#studyInfo{
+    width: 86%;
+    text-align: left;
+    margin-left: 7vw;
+}
+#tryAbility{
+    height: 180vw;
+    margin-top: 4rem;
+}
+.sideByside1,.sideByside2{
+    position: relative;
+    display:block;
+    width:86vw;
+    height:82vw;
+}
+#upload{
+    position: absolute;
+    display: contents;
+    justify-content: space-between;
+    display: flex;
+    float: none;
+    width:86vw;
+    top:0;
+    left: 7vw;
+}
+#upload div{
+    width:20vw;
+    height:15vw;
+    font-size: 1.4rem;
+}
+#inputLabel{
+    width:20vw;
+    height: 15vw;
+    line-height: 15vw;
+    font-size: 1.4rem;
+    border-radius: 0px;
+    color: white;
+    background-color: #5376FF;
+    margin-top:0vw;
+}
+#before,#after{
+    position: absolute;
+    float: none;
+    left: 7vw;
+    bottom:1vw;
+    width:86vw;
+    height:64.5vw;
+}
+#after{
+    margin-left: 0;
+    top:1vw;
+    left:-7vw;
+}
+#before div,#after div{
+    float: right;
+    margin-right: 1rem;
+}
+#styleChoose{
+    position: absolute;
+    display: contents;
+    justify-content: space-between;
+    display: flex;
+    float: none;
+    width:86vw;
+    bottom:0;
+    left: -7vw;
+}
+#styleChoose div{
+    width:20vw;
+    height:15vw;
+    font-size: 1.4rem;
+}
+.style1,.style2,.style3,.style4{
+    margin-left: 0;
+}
+.style5{
+    display: none;
+}
+
+/* 应用案例 */
+#dec1,#dec2,#dec3,#dec4{
+    display: none;
+}
+#caseInfo{
+    width: 86%;
+    text-align: left;
+    margin-left: 7vw;
+}
+#pic4{
+    margin-top:4rem;
+    width: calc(160vw * 0.53);
+    height:calc(90vw * 0.53);
+}
+
+ /* 更多信息 */
+ #moreSub{
+    margin-top: 4rem;
+    width:20rem;
+}
+#moreSub div{
+    display: block;
+    width: 5rem;
+    height:5rem;
+    margin-right: 0rem;
+}
+.othericon{
+    width:5rem;
+    height:5rem;
+    border-radius: 4rem;
+    border: 5px solid white;
+    background-size: 2rem 2rem;
+    border: 2px solid white;
+
+    animation: bounce-right 1s linear infinite;
+-webkit-animation: bounce-right 1s linear infinite;
+-moz-animation: bounce-right 1s linear infinite;
+-o-animation: bounce-right 1s linear infinite;
+}
+#more{
+    padding-bottom: 15vh;
+}
+#moreSub h3{
+    font-size: 1.6rem;
+}
+#moreSub p{
+    display: none;
+}
+/* 页面尾部 */
+#footer{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    
+}
+#leftSide div{
+    width:40vw;
+    padding-bottom: 1rem;
+}
+#rightSide p{
+    display:none;
+}
+}
+
 
 
 

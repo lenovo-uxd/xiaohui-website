@@ -62,6 +62,10 @@ def gdesign():
 def transfer():
     return render_template('transfer.html')
 
+@app.route('/api')
+def api():
+    return render_template('api.html')
+
 basedir = os.path.abspath(os.path.dirname(__file__))
  
 headers = {

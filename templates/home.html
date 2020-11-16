@@ -18,10 +18,22 @@
     <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+
+    <!-- Hotjar Tracking Code for http://xiaohui.ai/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2074891,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
 
 <body>
-<div id="loading" style="z-index: 999"><p>loading...</p></div>
+<div id="loading" style="z-index: 1100"><p>loading...</p></div>
 <!--页面信息-->  
 <div id="wrap">
     <div id="main">
@@ -62,18 +74,20 @@
         <div class="back" id="back4"> </div>
         <div id="recentdec"></div>
         <div class="textmodel"><h1>小绘近期动态</h1></div>
+
         <div class="pic" id="pic4">
-            <div class="recent">
+            <div class="recent recentA">
                 <div id="recent1"></div>
                 <div id="recent2"></div>
                 <div id="recent3"></div>
             </div> 
-            <div class="recent">
+            <div class="recent recentB">
                 <div id="recent4"></div>
                 <div id="recent5"></div>
                 <div id="recent6"></div>
             </div> 
         </div>
+
         <div id="recentText">
         
         <div class="recentTextIn" id="recentText1">
@@ -85,7 +99,7 @@
         <div class="recentTextIn" id="recentText2">
             <div class="recentTextA"><P>2020/06</P></div>
             <div class="recentTextB">
-                <h3>破解蒙娜丽莎的正面</h3><p>StyleGAN揭开梦娜丽莎证件照</p>
+                <h3>破解"神秘的微笑"</h3><p>首次揭秘蒙娜丽莎正面高清图</p>
             </div>
         </div>
         <div class="recentTextIn" id="recentText3">
@@ -116,6 +130,7 @@
             </div>
         
         </div>
+
         </div>
         <div id="forhover">
             <div class="recenthover">
@@ -130,6 +145,17 @@
             </div> 
         </div>
 
+        <!-- 移动端的小组件们 -->
+        <div id="recentDot">
+            <div class="recentDot activeDot"></div>
+            <div class="recentDot"></div>
+            <div class="recentDot"></div>
+            <div class="recentDot"></div>
+            <div class="recentDot"></div>
+            <div class="recentDot"></div>
+        </div>
+        <p class="hint">左滑查看更多</p>
+
         <div class="front" id="front4"> </div>
         </div>
         
@@ -140,25 +166,48 @@
         <div class="deccontrol11" id="scedec1"></div>
         <div class="deccontrol22" id="scedec2"></div>
         <div class="deccontrol33" id="scedec3"></div>
+        
         <div class="textmodel" >
-        <!--<div class="main" id="main3">
-            <div class="div1"></div>
-            <div class="div2"></div>
-        </div>-->
-        <h1>4大应用场景，设计可以更轻松</h1>
+        <h1>4大应用场景，设计更轻松</h1>
         </div>
+
         <div class="pic" id="pic3">
         <div class="scenario" id="scenario1"><div class="scecover"><div class="icon"></div><p>品牌设计</p></div></div>
         <div class="scenario" id="scenario2"><div class="scecover"><div class="icon"></div><p>包装设计</p></div></div>
         <div class="scenario" id="scenario3"><div class="scecover"><div class="icon"></div><p>广告设计</p></div></div>
         <div class="scenario" id="scenario4"><div class="scecover"><div class="icon"></div><p>互动设计</p></div></div>
         </div>
+
         <div id="scenarioText">
         <div id="sceText1"><h3>品牌设计</h3><p>高效生成物料素材，一键延展品牌周边</p></div> 
         <div id="sceText2"><h3>包装设计</h3><p>低成本，定制化个性包装</p></div> 
         <div id="sceText3"><h3>广告设计</h3><p>千人千面助力智能广告创意营销</p></div> 
         <div id="sceText4"><h3>互动设计</h3><p>搭建可动可静的视觉互动体验</p></div> 
         </div>
+
+        <!-- 移动端节点 -->
+            <div class="mobilePic3">
+            <div id="mobileScenario1"></div>
+            <div id="mobileScenario2"></div>
+            <div id="mobileScenario3"></div>
+            <div id="mobileScenario4"></div>
+            </div>
+
+            <div id="mobileScenarioText">
+            <div id="mobileSceText1"><h3>品牌设计</h3><p>高效生成物料素材，一键延展品牌周边</p></div> 
+            <div id="mobileSceText2"><h3>包装设计</h3><p>低成本，定制化个性包装</p></div> 
+            <div id="mobileSceText3"><h3>广告设计</h3><p>千人千面助力智能广告创意营销</p></div> 
+            <div id="mobileSceText4"><h3>互动设计</h3><p>搭建可动可静的视觉互动体验</p></div> 
+            </div>
+
+        <!-- 移动端的小组件们 -->
+        <div id="scenarioDot">
+            <div class="scenarioDot activeDot"></div>
+            <div class="scenarioDot"></div>
+            <div class="scenarioDot"></div>
+            <div class="scenarioDot"></div>
+        </div>
+        <p class="hint">左滑查看更多</p>
 
         <div class="front" id="front3"> </div>
         </div>
@@ -170,7 +219,6 @@
         <div class="deccontrol1" id="dec1"></div>
         <div class="deccontrol2" id="dec2"></div>
         <div class="deccontrol3" id="dec3"></div>
-        <!--<div class="deccontrol4" id="dec4"></div>-->
         <div class="textmodel" id="textmodel2"><h1>3种工具，造出无穷想象</h1></div>
         <div class="pic" id="pic2">
             
@@ -205,7 +253,22 @@
         
         </div>
 
+        <!-- 移动端的小组件们 -->
+        
+        <div id="detailDot">
+            <div class="detailDot activeDot"></div>
+            <div class="detailDot"></div>
+            <div class="detailDot"></div>
+        </div>
+        <p class="hint">左滑查看更多</p>
+        <!-- <div class="mobileLeft"></div>
+        <div class="mobileRight"></div> -->
+
         <div class="front" id="front2"> </div>
+
+        
+
+
         </div>
        
 
@@ -260,17 +323,64 @@
             <li><a href="/cross">时光机</a></li>
             </ul>
             </li>
-            <li><a href="#" class="mainMenu">API接入</a></li>
+            <li><a href="/api" class="mainMenu">API接入</a></li>
             <li><a href="/about" class="mainMenu">关于小绘</a></li>
             </ul>
-            </nav>
+        </nav>
             
-        <div class="english">
+        <!-- <div class="english">
          <a href="#">
          <p>EN</p>
          </a>
+        </div> -->
         </div>
+
+         <!-- 增加移动端导航 -->
+         <div class="mobileNav">
+            <div class="line1 line"></div>
+            <div class="line2 line"></div>
+            <div class="line3 line"></div>
         </div>
+        
+        <div class="mobileNav-details">
+
+            <a href="#">
+                <div class="Navdetails Navdetails1">
+                    <h3>主页</h3><div class="navPic navPic1"></div>
+                </div>
+            </a>
+            <a href="/gdesign">
+                <div class="Navdetails Navdetails2">
+                    <h3>万花筒</h3><div class="navPic navPic2"></div>
+                </div>
+            </a>
+            <a href="/transfer">
+                <div class="Navdetails Navdetails3">
+                    <h3>造梦机</h3><div class="navPic navPic3"></div>
+                </div>
+            </a>
+            <a href="/cross">
+                <div class="Navdetails Navdetails4">
+                    <h3>时光机</h3><div class="navPic navPic4"></div>
+                </div>
+            </a>
+            <a href="/api">
+                <div class="Navdetails Navdetails5">
+                    <h3>API接入</h3><div class="navPic navPic5"></div>
+                </div>
+            </a>
+            <a href="/about">
+                <div class="Navdetails Navdetails6">
+                    <h3>关于小绘</h3><div class="navPic navPic6"></div>
+                </div>
+            </a>
+            
+            <div class="navDec1"></div>
+            <div class="navDec2"></div>
+            <div class="navDec3"></div>
+            <div class="navDec4"></div>
+        </div>
+
 <div id="pagenumber">
 <div class="pagenumber"></div>
 <div id="pagedot">
@@ -303,6 +413,9 @@ var startTime = 0, //翻屏起始时间
             endTime = 0,
             count = 1,
             timeSpace=500,
+            count = 0,
+            detailCount=1,
+            
             
             page1=$("#page1"),
             back1=$("#back1"),
@@ -353,8 +466,42 @@ var startTime = 0, //翻屏起始时间
             divout = document.getElementsByClassName("landing-animation")[0],
             countx=document.getElementById("countx");
         
-        
-        
+    var wangyuanjingH=wangyuanjing.height();
+    var wanhuatongH=wanhuatong.height();
+    var shiguangjiH=shiguangji.height();
+    var winWidth=document.body.clientWidth;
+    // 用于解决自适应时雪碧图位置错乱的问题
+    $(window).resize(function () {          //当浏览器大小变化时
+        // 获取新的窗口尺寸
+        wangyuanjingH=wangyuanjing.height();
+        wanhuatongH=wanhuatong.height();
+        shiguangjiH=shiguangji.height();
+        winWidth=document.body.clientWidth;
+        console.log(winWidth);
+        // wangyuanjing.css('background-position',"bottom");
+        // wanhuatong.css('background-position',"bottom");
+        // shiguangji.css('background-position',"bottom");
+    });    
+    //鼠标动元素动
+  document.onmousemove = function move (event) {  
+            event = event || window.event;  
+            //2.获取鼠标在整个页面的位置  
+            var pagex = event.pageX || scroll().left + event.clientX; 
+            var pagey = event.pageY || scroll().top + event.clientY; 
+            if(winWidth>768){
+                $("#dec1").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
+            $("#dec2").css("transform","translate("+pagex*-0.01+"px,"+pagey*-0.01+"px)");
+            $("#dec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
+            
+  $("#scedec1").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-15deg)");
+  $("#scedec2").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-20deg)");
+  $("#scedec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
+  $(".recentTextA").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
+  $(".recentTextB").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
+  $("#recentdec").css("transform","translate("+pagex*-0.02+"px,"+"-50%)");
+            }
+            
+        }
     
 
 
@@ -382,8 +529,9 @@ function startlanding(aniPosition,step){
         
         setInterval(
         function(){
-            if(i==-40*61){
-                i=-40*60;
+            if(i==-step*61){
+                i=-step*60;
+                
             }
             aniPosition.css('background-position',"0 " + i + "vw");
             $(".landingwink").css({"background-position":"0 " + i + "vw","opacity":opa});
@@ -391,14 +539,17 @@ function startlanding(aniPosition,step){
             if(n%61==0){
             step=-step;
             opa=-1;
+            
             }
-            if(n%244==0){
+            if(n%(step*6.1)==0){
             opa=1;
+            
             }
             i+=-step;
             
-            if(i==40){
+            if(i==Math.abs(step)){
                 i=0;
+                
             }
             
         }, 25);        
@@ -406,10 +557,59 @@ function startlanding(aniPosition,step){
 
 //windowonload-交互-鼠标悬浮
 var flyCube=$(".flyDec div");
+
+//页面消失函数（页面，背景，文字）
+function pageGone(page,which,text){
+        page.delay(timeSpace/5).animate({"top":"-100%"},timeSpace,'easeOutCubic');
+        $("#front"+which).css("display","block");
+        text.animate({"opacity":"0"},timeSpace,'easeOutCubic');
+    }
+//页面出现函数（背景，文字）
+function pageCome(which,text){
+        $("#front"+which).css("display","none");
+        text.css("opacity","1");
+    }
+
+//页面上滑出现函数（页面，背景，文字）
+function pageComeUp(page,which,text){
+        page.delay(timeSpace/5).animate({"top":"0%"},timeSpace);
+        $("#front"+which).css("display","none");
+        text.animate({"opacity":"1"},timeSpace);
+        }
+//页面上滑消失函数（背景，文字）
+function pageGoneUp(which,text){
+        $("#front"+which).css("display","block");
+        text.animate({"opacity":"0"},timeSpace);
+       }
+//物体出现函数
+function objectAppear(who,top){
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"1"},timeSpace); 
+} 
+//物体消失函数
+function objectDisappear(who,top){
+                who.delay(timeSpace/5).animate({"top":top,"opacity":"0"},timeSpace); 
+}
+//清空文本
+function emptyText(a,b){
+                setTimeout(function(){
+                a.empty();
+                b.empty();
+                },timeSpace)  
+} 
+
 window.onload = function(){
        //首页landing
        var landinginnerWidth=$(".landinginner").width();
-       startlanding($(".landinginner"),40);
+       if(winWidth>800){
+        startlanding($(".landinginner"),40);
+       }else{
+        startlanding($(".landinginner"),100);
+       }
+
+       
+
+
+       
      
         //更新服务器评论  
         var line=1;
@@ -434,7 +634,7 @@ window.onload = function(){
             },
         });
     
-        var count = 0;
+        
     //发表评论    
         var btnPut=document.getElementById('btn_put');
         var newtext=1;
@@ -488,20 +688,7 @@ window.onload = function(){
         
     }  
 
-    var wangyuanjingH=wangyuanjing.height();
-    var wanhuatongH=wanhuatong.height();
-    var shiguangjiH=shiguangji.height();
-    // 用于解决自适应时雪碧图位置错乱的问题
-    $(window).resize(function () {          //当浏览器大小变化时
-        // 获取新的窗口尺寸
-        wangyuanjingH=wangyuanjing.height();
-        wanhuatongH=wanhuatong.height();
-        shiguangjiH=shiguangji.height();
-        
-        // wangyuanjing.css('background-position',"bottom");
-        // wanhuatong.css('background-position',"bottom");
-        // shiguangji.css('background-position',"bottom");
-    });
+   
 
     //鼠标悬停
 	contact.mouseenter(
@@ -548,44 +735,7 @@ window.onload = function(){
    
     //分割为数组
  
-//页面消失函数（页面，背景，文字）
-function pageGone(page,which,text){
-        page.delay(timeSpace/5).animate({"top":"-100%"},timeSpace,'easeOutCubic');
-        $("#front"+which).css("display","block");
-        text.animate({"opacity":"0"},timeSpace,'easeOutCubic');
-    }
-//页面出现函数（背景，文字）
-function pageCome(which,text){
-        $("#front"+which).css("display","none");
-        text.css("opacity","1");
-    }
 
-//页面上滑出现函数（页面，背景，文字）
-function pageComeUp(page,which,text){
-        page.delay(timeSpace/5).animate({"top":"0%"},timeSpace);
-        $("#front"+which).css("display","none");
-        text.animate({"opacity":"1"},timeSpace);
-        }
-//页面上滑消失函数（背景，文字）
-function pageGoneUp(which,text){
-        $("#front"+which).css("display","block");
-        text.animate({"opacity":"0"},timeSpace);
-       }
-//物体出现函数
-function objectAppear(who,top){
-                who.delay(timeSpace/5).animate({"top":top,"opacity":"1"},timeSpace); 
-} 
-//物体消失函数
-function objectDisappear(who,top){
-                who.delay(timeSpace/5).animate({"top":top,"opacity":"0"},timeSpace); 
-}
-//清空文本
-function emptyText(a,b){
-                setTimeout(function(){
-                a.empty();
-                b.empty();
-                },timeSpace)  
-} 
     
     //浏览器兼容
    if((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) { window.addEventListener('DOMMouseScroll',scrollFun,{passive:false}); } else if(document.addEventListener) { window.addEventListener('mousewheel',scrollFun,{passive:false}); }
@@ -611,13 +761,12 @@ function emptyText(a,b){
                     
                 //第二页
                 if(count==1){
-                // console.log(count);
                 $("#dot1").animate({"margin-bottom":"12px"},1000);
                 $("#dot2").animate({"margin-bottom":"35px"},1000);
                 pageGone(page1,1,text1);
                 pageCome(2,text2);
                 $("div #dot1").css("animation","none");
-                
+                scenarioChange();    
                 }
                  
                 //第三页
@@ -626,12 +775,7 @@ function emptyText(a,b){
                 $("#dot3").animate({"margin-bottom":"35px"},1000);
                 pageGone(page2,2,text2);
                 pageCome(3,text3);
-               /* objectDisappear(wanhuatong,"60%");
-                objectDisappear(wangyuanjing,"60%");
-                objectDisappear(shiguangji,"95%");*/
-                /*objectAppear($("#pic3"),"0%");*/
-                scenarioChange(); 
-                /*textScroll(arr3a,arr3b,main3div1,main3div2);  */          
+                if(winWidth>768){scenarioChange();  }       
                 }
                     
                 //第四页
@@ -639,10 +783,7 @@ function emptyText(a,b){
                 $("#dot3").animate({"margin-bottom":"12px"},1000);
                 $("#dot4").animate({"margin-bottom":"35px"},1000);
                 pageGone(page3,3,text3);
-                pageCome(4,text4);
-                /*objectDisappear($("#pic3"),"40%");*/
-                /*objectAppear($("#pic4"),"50%");*/
-                /*textScroll(arr4a,arr4b,main4div1,main4div2); */          
+                pageCome(4,text4);        
                 }
                     
                 //第五页
@@ -650,10 +791,7 @@ function emptyText(a,b){
                 $("#dot4").animate({"margin-bottom":"12px"},1000);
                 $("#dot5").animate({"margin-bottom":"35px"},1000);
                 pageGone(page4,4,text4);
-                pageCome(5,text5);
-                /*objectDisappear($("#pic4"),"90%");
-                objectAppear($("#footer"),"23%");*/
-                /*textScroll(arr5a,arr5b,main5div1,main5div2); */       
+                pageCome(5,text5);      
                 } 
                     
                 }
@@ -708,7 +846,180 @@ function emptyText(a,b){
             event.preventDefault();
         }
     }}
+
+    // 滑动事件处理函数
+    function touchScroll(direction){
+        if(direction==1){
+            if(count==4){return ''}else{
+                $(".pagenumber").animate({'top':'+=17px'},1000);
+                count++;
+                    
+                //第二页
+                if(count==1){
+                $("#dot1").animate({"margin-bottom":"12px"},1000);
+                $("#dot2").animate({"margin-bottom":"35px"},1000);
+                pageGone(page1,1,text1);
+                pageCome(2,text2);
+                $("div #dot1").css("animation","none");
+                }
+                 
+                //第三页
+                if(count==2){
+                $("#dot2").animate({"margin-bottom":"12px"},1000);
+                $("#dot3").animate({"margin-bottom":"35px"},1000);
+                pageGone(page2,2,text2);
+                pageCome(3,text3)
+                scenarioChange();     
+                }
+                    
+                //第四页
+                if(count==3){
+                $("#dot3").animate({"margin-bottom":"12px"},1000);
+                $("#dot4").animate({"margin-bottom":"35px"},1000);
+                pageGone(page3,3,text3);
+                pageCome(4,text4);         
+                }
+                    
+                //第五页
+                if(count==4){
+                $("#dot4").animate({"margin-bottom":"12px"},1000);
+                $("#dot5").animate({"margin-bottom":"35px"},1000);
+                pageGone(page4,4,text4);
+                pageCome(5,text5);      
+                } 
+                    
+                }
+        }
+
+        if(direction==-1){
+            if(count==0){return ''}else{
+                $(".pagenumber").animate({'top':'-=17px'},1000);
+                
+                    
+                //第四页
+                if(count==4){
+                $("#dot5").animate({"margin-bottom":"12px"},1000);
+                $("#dot4").animate({"margin-bottom":"35px"},1000);
+                pageComeUp(page4,4,text4); 
+                pageGoneUp(5,text5);
+                generalCount=1;
+                position=0;
+                dotNum=1;  
+                }
+                
+                //第三页
+                if(count==3){
+                $("#dot4").animate({"margin-bottom":"12px"},1000);
+                $("#dot3").animate({"margin-bottom":"35px"},1000);
+                pageComeUp(page3,3,text3); 
+                pageGoneUp(4,text4);
+                generalCount=1;
+                position=0;
+                dotNum=1;  
+                }
+                    
+                //第二页
+                if(count==2){
+                $("#dot3").animate({"margin-bottom":"12px"},1000);
+                $("#dot2").animate({"margin-bottom":"35px"},1000);
+                pageComeUp(page2,2,text2); 
+                pageGoneUp(3,text3);
+                }
+                    
+                //第一页
+                if(count==1){
+                $("#dot2").animate({"margin-bottom":"12px"},1000);
+                $("#dot1").animate({"margin-bottom":"35px"},1000);  
+                pageComeUp(page1,1,text1); 
+                pageGoneUp(2,text2);
+                $("div #dot1").css("animation","dothint 1s linear infinite");
     
+                            } 
+                count--;
+                }
+        }
+    }
+
+// 手指滑动
+var startx, starty;
+// var direction;
+    //获得角度
+    function getAngle(angx, angy) {
+        return Math.atan2(angy, angx) * 180 / Math.PI;
+    };
+ 
+    //根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
+    function getDirection(startx, starty, endx, endy) {
+        var angx = endx - startx;
+        var angy = endy - starty;
+        var result = 0;
+ 
+        //如果滑动距离太短
+        if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+            return result;
+        }
+ 
+        var angle = getAngle(angx, angy);
+        if (angle >= -135 && angle <= -45) {
+            result = 1;
+        } else if (angle > 45 && angle < 135) {
+            result = 2;
+        } else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+            result = 3;
+        } else if (angle >= -45 && angle <= 45) {
+            result = 4;
+        }
+ 
+        return result;
+    }
+    //手指接触屏幕
+    document.addEventListener("touchstart", function(e) {
+        startx = e.touches[0].pageX;
+        starty = e.touches[0].pageY;
+    }, false);
+    //手指离开屏幕
+    document.addEventListener("touchend", function(e) {
+        var endx, endy;
+        endx = e.changedTouches[0].pageX;
+        endy = e.changedTouches[0].pageY;
+        var direction = getDirection(startx, starty, endx, endy);
+        switch (direction) {
+            case 0:
+                // alert("未滑动！");
+                break;
+            case 1:
+                touchScroll(1);
+                console.log(count);
+                break;
+            case 2:
+                touchScroll(-1);
+                break;
+            case 3:
+                if(count==1){
+                    mobileSlideRight();
+                }
+                if(count==2){
+                    generalRight(4,$(".mobilePic3"),$("#mobileScenarioText"));
+                }
+                if(count==3){
+                    recentRight(6,$("#pic4"),$("#recentText"));
+                }
+                break;
+            case 4:
+                if(count==1){
+                    mobileSlideLeft();
+                }
+                if(count==2){
+                    generalLeft(4,$(".mobilePic3"),$("#mobileScenarioText"));
+                }
+                if(count==3){
+                    recentLeft(6,$("#pic4"),$("#recentText"));
+                }
+                break;
+            default:
+        }
+    }, false);
+
 //应用场景轮播-鼠标悬停
 var moveTime=800;
 function scenarioChange(){
@@ -798,6 +1109,8 @@ function scenarioChange(){
     $("#scenario3").on("click",function(){scenarioClick(3)});
     $("#scenario4").on("click",function(){scenarioClick(4)});
     startslide();
+    
+    
 };
     
     
@@ -813,23 +1126,119 @@ $("#recenthover"+which).on("mouseenter",function(){
 }
 recentHover(1);recentHover(2);recentHover(3);recentHover(4);recentHover(5);recentHover(6);
 
-//鼠标动元素动
-  document.onmousemove = function move (event) {  
-            event = event || window.event;  
-            //2.获取鼠标在整个页面的位置  
-            var pagex = event.pageX || scroll().left + event.clientX; 
-            var pagey = event.pageY || scroll().top + event.clientY; 
-            $("#dec1").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
-            $("#dec2").css("transform","translate("+pagex*-0.01+"px,"+pagey*-0.01+"px)");
-            $("#dec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
-            
-  $("#scedec1").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-15deg)");
-  $("#scedec2").css("transform","translate("+pagex*-0.05+"px,"+pagey*-0.05+"px) rotate(-20deg)");
-  $("#scedec3").css("transform","translate("+pagex*-0.03+"px,"+pagey*-0.03+"px)");
-  $(".recentTextA").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
-  $(".recentTextB").css("transform","translate("+pagex*0.02+"px,"+pagey*0.02+"px)");
-  $("#recentdec").css("transform","translate("+pagex*-0.02+"px,"+"-50%)");
-        }
+
+
+//移动端导航部分
+var Navcount=1;
+$(".mobileNav").on("click",function(){
+    Navcount++;
+    if(Navcount%2==0){
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line2").hide();
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".mobileNav-details").css("width","100%");
+    }
+    else{
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
+      $(".line2").show();
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
+      $(".mobileNav-details").css("width","0");
+    }
+})
+// 移动二页：优化为可统一使用的
+function mobileSlideRight(){
+    if(detailCount==1){
+        $("#pic2").css("margin-left","-105%");
+        $(".mobileLeft").show();
+        detailCount=2;
+        $(".detailDot:nth-child(1)").removeClass("activeDot");
+        $(".detailDot:nth-child(2)").addClass("activeDot");
+    }else{
+        $("#pic2").css("margin-left","-218%");
+        $(".mobileRight").hide();
+        detailCount=3;
+        $(".detailDot:nth-child(2)").removeClass("activeDot");
+        $(".detailDot:nth-child(3)").addClass("activeDot");
+    }
+}
+
+function mobileSlideLeft(){
+    if(detailCount==3){
+        $("#pic2").css("margin-left","-105%");
+        $(".mobileRight").show();
+        detailCount=2;
+        $(".detailDot:nth-child(3)").removeClass("activeDot");
+        $(".detailDot:nth-child(2)").addClass("activeDot");
+    }else{
+        $("#pic2").css("margin-left","7%");
+        $(".mobileRight").show();
+        $(".mobileLeft").hide();
+        detailCount=1;
+        $(".detailDot:nth-child(2)").removeClass("activeDot");
+        $(".detailDot:nth-child(1)").addClass("activeDot");
+    }
+}
+
+var generalCount=1,
+    position=0,
+    dotNum=1;
+function generalRight(totalDot,whichPic,whichText){
+    if(generalCount>0&&generalCount<totalDot){
+        position=position-100;
+        whichPic.css("margin-left",position+"vw");
+        whichText.css("margin-left",position+"vw");
+        $(".scenarioDot:nth-child("+dotNum+")").removeClass("activeDot");
+        $(".scenarioDot:nth-child("+(dotNum+1)+")").addClass("activeDot");
+        dotNum++;
+        generalCount++;
+    }
+}
+function generalLeft(totalDot,whichPic,whichText){
+    if(generalCount>1&&generalCount<=totalDot){
+        position=position+100;
+        whichPic.css("margin-left",position+"vw");
+        whichText.css("margin-left",position+"vw");
+        $(".scenarioDot:nth-child("+dotNum+")").removeClass("activeDot");
+        $(".scenarioDot:nth-child("+(dotNum-1)+")").addClass("activeDot");
+        dotNum--;
+        generalCount--;
+    }
+}
+
+var recentCount=1,
+    recentPos=0,
+    recentDotNum=1;
+function recentRight(totalDot,whichPic,whichText){
+    if(recentCount>0&&recentCount<totalDot){
+        recentPos=recentPos-100;
+        whichPic.css("margin-left",recentPos+"vw");
+        whichText.css("margin-left",recentPos+"vw");
+        $(".recentDot:nth-child("+recentDotNum+")").removeClass("activeDot");
+        $(".recentDot:nth-child("+(recentDotNum+1)+")").addClass("activeDot");
+        recentDotNum++;
+        recentCount++;
+    }
+}
+function recentLeft(totalDot,whichPic,whichText){
+    if(recentCount>1&&recentCount<=totalDot){
+        recentPos=recentPos+100;
+        whichPic.css("margin-left",recentPos+"vw");
+        whichText.css("margin-left",recentPos+"vw");
+        $(".recentDot:nth-child("+recentDotNum+")").removeClass("activeDot");
+        $(".recentDot:nth-child("+(recentDotNum-1)+")").addClass("activeDot");
+        recentDotNum--;
+        recentCount--;
+    }
+}
+
+$(".mobileRight").on("click",function(){
+    mobileSlideRight();
+})
+
+$(".mobileLeft").on("click",function(){
+    mobileSlideLeft();
+})
+
 
 </script>
     

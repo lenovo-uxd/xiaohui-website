@@ -23,11 +23,12 @@
 <!--页面信息-->
 <div id="landing">
 <div id="back"><img src="{{ url_for('static', filename='image/colorrun.png')}}"/></div>
-<div id="front"> </div>
+
 <div id="mask"><img src="{{ url_for('static', filename='image/colorrun2.png')}}"/></div>
+<div id="front"> </div>
 </div>
 <div id="title">
-<h1>造梦机-风格迁移工具</h1>
+<h1>造梦机-<span>风格迁移工具</span></h1>
 <p>利用风格迁移算法，实现100+不同视觉风格的实时转换，产出艺术化素材。</p>
 <button id="gotoTry">试试看</button>
 </div>
@@ -45,7 +46,7 @@
 </div>
 <div class="proSub1">
 <div id="proicon2">
-<div class="icon1"></div><div class="icon4"></div> <div class="icon2"></div><div class="icon3"></div>    
+<div class="icon1"></div> <div class="icon2"></div><div class="icon3"></div> <div class="icon4"></div>   
 </div>
 <div class="proh3"><h3>支持定制</h3></div>
 <div class="prop"><p>一张参考图,即可打造专属风格模型</p></div> 
@@ -74,7 +75,7 @@
 <div id="studyProcess">
 <div class="mainInfo" id="studyInfo">
 <div><h1>能力演示</h1></div>
-<div><p>选择图像体验风格转换能力，该能力演示基于<a href="#">风格迁移API</a>搭建，
+<div><p>选择或上传图像体验风格转换能力，该能力演示基于<a href="#">风格迁移API</a>搭建，
 如果您对技术能力有特别要求，欢迎联系我们。</p></div>
 </div>
     
@@ -152,7 +153,7 @@
     
 <div onclick="window.location.href= '/gdesign';return false">
 <div class="othericon"></div>
-<div><h3>望远镜</h3><p>背景拓展工具</p></div>
+<div><h3>万花筒</h3><p>背景生成工具</p></div>
 <div></div>
 </div>
     
@@ -201,16 +202,61 @@
             <li><a href="/cross">时光机</a></li>
             </ul>
             </li>
-            <li><a href="#" class="mainMenu">API接入</a></li>
+            <li><a href="/api" class="mainMenu">API接入</a></li>
             <li><a href="/about" class="mainMenu">关于小绘</a></li>
             </ul>
             </nav>
             
-        <div class="english">
+        <!-- <div class="english">
          <a href="#">
          <p>EN</p>
          </a>
+        </div> -->
+</div>
+<!-- 增加移动端导航 -->
+<div class="mobileNav">
+    <div class="line1 line"></div>
+    <div class="line2 line"></div>
+    <div class="line3 line"></div>
+</div>
+
+<div class="mobileNav-details">
+
+    <a href="/">
+        <div class="Navdetails Navdetails1">
+            <h3>主页</h3><div class="navPic navPic1"></div>
         </div>
+    </a>
+    <a href="/gdesign">
+        <div class="Navdetails Navdetails2">
+            <h3>万花筒</h3><div class="navPic navPic2"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="Navdetails Navdetails3">
+            <h3>造梦机</h3><div class="navPic navPic3"></div>
+        </div>
+    </a>
+    <a href="/cross">
+        <div class="Navdetails Navdetails4">
+            <h3>时光机</h3><div class="navPic navPic4"></div>
+        </div>
+    </a>
+    <a href="/api">
+        <div class="Navdetails Navdetails5">
+            <h3>API接入</h3><div class="navPic navPic5"></div>
+        </div>
+    </a>
+    <a href="/about">
+        <div class="Navdetails Navdetails6">
+            <h3>关于小绘</h3><div class="navPic navPic6"></div>
+        </div>
+    </a>
+    
+    <div class="navDec1"></div>
+    <div class="navDec2"></div>
+    <div class="navDec3"></div>
+    <div class="navDec4"></div>
 </div>
 
 
@@ -241,6 +287,20 @@
         qrcode=$(".qrcode"),
         qrcodeP=$(".qrcode p"),
         timeSpace=500;
+    // 用于解决自适应时雪碧图位置错乱的问题
+    var winWidth=document.body.clientWidth;
+
+    if(winWidth>768){
+    var sliderWidth=160*0.35;
+    }else{
+    var sliderWidth=160*0.53;
+    }
+    
+    $(window).resize(function () {          //当浏览器大小变化时
+        // 获取新的窗口尺寸
+        winWidth=document.body.clientWidth;
+    }); 
+
     //页面加载
     window.onload=function(){
         /*点击试试看页面滑动*/
@@ -264,14 +324,14 @@
                     contact.css("opacity","0.8");
                 });
         
-        slider(flexslider,4,160*0.35);
+       
         
         //探照灯
         window.onmousemove = function(e){
         e = e || event;
         oBox.style.WebkitMaskPosition=(e.clientX/10-25)+"rem "+ (e.clientY/10-25)+"rem";
         }
-        
+        slider(flexslider,4,sliderWidth);
         //走马灯
         function slider(who,totalSlides,width){
         var currentSlide=1;
@@ -300,10 +360,12 @@
         //导航变化
         if(scrollS>10){
         $(".nav").css("top","9px");// 上滑时要做的事（上移一点）
-        $("#navback").css("opacity","1");   
+        $("#navback").css("opacity","1"); 
+        $(".mobileNav").css("top","9px");  
         }else{
         $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
         $("#navback").css("opacity","0");  
+        $(".mobileNav").css("top","30px");
         }
         
         //滚动页面动效
@@ -610,7 +672,23 @@
         $("#before").css("backgroundImage","url("+toWhat+")");
         $("#after").css("backgroundImage","url("+which+")");
     }
-  
+     //移动端导航部分
+var Navcount=1;
+$(".mobileNav").on("click",function(){
+    Navcount++;
+    if(Navcount%2==0){
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line2").hide();
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".mobileNav-details").css("width","100%");
+    }
+    else{
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line2").show();
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".mobileNav-details").css("width","0");
+    }
+})
                     
 </script> 
 </body>
