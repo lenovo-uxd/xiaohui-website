@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>风格迁移</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?696a3cbdb1f298b19a1542baf4fb0043";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/api.css')}}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png')}}">
+</head>
+
+<body>
+<!--页面信息-->
+<div id="landing">
+<div id="back"><img src="{{ url_for('static', filename='image/colorrun.png')}}"/></div>
+
+<div id="front"> </div>
+</div>
+<div id="title">
+<h1>一键连接<span>艺术与技术</span></h1>
+<p class="normalP">小绘正式入驻联想大脑AI平台，轻松接入稳定API，即刻获得智能设计能力。</p>
+<p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
+
+</div>
+<!--向下滚-->
+<div id="scroll">
+
+<div class="api api1">
+    <img src="{{ url_for('static', filename='image/api1.png')}}" class="decPic decPic1"/>
+    <div class="text">
+        <h3>抽象素材生成</h3>
+        <p>支持根据用户指定的数量和分辨率随机生成相对应的抽象背景图片。 可作为线上海报，banner及线下包装，宣传物料的设计素材。</p>
+        <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4455&version=1.0&name=%2Fai-design%2Fad%2Fabstract-art-service&serviceType=0"><button>试试看</button></a>
+    </div>
+</div>
+
+<div class="api api2">
+    <img src="{{ url_for('static', filename='image/api2.png')}}" class="decPic decPic2"/>
+    <div class="text">
+        <h3>定向语义生成</h3>
+        <p>在用户指定素材基础上，根据所指定语义风格标签对素材进行定向变化， 并生成新的抽象素材。可作为设计微调，灵感拓展，智能互动工具等使用。</p>
+        <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4458&version=1.0&name=%2Fai-design%2Fad%2Fsemantic-art-design&serviceType=0"><button>试试看</button></a>
+    </div>
+</div>
+
+<div class="api api3">
+    <img src="{{ url_for('static', filename='image/api3.png')}}" class="decPic decPic3"/>
+    <div class="text">
+        <h3>风格转换</h3>
+        <p>支持将用户输入的单张图片转换为用户所指定的风格图片， 可用于生成多种艺术设计素材、趣味互动等营销类应用场景。</p>
+        <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4456&version=1.0&name=%2Fai-design%2Fad%2Fstyle-transfer-service&serviceType=0"><button>试试看</button></a>
+    </div>
+</div>
+
+<div class="api api4">
+    <img src="{{ url_for('static', filename='image/api4.png')}}" class="decPic decPic4"/>
+    <div class="text">
+        <h3>艺术头像</h3>
+        <p>支持将用户输入的正面人像图片裁切后转换为油画风或二次元头像， 可用于个性社交头像、市场营销类互动等应用场景。</p>
+        <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4457&version=1.0&name=%2Fai-design%2Fad%2Fart-portrait-service&serviceType=0"><button>试试看</button></a>
+    </div>
+</div>
+    
+
+    
+<!--页脚-->
+<div id="footer"> 
+<div id="leftSide">
+<div></div>
+<p id="groupName">联想研究院用户体验设计</p> 
+<p id="email">联系邮箱：yangzhi3@lenovo.com</p>
+
+</div>   
+<div id="rightSide">
+<p>关注公众号“联想研究院UXD”<br>获取更多有趣的资讯~</p>
+<div></div>
+</div> 
+</div>
+<div id="line"></div>
+<div id="middleSide"><p><span>Made with</span> 🧡❤️🧡❤️🧡❤️🧡 <span>by UXD Lenovo Research</span></p></div>  
+</div>
+
+<!--不动产-->
+<div id="navback"></div>
+<div class="nav">
+      
+        <div class="logo">
+                <a href="/">
+                <img src="{{ url_for('static', filename='image/logowhite.svg')}}" width=100% height=auto />
+                </a>
+        </div>
+        
+        <nav class="dropdownmenu">
+            <ul>
+            <li><a href="/" class="mainMenu">主页</a></li>
+            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <ul id="submenu">
+            <li><a href="/gdesign">万花筒</a></li>
+            <li><a href="/transfer">造梦机</a></li>
+            <li><a href="/cross">时光机</a></li>
+            </ul>
+            </li>
+            <li id="api"><a href="#" class="mainMenu">API接入</a></li>
+            <li><a href="/about" class="mainMenu">关于小绘</a></li>
+            </ul>
+            </nav>
+            
+        <!-- <div class="english">
+         <a href="#">
+         <p>EN</p>
+         </a>
+        </div> -->
+</div>
+<!-- 增加移动端导航 -->
+<div class="mobileNav">
+    <div class="line1 line"></div>
+    <div class="line2 line"></div>
+    <div class="line3 line"></div>
+</div>
+
+<div class="mobileNav-details">
+
+    <a href="/">
+        <div class="Navdetails Navdetails1">
+            <h3>主页</h3><div class="navPic navPic1"></div>
+        </div>
+    </a>
+    <a href="/gdesign">
+        <div class="Navdetails Navdetails2">
+            <h3>万花筒</h3><div class="navPic navPic2"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="Navdetails Navdetails3">
+            <h3>造梦机</h3><div class="navPic navPic3"></div>
+        </div>
+    </a>
+    <a href="/cross">
+        <div class="Navdetails Navdetails4">
+            <h3>时光机</h3><div class="navPic navPic4"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="Navdetails Navdetails5">
+            <h3>API接入</h3><div class="navPic navPic5"></div>
+        </div>
+    </a>
+    <a href="/about">
+        <div class="Navdetails Navdetails6">
+            <h3>关于小绘</h3><div class="navPic navPic6"></div>
+        </div>
+    </a>
+    
+    <div class="navDec1"></div>
+    <div class="navDec2"></div>
+    <div class="navDec3"></div>
+    <div class="navDec4"></div>
+</div>
+
+
+    
+<!--js代码-->
+<script type="text/javascript"> 
+    //赋值变量
+    var windowTop=0,
+        windowH=window.innerHeight,
+        windowW=window.innerHeight,
+        leftdownHint=$(".leftdown div"),
+        scrolldiv=document.getElementsByClassName("flexslider"),
+        leftdownSvg=$(".leftdown svg g g "),
+        contactSvg=$(".contact svg g g "),
+        logoChange=$("#logoChange g g"),
+        english=$(".english a"),
+        mainMenu=$(".mainMenu"),
+        normalGray="#444553",
+        whiteColor="white",
+        contact=$(".contact"),
+        leftDown=$(".leftdown"),
+        flexslider=$(".flexslider"),
+        qrcode=$(".qrcode"),
+        qrcodeP=$(".qrcode p"),
+        timeSpace=500;
+    // 用于解决自适应时雪碧图位置错乱的问题
+    var winWidth=document.body.clientWidth;
+
+    if(winWidth>768){
+    var sliderWidth=160*0.35;
+    }else{
+    var sliderWidth=160*0.53;
+    }
+    
+    $(window).resize(function () {          //当浏览器大小变化时
+        // 获取新的窗口尺寸
+        winWidth=document.body.clientWidth;
+    }); 
+
+    //页面加载
+    window.onload=function(){
+        
+        //鼠标悬停
+        contact.mouseenter(
+                function () {
+                    qrcode.css("width","20rem").css("height","24rem");
+                    qrcodeP.css("opacity","1");
+                    contact.css("opacity","1");
+                });
+        contact.mouseleave(
+                function () {
+                    qrcode.css("width","0rem").css("height","0rem");
+                    qrcodeP.css("opacity","0");
+                    contact.css("opacity","0.8");
+                });
+       
+        
+        
+        
+         // 上下滑动
+        $(window).scroll(function() {
+        let scrollS = $(this).scrollTop();
+        
+        //导航变化
+        if(scrollS>10){
+        $(".nav").css("top","9px");// 上滑时要做的事（上移一点）
+        $("#navback").css("opacity","1"); 
+        $(".mobileNav").css("top","9px");  
+        }else{
+        $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+        $("#navback").css("opacity","0");  
+        $(".mobileNav").css("top","30px");
+        }
+        
+        //滚动页面动效
+        var disappear=1-(scrollS/windowH)*2;
+        $("#title").css("opacity",disappear);
+            
+        });
+        
+   
+     //移动端导航部分
+var Navcount=1;
+$(".mobileNav").on("click",function(){
+    Navcount++;
+    if(Navcount%2==0){
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line2").hide();
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".mobileNav-details").css("width","100%");
+    }
+    else{
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line2").show();
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".mobileNav-details").css("width","0");
+    }
+});
+    }               
+</script> 
+</body>
+  
+    
+   
+
+</html>
