@@ -44,11 +44,13 @@ a{
     height:100vh;
     background-color: black;
 }
-#loading p{
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    line-height: 100vh;
+#loading img{
+    position: absolute;
+    width:120px;
+    height:120px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 /*导航*/
 .nav{
@@ -96,8 +98,8 @@ a{
     text-align: center;
     text-decoration: none;
 }
-#homepage a{
-    opacity: 1;
+#homepage{
+    opacity:1;
 }
 .dropdownmenu li:hover a {
     color:#444553;
@@ -132,6 +134,16 @@ li:hover ul#submenu {
     background-color:white;
     line-height: 4rem;
     color:#444553;
+}
+.tryNew{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:44px;
+    height:26px;
+    background-image: url("../image/trynew.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* .english{
@@ -576,6 +588,7 @@ div #dot1{
     width:15vw;
     height:15vw;
     border-radius: 8vw;
+    transition: all .4s;
 }
 #circle1{
     background-color: #E5E7EE;
@@ -601,6 +614,7 @@ div #dot1{
 #hover1{
     background-image: url("../image/wanhuatong.png");
 }
+
 #hover2{
     background-image: url("../image/wangyuanjing.png");
 }
@@ -638,6 +652,7 @@ div #dot1{
     opacity: 0.7;
 }
 #pic2 button{
+    position: relative;
     display:block;
     margin: 0 auto;
     margin-top:1vh;
@@ -648,10 +663,46 @@ div #dot1{
     height:4rem;
     width:10rem;
     background-color: transparent;
+    z-index: auto;
 }
-#pic2 button:hover{
+.wanhuatong:hover{
+    cursor: pointer;
+}
+.wangyuanjing:hover{
+    cursor: pointer;
+}
+.shiguangji:hover{
+    cursor: pointer;
+}
+.wanhuatong:hover #circle1{
+    width:20vw;
+    height:calc(20vw + 17rem);
+    border-radius: 10vw;
+}
+.wangyuanjing:hover #circle2{
+    width:20vw;
+    height:calc(20vw + 17rem);
+    border-radius: 10vw;
+}
+.shiguangji:hover #circle3{
+    width:20vw;
+    height:calc(20vw + 17rem);
+    border-radius: 10vw;
+}
+.wanhuatong:hover #try1{
     background-color: #3E62F5;
     color:white;
+}
+.wangyuanjing:hover #try2{
+    background-color: #3E62F5;
+    color:white;
+}
+.shiguangji:hover #try3{
+    background-color: #3E62F5;
+    color:white;
+}
+#pic2 button:hover{
+    cursor: pointer;
 }
 
 
@@ -971,8 +1022,123 @@ div #dot1{
 
 
 /*第五页*/
+#pic5{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:15vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+.function{
+    position: relative;
+    width:13vw;
+}
+.funccontent{
+    position: relative;
+    display: block;
+    width:100%;
+    height:20vw;
+    background-color: #DFE0EE;
+    border-radius: 8px;
+    transition: all .2s;
+}
+.funccontent1{
+    background-image: url("../image/api1.png");
+    background-size: cover;
+    background-position: right;
+}
+.funccontent2{
+    background-image: url("../image/api3.png");
+    background-size: cover;
+    background-position: right;
+}
+.funccontent3{
+    background-image: url("../image/api4.png");
+    background-size: cover;
+    background-position: right;
+}
+.funccontent4{
+    background-image: url("../image/placeholder.png");
+    background-size: cover;
+    background-position: right;
+}
 
-#textmodel5{
+.funcover{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:#DFE0EE ;
+    opacity: 1;
+    border-radius: 8px;
+    transition: all .2s;
+}
+.funcover1{
+    background-image: url("../image/wanhuaMobile.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.funcover2{
+    background-image: url("../image/zaomengMobile.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.funcover3{
+    background-image: url("../image/shiguangMobile.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.funcover p{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    bottom: 10%;
+    color:#444553;
+}
+.moretool{
+    position: absolute;
+    top:50%;
+    bottom: 0%;
+}
+.funccontent:hover{
+    transform: scale(1.1);
+}
+.funcover:hover{
+    opacity: 0;
+}
+.hovertext{
+    position: relative;
+    width:100%;
+    text-align: center;
+    margin-top: 2vw;
+    opacity: 0;
+    transition: all .2s;
+    color:#444553;
+}
+.function:hover .hovertext{
+    opacity: 1;
+}
+.email{
+    position: relative;
+    margin-top: 8vh;
+    width:100%;
+    text-align: center;
+}
+.power{
+    position: relative;
+    width:100%;
+    margin-top: 2vh;
+    font-size: 1.4rem;
+    opacity: .7;
+    text-align: center;
+}
+
+/* #textmodel5{
     position: absolute;
     right:10%;
     width:auto;
@@ -1106,19 +1272,19 @@ div #dot1{
     padding-left: 10%;
     padding-right: 10%;
     
-}
+} */
 
 
-@keyframes marqueeTransform {
+/* @keyframes marqueeTransform {
     0%   { transform: translate(150%,0)}
     100% { transform: translate(-240%,0)}
-  }
+  } */
 
 
 
 
         
-        .hidden{
+        /* .hidden{
             position: relative;
             top:6rem;
             animation: all 0.5s ease-in 0.3s;
@@ -1149,7 +1315,7 @@ div #dot1{
             100%{
                 top:0px;
             }
-        }
+        } */
 /* 移动端增加的组件 */
 #detailDot,.mobileLeft,.mobileRight{
     display: none;
@@ -1157,36 +1323,42 @@ div #dot1{
 
 @media screen and (max-width:768px){
     /* 移动端导航 */
+    .nav{
+        top: 20px;
+    }
+    .logo{
+        width:100px;
+    }
     .dropdownmenu{
         display: none;
     }
     .mobileNav{
         position: fixed;
-        top: 30px;
+        top: 24px;
         right:7vw;
-        width:26px;
-        height:30px;
+        width:22px;
+        height:22px;
         z-index: 1000;
     }
     .line{
         position: absolute;
         width:100%;
-        height:4px;
+        height:2px;
         background-color: #444553;
         border-radius: 4px;
     }
     .line1{
-        width:26px;
+        width:22px;
         top:2px;
         transform-origin: 0 2px;
         transition: all .2s;
     }
     .line2{
-        top:13px;
+        top:9.5px;
         transition: all .2s;
     }
     .line3{
-        width:26px;
+        width:22px;
         bottom:2px;
         transform-origin: 0 2px;
         transition: all .2s;
@@ -1304,7 +1476,14 @@ div #dot1{
         border-radius: 20vw;
         background: linear-gradient(135deg, #3023AE 0%, #C86DD7 100%);
     }
-
+    .contact{
+        width:22px;
+        height:22px;
+    }
+    .contact img{
+        width:22px;
+        height:22px;
+    }
     /* 去掉pagedot */
     #pagenumber{
         display: none;
@@ -1393,6 +1572,31 @@ div #dot1{
     width:75vw;
     height:75vw;
 }
+#hover1{
+    background-image: url("../image/zaoMengMobile.png");
+}
+
+#hover2{
+    background-image: url("../image/wanhuaMobile.png");
+}
+#hover3{
+    background-image: url("../image/shiguangMobile.png");
+}
+.wanhuatong:hover #circle1{
+    width:55vw;
+    height:55vw;
+    border-radius: 60vw;
+}
+.wangyuanjing:hover #circle2{
+    width:55vw;
+    height:55vw;
+    border-radius: 60vw;
+}
+.shiguangji:hover #circle3{
+    width:55vw;
+    height:55vw;
+    border-radius: 60vw;
+}
 .descript p{
     text-align: left;
     padding-top: 5vh;
@@ -1407,8 +1611,17 @@ div #dot1{
 }
 #pic2 button{
     margin-left: 0%;
+    margin-top: 20px;
+    width:75vw;
     background-color: #3E62F5;
     color:white;
+    animation: buttonHighlight .5s infinite;
+}
+
+@keyframes buttonHighlight{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.02);}
+    100%{transform: scale(1);}
 }
 
 /* .mobileLeft{
@@ -1630,7 +1843,41 @@ div #dot1{
     background-color: #303133;
 }
 /* 第五页 */
-#textmodel5{
+#pic5{
+    position: relative;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:6vh;
+    width: 86vw;
+    display: inline-block;
+    justify-content: none;
+}
+.function{
+    position: relative;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    display: inline-block;
+    width:40vw;
+}
+.funccontent{
+    position: relative;
+    display: block;
+    width:100%;
+    height:50vw;
+    background-color: #DFE0EE;
+    border-radius: 8px;
+    transition: all .2s;
+}
+.hovertext{
+    display: none;
+}
+.email{
+    display: none;
+}
+.power{
+    display: none;
+}
+/* #textmodel5{
     top:0%;
     transform:translate(0,0%);
     left: 0%;
@@ -1675,7 +1922,10 @@ div #dot1{
 }
 .cover{
     width:10%;
-}
+} */
+
+
+
 }
 
 

@@ -33,14 +33,67 @@
 </head>
 
 <body>
-<div id="loading" style="z-index: 1100"><p>loading...</p></div>
+<div id="loading" style="z-index: 1100">
+<img src="../static/image/loading.gif" alt="">
+</div>
 <!--页面信息-->  
 <div id="wrap">
     <div id="main">
         <!-- 第5页 -->
         <div id="page5" class="page">
         <div class="back" id="back5"> </div>
-        <div id="footer">
+        <div class="textmodel"><h1>点击马上试用</h1></div>
+        <div class="pic" id="pic5">
+            <a href="/gdesign">
+                <div class="function function1">
+                    <div class="funccontent funccontent1">
+                        <div class="funcover funcover1">
+                            <p>背景生成</p>
+                        </div>
+                    </div>
+                    <p class="hovertext">背景生成</p>
+                </div>
+            </a>
+            
+            <a href="/transfer">
+                <div class="function function2">
+                    <div class="funccontent funccontent2">
+                        <div class="funcover funcover2">
+                            <p>风格转换</p>
+                        </div>
+                    </div>
+                    <p class="hovertext">风格转换</p>
+                </div>
+            </a>
+
+            <a href="/cross">
+                <div class="function function3">
+                    <div class="funccontent funccontent3">
+                        <div class="funcover funcover3">
+                            <p>肖像绘制</p>
+                        </div>
+                    </div>
+                    <p class="hovertext">肖像绘制</p>
+                </div>
+            </a>
+
+            
+
+            <div class="function function4">
+                <div class="funccontent funccontent4">
+                    <div class="funcover funcover4">
+                        <p class="moretool">更多设计工具</p>
+                        <p>敬请期待...</p>
+                    </div>
+                </div>
+                <p class="hovertext">敬请期待...</p>
+            </div>
+        </div>
+
+        <p class="email">如有商务合作需求，请联系：suxi2@lenovo.com</p>
+        <p class="power">Powered by Lenovo Research UXD Team</p>
+
+        <!-- <div id="footer">
         <div id="foot">
         <div id="textdiv1"></div>
         <div id="textdiv2"></div>
@@ -63,7 +116,7 @@
         </div>
         </div>
     
-        </div>
+        </div> -->
 
         <div class="front" id="front5"> </div>
         </div>
@@ -221,23 +274,24 @@
         <div class="deccontrol3" id="dec3"></div>
         <div class="textmodel" id="textmodel2"><h1>3种工具，造出无穷想象</h1></div>
         <div class="pic" id="pic2">
-            
+        
+        
         <div class="wangyuanjing">
         <div id="circle2"></div> 
         <div id="hover2" onclick="window.location.href= '/gdesign';return false"></div>
         <div class="descript"><p>万花筒</p></div>
         <div class="subDes"><p>背景生成工具</p></div>
         <div id="details2"><p>1秒1万张<br>每一次转动，你的眼前都是新的风景</p></div>
-        <button onclick="window.location.href= '/gdesign';return false">试试看</button>
+        <button id="try2" onclick="window.location.href= '/gdesign';return false">试用工具</button>
         </div>
             
         <div class="wanhuatong">
         <div id="circle1"></div> 
         <div id="hover1" onclick="window.location.href= '/transfer';return false"></div>
         <div class="descript"><p>造梦机</p></div>
-        <div class="subDes"><p>风格迁移工具</p></div>
+        <div class="subDes"><p>风格转换工具</p></div>
         <div id="details1"><p>无限学习库<br>你的图片，你来决定是什么风格</p></div>
-        <button onclick="window.location.href= '/transfer';return false">试试看</button>
+        <button id="try1" onclick="window.location.href= '/transfer';return false">试用工具</button>
         </div>
         
         
@@ -248,7 +302,7 @@
         <div class="descript"><p>时光机</p></div>
         <div class="subDes"><p>肖像绘制工具</p></div>
         <div id="details3"><p>即时转换<br>让文艺复兴时期的大师，为你画肖像</p></div>
-        <button onclick="window.location.href= '/cross';return false">试试看</button>
+        <button id="try3" onclick="window.location.href= '/cross';return false">试用工具</button>
         </div>
         
         </div>
@@ -315,12 +369,13 @@
         
         <nav class="dropdownmenu">
             <ul>
-            <li><a href="/" class="mainMenu">主页</a></li>
-            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <li><a href="/" class="mainMenu" id="homepage">主页</a></li>
+            <li id="gdesign">
+                <div class="tryNew"></div><a href="#" class="mainMenu">试用工具</a>
             <ul id="submenu">
-            <li><a href="/gdesign">万花筒</a></li>
-            <li><a href="/transfer">造梦机</a></li>
-            <li><a href="/cross">时光机</a></li>
+            <li><a href="/gdesign">背景生成</a></li>
+            <li><a href="/transfer">风格转换</a></li>
+            <li><a href="/cross">肖像绘制</a></li>
             </ul>
             </li>
             <li><a href="/api" class="mainMenu">API接入</a></li>
@@ -351,17 +406,17 @@
             </a>
             <a href="/gdesign">
                 <div class="Navdetails Navdetails2">
-                    <h3>万花筒</h3><div class="navPic navPic2"></div>
+                    <h3>背景生成</h3><div class="navPic navPic2"></div>
                 </div>
             </a>
             <a href="/transfer">
                 <div class="Navdetails Navdetails3">
-                    <h3>造梦机</h3><div class="navPic navPic3"></div>
+                    <h3>风格转换</h3><div class="navPic navPic3"></div>
                 </div>
             </a>
             <a href="/cross">
                 <div class="Navdetails Navdetails4">
-                    <h3>时光机</h3><div class="navPic navPic4"></div>
+                    <h3>肖像绘制</h3><div class="navPic navPic4"></div>
                 </div>
             </a>
             <a href="/api">
@@ -605,11 +660,6 @@ window.onload = function(){
        }else{
         startlanding($(".landinginner"),100);
        }
-
-       
-
-
-       
      
         //更新服务器评论  
         var line=1;
@@ -636,43 +686,43 @@ window.onload = function(){
     
         
     //发表评论    
-        var btnPut=document.getElementById('btn_put');
-        var newtext=1;
-        var textnum=1; 
-        btnPut.onclick=function(){
+        // var btnPut=document.getElementById('btn_put');
+        // var newtext=1;
+        // var textnum=1; 
+        // btnPut.onclick=function(){
         
-        var getContent=document.getElementById('enjoy').value;
+        // var getContent=document.getElementById('enjoy').value;
 
-        if (/['")-><&\\\/\.]/.test(getContent)) {
-            alert('包含特殊字符，不允许提交!');
-        }else{
-            if(getContent){
-                var content=document.getElementById('textdiv'+textnum);
-                var bodydata = {}
-                bodydata.comment = getContent
-                console.log(bodydata)
-                //评论上传服务器    
-               $.ajax({
-                   type:'POST',
-                   url:'/leave-message',
-                   contentType:'application/json',
-                   data:JSON.stringify(bodydata),
-                   dataType:'json',
-                   success:function(data){
-                       console.log(data)
-                   },
-                   error:function(err){
-                       console.log(err)
-                   },
-               });
-                $("#textdiv"+textnum).prepend("<p style='color: #5376FF;font-size:3rem'>"+getContent+"</p>");  
-                document.getElementById('enjoy').value='';
-                if(textnum<6){textnum++;}else{textnum=1;}
-            }else{
-                alert('给我们留言，分享你的建议吧～');
-            }
-        }
-        };
+        // if (/['")-><&\\\/\.]/.test(getContent)) {
+        //     alert('包含特殊字符，不允许提交!');
+        // }else{
+        //     if(getContent){
+        //         var content=document.getElementById('textdiv'+textnum);
+        //         var bodydata = {}
+        //         bodydata.comment = getContent
+        //         console.log(bodydata)
+        //         //评论上传服务器    
+        //        $.ajax({
+        //            type:'POST',
+        //            url:'/leave-message',
+        //            contentType:'application/json',
+        //            data:JSON.stringify(bodydata),
+        //            dataType:'json',
+        //            success:function(data){
+        //                console.log(data)
+        //            },
+        //            error:function(err){
+        //                console.log(err)
+        //            },
+        //        });
+        //         $("#textdiv"+textnum).prepend("<p style='color: #5376FF;font-size:3rem'>"+getContent+"</p>");  
+        //         document.getElementById('enjoy').value='';
+        //         if(textnum<6){textnum++;}else{textnum=1;}
+        //     }else{
+        //         alert('给我们留言，分享你的建议吧～');
+        //     }
+        // }
+        // };
     
     //序列帧动画1（div，每次动多少，多少张）
     var interval;
@@ -733,10 +783,6 @@ window.onload = function(){
        
     //滑动页面
    
-    //分割为数组
- 
-
-    
     //浏览器兼容
    if((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) { window.addEventListener('DOMMouseScroll',scrollFun,{passive:false}); } else if(document.addEventListener) { window.addEventListener('mousewheel',scrollFun,{passive:false}); }
     else if (document.attachEvent) {
@@ -1021,7 +1067,7 @@ var startx, starty;
     }, false);
 
 //应用场景轮播-鼠标悬停
-var moveTime=800;
+var moveTime=500;
 function scenarioChange(){
     var scrolldiv=document.getElementsByClassName("flexslider");
     var currentSlide=1;
@@ -1133,15 +1179,15 @@ var Navcount=1;
 $(".mobileNav").on("click",function(){
     Navcount++;
     if(Navcount%2==0){
-      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"23px","background-color":"white"});
       $(".line2").hide();
-      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"23px","background-color":"white"});
       $(".mobileNav-details").css("width","100%");
     }
     else{
-      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"#444553"});
       $(".line2").show();
-      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"#444553"});
       $(".mobileNav-details").css("width","0");
     }
 })

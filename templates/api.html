@@ -22,14 +22,14 @@
 <body>
 <!--页面信息-->
 <div id="landing">
-<div id="back"><img src="{{ url_for('static', filename='image/colorrun.png')}}"/></div>
+<div id="back"><img src="{{ url_for('static', filename='image/api.png')}}"/></div>
 
 <div id="front"> </div>
 </div>
 <div id="title">
 <h1>一键连接<span>艺术与技术</span></h1>
 <p class="normalP">小绘正式入驻联想大脑AI平台，轻松接入稳定API，即刻获得智能设计能力。</p>
-<p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
+<!-- <p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p> -->
 
 </div>
 <!--向下滚-->
@@ -40,6 +40,7 @@
     <div class="text">
         <h3>抽象素材生成</h3>
         <p>支持根据用户指定的数量和分辨率随机生成相对应的抽象背景图片。 可作为线上海报，banner及线下包装，宣传物料的设计素材。</p>
+        <p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
         <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4455&version=1.0&name=%2Fai-design%2Fad%2Fabstract-art-service&serviceType=0"><button>试试看</button></a>
     </div>
 </div>
@@ -48,7 +49,8 @@
     <img src="{{ url_for('static', filename='image/api2.png')}}" class="decPic decPic2"/>
     <div class="text">
         <h3>定向语义生成</h3>
-        <p>在用户指定素材基础上，根据所指定语义风格标签对素材进行定向变化， 并生成新的抽象素材。可作为设计微调，灵感拓展，智能互动工具等使用。</p>
+        <p>在指定素材基础上，根据语义风格标签对素材进行定向变化， 并生成新的抽象素材。可作为设计微调，灵感拓展，智能互动工具等使用。</p>
+        <p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
         <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4458&version=1.0&name=%2Fai-design%2Fad%2Fsemantic-art-design&serviceType=0"><button>试试看</button></a>
     </div>
 </div>
@@ -58,6 +60,7 @@
     <div class="text">
         <h3>风格转换</h3>
         <p>支持将用户输入的单张图片转换为用户所指定的风格图片， 可用于生成多种艺术设计素材、趣味互动等营销类应用场景。</p>
+        <p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
         <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4456&version=1.0&name=%2Fai-design%2Fad%2Fstyle-transfer-service&serviceType=0"><button>试试看</button></a>
     </div>
 </div>
@@ -67,6 +70,7 @@
     <div class="text">
         <h3>艺术头像</h3>
         <p>支持将用户输入的正面人像图片裁切后转换为油画风或二次元头像， 可用于个性社交头像、市场营销类互动等应用场景。</p>
+        <p class="hint">*当前API仅对联想内部开放，请连接公司内网访问。</p>
         <a href="https://brain.lenovo.com/#/zh-cn/Products/productContent?id=4457&version=1.0&name=%2Fai-design%2Fad%2Fart-portrait-service&serviceType=0"><button>试试看</button></a>
     </div>
 </div>
@@ -103,11 +107,11 @@
         <nav class="dropdownmenu">
             <ul>
             <li><a href="/" class="mainMenu">主页</a></li>
-            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <li id="gdesign"><div class="tryNew"></div><a href="#" class="mainMenu">试用工具</a>
             <ul id="submenu">
-            <li><a href="/gdesign">万花筒</a></li>
-            <li><a href="/transfer">造梦机</a></li>
-            <li><a href="/cross">时光机</a></li>
+            <li><a href="/gdesign">背景生成</a></li>
+            <li><a href="/transfer">风格转换</a></li>
+            <li><a href="/cross">肖像绘制</a></li>
             </ul>
             </li>
             <li id="api"><a href="#" class="mainMenu">API接入</a></li>
@@ -137,17 +141,17 @@
     </a>
     <a href="/gdesign">
         <div class="Navdetails Navdetails2">
-            <h3>万花筒</h3><div class="navPic navPic2"></div>
+            <h3>背景生成</h3><div class="navPic navPic2"></div>
         </div>
     </a>
     <a href="#">
         <div class="Navdetails Navdetails3">
-            <h3>造梦机</h3><div class="navPic navPic3"></div>
+            <h3>风格转换</h3><div class="navPic navPic3"></div>
         </div>
     </a>
     <a href="/cross">
         <div class="Navdetails Navdetails4">
-            <h3>时光机</h3><div class="navPic navPic4"></div>
+            <h3>肖像绘制</h3><div class="navPic navPic4"></div>
         </div>
     </a>
     <a href="#">
@@ -232,11 +236,15 @@
         if(scrollS>10){
         $(".nav").css("top","9px");// 上滑时要做的事（上移一点）
         $("#navback").css("opacity","1"); 
-        $(".mobileNav").css("top","9px");  
+        $(".mobileNav").css("top","12px");  
         }else{
-        $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+            if(winWidth>768){
+                $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+            }else{
+                $(".nav").css("top","20px");}
+            
         $("#navback").css("opacity","0");  
-        $(".mobileNav").css("top","30px");
+        $(".mobileNav").css("top","23px");
         }
         
         //滚动页面动效
@@ -251,15 +259,15 @@ var Navcount=1;
 $(".mobileNav").on("click",function(){
     Navcount++;
     if(Navcount%2==0){
-      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"23px","background-color":"white"});
       $(".line2").hide();
-      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"23px","background-color":"white"});
       $(".mobileNav-details").css("width","100%");
     }
     else{
-      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"white"});
       $(".line2").show();
-      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"white"});
       $(".mobileNav-details").css("width","0");
     }
 });

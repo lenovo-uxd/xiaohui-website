@@ -124,7 +124,16 @@ li:hover ul#submenu {
     line-height: 4rem;
     color:#444553;
 }
-
+.tryNew{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:44px;
+    height:26px;
+    background-image: url("../image/trynew.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* .english{
     position: absolute;
     height: 30px;
@@ -495,8 +504,24 @@ color: white;
     display: inline-block;
     width:16.8vw;
     height:8.4vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 2px solid transparent;
+}
+#demoFirstline img{
+    position: relative;
+    width:100%;
+    height:auto;
+}
+.arrow{
+    position: relative;
+    width: 100%; 
+    height: 40px;
+    background-image: url("../image/arrow.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -30px;
+    display: none;
 }
 #demoFirstline div:hover{
     border: 2px solid #5375FF;
@@ -516,15 +541,22 @@ color: white;
     display: inline-block;
     width:16.8vw;
     height:8.4vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 2px solid transparent;
+}
+#demoSecondline img{
+    position: relative;
+    width:100%;
+    height:auto;
 }
 #demoSecondline div:hover{
     border: 2px solid #5375FF;
 }
+
 /*添加的dom节点*/
 #adddom{
     position: relative;
+    margin-top:10px;
     background-color: #444553;
 }
 #domTitle{
@@ -602,7 +634,7 @@ color: white;
 #domSecond div:hover{
     border: 2px solid #5375FF;
 }
-#arrow{
+/* #arrow{
     position: relative;
     width: 0; 
     height: 0;
@@ -611,7 +643,7 @@ color: white;
     border-color:transparent transparent #444553 transparent;
     margin-left: calc(7% + 8vw);
     margin-top: -15px;
-}
+} */
 #demoloading{
     position: relative;
     width:100vw;
@@ -1018,36 +1050,42 @@ color: white;
         margin-bottom: 0rem;
     }
     /* 移动端导航 */
+    .nav{
+        top: 20px;
+    }
+    .logo{
+        width:100px;
+    }
     .dropdownmenu{
         display: none;
     }
     .mobileNav{
         position: fixed;
-        top: 30px;
+        top: 23px;
         right:7vw;
-        width:26px;
-        height:30px;
+        width:22px;
+        height:22px;
         z-index: 1000;
     }
     .line{
         position: absolute;
         width:100%;
-        height:4px;
+        height:2px;
         background-color: white;
         border-radius: 4px;
     }
     .line1{
-        width:26px;
+        width:22px;
         top:2px;
         transform-origin: 0 2px;
         transition: all .2s;
     }
     .line2{
-        top:13px;
+        top:9.5px;
         transition: all .2s;
     }
     .line3{
-        width:26px;
+        width:22px;
         bottom:2px;
         transform-origin: 0 2px;
         transition: all .2s;
@@ -1356,10 +1394,12 @@ color: white;
     #domSecond{
         padding-bottom: 2rem;
     }
-    #arrow{
-        margin-left: calc(7% + 8vw);
-        margin-top: -4px;
-        border-width: 10px;
+    .arrow{
+        height: 20px;
+        margin-top: -10px;
+    }
+    #adddom{
+        margin-top:4px;
     }
     
     #demoloading{
@@ -1432,10 +1472,14 @@ color: white;
         padding-bottom: 15vh;
     }
     #moreSub h3{
-        font-size: 1.6rem;
+        /* font-size: 1.6rem; */
+        display: none;
     }
     #moreSub p{
-        display: none;
+        margin-top: 4px;
+        font-size: 1.2rem;
+        opacity: 1;
+        text-align: center;
     }
     /* 页面尾部 */
     #footer{

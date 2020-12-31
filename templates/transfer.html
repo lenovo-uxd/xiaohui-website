@@ -74,8 +74,8 @@
 <!--能力演示-->
 <div id="studyProcess">
 <div class="mainInfo" id="studyInfo">
-<div><h1>能力演示</h1></div>
-<div><p>选择或上传图像体验风格转换能力，该能力演示基于<a href="#">风格迁移API</a>搭建，
+<div><h1>试用工具</h1></div>
+<div><p>选择或上传图像体验风格转换能力，该试用工具基于<a href="/api">风格迁移API</a>搭建，
 如果您对技术能力有特别要求，欢迎联系我们。</p></div>
 </div>
     
@@ -195,11 +195,11 @@
         <nav class="dropdownmenu">
             <ul>
             <li><a href="/" class="mainMenu">主页</a></li>
-            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <li id="gdesign"><div class="tryNew"></div><a href="#" class="mainMenu">试用工具</a>
             <ul id="submenu">
-            <li><a href="/gdesign">万花筒</a></li>
-            <li><a href="/transfer">造梦机</a></li>
-            <li><a href="/cross">时光机</a></li>
+            <li><a href="/gdesign">背景生成</a></li>
+            <li><a href="/transfer">风格转换</a></li>
+            <li><a href="/cross">肖像绘制</a></li>
             </ul>
             </li>
             <li><a href="/api" class="mainMenu">API接入</a></li>
@@ -229,17 +229,17 @@
     </a>
     <a href="/gdesign">
         <div class="Navdetails Navdetails2">
-            <h3>万花筒</h3><div class="navPic navPic2"></div>
+            <h3>背景生成</h3><div class="navPic navPic2"></div>
         </div>
     </a>
     <a href="#">
         <div class="Navdetails Navdetails3">
-            <h3>造梦机</h3><div class="navPic navPic3"></div>
+            <h3>风格转换</h3><div class="navPic navPic3"></div>
         </div>
     </a>
     <a href="/cross">
         <div class="Navdetails Navdetails4">
-            <h3>时光机</h3><div class="navPic navPic4"></div>
+            <h3>肖像绘制</h3><div class="navPic navPic4"></div>
         </div>
     </a>
     <a href="/api">
@@ -361,11 +361,15 @@
         if(scrollS>10){
         $(".nav").css("top","9px");// 上滑时要做的事（上移一点）
         $("#navback").css("opacity","1"); 
-        $(".mobileNav").css("top","9px");  
+        $(".mobileNav").css("top","12px");  
         }else{
-        $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+            if(winWidth>768){
+                $(".nav").css("top","30px");// 上滑时要做的事（上移一点）
+            }else{
+                $(".nav").css("top","20px");}
+            
         $("#navback").css("opacity","0");  
-        $(".mobileNav").css("top","30px");
+        $(".mobileNav").css("top","23px");
         }
         
         //滚动页面动效
@@ -677,15 +681,15 @@ var Navcount=1;
 $(".mobileNav").on("click",function(){
     Navcount++;
     if(Navcount%2==0){
-      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"23px","background-color":"white"});
       $(".line2").hide();
-      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"23px","background-color":"white"});
       $(".mobileNav-details").css("width","100%");
     }
     else{
-      $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"white"});
       $(".line2").show();
-      $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"white"});
       $(".mobileNav-details").css("width","0");
     }
 })

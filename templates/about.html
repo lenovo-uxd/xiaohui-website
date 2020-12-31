@@ -20,7 +20,9 @@
 </head>
 
 <body>
-<div id="loading" style="z-index: 999"><p>loading...</p></div>
+    <div id="loading" style="z-index: 1100">
+        <img src="../static/image/loading.gif" alt="">
+        </div>
 <!--页面信息-->
 <!--横条背景-->
 <div id="ready">
@@ -276,15 +278,15 @@
         <nav class="dropdownmenu">
             <ul>
             <li><a href="/" class="mainMenu">主页</a></li>
-            <li id="gdesign"><a href="#" class="mainMenu">能力展示</a>
+            <li id="gdesign"><div class="tryNew"></div><a href="#" class="mainMenu">试用工具</a>
             <ul id="submenu">
-            <li><a href="/gdesign">万花筒</a></li>
-            <li><a href="/transfer">造梦机</a></li>
-            <li><a href="/cross">时光机</a></li>
+            <li><a href="/gdesign">背景生成</a></li>
+            <li><a href="/transfer">风格转换</a></li>
+            <li><a href="/cross">肖像绘制</a></li>
             </ul>
             </li>
             <li><a href="/api" class="mainMenu">API接入</a></li>
-            <li><a href="/about" class="mainMenu">关于小绘</a></li>
+            <li><a href="/about" class="mainMenu" id="aboutMe">关于小绘</a></li>
             </ul>
         </nav>
             
@@ -311,17 +313,17 @@
     </a>
     <a href="/gdesign">
         <div class="Navdetails Navdetails2">
-            <h3>万花筒</h3><div class="navPic navPic2"></div>
+            <h3>背景生成</h3><div class="navPic navPic2"></div>
         </div>
     </a>
     <a href="/transfer">
         <div class="Navdetails Navdetails3">
-            <h3>造梦机</h3><div class="navPic navPic3"></div>
+            <h3>风格转换</h3><div class="navPic navPic3"></div>
         </div>
     </a>
     <a href="/cross">
         <div class="Navdetails Navdetails4">
-            <h3>时光机</h3><div class="navPic navPic4"></div>
+            <h3>肖像绘制</h3><div class="navPic navPic4"></div>
         </div>
     </a>
     <a href="/api">
@@ -931,18 +933,18 @@ var Navcount=1;
 $(".mobileNav").on("click",function(){
     Navcount++;
     if(Navcount%2==0){
-      $(".line1").css({"transform":"rotateZ(45deg)","width":"31px","background-color":"white"});
+      $(".line1").css({"transform":"rotateZ(45deg)","width":"23px","background-color":"white"});
       $(".line2").hide();
-      $(".line3").css({"transform":"rotateZ(-45deg)","width":"31px","background-color":"white"});
+      $(".line3").css({"transform":"rotateZ(-45deg)","width":"23px","background-color":"white"});
       $(".mobileNav-details").css("width","100%");
     }
     else{
       if(count==9){
-        $(".line1").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
-        $(".line3").css({"transform":"rotateZ(0deg)","width":"26px","background-color":"#444553"});
+        $(".line1").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"#444553"});
+        $(".line3").css({"transform":"rotateZ(0deg)","width":"22px","background-color":"#444553"});
       }else{
-        $(".line1").css({"transform":"rotateZ(0deg)","width":"26px"});
-        $(".line3").css({"transform":"rotateZ(0deg)","width":"26px"});
+        $(".line1").css({"transform":"rotateZ(0deg)","width":"22px"});
+        $(".line3").css({"transform":"rotateZ(0deg)","width":"22px"});
       }
       $(".line2").show();
       $(".mobileNav-details").css("width","0");

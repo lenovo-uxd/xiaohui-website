@@ -133,8 +133,17 @@ li:hover ul#submenu {
     line-height: 4rem;
     color:#444553;
 }
-
-.english{
+.tryNew{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:44px;
+    height:26px;
+    background-image: url("../image/trynew.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .english{
     position: absolute;
     height: 30px;
     right: 0px;
@@ -149,7 +158,7 @@ li:hover ul#submenu {
 .english a{
 text-decoration: none;
 color: white;
-}
+} */
 
 
 
@@ -265,7 +274,7 @@ color: white;
     line-height: 3rem;
 }
 .text button{
-    margin-top: 32px;
+    margin-top: 24px;
     background-color: transparent;
     border:1px solid white;
     border-radius: 4px;
@@ -371,36 +380,42 @@ color: white;
         margin-bottom: 0rem;
     }
     /* 移动端导航 */
+    .nav{
+        top: 20px;
+    }
+    .logo{
+        width:100px;
+    }
     .dropdownmenu{
         display: none;
     }
     .mobileNav{
         position: fixed;
-        top: 30px;
+        top: 23px;
         right:7vw;
-        width:26px;
-        height:30px;
+        width:22px;
+        height:22px;
         z-index: 1000;
     }
     .line{
         position: absolute;
         width:100%;
-        height:4px;
+        height:2px;
         background-color: white;
         border-radius: 4px;
     }
     .line1{
-        width:26px;
+        width:22px;
         top:2px;
         transform-origin: 0 2px;
         transition: all .2s;
     }
     .line2{
-        top:13px;
+        top:9.5px;
         transition: all .2s;
     }
     .line3{
-        width:26px;
+        width:22px;
         bottom:2px;
         transform-origin: 0 2px;
         transition: all .2s;
