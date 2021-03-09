@@ -23,7 +23,7 @@ CORS(app, supports_credentials=True)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'JPG', 'PNG', 'gif', 'GIF', 'pdf', 'PDF'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'JPG', 'PNG', 'gif', 'GIF', 'pdf', 'PDF', 'mp4', 'MP4'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
