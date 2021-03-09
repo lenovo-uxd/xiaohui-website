@@ -2,7 +2,8 @@
 import datetime
 from datetime import timedelta
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response
+from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort, Response, send_from_directory
+
 import time
 import os
 import base64
@@ -14,7 +15,6 @@ import json
 import pandas as pd
 from flask_cors import CORS
 
-
 token = "c5f583ba-d03c-4e84-bc7a-7a4250037c87"
 
 
@@ -22,10 +22,8 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
-UPLOAD_FOLDER = 'upload'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 basedir = os.path.abspath(os.path.dirname(__file__))
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'JPG', 'PNG', 'gif', 'GIF', 'pdf'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'JPG', 'PNG', 'gif', 'GIF', 'pdf', 'PDF'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
@@ -39,8 +37,10 @@ def create_uuid(): #生成唯一的图片的名称字符串，防止图片显示
     return uniqueNum;
 
 
-# @app.route('/home/static/<filename>')
-# def staticfile(filename): pass
+
+@app.route('/other-upload/<path:path>')
+def send_js(path):
+    return send_from_directory('other-upload', path)
 
 @app.route('/')
 def home():
@@ -72,8 +72,29 @@ headers = {
   'Content-Type': 'application/json'
 }
 
+
+@app.route('/upload', methods=['POST'], strict_slashes=False)
+def api_upload_file():
+    UPLOAD_FOLDER = 'other-upload'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    file_dir = os.path.join(basedir, app.config['UPLOAD_FOLDER'])
+    if not os.path.exists(file_dir):
+        os.makedirs(file_dir)
+    f = request.files['file']
+    if f and allowed_file(f.filename):
+        fname = secure_filename(f.filename)
+        print (fname)
+        ext = fname.rsplit('.', 1)[1]
+        
+        f.save(os.path.join(file_dir, fname)) 
+        return jsonify({"success": 0, "msg": "http://xiaohui.ai/other-upload/"+fname})
+    else:
+        return jsonify({"error": 1001, "msg": "上传失败"})
+
 @app.route('/up_photo', methods=['POST'], strict_slashes=False)
 def api_upload():
+    UPLOAD_FOLDER = 'upload'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
     file_dir = os.path.join(basedir, app.config['UPLOAD_FOLDER'])
     if not os.path.exists(file_dir):
         os.makedirs(file_dir)
